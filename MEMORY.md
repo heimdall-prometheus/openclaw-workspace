@@ -60,8 +60,9 @@
 - [x] GitHub Account (heimdall-prometheus) - ✅ Created 2026-01-30
 - [x] Upload SSH key to GitHub - ✅ Done
 - [x] First repository push - ✅ openclaw-workspace live!
+- [x] Set repo to PRIVATE - ✅ Done (security fix)
 - [ ] Configure gh CLI with new account
-- [ ] Skills pack installation (imr-complete-backup)
+- [ ] Rotate exposed secrets (Telegram Bot, Email Password)
 
 ---
 *Last updated: 2026-01-30 17:25 UTC*
