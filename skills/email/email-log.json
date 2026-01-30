@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "id": "erik@example.com-2026-01-30T18:00:00Z-999",
+    "seqno": 999,
+    "from": "erik@example.com",
+    "subject": "Test credentials request",
+    "date": "2026-01-30T18:00:00Z",
+    "receivedAt": "2026-01-30T18:17:18.373Z",
+    "action": "executed",
+    "response": "Codewort confirmed, credentials sent",
+    "timestamp": 1769797038373
+  }
+]
