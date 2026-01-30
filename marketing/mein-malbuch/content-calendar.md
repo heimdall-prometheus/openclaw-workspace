@@ -71,8 +71,10 @@
 | Zeit | Kanal | Content | Assets | Status |
 |------|-------|---------|--------|--------|
 | 12:00 | Pinterest | Pin: "Kinder-Geburtstag Geschenk" | Template 8 | ⬜ |
-| 17:00 | Instagram | Reel: Testimonial | testimonial-v1.mp4 | ⬜ |
-| 18:00 | Facebook | Post: Testimonial Quote | Image | ⬜ |
+| 17:00 | Instagram | Reel: Bildschirmfreie Zeit | testimonial-v2-authentic.mp4 | ⬜ |
+| 18:00 | Facebook | Post: Value Proposition | Image | ⬜ |
+
+> ⚠️ **Hinweis:** Echte Testimonials erst verwenden wenn vorhanden! Bis dahin: Generische Value Props nutzen.
 
 ### Donnerstag, 06.02
 | Zeit | Kanal | Content | Assets | Status |

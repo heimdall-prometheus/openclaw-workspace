@@ -92,7 +92,8 @@
               "features": "https://assets.imr-media.de/mein-malbuch/remotion-templates/features-showcase-v1.mp4",
               "vorherNachherBeach": "https://assets.imr-media.de/mein-malbuch/remotion-templates/vorher-nachher-beach-v1.mp4",
               "vorherNachherPet": "https://assets.imr-media.de/mein-malbuch/remotion-templates/vorher-nachher-pet-v1.mp4",
-              "testimonial": "https://assets.imr-media.de/mein-malbuch/remotion-templates/testimonial-v1.mp4"
+              "testimonial": "https://assets.imr-media.de/mein-malbuch/remotion-templates/testimonial-v2-authentic.mp4",
+              "testimonial_deprecated": "testimonial-v1.mp4 (fake quote - nicht verwenden!)"
             }
           }
         },
@@ -287,6 +288,11 @@
       "timestamp": "2026-01-30T20:12:00Z",
       "action": "phase1_complete",
       "details": "🎉 PHASE 1 KOMPLETT! Alle Quick Wins erledigt: UGC Video, Pinterest (10 Pins), Remotion Templates (4 Videos), Content Kalender, Pinterest Schedule"
+    },
+    {
+      "timestamp": "2026-01-30T20:18:00Z",
+      "action": "quality_review",
+      "details": "Asset Review durchgeführt. Problem erkannt: testimonial-v1 hatte fake Quote/Name. Neu gerendert als testimonial-v2-authentic mit ehrlicher Value Prop statt fake Testimonial. Content Kalender angepasst."
     }
   ]
 }
