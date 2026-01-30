@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Ihr Weg zum Online-Shop - In Medias Reh</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Caveat:wght@500&display=swap');
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 11pt;
+            line-height: 1.6;
+            color: #3D3D3D;
+            background: #FAFAF8;
+        }
+        
+        .page {
+            padding: 35px 40px;
+            min-height: 100vh;
+            page-break-after: always;
+        }
+        
+        .page:last-child { page-break-after: avoid; }
+        
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #AEBFC8;
+        }
+        
+        .logo { height: 55px; }
+        .header-right { text-align: right; font-size: 9pt; color: #888; }
+        
+        /* Titles */
+        h1 {
+            color: #AEBFC8;
+            font-size: 24pt;
+            margin-bottom: 5px;
+        }
+        
+        .tagline {
+            font-family: 'Caveat', cursive;
+            font-size: 18pt;
+            color: #C18E65;
+            margin-bottom: 20px;
+        }
+        
+        h2 {
+            color: #AEBFC8;
+            font-size: 14pt;
+            margin: 20px 0 12px 0;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #AEBFC8;
+        }
+        
+        /* Intro Box */
+        .intro-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+            margin-bottom: 20px;
+        }
+        
+        .highlight {
+            background: linear-gradient(180deg, transparent 55%, #C18E6540 55%);
+            padding: 0 3px;
+        }
+        
+        /* Checklist Items */
+        .checklist {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+        }
+        
+        .check-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 12px 0;
+            border-bottom: 1px dashed #e8e8e8;
+        }
+        
+        .check-item:last-child { border-bottom: none; }
+        
+        .check-icon {
+            width: 36px;
+            height: 36px;
+            background: #AEBFC8;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16pt;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+        
+        .check-content { flex: 1; }
+        
+        .check-content h3 {
+            font-size: 11pt;
+            color: #3D3D3D;
+            margin-bottom: 3px;
+        }
+        
+        .check-content p {
+            font-size: 10pt;
+            color: #666;
+        }
+        
+        .checkbox {
+            width: 18px;
+            height: 18px;
+            border: 2px solid #AEBFC8;
+            border-radius: 3px;
+            margin-left: auto;
+            flex-shrink: 0;
+        }
+        
+        /* Interactive Elements */
+        .question-box {
+            background: #f5f7f8;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .question-box p {
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 10pt;
+        }
+        
+        .answer-line {
+            border-bottom: 1px solid #ccc;
+            height: 28px;
+            margin: 5px 0;
+            background: white;
+        }
+        
+        /* Tip Box */
+        .tip-box {
+            background: #fff8f0;
+            border-left: 3px solid #C18E65;
+            padding: 12px 15px;
+            margin: 12px 0;
+            border-radius: 0 6px 6px 0;
+            font-size: 10pt;
+        }
+        
+        .tip-box strong { color: #C18E65; }
+        
+        /* Quote */
+        .quote-section {
+            background: linear-gradient(135deg, #AEBFC8 0%, #8FA3AE 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .quote {
+            font-family: 'Caveat', cursive;
+            font-size: 20pt;
+            margin-bottom: 8px;
+        }
+        
+        .quote-author { font-size: 10pt; opacity: 0.9; }
+        
+        /* CTA Section */
+        .cta-section {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+            margin-top: 20px;
+        }
+        
+        .cta-section h2 {
+            border: none;
+            margin-bottom: 10px;
+        }
+        
+        .contact-row {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 15px 0;
+            font-size: 12pt;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #C18E65;
+            color: white;
+            padding: 10px 28px;
+            border-radius: 25px;
+            font-weight: 600;
+            text-decoration: none;
+            margin: 10px 0;
+            font-size: 11pt;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding-top: 20px;
+            margin-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            font-size: 8pt;
+            color: #999;
+        }
+        
+        /* Two Column */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .mini-checklist {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #e8e8e8;
+        }
+        
+        .mini-checklist h4 {
+            color: #AEBFC8;
+            font-size: 10pt;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .mini-check {
+            display: flex;
+            align-items: center;
+            padding: 5px 0;
+            font-size: 9pt;
+        }
+        
+        .mini-check .checkbox {
+            width: 14px;
+            height: 14px;
+            margin-right: 8px;
+            margin-left: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- PAGE 1 -->
+    <div class="page">
+        <div class="header">
+            <img src="../brand-assets/logo-light-blaugrau.png" alt="In Medias Reh" class="logo">
+            <div class="header-right">www.imr-media.de<br>+49 1556 333 91 22</div>
+        </div>
+        
+        <h1>Ihr Weg zum Online-Shop</h1>
+        <p class="tagline">Wir kümmern uns – Sie verkaufen!</p>
+        
+        <div class="intro-box">
+            <p>Liebe Unternehmerin, lieber Unternehmer,</p>
+            <p style="margin-top: 8px;">Sie denken darüber nach, Ihr Geschäft ins Internet zu bringen? <span class="highlight">Das ist eine gute Entscheidung!</span></p>
+            <p style="margin-top: 8px;">Diese Checkliste zeigt Ihnen, was wichtig ist. <strong>Und das Beste: Sie müssen das nicht alleine machen.</strong></p>
+        </div>
+        
+        <h2>Die 10 wichtigsten Punkte</h2>
+        
+        <div class="checklist">
+            <div class="check-item">
+                <div class="check-icon">📦</div>
+                <div class="check-content">
+                    <h3>1. Welche Produkte verkaufen Sie online?</h3>
+                    <p>Starten Sie mit Ihren 10-20 beliebtesten Artikeln</p>
+                </div>
+                <div class="checkbox"></div>
+            </div>
+            
+            <div class="check-item">
+                <div class="check-icon">⚖️</div>
+                <div class="check-content">
+                    <h3>2. Rechtliche Grundlagen</h3>
+                    <p>Impressum, Datenschutz, AGB – wir helfen Ihnen dabei</p>
+                </div>
+                <div class="checkbox"></div>
+            </div>
+            
+            <div class="check-item">
+                <div class="check-icon">💳</div>
+                <div class="check-content">
+                    <h3>3. Zahlungsarten festlegen</h3>
+                    <p>PayPal + Rechnung deckt 80% aller Kunden ab</p>
+                </div>
+                <div class="checkbox"></div>
+            </div>
+            
+            <div class="check-item">
+                <div class="check-icon">🚚</div>
+                <div class="check-content">
+                    <h3>4. Versand organisieren</h3>
+                    <p>Klare Kosten und Lieferzeiten schaffen Vertrauen</p>
+                </div>
+                <div class="checkbox"></div>
+            </div>
+            
+            <div class="check-item">
+                <div class="check-icon">🧮</div>
+                <div class="check-content">
+                    <h3>5. Preise kalkulieren</h3>
+                    <p>Versand, Gebühren und Retouren einplanen</p>
+                </div>
+                <div class="checkbox"></div>
+            </div>
+        </div>
+        
+        <div class="tip-box">
+            <strong>💡 Gut zu wissen:</strong> Sie müssen sich nicht mit Technik beschäftigen. Wir richten alles für Sie ein – Sie konzentrieren sich aufs Verkaufen.
+        </div>
+    </div>
+    
+    <!-- PAGE 2 -->
+    <div class="page">
+        <div class="header">
+            <img src="../brand-assets/logo-light-blaugrau.png" alt="In Medias Reh" class="logo">
+            <div class="header-right">Seite 2</div>
+        </div>
+        
+        <div class="checklist">
+            <div class="check-item">
+                <div class="check-icon">📞</div>
+                <div class="check-content">
+                    <h3>6. Kundenservice einplanen</h3>
+                    <p>Erreichbarkeit schafft Vertrauen bei Ihren Kunden</p>
+                </div>
+                <div class="checkbox"></div>
+            </div>
+            
+            <div class="check-item">
+                <div class="check-icon">🛠️</div>
+                <div class="check-content">
+                    <h3>7. Das richtige Shop-System</h3>
+                    <p>WooCommerce, Shopify, Shopware – wir beraten Sie</p>
+                </div>
+                <div class="checkbox"></div>
+            </div>
+            
+            <div class="check-item">
+                <div class="check-icon">🎨</div>
+                <div class="check-content">
+                    <h3>8. Design das zu Ihnen passt</h3>
+                    <p>Professionell und einladend – so gewinnen Sie Kunden</p>
+                </div>
+                <div class="checkbox"></div>
+            </div>
+            
+            <div class="check-item">
+                <div class="check-icon">🔍</div>
+                <div class="check-content">
+                    <h3>9. Bei Google gefunden werden</h3>
+                    <p>Das Wichtigste für langfristigen Erfolg online</p>
+                </div>
+                <div class="checkbox"></div>
+            </div>
+            
+            <div class="check-item">
+                <div class="check-icon">🤝</div>
+                <div class="check-content">
+                    <h3>10. Langfristige Betreuung</h3>
+                    <p>Nach dem Start sind wir weiterhin für Sie da</p>
+                </div>
+                <div class="checkbox"></div>
+            </div>
+        </div>
+        
+        <h2>Kurz zum Nachdenken</h2>
+        
+        <div class="question-box">
+            <p>Welche 5 Produkte würden Sie als erstes online anbieten?</p>
+            <div class="answer-line"></div>
+            <div class="answer-line"></div>
+        </div>
+        
+        <div class="two-col">
+            <div class="mini-checklist">
+                <h4>💳 Zahlungsarten</h4>
+                <div class="mini-check"><div class="checkbox"></div> PayPal</div>
+                <div class="mini-check"><div class="checkbox"></div> Kreditkarte</div>
+                <div class="mini-check"><div class="checkbox"></div> Rechnung</div>
+                <div class="mini-check"><div class="checkbox"></div> Lastschrift</div>
+            </div>
+            <div class="mini-checklist">
+                <h4>🚚 Versand</h4>
+                <div class="mini-check"><div class="checkbox"></div> DHL</div>
+                <div class="mini-check"><div class="checkbox"></div> Hermes</div>
+                <div class="mini-check"><div class="checkbox"></div> DPD</div>
+                <div class="mini-check"><div class="checkbox"></div> Abholung</div>
+            </div>
+        </div>
+        
+        <div class="quote-section">
+            <p class="quote">"Endlich jemand, der mir die Technik abnimmt!"</p>
+            <p class="quote-author">– Das hören wir oft von unseren Kunden</p>
+        </div>
+    </div>
+    
+    <!-- PAGE 3 -->
+    <div class="page">
+        <div class="header">
+            <img src="../brand-assets/logo-light-blaugrau.png" alt="In Medias Reh" class="logo">
+            <div class="header-right">Seite 3</div>
+        </div>
+        
+        <div class="cta-section">
+            <h2>Bereit für den nächsten Schritt?</h2>
+            <p style="font-size: 12pt; margin-bottom: 15px;"><strong>Sie konzentrieren sich auf Ihr Geschäft – wir kümmern uns um den Rest.</strong></p>
+            
+            <p>Lassen Sie uns unverbindlich sprechen.<br>Wir nehmen uns Zeit für Ihre Fragen.</p>
+            
+            <div class="contact-row">
+                <div class="contact-item">📞 +49 1556 333 91 22</div>
+                <div class="contact-item">✉️ info@imr-media.de</div>
+            </div>
+            
+            <a href="tel:+4915563339122" class="cta-button">Jetzt anrufen</a>
+            
+            <p style="margin-top: 15px; font-size: 9pt; color: #888;">Kostenlose Erstberatung – ohne Druck, ohne Verpflichtung</p>
+        </div>
+        
+        <div class="tip-box" style="margin-top: 25px;">
+            <strong>So geht es weiter:</strong><br>
+            1. Sie rufen an oder schreiben uns<br>
+            2. Wir besprechen Ihre Situation – kostenlos und unverbindlich<br>
+            3. Sie entscheiden in Ruhe, ob wir zusammenarbeiten
+        </div>
+        
+        <div class="question-box">
+            <p>Meine wichtigste Frage an In Medias Reh:</p>
+            <div class="answer-line"></div>
+            <div class="answer-line"></div>
+        </div>
+        
+        <div class="footer">
+            © 2026 In Medias Reh | www.imr-media.de | Untere Lettenbergstraße 1, 86420 Diedorf<br>
+            <span style="font-family: 'Caveat', cursive; font-size: 12pt; color: #AEBFC8;">Ihre maßgeschneiderte Webseite – direkt, kreativ, erfolgreich.</span>
+        </div>
+    </div>
+</body>
+</html>

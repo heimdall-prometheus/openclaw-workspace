@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>E-Commerce Checkliste - In Medias Reh</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 10pt;
+            line-height: 1.4;
+            color: #3D3D3D;
+        }
+        
+        .page {
+            display: flex;
+            min-height: 100vh;
+        }
+        
+        .sidebar {
+            width: 200px;
+            background: #AEBFC8;
+            color: white;
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .sidebar .logo {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        
+        .sidebar h2 {
+            font-size: 11pt;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            padding-bottom: 10px;
+        }
+        
+        .sidebar p {
+            font-size: 9pt;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+        
+        .sidebar .contact {
+            margin-top: auto;
+            font-size: 9pt;
+        }
+        
+        .sidebar .contact div {
+            margin-bottom: 8px;
+        }
+        
+        .main {
+            flex: 1;
+            padding: 30px 40px;
+        }
+        
+        h1 {
+            color: #AEBFC8;
+            font-size: 20pt;
+            margin-bottom: 5px;
+        }
+        
+        .subtitle {
+            color: #888;
+            font-size: 11pt;
+            margin-bottom: 25px;
+        }
+        
+        .checklist {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .check-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 12px;
+            background: #f8f9fa;
+            border-radius: 6px;
+            border-left: 3px solid #AEBFC8;
+        }
+        
+        .checkbox {
+            width: 18px;
+            height: 18px;
+            border: 2px solid #AEBFC8;
+            margin-right: 10px;
+            flex-shrink: 0;
+            border-radius: 3px;
+        }
+        
+        .check-item strong {
+            display: block;
+            font-size: 10pt;
+            color: #3D3D3D;
+            margin-bottom: 3px;
+        }
+        
+        .check-item span {
+            font-size: 9pt;
+            color: #666;
+        }
+        
+        .bottom-cta {
+            margin-top: 25px;
+            padding: 20px;
+            background: linear-gradient(135deg, #AEBFC8 0%, #8FA3AE 100%);
+            color: white;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .bottom-cta h3 {
+            font-size: 14pt;
+            margin-bottom: 8px;
+        }
+        
+        .bottom-cta p {
+            font-size: 10pt;
+            opacity: 0.9;
+        }
+        
+        .qr-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .qr-placeholder {
+            width: 60px;
+            height: 60px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 8pt;
+            color: #AEBFC8;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="sidebar">
+            <img src="../brand-assets/logo-dark-anthrazit.png" alt="In Medias Reh" class="logo" style="filter: brightness(0) invert(1);">
+            
+            <h2>Wir übernehmen.</h2>
+            
+            <p>Sie müssen sich nicht mit Technik beschäftigen. Wir richten alles ein und sind für Sie da.</p>
+            
+            <p><strong>Unsere Leistungen:</strong><br>
+            ✓ Online-Shop Erstellung<br>
+            ✓ E-Commerce Beratung<br>
+            ✓ Laufende Betreuung</p>
+            
+            <div class="contact">
+                <div>📞 +49 1556 333 91 22</div>
+                <div>✉️ info@imr-media.de</div>
+                <div>🌐 imr-media.de</div>
+            </div>
+        </div>
+        
+        <div class="main">
+            <h1>✓ E-Commerce Checkliste</h1>
+            <p class="subtitle">10 Punkte für Ihren erfolgreichen Online-Shop</p>
+            
+            <div class="checklist">
+                <div class="check-item">
+                    <div class="checkbox"></div>
+                    <div>
+                        <strong>1. Produkte definieren</strong>
+                        <span>Welche Artikel verkaufen Sie online?</span>
+                    </div>
+                </div>
+                
+                <div class="check-item">
+                    <div class="checkbox"></div>
+                    <div>
+                        <strong>2. Rechtliches klären</strong>
+                        <span>Impressum, AGB, Datenschutz</span>
+                    </div>
+                </div>
+                
+                <div class="check-item">
+                    <div class="checkbox"></div>
+                    <div>
+                        <strong>3. Zahlungsarten</strong>
+                        <span>PayPal, Kreditkarte, Rechnung</span>
+                    </div>
+                </div>
+                
+                <div class="check-item">
+                    <div class="checkbox"></div>
+                    <div>
+                        <strong>4. Versand organisieren</strong>
+                        <span>Dienstleister, Kosten, Zeiten</span>
+                    </div>
+                </div>
+                
+                <div class="check-item">
+                    <div class="checkbox"></div>
+                    <div>
+                        <strong>5. Preise kalkulieren</strong>
+                        <span>Inkl. Gebühren & Retouren</span>
+                    </div>
+                </div>
+                
+                <div class="check-item">
+                    <div class="checkbox"></div>
+                    <div>
+                        <strong>6. Kundenservice</strong>
+                        <span>Erreichbarkeit & Rückgaben</span>
+                    </div>
+                </div>
+                
+                <div class="check-item">
+                    <div class="checkbox"></div>
+                    <div>
+                        <strong>7. Shop-System wählen</strong>
+                        <span>WooCommerce, Shopify, etc.</span>
+                    </div>
+                </div>
+                
+                <div class="check-item">
+                    <div class="checkbox"></div>
+                    <div>
+                        <strong>8. Design festlegen</strong>
+                        <span>Professionell & passend zur Marke</span>
+                    </div>
+                </div>
+                
+                <div class="check-item">
+                    <div class="checkbox"></div>
+                    <div>
+                        <strong>9. Sichtbarkeit planen</strong>
+                        <span>Google, Social Media, Empfehlungen</span>
+                    </div>
+                </div>
+                
+                <div class="check-item">
+                    <div class="checkbox"></div>
+                    <div>
+                        <strong>10. Betreuung sichern</strong>
+                        <span>Support nach dem Launch</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bottom-cta">
+                <h3>Bereit für Ihren Online-Shop?</h3>
+                <p>Sie konzentrieren sich auf Ihr Geschäft – wir kümmern uns um den Rest.</p>
+                <div class="qr-section">
+                    <div class="qr-placeholder">[QR]</div>
+                    <div style="text-align: left;">
+                        <strong>Kostenlose Beratung</strong><br>
+                        <span style="font-size: 9pt;">Scannen oder anrufen!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

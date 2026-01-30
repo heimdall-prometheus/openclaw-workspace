@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>E-Commerce Arbeitsbuch - In Medias Reh</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Caveat:wght@500&display=swap');
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 10pt;
+            line-height: 1.6;
+            color: #3D3D3D;
+        }
+        
+        /* Cover */
+        .cover {
+            height: 100vh;
+            background: linear-gradient(135deg, #AEBFC8 0%, #8FA3AE 50%, #C18E65 100%);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px;
+        }
+        
+        .cover .logo { height: 120px; filter: brightness(0) invert(1); margin-bottom: 40px; }
+        .cover h1 { font-size: 36pt; margin-bottom: 10px; }
+        .cover .subtitle { font-size: 16pt; opacity: 0.9; margin-bottom: 30px; }
+        .cover .workbook-label {
+            background: white;
+            color: #AEBFC8;
+            padding: 8px 25px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 11pt;
+        }
+        .cover .owner {
+            margin-top: 60px;
+            border: 2px solid rgba(255,255,255,0.5);
+            padding: 15px 40px;
+            border-radius: 4px;
+        }
+        .cover .owner span { font-family: 'Caveat', cursive; font-size: 14pt; }
+        
+        /* Pages */
+        .page {
+            padding: 40px;
+            min-height: 100vh;
+        }
+        
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #AEBFC8;
+        }
+        
+        .page-header h2 { color: #AEBFC8; font-size: 18pt; }
+        .page-header .page-num { color: #AEBFC8; font-size: 12pt; }
+        
+        h3 { color: #AEBFC8; font-size: 13pt; margin: 25px 0 15px 0; }
+        
+        .question {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .question p { margin-bottom: 15px; font-weight: 600; }
+        
+        .answer-field {
+            background: white;
+            border: 1px dashed #ccc;
+            min-height: 60px;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        
+        .answer-lines {
+            border-bottom: 1px solid #ddd;
+            height: 30px;
+            margin: 5px 0;
+        }
+        
+        .checklist-box {
+            background: white;
+            border: 2px solid #AEBFC8;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .checklist-box h4 {
+            color: #AEBFC8;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .check-row {
+            display: flex;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px dotted #eee;
+        }
+        
+        .check-row:last-child { border-bottom: none; }
+        
+        .checkbox {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #AEBFC8;
+            margin-right: 12px;
+            border-radius: 3px;
+            flex-shrink: 0;
+        }
+        
+        .tip-highlight {
+            background: linear-gradient(180deg, transparent 50%, #C18E6540 50%);
+            padding: 0 4px;
+        }
+        
+        .reflection-box {
+            background: #fff8f0;
+            border-left: 4px solid #C18E65;
+            padding: 20px;
+            margin: 25px 0;
+        }
+        
+        .reflection-box h4 {
+            color: #C18E65;
+            margin-bottom: 10px;
+        }
+        
+        .notes-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .notes-section h4 { margin-bottom: 15px; color: #666; }
+        
+        .notes-lines {
+            background: white;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        
+        /* Action Page */
+        .action-page {
+            background: #AEBFC8;
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .action-page h2 { font-size: 24pt; margin-bottom: 20px; }
+        
+        .next-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .step-card {
+            background: rgba(255,255,255,0.1);
+            padding: 25px;
+            border-radius: 10px;
+        }
+        
+        .step-card .num {
+            width: 40px;
+            height: 40px;
+            background: white;
+            color: #AEBFC8;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin: 0 auto 15px;
+        }
+        
+        .contact-box {
+            background: white;
+            color: #3D3D3D;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+        
+        .contact-box h3 { color: #AEBFC8; margin-bottom: 15px; }
+    </style>
+</head>
+<body>
+    <!-- Cover -->
+    <div class="cover">
+        <img src="../brand-assets/logo-light-blaugrau.png" alt="In Medias Reh" class="logo">
+        <span class="workbook-label">ARBEITSBUCH</span>
+        <h1>Mein Online-Shop</h1>
+        <p class="subtitle">Der Schritt-für-Schritt Planer für Ihren E-Commerce Start</p>
+        <div class="owner">
+            <span>Dieses Arbeitsbuch gehört:</span>
+            <div style="border-bottom: 1px solid rgba(255,255,255,0.5); width: 200px; margin: 15px auto 0; height: 25px;"></div>
+        </div>
+    </div>
+    
+    <!-- Page 1: Meine Produkte -->
+    <div class="page">
+        <div class="page-header">
+            <h2>1. Meine Produkte</h2>
+            <span class="page-num">Seite 1</span>
+        </div>
+        
+        <div class="question">
+            <p>Welche 10 Produkte würde ich als erstes online anbieten?</p>
+            <div class="answer-lines"></div>
+            <div class="answer-lines"></div>
+            <div class="answer-lines"></div>
+            <div class="answer-lines"></div>
+            <div class="answer-lines"></div>
+        </div>
+        
+        <div class="checklist-box">
+            <h4>✓ Checkliste: Produktvorbereitung</h4>
+            <div class="check-row"><div class="checkbox"></div><span>Ich habe Fotos von allen Produkten</span></div>
+            <div class="check-row"><div class="checkbox"></div><span>Die Beschreibungen sind vollständig</span></div>
+            <div class="check-row"><div class="checkbox"></div><span>Preise sind festgelegt</span></div>
+            <div class="check-row"><div class="checkbox"></div><span>Lagerbestand ist bekannt</span></div>
+        </div>
+        
+        <div class="reflection-box">
+            <h4>💭 Zum Nachdenken</h4>
+            <p>Welche Produkte fragen Ihre Kunden am häufigsten nach? Diese sind oft die besten für den Online-Start.</p>
+        </div>
+    </div>
+    
+    <!-- Page 2: Meine Ziele -->
+    <div class="page">
+        <div class="page-header">
+            <h2>2. Meine Ziele</h2>
+            <span class="page-num">Seite 2</span>
+        </div>
+        
+        <div class="question">
+            <p>Warum möchte ich online verkaufen?</p>
+            <div class="answer-field" style="min-height: 80px;"></div>
+        </div>
+        
+        <div class="question">
+            <p>Was erhoffe ich mir in den ersten 6 Monaten?</p>
+            <div class="answer-lines"></div>
+            <div class="answer-lines"></div>
+        </div>
+        
+        <div class="question">
+            <p>Wie viel Zeit kann ich pro Woche für den Online-Shop aufwenden?</p>
+            <div style="display: flex; gap: 20px; margin-top: 10px;">
+                <label><input type="checkbox"> 1-2 Stunden</label>
+                <label><input type="checkbox"> 3-5 Stunden</label>
+                <label><input type="checkbox"> Mehr als 5 Stunden</label>
+            </div>
+        </div>
+        
+        <div class="notes-section">
+            <h4>📝 Meine Notizen</h4>
+            <div class="notes-lines">
+                <div class="answer-lines"></div>
+                <div class="answer-lines"></div>
+                <div class="answer-lines"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Page 3: Die Basics -->
+    <div class="page">
+        <div class="page-header">
+            <h2>3. Die wichtigsten Entscheidungen</h2>
+            <span class="page-num">Seite 3</span>
+        </div>
+        
+        <div class="checklist-box">
+            <h4>💳 Zahlungsarten (ankreuzen was Sie anbieten möchten)</h4>
+            <div class="check-row"><div class="checkbox"></div><span>PayPal</span></div>
+            <div class="check-row"><div class="checkbox"></div><span>Kreditkarte</span></div>
+            <div class="check-row"><div class="checkbox"></div><span>Kauf auf Rechnung</span></div>
+            <div class="check-row"><div class="checkbox"></div><span>SEPA-Lastschrift</span></div>
+            <div class="check-row"><div class="checkbox"></div><span>Sofortüberweisung</span></div>
+        </div>
+        
+        <div class="checklist-box">
+            <h4>🚚 Versand</h4>
+            <div class="check-row"><div class="checkbox"></div><span>DHL</span></div>
+            <div class="check-row"><div class="checkbox"></div><span>Hermes</span></div>
+            <div class="check-row"><div class="checkbox"></div><span>DPD</span></div>
+            <div class="check-row"><div class="checkbox"></div><span>Abholung möglich</span></div>
+        </div>
+        
+        <div class="question">
+            <p>Ab welchem Bestellwert soll der Versand kostenlos sein?</p>
+            <div style="display: flex; gap: 15px; align-items: center;">
+                <span>Ab</span>
+                <div style="border-bottom: 2px solid #AEBFC8; width: 80px;"></div>
+                <span>€</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Action Page -->
+    <div class="action-page">
+        <h2>Ihre nächsten Schritte</h2>
+        <p>Sie haben die wichtigsten Punkte durchdacht. Jetzt wird's konkret!</p>
+        
+        <div class="next-steps">
+            <div class="step-card">
+                <div class="num">1</div>
+                <strong>Arbeitsbuch ausfüllen</strong>
+                <p style="font-size: 9pt; margin-top: 10px;">Nehmen Sie sich 30 Minuten für alle Fragen</p>
+            </div>
+            <div class="step-card">
+                <div class="num">2</div>
+                <strong>Uns kontaktieren</strong>
+                <p style="font-size: 9pt; margin-top: 10px;">Wir besprechen Ihre Antworten gemeinsam</p>
+            </div>
+            <div class="step-card">
+                <div class="num">3</div>
+                <strong>Entspannt starten</strong>
+                <p style="font-size: 9pt; margin-top: 10px;">Wir kümmern uns um die Technik</p>
+            </div>
+        </div>
+        
+        <div class="contact-box">
+            <h3>Kostenlose Erstberatung</h3>
+            <p style="margin-bottom: 15px;">Wir nehmen uns Zeit für Sie und Ihre Fragen.</p>
+            <p><strong>📞</strong> +49 1556 333 91 22</p>
+            <p><strong>✉️</strong> info@imr-media.de</p>
+            <p style="margin-top: 15px; font-size: 9pt; color: #888;">Unverbindlich und ohne Druck</p>
+        </div>
+    </div>
+</body>
+</html>

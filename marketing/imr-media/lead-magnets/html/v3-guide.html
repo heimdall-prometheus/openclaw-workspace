@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Der komplette E-Commerce Guide - In Medias Reh</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 10pt;
+            line-height: 1.5;
+            color: #3D3D3D;
+        }
+        
+        .page { padding: 40px; }
+        
+        /* Cover Page */
+        .cover {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(180deg, #AEBFC8 0%, #8FA3AE 100%);
+            color: white;
+            padding: 40px;
+        }
+        
+        .cover .logo { height: 100px; filter: brightness(0) invert(1); margin-bottom: 40px; }
+        .cover h1 { font-size: 32pt; margin-bottom: 15px; }
+        .cover .subtitle { font-size: 14pt; opacity: 0.9; margin-bottom: 40px; }
+        .cover .tagline { font-size: 11pt; border-top: 1px solid rgba(255,255,255,0.3); padding-top: 20px; margin-top: 40px; }
+        
+        /* TOC */
+        .toc { padding: 40px; }
+        .toc h2 { color: #AEBFC8; font-size: 18pt; margin-bottom: 30px; border-bottom: 2px solid #AEBFC8; padding-bottom: 10px; }
+        .toc-item { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px dotted #ddd; }
+        .toc-item span:first-child { font-weight: 600; }
+        
+        /* Section Header */
+        .section-header {
+            background: #AEBFC8;
+            color: white;
+            padding: 15px 20px;
+            margin: 30px 0 20px 0;
+        }
+        
+        .section-header h2 { font-size: 14pt; margin: 0; }
+        
+        /* Content */
+        .content { padding: 0 40px; }
+        
+        h3 { color: #AEBFC8; font-size: 12pt; margin: 20px 0 10px 0; }
+        
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 15px 0;
+        }
+        
+        .info-box {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 3px solid #AEBFC8;
+        }
+        
+        .tip-box {
+            background: #fff3e0;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 3px solid #C18E65;
+            margin: 15px 0;
+        }
+        
+        .tip-box strong { color: #C18E65; }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        
+        th { background: #AEBFC8; color: white; padding: 10px; text-align: left; }
+        td { padding: 10px; border-bottom: 1px solid #eee; }
+        
+        .checklist-mini { list-style: none; }
+        .checklist-mini li { padding: 5px 0; padding-left: 25px; position: relative; }
+        .checklist-mini li::before { content: "☐"; position: absolute; left: 0; color: #AEBFC8; }
+        
+        /* CTA Page */
+        .cta-page {
+            padding: 40px;
+            text-align: center;
+            background: #f8f9fa;
+            margin-top: 40px;
+        }
+        
+        .cta-page h2 { color: #AEBFC8; margin-bottom: 20px; }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .contact-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .contact-card .icon { font-size: 24pt; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <!-- Cover -->
+    <div class="cover">
+        <img src="../brand-assets/logo-light-blaugrau.png" alt="In Medias Reh" class="logo">
+        <h1>Der E-Commerce Guide</h1>
+        <p class="subtitle">Alles was Sie für Ihren Online-Shop wissen müssen</p>
+        <p class="tagline">Ein Leitfaden von In Medias Reh</p>
+    </div>
+    
+    <!-- TOC -->
+    <div class="toc">
+        <h2>Inhalt</h2>
+        <div class="toc-item"><span>1. Produkte & Sortiment</span><span>Seite 3</span></div>
+        <div class="toc-item"><span>2. Rechtliche Grundlagen</span><span>Seite 3</span></div>
+        <div class="toc-item"><span>3. Zahlungsarten</span><span>Seite 4</span></div>
+        <div class="toc-item"><span>4. Versand & Logistik</span><span>Seite 4</span></div>
+        <div class="toc-item"><span>5. Preiskalkulation</span><span>Seite 5</span></div>
+        <div class="toc-item"><span>6. Kundenservice</span><span>Seite 5</span></div>
+        <div class="toc-item"><span>7. Shop-System</span><span>Seite 6</span></div>
+        <div class="toc-item"><span>8. Design & Usability</span><span>Seite 6</span></div>
+        <div class="toc-item"><span>9. Sichtbarkeit & Marketing</span><span>Seite 7</span></div>
+        <div class="toc-item"><span>10. Langfristige Betreuung</span><span>Seite 7</span></div>
+    </div>
+    
+    <!-- Content Sections -->
+    <div class="content">
+        <div class="section-header"><h2>1. Produkte & Sortiment</h2></div>
+        
+        <p>Der erste Schritt ist die Entscheidung, welche Produkte Sie online anbieten möchten.</p>
+        
+        <h3>Fragen zur Klärung:</h3>
+        <ul class="checklist-mini">
+            <li>Welche Produkte eignen sich für den Online-Verkauf?</li>
+            <li>Haben Sie professionelle Produktfotos?</li>
+            <li>Sind Ihre Beschreibungen vollständig?</li>
+            <li>Wie groß soll das anfängliche Sortiment sein?</li>
+        </ul>
+        
+        <div class="tip-box">
+            <strong>Unser Tipp:</strong> Starten Sie mit Ihren 10-20 beliebtesten Produkten. Sie können später jederzeit erweitern.
+        </div>
+        
+        <div class="section-header"><h2>2. Rechtliche Grundlagen</h2></div>
+        
+        <p>Im E-Commerce gibt es Pflichtangaben, die auf Ihrer Website vorhanden sein müssen.</p>
+        
+        <div class="two-col">
+            <div class="info-box">
+                <strong>Pflichtangaben:</strong>
+                <ul class="checklist-mini">
+                    <li>Impressum</li>
+                    <li>Datenschutzerklärung</li>
+                    <li>AGB</li>
+                    <li>Widerrufsbelehrung</li>
+                </ul>
+            </div>
+            <div class="info-box">
+                <strong>Optional aber empfohlen:</strong>
+                <ul class="checklist-mini">
+                    <li>FAQ / Hilfebereich</li>
+                    <li>Versandinformationen</li>
+                    <li>Zahlungsarten-Übersicht</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="tip-box">
+            <strong>Keine Sorge:</strong> Wir arbeiten mit Partnern zusammen, die rechtssichere Texte für Sie erstellen.
+        </div>
+        
+        <div class="section-header"><h2>3. Zahlungsarten</h2></div>
+        
+        <p>Deutsche Kunden erwarten verschiedene Zahlungsmöglichkeiten.</p>
+        
+        <table>
+            <tr><th>Zahlungsart</th><th>Beliebtheit</th><th>Gebühren ca.</th></tr>
+            <tr><td>PayPal</td><td>⭐⭐⭐⭐⭐</td><td>2,49% + 0,35€</td></tr>
+            <tr><td>Kauf auf Rechnung</td><td>⭐⭐⭐⭐⭐</td><td>Variabel</td></tr>
+            <tr><td>Kreditkarte</td><td>⭐⭐⭐⭐</td><td>1,5-3%</td></tr>
+            <tr><td>SEPA-Lastschrift</td><td>⭐⭐⭐</td><td>~0,30€</td></tr>
+        </table>
+        
+        <div class="section-header"><h2>4. Versand & Logistik</h2></div>
+        
+        <div class="two-col">
+            <div class="info-box">
+                <strong>Zu klären:</strong>
+                <ul class="checklist-mini">
+                    <li>Welcher Versanddienstleister?</li>
+                    <li>Versandkosten (pauschal oder nach Gewicht?)</li>
+                    <li>Ab welchem Wert versandkostenfrei?</li>
+                    <li>Lieferzeiten kommunizieren</li>
+                </ul>
+            </div>
+            <div class="info-box">
+                <strong>Beliebte Dienstleister:</strong>
+                <ul>
+                    <li>DHL (am bekanntesten)</li>
+                    <li>Hermes</li>
+                    <li>DPD</li>
+                    <li>GLS</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section-header"><h2>7. Shop-System wählen</h2></div>
+        
+        <table>
+            <tr><th>System</th><th>Für wen</th><th>Kosten</th></tr>
+            <tr><td>WooCommerce</td><td>Flexibel, viele Optionen</td><td>Einmalig</td></tr>
+            <tr><td>Shopify</td><td>Schnell & einfach</td><td>Ab 27€/Monat</td></tr>
+            <tr><td>Shopware</td><td>Größere Shops</td><td>Variabel</td></tr>
+        </table>
+        
+        <div class="tip-box">
+            <strong>Gut zu wissen:</strong> Sie müssen sich nicht selbst mit der Technik beschäftigen. Wir richten das System für Sie ein – Sie konzentrieren sich aufs Verkaufen.
+        </div>
+    </div>
+    
+    <!-- CTA Page -->
+    <div class="cta-page">
+        <h2>Bereit für Ihren Online-Shop?</h2>
+        <p>Sie konzentrieren sich auf Ihr Geschäft. Die Technik übernehmen wir.</p>
+        
+        <div class="contact-grid">
+            <div class="contact-card">
+                <div class="icon">📞</div>
+                <strong>Anrufen</strong>
+                <p>+49 1556 333 91 22</p>
+            </div>
+            <div class="contact-card">
+                <div class="icon">✉️</div>
+                <strong>Schreiben</strong>
+                <p>info@imr-media.de</p>
+            </div>
+            <div class="contact-card">
+                <div class="icon">🌐</div>
+                <strong>Besuchen</strong>
+                <p>imr-media.de</p>
+            </div>
+        </div>
+        
+        <p style="margin-top: 30px; font-size: 9pt; color: #888;">
+            © 2026 In Medias Reh | Kostenlose Erstberatung – unverbindlich und ohne Druck
+        </p>
+    </div>
+</body>
+</html>
