@@ -1,0 +1,17 @@
+{
+  "name": "heimdall-email-skill",
+  "version": "1.0.0",
+  "description": "Email IMAP/SMTP skill for autonomous email access",
+  "main": "check-email.js",
+  "dependencies": {
+    "node-imap": "^0.9.6",
+    "mailparser": "^3.7.1",
+    "nodemailer": "^6.9.16"
+  },
+  "scripts": {
+    "check": "node check-email.js",
+    "search": "node search-email.js"
+  },
+  "author": "Heimdall",
+  "license": "MIT"
+}
