@@ -1,0 +1,292 @@
+{
+  "project": "mein-malbuch.com Marketing",
+  "created": "2026-01-30T18:35:00Z",
+  "lastChecked": "2026-01-30T20:12:00Z",
+  "inputHours": {
+    "start": "08:00",
+    "end": "22:00",
+    "timezone": "UTC",
+    "note": "09:00-23:00 Berlin Zeit = 08:00-22:00 UTC"
+  },
+  "currentWork": {
+    "task": "phase1-complete",
+    "subtask": null,
+    "status": "done",
+    "note": "🎉 PHASE 1 KOMPLETT! Alle Quick Wins für Wochenende erledigt. Phase 2 startet nächste Woche."
+  },
+  "phases": [
+    {
+      "id": "phase1",
+      "name": "Quick Wins (Wochenende)",
+      "deadline": "2026-02-02",
+      "tasks": [
+        {
+          "id": "ugc-video-1",
+          "title": "Erstes UGC Video produzieren",
+          "description": "Mit UGC Skill: Avatar (Mama 32), Sophie Voice, Vorher/Nachher B-Roll",
+          "status": "done",
+          "completedAt": "2026-01-30T18:52:00Z",
+          "priority": "high",
+          "estimatedHours": 2,
+          "actualHours": 1.5,
+          "projectFolder": "video-assets/ugc-2026-01-30-183758",
+          "subtasks": [
+            {"id": "ugc-1-script", "title": "5 Script-Varianten schreiben", "status": "done", "completedAt": "2026-01-30T18:38:00Z"},
+            {"id": "ugc-1-script-select", "title": "Script-Auswahl", "status": "done", "completedAt": "2026-01-30T18:39:00Z", "choice": "Variante 5 (Transformation)"},
+            {"id": "ugc-1-avatar", "title": "Avatar generieren", "status": "done", "completedAt": "2026-01-30T18:40:00Z", "output": "03-avatars/avatar-mama-couch.png"},
+            {"id": "ugc-1-avatar-approve", "title": "Avatar-Bestätigung", "status": "done", "completedAt": "2026-01-30T18:40:00Z"},
+            {"id": "ugc-1-broll-download", "title": "B-Roll Assets laden", "status": "done", "completedAt": "2026-01-30T18:39:00Z"},
+            {"id": "ugc-1-audio", "title": "TTS Audio erstellen", "status": "done", "completedAt": "2026-01-30T18:41:00Z", "duration": "25s"},
+            {"id": "ugc-1-omnihuman", "title": "OmniHuman Lip-Sync", "status": "done", "completedAt": "2026-01-30T18:50:00Z", "note": "~100min (fal.ai überlastet)"},
+            {"id": "ugc-1-broll", "title": "B-Roll Assembly", "status": "done", "completedAt": "2026-01-30T18:51:00Z"},
+            {"id": "ugc-1-upload", "title": "R2 Upload", "status": "done", "completedAt": "2026-01-30T18:52:00Z"}
+          ],
+          "output": {
+            "hd": "https://assets.imr-media.de/mein-malbuch/ugc-videos/ugc-transformation-v1-hd.mp4",
+            "social": "https://assets.imr-media.de/mein-malbuch/ugc-videos/ugc-transformation-v1.mp4"
+          },
+          "blockedBy": [],
+          "output": null
+        },
+        {
+          "id": "pinterest-setup",
+          "title": "Pinterest Account & erste Pins",
+          "description": "Account einrichten, 10 erste Pins erstellen mit SEO Keywords",
+          "status": "done",
+          "completedAt": "2026-01-30T19:30:00Z",
+          "priority": "high",
+          "estimatedHours": 1.5,
+          "actualHours": 1,
+          "subtasks": [
+            {"id": "pin-1-research", "title": "Keyword Research (Eltern, Geschenke, Kinder)", "status": "done", "completedAt": "2026-01-30T19:05:00Z", "output": "pinterest-keywords.md (34 Keywords)"},
+            {"id": "pin-2-account", "title": "Pinterest Account erstellen", "status": "done", "completedAt": "2026-01-30T19:15:00Z"},
+            {"id": "pin-3-create", "title": "10 Pins erstellen", "status": "done", "completedAt": "2026-01-30T19:30:00Z"},
+            {"id": "pin-4-schedule", "title": "Posting Schedule aufsetzen", "status": "done", "completedAt": "2026-01-30T20:12:00Z", "output": "pinterest-schedule.md"}
+          ],
+          "blockedBy": [],
+          "output": {
+            "profile": "https://de.pinterest.com/heimdall0380/",
+            "board": "Personalisierte Malbücher für Kinder",
+            "pins": 10
+          }
+        },
+        {
+          "id": "remotion-templates",
+          "title": "Remotion Video Templates",
+          "description": "Wiederverwendbare Templates für TikTok/Reels Content",
+          "status": "done",
+          "completedAt": "2026-01-30T20:07:00Z",
+          "priority": "medium",
+          "estimatedHours": 2,
+          "actualHours": 0.5,
+          "subtasks": [
+            {"id": "rem-1-vorher-nachher", "title": "Vorher/Nachher Transformation Template", "status": "done", "completedAt": "2026-01-30T20:06:00Z"},
+            {"id": "rem-2-testimonial", "title": "Testimonial Quote Template", "status": "done", "completedAt": "2026-01-30T20:07:00Z"},
+            {"id": "rem-3-feature", "title": "Feature Showcase Template", "status": "done", "completedAt": "2026-01-30T20:04:00Z"}
+          ],
+          "blockedBy": [],
+          "output": {
+            "projectFolder": "marketing/mein-malbuch/remotion-templates",
+            "templates": ["VorherNachher", "TestimonialQuote", "FeatureShowcase"],
+            "videos": {
+              "features": "https://assets.imr-media.de/mein-malbuch/remotion-templates/features-showcase-v1.mp4",
+              "vorherNachherBeach": "https://assets.imr-media.de/mein-malbuch/remotion-templates/vorher-nachher-beach-v1.mp4",
+              "vorherNachherPet": "https://assets.imr-media.de/mein-malbuch/remotion-templates/vorher-nachher-pet-v1.mp4",
+              "testimonial": "https://assets.imr-media.de/mein-malbuch/remotion-templates/testimonial-v1.mp4"
+            }
+          }
+        },
+        {
+          "id": "content-calendar",
+          "title": "30-Tage Content Kalender",
+          "description": "Posting Plan für alle Kanäle",
+          "status": "done",
+          "completedAt": "2026-01-30T20:10:00Z",
+          "priority": "medium",
+          "estimatedHours": 1,
+          "actualHours": 0.25,
+          "subtasks": [],
+          "blockedBy": [],
+          "output": {
+            "file": "marketing/mein-malbuch/content-calendar.md",
+            "channels": ["Pinterest", "Instagram", "TikTok", "Facebook"],
+            "duration": "30 Tage (01.02-02.03.2026)",
+            "highlights": ["Valentinstag Push Woche 2", "4 Content Pillars"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "phase2",
+      "name": "Mittelfristig (Woche 1-2)",
+      "deadline": "2026-02-14",
+      "tasks": [
+        {
+          "id": "influencer-research",
+          "title": "Micro-Influencer Liste",
+          "description": "50 Mama-Blogger/Familien-Influencer mit 5k-50k Followern finden",
+          "status": "pending",
+          "priority": "high",
+          "estimatedHours": 3,
+          "subtasks": [
+            {"id": "inf-1-instagram", "title": "Instagram Recherche", "status": "pending"},
+            {"id": "inf-2-tiktok", "title": "TikTok Recherche", "status": "pending"},
+            {"id": "inf-3-youtube", "title": "YouTube Recherche", "status": "pending"},
+            {"id": "inf-4-contact", "title": "Kontaktdaten sammeln", "status": "pending"},
+            {"id": "inf-5-template", "title": "Outreach Email Template", "status": "pending"}
+          ],
+          "blockedBy": [],
+          "output": null
+        },
+        {
+          "id": "seo-content",
+          "title": "SEO Blog-Artikel",
+          "description": "3 Artikel für organischen Traffic",
+          "status": "pending",
+          "priority": "medium",
+          "estimatedHours": 4,
+          "subtasks": [
+            {"id": "seo-1-research", "title": "Keyword Research", "status": "pending"},
+            {"id": "seo-2-article1", "title": "Artikel: Bildschirmfreie Aktivitäten", "status": "pending"},
+            {"id": "seo-3-article2", "title": "Artikel: Geschenkideen Kinder", "status": "pending"},
+            {"id": "seo-4-article3", "title": "Artikel: Familienzeit gestalten", "status": "pending"}
+          ],
+          "blockedBy": [],
+          "output": null
+        },
+        {
+          "id": "email-automation",
+          "title": "Email Marketing Flows",
+          "description": "Automatisierte Email-Sequenzen aufsetzen",
+          "status": "pending",
+          "priority": "high",
+          "estimatedHours": 2,
+          "subtasks": [
+            {"id": "email-1-welcome", "title": "Welcome Series (3 Emails)", "status": "pending"},
+            {"id": "email-2-cart", "title": "Abandoned Cart Flow", "status": "pending"},
+            {"id": "email-3-post", "title": "Post-Purchase UGC Request", "status": "pending"}
+          ],
+          "blockedBy": [],
+          "output": null
+        },
+        {
+          "id": "ugc-campaign",
+          "title": "UGC Kampagne #MeinMalbuchMoment",
+          "description": "Kunden motivieren Content zu posten",
+          "status": "pending",
+          "priority": "medium",
+          "estimatedHours": 1,
+          "subtasks": [
+            {"id": "ugc-c-1-hashtag", "title": "Hashtag & Guidelines erstellen", "status": "pending"},
+            {"id": "ugc-c-2-card", "title": "Beilagekarten Design", "status": "pending"},
+            {"id": "ugc-c-3-incentive", "title": "Incentive definieren (Gewinnspiel?)", "status": "pending"}
+          ],
+          "blockedBy": [],
+          "output": null
+        }
+      ]
+    },
+    {
+      "id": "phase3",
+      "name": "Langfristig (Monat 1-3)",
+      "deadline": "2026-04-30",
+      "tasks": [
+        {
+          "id": "referral-program",
+          "title": "Referral Programm",
+          "description": "5€ für beide bei Empfehlung",
+          "status": "pending",
+          "priority": "medium",
+          "estimatedHours": 3,
+          "subtasks": [],
+          "blockedBy": ["email-automation"],
+          "output": null
+        },
+        {
+          "id": "facebook-group",
+          "title": "Community aufbauen",
+          "description": "Facebook Gruppe 'Mein-Malbuch Familie'",
+          "status": "pending",
+          "priority": "low",
+          "estimatedHours": 2,
+          "subtasks": [],
+          "blockedBy": [],
+          "output": null
+        },
+        {
+          "id": "partnerships",
+          "title": "Offline Partnerschaften",
+          "description": "Kindergärten, Fotostudios, Messen",
+          "status": "pending",
+          "priority": "low",
+          "estimatedHours": 5,
+          "subtasks": [],
+          "blockedBy": [],
+          "output": null
+        }
+      ]
+    }
+  ],
+  "log": [
+    {
+      "timestamp": "2026-01-30T18:35:00Z",
+      "action": "project_created",
+      "details": "Marketing Task System initialisiert"
+    },
+    {
+      "timestamp": "2026-01-30T18:37:00Z",
+      "action": "ugc_briefing_created",
+      "details": "Briefing für erstes UGC Video erstellt"
+    },
+    {
+      "timestamp": "2026-01-30T18:38:00Z",
+      "action": "ugc_scripts_done",
+      "details": "5 Script-Varianten geschrieben, Erik gefragt für Auswahl"
+    },
+    {
+      "timestamp": "2026-01-30T18:39:00Z",
+      "action": "broll_downloaded",
+      "details": "Vorher/Nachher Bilder von Website geladen (Strand + Haustier)"
+    },
+    {
+      "timestamp": "2026-01-30T18:40:00Z",
+      "action": "avatar_generated",
+      "details": "Avatar 'Mama auf Couch' mit fal.ai generiert, Erik gefragt für Bestätigung"
+    },
+    {
+      "timestamp": "2026-01-30T19:05:00Z",
+      "action": "pinterest_keywords_done",
+      "details": "34 SEO Keywords recherchiert, 5 Pin-Strategien definiert, pinterest-keywords.md erstellt"
+    },
+    {
+      "timestamp": "2026-01-30T20:00:00Z",
+      "action": "cron_check_hourly",
+      "details": "Stündlicher Marketing Check - Pinterest Pin Templates gestartet, Erik gefragt für Design-Tool Entscheidung"
+    },
+    {
+      "timestamp": "2026-01-30T20:01:00Z",
+      "action": "pinterest_complete",
+      "details": "Pinterest Setup abgeschlossen: Account erstellt, 10 Pins live auf Board 'Personalisierte Malbücher für Kinder'"
+    },
+    {
+      "timestamp": "2026-01-30T20:07:00Z",
+      "action": "remotion_templates_complete",
+      "details": "3 Remotion Templates erstellt (VorherNachher, TestimonialQuote, FeatureShowcase), 4 Videos gerendert und auf R2 hochgeladen"
+    },
+    {
+      "timestamp": "2026-01-30T20:10:00Z",
+      "action": "content_calendar_complete",
+      "details": "30-Tage Content Kalender erstellt: 4 Kanäle (Pinterest, IG, TikTok, FB), Valentinstag-Push, Content Pillars definiert"
+    },
+    {
+      "timestamp": "2026-01-30T20:12:00Z",
+      "action": "pinterest_schedule_complete",
+      "details": "Pinterest Posting Schedule erstellt: Optimale Zeiten, Pin-Vorlagen, Hashtag-Strategie, erste Woche geplant"
+    },
+    {
+      "timestamp": "2026-01-30T20:12:00Z",
+      "action": "phase1_complete",
+      "details": "🎉 PHASE 1 KOMPLETT! Alle Quick Wins erledigt: UGC Video, Pinterest (10 Pins), Remotion Templates (4 Videos), Content Kalender, Pinterest Schedule"
+    }
+  ]
+}

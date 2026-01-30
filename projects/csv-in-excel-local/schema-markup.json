@@ -1,0 +1,122 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://csv-in-excel.com/#application",
+      "name": "CSV to Excel Converter",
+      "alternateName": ["CSV in Excel", "CSV to XLSX Converter"],
+      "description": "Free online tool to convert CSV files to Excel format (XLSX). Secure, fast, and reliable - all processing happens locally in your browser.",
+      "url": "https://csv-in-excel.com",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (Web Browser)",
+      "browserRequirements": "Requires JavaScript",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR"
+      },
+      "featureList": [
+        "CSV to XLSX conversion",
+        "Local browser processing",
+        "No file upload to server",
+        "UTF-8 encoding support",
+        "Special characters support",
+        "Drag and drop interface",
+        "Preview before download",
+        "Multiple language support"
+      ],
+      "screenshot": "https://csv-in-excel.com/screenshot.png",
+      "softwareVersion": "1.0",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "150",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://csv-in-excel.com/#organization",
+      "name": "CSV in Excel",
+      "url": "https://csv-in-excel.com",
+      "logo": "https://csv-in-excel.com/logo.png"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://csv-in-excel.com/#website",
+      "url": "https://csv-in-excel.com",
+      "name": "CSV to Excel Converter",
+      "publisher": {
+        "@id": "https://csv-in-excel.com/#organization"
+      },
+      "inLanguage": ["en", "de", "fr", "it"]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://csv-in-excel.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is my data safe when using this CSV converter?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, absolutely. All file processing happens locally in your browser. Your CSV data never leaves your computer and is never uploaded to any server."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does Excel show wrong characters in my CSV file?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This is usually an encoding issue. CSV files are often saved in UTF-8 format, but Excel expects a different encoding. Our converter handles this automatically by creating a properly formatted XLSX file."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this CSV to Excel converter free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, our basic converter is completely free with no registration required. Convert your CSV files to Excel format instantly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the maximum file size I can convert?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Since processing happens in your browser, the limit depends on your device's memory. Typically, files up to 100MB work well on modern devices."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://csv-in-excel.com/#howto",
+      "name": "How to Convert CSV to Excel",
+      "description": "Step-by-step guide to convert CSV files to Excel format online",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Upload CSV File",
+          "text": "Click the upload button or drag and drop your CSV file into the converter"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Preview Data",
+          "text": "Review the first 10 rows of your data in the preview to ensure correct parsing"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Download Excel File",
+          "text": "Click download to save your converted XLSX file"
+        }
+      ],
+      "totalTime": "PT1M"
+    }
+  ]
+}

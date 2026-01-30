@@ -1,0 +1,16 @@
+{
+  "name": "ugc-2026-01-30-183758",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.978.0",
+    "@fal-ai/serverless-client": "^0.15.0"
+  }
+}

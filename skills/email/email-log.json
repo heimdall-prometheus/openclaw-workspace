@@ -9,5 +9,60 @@
     "action": "executed",
     "response": "Codewort confirmed, credentials sent",
     "timestamp": 1769797038373
+  },
+  {
+    "id": "\"Pinterest\" <confirm@account.pinterest.com>-2026-01-30T19:06:20.000Z-9",
+    "seqno": 9,
+    "from": "\"Pinterest\" <confirm@account.pinterest.com>",
+    "subject": "Please confirm your email",
+    "date": "2026-01-30T19:06:20.000Z",
+    "receivedAt": "2026-01-30T19:12:11.162Z",
+    "action": "pending_notification",
+    "response": "Needs Erik approval",
+    "timestamp": 1769800331162
+  },
+  {
+    "id": "\"Pinterest\" <pinbot@account.pinterest.com>-2026-01-30T19:13:48.000Z-10",
+    "seqno": 10,
+    "from": "\"Pinterest\" <pinbot@account.pinterest.com>",
+    "subject": "Your Pinterest verification code",
+    "date": "2026-01-30T19:13:48.000Z",
+    "receivedAt": "2026-01-30T19:18:32.053Z",
+    "action": "pending_notification",
+    "response": "Needs Erik approval",
+    "timestamp": 1769800712053
+  },
+  {
+    "id": "\"Reisig-Erik\" <noreply@github.com>-2026-01-30T19:30:01.000Z-11",
+    "seqno": 11,
+    "from": "\"Reisig-Erik\" <noreply@github.com>",
+    "subject": "Reisig-Erik invited you to Reisig-Erik/csv-in-excel",
+    "date": "2026-01-30T19:30:01.000Z",
+    "receivedAt": "2026-01-30T19:32:13.308Z",
+    "action": "pending_notification",
+    "response": "Needs Erik approval",
+    "timestamp": 1769801533308
+  },
+  {
+    "id": "\"coderabbitai[bot]\" <notifications@github.com>-2026-01-30T19:34:35.000Z-12",
+    "seqno": 12,
+    "from": "\"coderabbitai[bot]\" <notifications@github.com>",
+    "subject": "Re: [Reisig-Erik/csv-in-excel] feat(seo): add Schema.org JSON-LD markup (PR #2)",
+    "date": "2026-01-30T19:34:35.000Z",
+    "receivedAt": "2026-01-30T19:37:10.988Z",
+    "action": "pending_notification",
+    "response": "Needs Erik approval",
+    "timestamp": 1769801830989
+  },
+  {
+    "id": "\"cloudflare-workers-and-pages[bot]\" <notifications@github.com>-2026-01-30T19:34:46.000Z-13",
+    "seqno": 13,
+    "from": "\"cloudflare-workers-and-pages[bot]\" <notifications@github.com>",
+    "subject": "Re: [Reisig-Erik/csv-in-excel] feat(seo): add Schema.org JSON-LD markup (PR #2)",
+    "date": "2026-01-30T19:34:46.000Z",
+    "receivedAt": "2026-01-30T19:37:11.011Z",
+    "action": "pending_notification",
+    "response": "Needs Erik approval",
+    "timestamp": 1769801831011
   }
 ]
