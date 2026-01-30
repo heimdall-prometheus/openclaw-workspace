@@ -1,0 +1,23 @@
+# Credentials & Secrets
+credentials/
+*.env
+*.env.*
+secrets.md
+*-api-keys.md
+
+# Node modules
+node_modules/
+package-lock.json
+
+# Temporary files
+*.log
+*.tmp
+/tmp/
+
+# Editor
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

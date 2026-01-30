@@ -40,6 +40,9 @@
   - search-email.js: Search by query
   - Provider: IONOS (imap.ionos.de)
 - SSH keys for servers + GitHub
+- **Cloudflare R2** - 14 buckets accessible ✅
+- **fal.ai** - Image/Video generation (German TTS voices)
+- **IMR Skills Pack** - 5 business skills installed ✅
 
 ## 📦 Active Projects
 ### mein-malbuch
@@ -55,9 +58,9 @@
 
 ## 🔄 Pending Tasks
 - [x] GitHub Account (heimdall-prometheus) - ✅ Created 2026-01-30
-- [ ] Upload SSH key to GitHub
+- [x] Upload SSH key to GitHub - ✅ Done
+- [x] First repository push - ✅ openclaw-workspace live!
 - [ ] Configure gh CLI with new account
-- [ ] First repository push
 - [ ] Skills pack installation (imr-complete-backup)
 
 ---
