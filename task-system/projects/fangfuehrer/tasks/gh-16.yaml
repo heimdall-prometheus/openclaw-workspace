@@ -1,0 +1,43 @@
+id: gh-16
+title: "Catch Confirmation Screen"
+status: open
+github_issue: 16
+
+project: fangfuehrer
+strategy: mvp-launch
+phase: 3
+
+intention: |
+  User bestätigt/korrigiert Fish ID und ergänzt Details - Datenqualität sichern.
+
+target_audience: |
+  User nach Fish ID
+
+criteria:
+  quantitative:
+    - "Fischart korrigierbar"
+    - "Länge/Gewicht eingebbar"
+    - "Gewässer wählbar"
+    - "Save funktioniert"
+  
+  qualitative:
+    - "Schneller Flow (<30s)"
+    - "Optionale Felder klar markiert"
+
+validation:
+  loop_count: 0
+  max_loops: 10
+  min_qualitative_score: 7
+  history: []
+
+created: "2026-02-04T11:45:00Z"
+created_by: heimdall
+updated: "2026-02-04T11:45:00Z"
+completed: ""
+
+artifacts: []
+
+notes: |
+  GitHub Issue: https://github.com/heimdall-prometheus/fangfuehrer/issues/16
+  Type: feature
+  Priority: high

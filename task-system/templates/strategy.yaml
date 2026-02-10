@@ -1,0 +1,47 @@
+# Strategy Template
+
+slug: ""           # URL-freundlicher identifier
+title: ""
+project: ""        # project-slug
+
+# === ZIEL ===
+
+objective: |
+  Was wollen wir mit dieser Strategie erreichen?
+  (Konkretes, messbares Ziel)
+
+key_results:
+  - description: ""
+    target: ""      # Zielwert
+    current: ""     # Aktueller Wert
+    
+  - description: ""
+    target: ""
+    current: ""
+
+# === ZEITRAHMEN ===
+
+timeframe:
+  start: ""        # ISO date
+  end: ""          # ISO date
+  review: ""       # Wann Review? (weekly, monthly, quarterly)
+
+# === TAKTIKEN ===
+
+tactics:
+  - name: ""
+    goal: ""
+    tasks: []      # Liste von task-ids
+    
+  - name: ""
+    goal: ""
+    tasks: []
+
+# === STATUS ===
+
+status: active     # draft|active|paused|completed|abandoned
+
+# === NOTIZEN ===
+
+notes: |
+  Kontext, Annahmen, Risiken

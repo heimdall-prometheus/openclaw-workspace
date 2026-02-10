@@ -1,0 +1,52 @@
+id: reddit-001
+title: "Reddit Account Setup & erste Karma-Aktivität"
+project: imr-media
+strategy: reddit-organic
+phase: 1
+created: 2026-02-02
+status: working
+
+intention: |
+  Reddit Account erstellen und erste Karma-Basis aufbauen,
+  damit wir in Phase 1 glaubwürdig agieren können.
+  NICHT: Account erstellen. SONDERN: Fundament für Authority legen.
+
+zielgruppe: 
+  primary: "E-Commerce Shop-Betreiber (Shopify, WooCommerce, Shopware)"
+  secondary: "Startup-Gründer mit Custom Software Bedarf"
+
+qualitaetskriterien:
+  quantitativ:
+    - "Account erfolgreich erstellt"
+    - "Profil vollständig ausgefüllt (Bio, Avatar)"
+    - "Mind. 5 Subreddits gejoined"
+    - "Mind. 3 hilfreiche Kommentare in Woche 1"
+  qualitativ:
+    - "Bio klingt authentisch, nicht werblich (min 7/10)"
+    - "Kommentare liefern echten Mehrwert (min 7/10)"
+
+account_details:
+  username: erik_builds
+  email: heim.dall@prometheus-labs.io
+  persona: |
+    Web Developer aus Deutschland mit Fokus auf E-Commerce.
+    Hilft gerne, teilt Erfahrungen aus echten Projekten.
+    Authentisch, nicht salesy.
+
+subtasks:
+  - id: reddit-001a
+    title: "Account erstellen"
+    status: open
+  - id: reddit-001b
+    title: "Profil einrichten"
+    status: open
+  - id: reddit-001c
+    title: "5+ Subreddits joinen"
+    status: open
+  - id: reddit-001d
+    title: "3 hilfreiche Kommentare"
+    status: open
+
+validation:
+  type: manual_and_automated
+  max_loops: 5

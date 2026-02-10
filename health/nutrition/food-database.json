@@ -1,0 +1,86 @@
+{
+  "foods": {
+    "hähnchenbrust_roh": {
+      "name": "Hähnchenbrust roh",
+      "per100g": {
+        "calories": 110,
+        "protein": 23.1,
+        "fat": 1.2,
+        "carbs": 0
+      },
+      "source": "USDA",
+      "aliases": ["chicken breast", "hühnerbrust", "hähnchen", "huhn"]
+    },
+    "hähnchen_tk": {
+      "name": "Hähnchenfleisch TK",
+      "per100g": {
+        "calories": 165,
+        "protein": 31,
+        "fat": 3.6,
+        "carbs": 0
+      },
+      "source": "Average TK product",
+      "aliases": ["tk hähnchen", "gefrorenes hähnchen"]
+    },
+    "ei_m": {
+      "name": "Ei Größe M",
+      "perUnit": {
+        "calories": 78,
+        "protein": 6.3,
+        "fat": 5.3,
+        "carbs": 0.6
+      },
+      "weight": 53,
+      "source": "USDA",
+      "aliases": ["egg", "eier"]
+    },
+    "champignon": {
+      "name": "Champignons frisch",
+      "per100g": {
+        "calories": 22,
+        "protein": 3.1,
+        "fat": 0.3,
+        "carbs": 3.3
+      },
+      "source": "USDA",
+      "aliases": ["mushrooms", "pilze", "champignons"]
+    },
+    "olivenöl": {
+      "name": "Olivenöl",
+      "per100g": {
+        "calories": 884,
+        "protein": 0,
+        "fat": 100,
+        "carbs": 0
+      },
+      "perTbsp": {
+        "calories": 119,
+        "protein": 0,
+        "fat": 13.5,
+        "carbs": 0,
+        "amount": "15ml"
+      },
+      "source": "USDA",
+      "aliases": ["olive oil", "öl"]
+    },
+    "butter": {
+      "name": "Butter",
+      "per100g": {
+        "calories": 717,
+        "protein": 0.9,
+        "fat": 81.1,
+        "carbs": 0.1
+      },
+      "perTbsp": {
+        "calories": 102,
+        "protein": 0.1,
+        "fat": 11.5,
+        "carbs": 0,
+        "amount": "14g"
+      },
+      "source": "USDA",
+      "aliases": []
+    }
+  },
+  "lastUpdated": "2026-02-01T10:14:00Z"
+}

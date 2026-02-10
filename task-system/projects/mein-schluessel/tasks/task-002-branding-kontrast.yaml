@@ -1,0 +1,36 @@
+slug: task-002-branding-kontrast
+name: "Primärfarbe WCAG-konform abdunkeln"
+project: mein-schluessel
+status: blocked
+blocked_by: "Abstimmung mit Uwe Becker (Branding-Entscheidung)"
+created: 2026-02-07
+priority: critical
+
+intention: |
+  Die Primärfarbe #11aba8 (Türkis) hat nur 2.83:1 Kontrast mit Weiß.
+  WCAG 2.2 AA verlangt mindestens 4.5:1. Diese eine Änderung behebt
+  ~80% aller Kontrast-Errors (115 von 144 betroffenen Elementen).
+  Größter Quick Win für BFSG-Compliance.
+
+finding: |
+  - Aktuelle Farbe: #11aba8 (Kontrast 2.83:1 mit Weiß)
+  - Minimum WCAG AA: 4.5:1
+  - Vorschlag: #097472 oder ähnlich dunkles Türkis
+  - Betroffene Elemente: Buttons ("In den Warenkorb"), Footer-Links,
+    Cookie-Banner, Newsletter-Bereich, Designer-Labels, Topseller-Badge
+  - Impact: Behebt ~115/144 Kontrast-Errors auf ALLEN Seiten
+
+next_step: "Erik bespricht Farbänderung mit Uwe Becker"
+
+quantitative_criteria:
+  - id: q1
+    criterion: "Primärfarbe hat mindestens 4.5:1 Kontrast mit Weiß"
+    test: "WebAIM Contrast Checker"
+  - id: q2
+    criterion: "Kontrast-Errors auf Startseite sinken um mindestens 70%"
+    test: "pa11y vorher/nachher Vergleich"
+
+qualitative_criteria:
+  - id: ql1
+    criterion: "Neue Farbe passt visuell zum bestehenden Branding"
+    min_score: 7

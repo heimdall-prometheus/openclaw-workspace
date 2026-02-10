@@ -1,0 +1,42 @@
+id: gh-24
+title: "Trophäen-System"
+status: open
+github_issue: 24
+
+project: fangfuehrer
+strategy: mvp-launch
+phase: 5
+
+intention: |
+  Besondere Leistungen belohnen und zur Schau stellen - Social Proof.
+
+target_audience: |
+  Ambitionierte Angler
+
+criteria:
+  quantitative:
+    - "Trophy-Model in DB"
+    - "10+ Trophäen-Typen"
+    - "Unlock-Logik funktioniert"
+  
+  qualitative:
+    - "Trophäen sind erstrebenswert"
+    - "Rarity-Levels sinnvoll"
+
+validation:
+  loop_count: 0
+  max_loops: 10
+  min_qualitative_score: 7
+  history: []
+
+created: "2026-02-04T11:45:00Z"
+created_by: heimdall
+updated: "2026-02-04T11:45:00Z"
+completed: ""
+
+artifacts: []
+
+notes: |
+  GitHub Issue: https://github.com/heimdall-prometheus/fangfuehrer/issues/24
+  Type: feature
+  Priority: critical

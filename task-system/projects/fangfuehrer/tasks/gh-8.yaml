@@ -1,0 +1,42 @@
+id: gh-8
+title: "Fish Upload Endpoint"
+status: open
+github_issue: 8
+
+project: fangfuehrer
+strategy: mvp-launch
+phase: 2
+
+intention: |
+  Bilder von gefangenen Fischen sicher empfangen und für Fish ID vorbereiten.
+
+target_audience: |
+  Angler die Fische identifizieren wollen
+
+criteria:
+  quantitative:
+    - "POST /upload akzeptiert Bilder"
+    - "Bildvalidierung (Format, Größe)"
+    - "Speicherung in R2/S3"
+  
+  qualitative:
+    - "Schnelle Response (<2s)"
+    - "Fehlerhandling bei ungültigen Bildern"
+
+validation:
+  loop_count: 0
+  max_loops: 10
+  min_qualitative_score: 7
+  history: []
+
+created: "2026-02-04T11:45:00Z"
+created_by: heimdall
+updated: "2026-02-04T11:45:00Z"
+completed: ""
+
+artifacts: []
+
+notes: |
+  GitHub Issue: https://github.com/heimdall-prometheus/fangfuehrer/issues/8
+  Type: feature
+  Priority: critical

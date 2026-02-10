@@ -1,0 +1,38 @@
+id: fb-strategy-001
+title: "Facebook Post Strategie IMR Media"
+status: passed
+created: 2026-02-01T14:08:00Z
+
+intention: |
+  Eine Facebook-Posting-Strategie erstellen, die Boomer Small Business Owners (50-70 Jahre)
+  anspricht und sie zu Leads/Kunden für E-Commerce und Webdesign-Dienstleistungen konvertiert.
+
+zielgruppe:
+  primaer: "Selbstständige & KMU-Inhaber, 50-70 Jahre, wenig digital-affin"
+  sekundaer: "Lokale Unternehmer in der Region Augsburg"
+  pain_points:
+    - "Wollen online verkaufen, wissen nicht wie"
+    - "Misstrauen gegenüber Agenturen"
+    - "Lange Entscheidungszyklen"
+
+qualitaetskriterien:
+  quantitativ:
+    - "Mindestens 20 Posts vorbereitet"
+    - "Alle 4 Content Pillars abgedeckt"
+    - "Mindestens 3 Video-Konzepte"
+    - "Jeder Post hat CTA oder Engagement-Element"
+  qualitativ:
+    - "Sprache ist Boomer-gerecht (nicht zu hip, nicht zu technisch)"
+    - "Vertrauensaufbau steht im Vordergrund (nicht hard-sell)"
+    - "Posts passen zur Marke IMR Media (professionell, ehrlich, lokal)"
+    - "Mix aus Educational, Social Proof, Behind-the-Scenes, Engagement"
+
+artefakt: "/home/reisig/.openclaw/workspace/marketing/imr-media/facebook-strategy.md"
+
+strategie_kontext: |
+  Organische Marketing-Strategie für IMR Media.
+  Ziel: Kundengewinnung ohne Paid Ads durch Content und Community.
+  Facebook ist Priorität 2 (nach SEO) weil Zielgruppe dort aktiv ist.
+
+max_loops: 3
+current_loop: 1

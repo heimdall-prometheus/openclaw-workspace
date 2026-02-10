@@ -1,0 +1,42 @@
+id: gh-36
+title: "Play Store Submission (Android)"
+status: open
+github_issue: 36
+
+project: fangfuehrer
+strategy: mvp-launch
+phase: 7
+
+intention: |
+  App für Android-User zugänglich machen.
+
+target_audience: |
+  Android-User
+
+criteria:
+  quantitative:
+    - "Policy compliant"
+    - "Kein Rejection"
+    - "Live im Store"
+  
+  qualitative:
+    - "Gute Store-Präsenz"
+    - "Keywords optimiert"
+
+validation:
+  loop_count: 0
+  max_loops: 10
+  min_qualitative_score: 7
+  history: []
+
+created: "2026-02-04T11:45:00Z"
+created_by: heimdall
+updated: "2026-02-04T11:45:00Z"
+completed: ""
+
+artifacts: []
+
+notes: |
+  GitHub Issue: https://github.com/heimdall-prometheus/fangfuehrer/issues/36
+  Type: infra
+  Priority: critical

@@ -1,0 +1,438 @@
+{
+  "project": "holzwerk10.de - SEO & Performance",
+  "created": "2026-02-05T10:51:00Z",
+  "client": {
+    "name": "Holzwerk 10",
+    "owner": "Joe Ott",
+    "website": "https://holzwerk10.de",
+    "industry": "Schreinerei, Innenausbau, Möbelbau",
+    "location": "Penzing, Landsberg am Lech"
+  },
+  "status": "analysis_complete",
+  "timeline": {
+    "start": "2026-02-05",
+    "phase1_deadline": "2026-02-19",
+    "phase2_deadline": "2026-02-26",
+    "phase3_deadline": "2026-03-26",
+    "phase4_deadline": "2026-04-30",
+    "total_duration": "90 days"
+  },
+  "budget": {
+    "total_year1": 356,
+    "breakdown": {
+      "wp_updates": 50,
+      "wp_rocket": 49,
+      "shortpixel": 99,
+      "generatepress_pro": 60,
+      "wordfence_premium": 99
+    },
+    "optional": {
+      "managed_hosting": 240,
+      "professional_photos": 500
+    }
+  },
+  "phases": [
+    {
+      "id": "phase0",
+      "name": "Analyse & Planung",
+      "status": "complete",
+      "completedAt": "2026-02-05T10:51:00Z",
+      "deliverables": [
+        {
+          "name": "SEO-Analyse",
+          "file": "seo-analyse.md",
+          "size": "19 KB",
+          "status": "complete"
+        },
+        {
+          "name": "Tech Stack Analyse",
+          "file": "tech-stack-analyse.md",
+          "size": "16 KB",
+          "status": "complete"
+        },
+        {
+          "name": "Projekt-Setup",
+          "file": "README.md",
+          "status": "complete"
+        }
+      ]
+    },
+    {
+      "id": "phase1",
+      "name": "Technical Quick Fixes (Woche 1-2)",
+      "deadline": "2026-02-19",
+      "status": "pending",
+      "estimatedHours": 6,
+      "budget": 50,
+      "expectedImpact": "+20-30% organischer Traffic",
+      "tasks": [
+        {
+          "id": "wp-update",
+          "title": "WordPress Update auf 6.7.x",
+          "priority": "critical",
+          "estimatedTime": "30 min",
+          "status": "pending",
+          "dependencies": [],
+          "notes": "SICHERHEITSRISIKO! 6.2.8 ist 9 Monate alt"
+        },
+        {
+          "id": "xml-rpc-disable",
+          "title": "XML-RPC deaktivieren",
+          "priority": "high",
+          "estimatedTime": "5 min",
+          "status": "pending",
+          "dependencies": [],
+          "notes": "DDoS-Risiko, x-pingback Header sichtbar"
+        },
+        {
+          "id": "meta-descriptions",
+          "title": "Meta Descriptions für alle Seiten",
+          "priority": "critical",
+          "estimatedTime": "60 min",
+          "status": "pending",
+          "dependencies": [],
+          "pages": ["Home", "Über uns", "Leistungen", "Showroom", "Kontakt", "Küchen", "Möbel & Wohnen", "Fenster & Türen"],
+          "notes": "Aktuell: 0 Meta Descriptions!"
+        },
+        {
+          "id": "schema-markup",
+          "title": "Schema Markup einbauen (LocalBusiness)",
+          "priority": "high",
+          "estimatedTime": "15 min",
+          "status": "pending",
+          "dependencies": [],
+          "notes": "Für Google Rich Snippets"
+        },
+        {
+          "id": "opengraph-tags",
+          "title": "Open Graph Tags optimieren",
+          "priority": "medium",
+          "estimatedTime": "10 min",
+          "status": "pending",
+          "dependencies": [],
+          "notes": "Aktuell: og:title='Home' (sehr schlecht!)"
+        },
+        {
+          "id": "duplicate-content",
+          "title": "holzwerk10.com Redirect einrichten",
+          "priority": "high",
+          "estimatedTime": "10 min",
+          "status": "pending",
+          "dependencies": [],
+          "notes": "301 Redirect zu holzwerk10.de oder Domain stilllegen"
+        },
+        {
+          "id": "xml-sitemap",
+          "title": "XML-Sitemap erstellen",
+          "priority": "medium",
+          "estimatedTime": "10 min",
+          "status": "pending",
+          "dependencies": [],
+          "notes": "WordPress Plugin: Rank Math oder Yoast"
+        },
+        {
+          "id": "search-console",
+          "title": "Google Search Console einrichten",
+          "priority": "high",
+          "estimatedTime": "15 min",
+          "status": "pending",
+          "dependencies": ["xml-sitemap"],
+          "notes": "Falls nicht bereits aktiv"
+        },
+        {
+          "id": "h1-optimization",
+          "title": "H1-Tags auf allen Seiten optimieren",
+          "priority": "medium",
+          "estimatedTime": "30 min",
+          "status": "pending",
+          "dependencies": [],
+          "notes": "Homepage H1 aktuell: '...Ihr Schreinermeister!' (kein Keyword, kein Ort)"
+        }
+      ]
+    },
+    {
+      "id": "phase2",
+      "name": "Performance & Local SEO (Woche 3-4)",
+      "deadline": "2026-02-26",
+      "status": "pending",
+      "estimatedHours": 4,
+      "budget": 150,
+      "expectedImpact": "+40% lokale Sichtbarkeit, PageSpeed 70-80/100",
+      "tasks": [
+        {
+          "id": "php-update",
+          "title": "PHP Update auf 8.2 anfragen",
+          "priority": "high",
+          "estimatedTime": "15 min",
+          "status": "pending",
+          "dependencies": [],
+          "notes": "Beim Hoster anfragen, Avada-Kompatibilität prüfen"
+        },
+        {
+          "id": "wp-rocket",
+          "title": "WP Rocket installieren & konfigurieren",
+          "priority": "high",
+          "estimatedTime": "60 min",
+          "cost": 49,
+          "status": "pending",
+          "dependencies": [],
+          "notes": "Ersetzt W3 Total Cache + Autoptimize"
+        },
+        {
+          "id": "cloudflare-cdn",
+          "title": "Cloudflare CDN einrichten",
+          "priority": "high",
+          "estimatedTime": "30 min",
+          "cost": 0,
+          "status": "pending",
+          "dependencies": [],
+          "notes": "DNS umstellen, kostenlos"
+        },
+        {
+          "id": "images-webp",
+          "title": "Bilder zu WebP konvertieren",
+          "priority": "high",
+          "estimatedTime": "60 min",
+          "cost": 99,
+          "status": "pending",
+          "dependencies": [],
+          "notes": "ShortPixel Plugin, Bulk-Konvertierung"
+        },
+        {
+          "id": "google-business-optimize",
+          "title": "Google Business Profile optimieren",
+          "priority": "high",
+          "estimatedTime": "30 min",
+          "status": "pending",
+          "dependencies": [],
+          "notes": "Kategorien, Attribute, Services, Öffnungszeiten"
+        },
+        {
+          "id": "google-business-photos",
+          "title": "20 hochwertige Fotos hochladen",
+          "priority": "medium",
+          "estimatedTime": "30 min",
+          "status": "pending",
+          "dependencies": [],
+          "notes": "Showroom, Werkstatt, Team, Projekte"
+        },
+        {
+          "id": "review-campaign",
+          "title": "Bewertungs-Kampagne starten",
+          "priority": "high",
+          "estimatedTime": "15 min",
+          "status": "pending",
+          "dependencies": [],
+          "target": "5-10 Google Reviews in 4 Wochen",
+          "notes": "Review-Link erstellen, nach Projekten nachfragen"
+        },
+        {
+          "id": "local-backlinks",
+          "title": "Lokale Backlinks aufbauen",
+          "priority": "medium",
+          "estimatedTime": "30 min",
+          "status": "pending",
+          "dependencies": [],
+          "targets": ["Schreinerinnung Landsberg", "IHK München", "Ammersee-Region.de"]
+        }
+      ]
+    },
+    {
+      "id": "phase3",
+      "name": "Content-Offensive (Woche 5-8)",
+      "deadline": "2026-03-26",
+      "status": "pending",
+      "estimatedHours": 12,
+      "budget": 0,
+      "expectedImpact": "+200-300% organischer Traffic",
+      "tasks": [
+        {
+          "id": "blog-article-1",
+          "title": "Blog-Artikel: Schreiner in Landsberg finden",
+          "priority": "high",
+          "estimatedTime": "150 min",
+          "wordCount": 1500,
+          "keyword": "schreiner landsberg",
+          "status": "pending",
+          "dependencies": []
+        },
+        {
+          "id": "blog-article-2",
+          "title": "Blog-Artikel: Küchen nach Maß Kosten",
+          "priority": "high",
+          "estimatedTime": "120 min",
+          "wordCount": 1200,
+          "keyword": "küche nach maß münchen",
+          "status": "pending",
+          "dependencies": []
+        },
+        {
+          "id": "blog-article-3",
+          "title": "Blog-Artikel: Innenausbau Altbau",
+          "priority": "medium",
+          "estimatedTime": "150 min",
+          "wordCount": 1500,
+          "keyword": "innenausbau münchen",
+          "status": "pending",
+          "dependencies": []
+        },
+        {
+          "id": "blog-article-4",
+          "title": "Blog-Artikel: Massivholzmöbel vs. Furnier",
+          "priority": "medium",
+          "estimatedTime": "120 min",
+          "wordCount": 1200,
+          "keyword": "massivholzmöbel landsberg",
+          "status": "pending",
+          "dependencies": []
+        },
+        {
+          "id": "service-page-kuechen",
+          "title": "Service-Seite: /kuechen-landsberg",
+          "priority": "high",
+          "estimatedTime": "100 min",
+          "wordCount": 1000,
+          "keyword": "küchen landsberg",
+          "status": "pending",
+          "dependencies": []
+        },
+        {
+          "id": "service-page-einbauschraenke",
+          "title": "Service-Seite: /einbauschraenke-muenchen",
+          "priority": "medium",
+          "estimatedTime": "100 min",
+          "wordCount": 1000,
+          "keyword": "einbauschränke münchen",
+          "status": "pending",
+          "dependencies": []
+        }
+      ]
+    },
+    {
+      "id": "phase4",
+      "name": "Conversion & Referenzen (Woche 9-12)",
+      "deadline": "2026-04-30",
+      "status": "pending",
+      "estimatedHours": 6,
+      "budget": 0,
+      "expectedImpact": "Conversion-Rate +15-20%",
+      "tasks": [
+        {
+          "id": "case-study-1",
+          "title": "Projekt-Case-Study: Küche Einfamilienhaus",
+          "priority": "high",
+          "estimatedTime": "90 min",
+          "status": "pending",
+          "dependencies": [],
+          "notes": "Vorher/Nachher, Herausforderung, Lösung, Testimonial"
+        },
+        {
+          "id": "case-study-2",
+          "title": "Projekt-Case-Study: Wohnzimmer Umbau",
+          "priority": "medium",
+          "estimatedTime": "90 min",
+          "status": "pending",
+          "dependencies": []
+        },
+        {
+          "id": "case-study-3",
+          "title": "Projekt-Case-Study: Treppe & Galerie",
+          "priority": "medium",
+          "estimatedTime": "90 min",
+          "status": "pending",
+          "dependencies": []
+        },
+        {
+          "id": "testimonials-homepage",
+          "title": "Testimonials auf Homepage einbinden",
+          "priority": "high",
+          "estimatedTime": "30 min",
+          "status": "pending",
+          "dependencies": ["case-study-1", "case-study-2"]
+        },
+        {
+          "id": "cta-optimization",
+          "title": "CTA-Buttons optimieren",
+          "priority": "medium",
+          "estimatedTime": "30 min",
+          "status": "pending",
+          "dependencies": [],
+          "notes": "Button 'Beratung vereinbaren' statt nur Telefonnummer"
+        },
+        {
+          "id": "contact-form-test",
+          "title": "Kontaktformular testen",
+          "priority": "high",
+          "estimatedTime": "15 min",
+          "status": "pending",
+          "dependencies": []
+        },
+        {
+          "id": "social-media-integration",
+          "title": "Social Media verknüpfen",
+          "priority": "low",
+          "estimatedTime": "30 min",
+          "status": "pending",
+          "dependencies": [],
+          "notes": "Instagram/Facebook Feed auf Website?"
+        }
+      ]
+    }
+  ],
+  "kpis": {
+    "baseline": {
+      "date": "2026-02-05",
+      "organic_visitors_month": 125,
+      "keyword_rankings_top10": 3,
+      "google_business_impressions": 1250,
+      "google_reviews": 4,
+      "inquiries_month": 7,
+      "pagespeed_score_desktop": 58,
+      "pagespeed_score_mobile": 42,
+      "loadtime_desktop_seconds": 2.8,
+      "loadtime_mobile_seconds": 4.5
+    },
+    "targets_90days": {
+      "organic_visitors_month": 450,
+      "keyword_rankings_top10": 18,
+      "google_business_impressions": 6000,
+      "google_reviews": 22,
+      "inquiries_month": 18,
+      "pagespeed_score_desktop": 92,
+      "pagespeed_score_mobile": 87,
+      "loadtime_desktop_seconds": 1.2,
+      "loadtime_mobile_seconds": 2.3
+    },
+    "tracking": []
+  },
+  "access": {
+    "wordpress_admin": "pending",
+    "google_analytics": "pending",
+    "google_search_console": "pending",
+    "google_business_profile": "pending",
+    "hosting_account": "pending",
+    "hosting_provider": "United-Domains (confirmed 2026-02-05)"
+  },
+  "log": [
+    {
+      "timestamp": "2026-02-05T10:03:00Z",
+      "action": "seo_analysis_complete",
+      "details": "SEO-Analyse erstellt (19 KB, 16 Kapitel) - Hauptfindingsreporte: Meta Descriptions fehlen, kein Schema Markup, Duplicate Content Risk"
+    },
+    {
+      "timestamp": "2026-02-05T10:08:00Z",
+      "action": "tech_stack_analysis_complete",
+      "details": "Tech Stack Analyse erstellt (16 KB) - WordPress 6.2.8 veraltet, Avada Performance-Killer, XML-RPC offen"
+    },
+    {
+      "timestamp": "2026-02-05T10:51:00Z",
+      "action": "project_setup_complete",
+      "details": "Projekt-Struktur angelegt: README.md, tasks.json, Roadmap definiert"
+    },
+    {
+      "timestamp": "2026-02-05T10:56:00Z",
+      "action": "hosting_info_confirmed",
+      "details": "Hoster bestätigt: United-Domains (von Erik)"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+id: bo-001
+title: "Legacy-DB Komplett-Dokumentation: Struktur, Relationen & Datenqualität"
+status: working
+
+project: becker-odoo
+strategy: data-migration
+tactic: "Quelldatenbank vollständig kartografieren"
+
+intention: |
+  Bevor wir migrieren, brauchen wir eine lückenlose Dokumentation der Legacy-DB.
+  Diese Doku dient als:
+  1. Mapping-Grundlage für die Odoo-Migration (welche Tabelle → welches Odoo-Modul)
+  2. Entscheidungsgrundlage für Datenbereinigung (was mitnehmen, was wegwerfen)
+  3. Referenzdokument für den gesamten Projektverlauf
+  Ohne dieses Verständnis fliegen wir blind.
+
+target_audience: |
+  - Erik + Heimdall (Migration durchführen)
+  - Uwe Becker / Becker-Team (Validierung der Daten-Interpretation)
+  - Zukünftige Odoo-Entwickler (Referenz)
+
+criteria:
+  quantitative:
+    - "Alle 151 SQL-Tabellen dokumentiert (Name, Spalten, Datentypen, Row-Count)"
+    - "Fremdschlüssel-Beziehungen zwischen Tabellen identifiziert und gemappt"
+    - "Datenqualitäts-Report: NULL-Raten, Duplikate, verwaiste Referenzen pro Tabelle"
+    - "ER-Diagramm oder Relationsmatrix erstellt"
+  qualitative:
+    - "Tabellen sinnvoll kategorisiert und auf Deutsch beschrieben"
+    - "Business-Logik hinter den Tabellenbeziehungen erklärt (nicht nur technisch)"
+    - "Empfehlungen für Bereinigung und Odoo-Mapping pro Kategorie"
+
+validation:
+  loop_count: 0
+  max_loops: 10
+  min_qualitative_score: 7
+  history: []
+
+created: "2026-02-10T15:23:00Z"
+created_by: erik
+updated: "2026-02-10T15:23:00Z"
+
+artifacts:
+  - type: file
+    path: "projects/becker-odoo/LEGACY-DB-ANALYSE.md"
+    description: "Erste Übersichtsanalyse (bereits erstellt)"
+  - type: file
+    path: "projects/becker-odoo/LEGACY-DB-SCHEMA.md"
+    description: "Vollständige Schema-Dokumentation (wird erstellt)"
+  - type: file
+    path: "projects/becker-odoo/LEGACY-DB-RELATIONEN.md"
+    description: "Beziehungs-Map und ER-Diagramm (wird erstellt)"
+
+notes: |
+  - DB restored via Firebird 4.0 Docker (fb-becker Container)
+  - Zugriff: isql via docker exec
+  - Encoding: Windows-1252 (Umlaute!)
+  - ERP-System: uswBS auf Embarcadero InterBase

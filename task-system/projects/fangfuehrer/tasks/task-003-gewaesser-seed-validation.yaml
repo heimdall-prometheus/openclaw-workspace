@@ -1,0 +1,170 @@
+validation_result:
+  task_id: "task-003-gewaesser-seed"
+  timestamp: "2026-02-07T10:07:00Z"
+  validator: "subagent (neutral)"
+  attempt: 1
+
+  quantitative:
+    - id: q1
+      criterion: "Mindestens 500 Gewässer in der DB"
+      result: pass
+      measured: "10.118 total (479 curated + 9.639 OSM-Import)"
+      note: "Quantitativ erfüllt, aber schwere Qualitätsprobleme bei OSM-Daten"
+
+    - id: q2
+      criterion: "Alle 16 Bundesländer mit mindestens 5 Gewässern"
+      result: pass
+      measured: |
+        Bayern: 2888 | Brandenburg: 1545 | Niedersachsen: 1277 | Baden-Württemberg: 1221
+        NRW: 1081 | Thüringen: 614 | Rheinland-Pfalz: 496 | Berlin: 346
+        Hamburg: 133 | Sachsen: 129 | Saarland: 90 | Sachsen-Anhalt: 89
+        Mecklenburg-Vorpommern: 77 | Schleswig-Holstein: 66 | Hessen: 38 | Bremen: 28
+      note: "Alle 16 Bundesländer vertreten, min = Bremen mit 28. Massive Schieflage: Bayern 2888 vs Hessen 38."
+
+    - id: q3
+      criterion: "Nearby-Suche in 50km um 5 Großstädte je mind. 3 Gewässer"
+      result: pass
+      measured: |
+        Berlin: 5 ✅ (Spree Berlin-Mitte, Spreekanal, Schinkel-Fontäne, ...)
+        München: 5 ✅ (Hofbrunnwerkkanal 2x, Westlicher Stadtgrabenbach, ...)
+        Hamburg: 5 ✅ (Nikolaifleet, Kleine Alster, Binnenalster, ...)
+        Köln: 5 ✅ (Theodor-Heuss-Weiher, Kleines Wasserbecken, Flamingoweiher, ...)
+        Leipzig: 5 ✅ (Pleißemühlgraben 4x, Elstermühlgraben)
+      note: |
+        QUANTITATIV bestanden, aber QUALITATIV katastrophal:
+        - München: Top 5 sind Kanäle/Bäche, keine echten Angelgewässer
+        - Köln: Nur Zoo-Teiche und Zierweiher — kein einziger See oder Fluss
+        - Leipzig: 4x der gleiche Mühlgraben — Duplikat-Problem live sichtbar
+        - Berlin: "Schinkel-Fontäne" ist kein Angelgewässer
+        - Hamburg: Fleets sind OK (besser), aber Nikolaifleet erscheint 2x
+
+    - id: q4
+      criterion: "Keine Duplikate (Name + State)"
+      result: fail
+      measured: |
+        746 Name+State-Kombinationen haben Duplikate → 3.229 betroffene Zeilen
+        Top-Duplikate:
+          Ludwig-Donau-Main-Kanal (Bayern): 454x
+          Dorfteich (Brandenburg): 38x
+          Erlesbachteiche (Bayern): 37x
+          Mühlenteich (Niedersachsen): 36x
+          Reisichbachteiche (Bayern): 30x
+          Fischteich (Niedersachsen): 28x
+          Stockweiher (Bayern): 24x
+          Fischteich (Brandenburg): 23x
+          Löschweiher (Bayern): 21x
+      note: |
+        KRITISCHER FAIL. 454x der gleiche Kanal, hunderte generische Teiche.
+        ~32% aller Einträge sind Duplikat-Zeilen.
+
+    - id: q5
+      criterion: "Seed-Script im Repo mit PR"
+      result: pass
+      measured: "PR #41 — OPEN — 'Seed waterbodies: 10k+ Gewässer in DB (v1 OSM + v2 curated)'"
+      note: "PR existiert, ist offen. URL: https://github.com/heimdall-prometheus/fangfuehrer/pull/41"
+
+  qualitative:
+    - id: ql1
+      criterion: "Datenqualität — echte, bekannte Angelgewässer"
+      score: 3
+      reasoning: |
+        ZWEITEILIGE Bewertung nötig:
+        
+        **Curated (479 Einträge): 8/10** — Exzellent!
+        - Bekannte Angelgewässer: Bodensee, Müritz, Chiemsee, Edersee, Rappbodetalsperre
+        - Saubere Daten mit size_ha (346 Einträge haben Größe)
+        - Korrekte Typ-Zuordnung, echte Angelgewässer
+        
+        **OSM-Import (9.639 Einträge): 2/10** — Katastrophal!
+        - 389+ Einträge sind generische Namen ("Teich", "Dorfteich", "Fischteich", "Löschweiher")
+        - "Paßgägngerpfuhl" — offensichtlich kein Angelgewässer
+        - "Schinkel-Fontäne" — ein Brunnen, kein Gewässer
+        - "Kleines Wasserbecken" — in den Top 5 für Köln!
+        - "Flamingoweiher" — Zoo-Gewässer in Köln-Nearby
+        - OSM-Junk dominiert Nearby-Ergebnisse, weil es 20x so viele Einträge sind
+        
+        **Gesamt: 3/10** — Die OSM-Daten machen die guten curated Daten kaputt.
+        Nearby-Suche ist für Angler aktuell UNBRAUCHBAR.
+
+    - id: ql2
+      criterion: "Typ-Zuordnung korrekt (See/Fluss/Kanal/Teich)"
+      score: 5
+      reasoning: |
+        Typ-Verteilung: 4.761 Teich, 4.194 See, 970 Kanal, 193 Fluss.
+        
+        **Probleme:**
+        - "Spree" (Berlin) als "Kanal" klassifiziert (ID 9326, 9330) — ist ein Fluss
+        - Viele OSM-Einträge als "Teich" die wahrscheinlich Seen sind
+        - "Taube Elbe" als "See" — fragwürdig (ist ein Altarm)
+        
+        **Curated Einträge:** Typ-Zuordnung fast durchgehend korrekt.
+        **OSM-Einträge:** Unzuverlässig, systematische Fehlklassifizierung.
+        Teich:See Ratio (47%:41%) ist verdächtig — Deutschland hat nicht so viele Teiche.
+
+    - id: ql3
+      criterion: "Gleichmäßige regionale Verteilung"
+      score: 4
+      reasoning: |
+        **Extreme Schieflage:**
+        - Bayern: 2.888 (28.5%) — massiv überrepräsentiert
+        - Hessen: 38 (0.4%) — stark unterrepräsentiert
+        - Bremen: 28 (0.3%) — verständlich klein, aber nur curated
+        
+        **Ost/Mitteldeutschland-Focus:**
+        - Sachsen-Anhalt: 89 (davon 16 curated — curated sind sehr gut: Saale, Unstrut, Rappbodetalsperre)
+        - Sachsen: 129 (23 curated)
+        - Thüringen: 614 (19 curated, Rest OSM — aber viel Junk)
+        - Brandenburg: 1.545 (43 curated) — viele OSM-Duplikate
+        
+        **Curated-only ist ausgewogen** (82 BaWü bis 8 Bremen).
+        **OSM verzerrt alles** — Bayern hat 454x Ludwig-Donau-Main-Kanal allein.
+
+  summary:
+    quantitative_pass: false  # q4 (Duplikate) FAIL
+    qualitative_avg: 4.0      # (3 + 5 + 4) / 3 — weit unter Minimum 7.0
+    overall: fail
+
+  feedback:
+    - title: "KRITISCH: Duplikat-Bereinigung"
+      detail: |
+        3.229 Zeilen sind Duplikate (Name+State). Allen voran 454x Ludwig-Donau-Main-Kanal.
+        → Deduplizierung nach Name+State, geographisch nächsten Eintrag behalten
+        
+    - title: "KRITISCH: OSM-Junk entfernen"
+      detail: |
+        Mindestens ~800-1000 Einträge sind klar nicht beangelbarer Junk:
+        - Generische Namen ohne Identität: "Teich", "Dorfteich", "Fischteich" (389+)
+        - Löschteiche: "Löschweiher", "Feuerlöschteich"  
+        - Absurde Namen: "Paßgägngerpfuhl", "Schinkel-Fontäne", "Kleines Wasserbecken"
+        - Zoo-/Parkgewässer: "Flamingoweiher"
+        → Blacklist für generische Namen + manuelle Review
+        
+    - title: "WICHTIG: Typ-Korrektur"
+      detail: |
+        Flüsse als "Kanal" klassifiziert (Spree in Berlin).
+        → Post-Import-Script für bekannte Flüsse: Spree, Havel, etc.
+        
+    - title: "EMPFEHLUNG: Curated Daten separat bewahren"
+      detail: |
+        Die 479 curated Einträge sind HERVORRAGEND (Score 8/10).
+        Sie werden aktuell von 9.639 OSM-Junk-Einträgen ertränkt.
+        → Curated als "verified=true" markieren (falls nicht schon)
+        → Nearby-Suche: Verified zuerst zeigen
+
+  recommendation: |
+    OVERALL: FAIL — Task muss nachgebessert werden.
+    
+    Die curated Basis (479 Einträge) ist exzellent und würde allein schon q1 (500 Gewässer) 
+    fast erfüllen. Der OSM-Bulk-Import hat die Datenbank jedoch mit Junk geflutet.
+    
+    **Empfohlener Cleanup-Task (Priorität: HOCH):**
+    1. Alle Duplikate entfernen (Name+State → nur einen behalten, geographisch besten)
+    2. Blacklist für generische Namen: "Teich", "Dorfteich", "Fischteich", "Löschweiher", etc.
+    3. Minimum-Qualitätsfilter: Gewässer ohne spezifischen Namen entfernen
+    4. Typ-Korrektur für bekannte Fehlklassifizierungen
+    5. Nearby-Ranking: Verified/Curated bevorzugen
+    
+    **Geschätzte Restmenge nach Cleanup:** ~4.000-6.000 brauchbare Einträge
+    Das wäre ein solider Datensatz, der alle Kriterien quantitativ UND qualitativ erfüllt.
+    
+    **Ohne Cleanup sollte PR #41 NICHT gemerged werden.**

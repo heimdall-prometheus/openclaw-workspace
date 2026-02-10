@@ -1,0 +1,68 @@
+task_id: hb-task-002
+title: "Kapitel 2: Bremerhaven"
+project: heinlein-book
+strategy: writing-strategy
+status: passed
+created: 2026-02-07
+
+intention: >
+  Kapitel 2 liefert drei Dinge:
+  1. Brenners Herkunft — Bremerhaven, Werftarbeiter-Sohn, die Lloyd-Werft die schloss. Kurz, nicht sentimental. Ein Satz der hängenbleibt.
+  2. Der Geld-Hustle beginnt — Tuvalu-Deal (Souveränitäts-Hack), Crowdfunding als PR-Waffe
+  3. Die Sovereign-Individual-Philosophie wird erstmals explizit: Brenner rekrutiert nicht Arbeiter, er rekrutiert Menschen die nirgendwo sonst das tun können was sie wollen.
+
+  WICHTIG: Kapitel 1 hat bereits Krone, Jian, Volkov eingeführt + Volkovs Erstinvestment.
+  Kapitel 2 muss NEUEN Plot vorantreiben, nicht wiederholen.
+
+target_audience: "Leser von Heinlein, Cixin Liu, Andy Weir. Technik-affin, 25-55."
+
+scene_summary: >
+  Szene 1: Brenner in Bremerhaven. Besuch am alten Werftgelände. Nicht nostalgisch —
+  pragmatisch. Er trifft seinen alten Ausbildungsmeister der jetzt Nachtwächter auf dem
+  leeren Gelände ist. Kurzer Dialog der Brenners Herkunft zeigt. "Die Stadt gehört denen 
+  die bleiben." — "Dann bau ich eine die mir gehört."
+  
+  Szene 2: Funafuti, Tuvalu (per Video). Brenner bietet dem tuvaluischen Außenminister 
+  einen Deal: Tuvalu "verlegt" seinen Staatssitz auf die Plattform. Im Gegenzug: Tuvalu 
+  bleibt UN-anerkannter Staat trotz steigendem Meeresspiegel. Der Souveränitäts-Hack.
+  
+  Szene 3: Crowdfunding-Kampagne. "Kauf dir einen Quadratmeter Ozean." Nicht für das 
+  Geld — für die Öffentlichkeit. 40.000 Unterstützer in 72 Stunden. Die Medien springen auf.
+  
+  Szene 4: Erste Rekrutierung. Brenner telefoniert mit der Chirurgin aus Mumbai, dem 
+  CRISPR-Forscher aus Seoul, der Finanzarchitektin aus Zürich. Sovereign Individuals —
+  Menschen die das System einschränkt, nicht beschützt.
+
+output:
+  format: "Markdown (.md)"
+  path: "projects/heinlein-book/chapters/kapitel-02-bremerhaven.md"
+  length: "3.500-4.500 Wörter"
+  language: "Deutsch"
+
+criteria:
+  quantitative:
+    - criterion: "Länge 3.500-4.500 Wörter"
+      test: "wc -w"
+    - criterion: "Dialog-Anteil ≥ 40%"
+      test: "Zeilen mit Anführungszeichen / Gesamtzeilen"
+    - criterion: "Keine Gefühls-Introspektion Brenners"
+      test: "Grep nach Introspektion-Pattern"
+
+  qualitative:
+    - criterion: "Heinlein-Authentizität"
+      description: "Trocken, kompetent, keine Sentimentalität. Bremerhaven-Szene darf NICHT in Nostalgie kippen."
+      min_score: 7
+    - criterion: "Sovereign Individual-Philosophie"
+      description: "Die Rekrutierungs-Szene macht klar: Der Wert von Nova Ventus sind die Menschen, nicht der Stahl."
+      min_score: 8
+    - criterion: "Der Hustle"
+      description: "Tuvalu-Deal und Crowdfunding sind zwei verschiedene Hustles — einer politisch, einer medial. Beide müssen clever sein."
+      min_score: 8
+    - criterion: "Bremerhaven-Szene"
+      description: "Muss Brenners Herkunft in unter 800 Wörtern vermitteln, ohne Sentimentalität. Zeigen, nicht erzählen."
+      min_score: 7
+    - criterion: "Plot-Momentum"
+      description: "Das Kapitel muss den Leser von 'er hat die Plattform' zu 'er hat die Leute und das Geld' bringen."
+      min_score: 8
+
+max_loops: 5

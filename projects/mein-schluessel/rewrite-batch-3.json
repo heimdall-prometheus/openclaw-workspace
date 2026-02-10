@@ -1,0 +1,944 @@
+[
+  {
+    "id": "0191fc31ffdd71a7a81b8d5f848281c2",
+    "name": "Türdrücker-Garnitur Häfele \"Startec\" PDH4103 Edelstahl",
+    "manufacturer": "Häfele",
+    "product_number": "HF-903.91.624",
+    "desc_length": 107,
+    "has_lists": false,
+    "has_headings": true,
+    "has_paragraphs": false,
+    "score": 70,
+    "issues": [
+      "TOO_SHORT(107)",
+      "WEAK_STRUCTURE",
+      "NO_CTA_META"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<div id=\"product_description\">\\n<h2><span style=\"font-size:13px;\"> </span><span style=\"font-size:13px;\">Türdrücker-Garnitur, Häfele Startec Modell PDH 4103 Edelstahl </span><span style=\"font-size:13px;\">Rosette, BB-Garnitur, Türdicke 37–52 mm</span></h2>\\n</div>"
+  },
+  {
+    "id": "0191fc31ffe3730996929e095480019c",
+    "name": "Türdrücker-Garnitur, Häfele \"Startec\" PDH 4102 Edelstahl, DIN L",
+    "manufacturer": "Häfele",
+    "product_number": "HF-903.95.574",
+    "desc_length": 137,
+    "has_lists": false,
+    "has_headings": true,
+    "has_paragraphs": false,
+    "score": 70,
+    "issues": [
+      "TOO_SHORT(137)",
+      "WEAK_STRUCTURE",
+      "NO_CTA_META"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<div id=\"product_description\">\\n<h2><span style=\"font-size:13px;\">Türdrücker-Garnitur, Häfele Startec Modell PDH 4102 Edelstahl, </span><span style=\"font-size:13px;\">Rosette, Objektbereich, PZ-Wechselgarnitur, Türdicke 37–52 mm, links</span></h2>\\n</div>"
+  },
+  {
+    "id": "0191fc31ffe07322a8cfcb05dc39400f",
+    "name": "Türdrücker-Garnitur, Häfele \"Startec\" PDH 4102 Edelstahl, DIN R",
+    "manufacturer": "Häfele",
+    "product_number": "HF-903.96.574",
+    "desc_length": 138,
+    "has_lists": false,
+    "has_headings": true,
+    "has_paragraphs": false,
+    "score": 70,
+    "issues": [
+      "TOO_SHORT(138)",
+      "WEAK_STRUCTURE",
+      "NO_CTA_META"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<div id=\"product_description\">\\n<h2><span style=\"font-size:13px;\">Türdrücker-Garnitur, Häfele Startec Modell PDH 4102 Edelstahl, </span><span style=\"font-size:13px;\">Rosette, Objektbereich, PZ-Wechselgarnitur, Türdicke 37–52 mm, rechts</span></h2>\\n</div>"
+  },
+  {
+    "id": "0191fc31fe5370aea6b6361ad564f320",
+    "name": "Vierkant Dornschlüssel, 10 mm",
+    "manufacturer": "KBV",
+    "product_number": "88636-10",
+    "desc_length": 252,
+    "has_lists": false,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 70,
+    "issues": [
+      "TOO_SHORT(252)",
+      "WEAK_STRUCTURE",
+      "MFR_NOT_IN_DESC"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p>Vierkant-Dornschlüssel 10 mm – Spezialschlüssel mit Vierkantprofil für Absperrschieber, Schaltschränke und technische Einrichtungen.</p><p>Robuste Ausführung aus gehärtetem Stahl. Unverzichtbares Werkzeug für Handwerker, Hausmeister und technisches Personal.</p>"
+  },
+  {
+    "id": "0191fc31fe4a7054bb05dcc38460e715",
+    "name": "Vierkant Dornschlüssel, 7 mm",
+    "manufacturer": "KBV",
+    "product_number": "88635",
+    "desc_length": 251,
+    "has_lists": false,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 70,
+    "issues": [
+      "TOO_SHORT(251)",
+      "WEAK_STRUCTURE",
+      "MFR_NOT_IN_DESC"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p>Vierkant-Dornschlüssel 7 mm – Spezialschlüssel mit Vierkantprofil für Absperrschieber, Schaltschränke und technische Einrichtungen.</p><p>Robuste Ausführung aus gehärtetem Stahl. Unverzichtbares Werkzeug für Handwerker, Hausmeister und technisches Personal.</p>"
+  },
+  {
+    "id": "0191fc31fe4f711d8dff44557533da3f",
+    "name": "Vierkant Dornschlüssel, 9 mm",
+    "manufacturer": "BASI",
+    "product_number": "121396",
+    "desc_length": 251,
+    "has_lists": false,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 70,
+    "issues": [
+      "TOO_SHORT(251)",
+      "WEAK_STRUCTURE",
+      "MFR_NOT_IN_DESC"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p>Vierkant-Dornschlüssel 9 mm – Spezialschlüssel mit Vierkantprofil für Absperrschieber, Schaltschränke und technische Einrichtungen.</p><p>Robuste Ausführung aus gehärtetem Stahl. Unverzichtbares Werkzeug für Handwerker, Hausmeister und technisches Personal.</p>"
+  },
+  {
+    "id": "0191fc31fe8d7312a5c726578ade05f3",
+    "name": "Vollstift 10x120 mm",
+    "manufacturer": "KBV",
+    "product_number": "KBV-90894",
+    "desc_length": 223,
+    "has_lists": false,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 70,
+    "issues": [
+      "TOO_SHORT(223)",
+      "WEAK_STRUCTURE",
+      "MFR_NOT_IN_DESC"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p>Vollstift 10x120 mm – Verbindungsstift für Türdrücker und Türgriffe. Verbindet die beiden Drücker durch das Schloss miteinander.</p><p>Passend für Drückergarnituren mit 10 mm Vierkant. Standardlänge 120 mm für gängige Türstärken.</p>"
+  },
+  {
+    "id": "0191fc31fe8f714db0dc86e08089d10a",
+    "name": "Vollstift 10x160 mm",
+    "manufacturer": "KBV",
+    "product_number": "KBV-90898",
+    "desc_length": 223,
+    "has_lists": false,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 70,
+    "issues": [
+      "TOO_SHORT(223)",
+      "WEAK_STRUCTURE",
+      "MFR_NOT_IN_DESC"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p>Vollstift 10x160 mm – Verbindungsstift für Türdrücker und Türgriffe. Verbindet die beiden Drücker durch das Schloss miteinander.</p><p>Passend für Drückergarnituren mit 10 mm Vierkant. Standardlänge 160 mm für gängige Türstärken.</p>"
+  },
+  {
+    "id": "0191fc31fe867165a7d08dc24a1b1022",
+    "name": "Vollstift 8x160 mm",
+    "manufacturer": "KBV",
+    "product_number": "4424-7015",
+    "desc_length": 221,
+    "has_lists": false,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 70,
+    "issues": [
+      "TOO_SHORT(221)",
+      "WEAK_STRUCTURE",
+      "MFR_NOT_IN_DESC"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p>Vollstift 8x160 mm – Verbindungsstift für Türdrücker und Türgriffe. Verbindet die beiden Drücker durch das Schloss miteinander.</p><p>Passend für Drückergarnituren mit 8 mm Vierkant. Standardlänge 160 mm für gängige Türstärken.</p>"
+  },
+  {
+    "id": "0191fc31fe8870088e9a379a0cc426f8",
+    "name": "Vollstift 9x120 mm",
+    "manufacturer": "KBV",
+    "product_number": "4410-8496",
+    "desc_length": 221,
+    "has_lists": false,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 70,
+    "issues": [
+      "TOO_SHORT(221)",
+      "WEAK_STRUCTURE",
+      "MFR_NOT_IN_DESC"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p>Vollstift 9x120 mm – Verbindungsstift für Türdrücker und Türgriffe. Verbindet die beiden Drücker durch das Schloss miteinander.</p><p>Passend für Drückergarnituren mit 9 mm Vierkant. Standardlänge 120 mm für gängige Türstärken.</p>"
+  },
+  {
+    "id": "0191fc31fe8a72fe8e9029c8468d19cd",
+    "name": "Vollstift 9x160 mm",
+    "manufacturer": "KBV",
+    "product_number": "4410-8495",
+    "desc_length": 221,
+    "has_lists": false,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 70,
+    "issues": [
+      "TOO_SHORT(221)",
+      "WEAK_STRUCTURE",
+      "MFR_NOT_IN_DESC"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p>Vollstift 9x160 mm – Verbindungsstift für Türdrücker und Türgriffe. Verbindet die beiden Drücker durch das Schloss miteinander.</p><p>Passend für Drückergarnituren mit 9 mm Vierkant. Standardlänge 160 mm für gängige Türstärken.</p>"
+  },
+  {
+    "id": "0191fc321452720bb754ed01954b901d",
+    "name": "Zimmertürgarnitur Hoppe \"Birmingham\" 1117/202SP, 72 mm BB, Nuss 8 mm, Langschild, F1",
+    "manufacturer": "Hoppe",
+    "product_number": "3000252985",
+    "desc_length": 277,
+    "has_lists": false,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 70,
+    "issues": [
+      "TOO_SHORT(277)",
+      "WEAK_STRUCTURE",
+      "NO_CTA_META"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p>Zimmertürgarnitur \"Birmingham\" von Hoppe mit Langschild in Aluminium F1 Natur. Ausführung für Buntbart (BB)-Lochung. Nuss: 8 mm.</p><p>Hochwertige Drückergarnitur für Innentüren – zeitloses Design, komfortable Bedienung und einfache Montage. Geeignet für den Wohn- und Objektbereich.</p>"
+  },
+  {
+    "id": "0191fc32144871668ea80fdec5922a2b",
+    "name": "Zimmertürgarnitur Hoppe \"Birmingham\" 1117/202SP, 72 mm BB, Nuss 8 mm, Langschild, F2",
+    "manufacturer": "Hoppe",
+    "product_number": "3000252988",
+    "desc_length": 281,
+    "has_lists": false,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 70,
+    "issues": [
+      "TOO_SHORT(281)",
+      "WEAK_STRUCTURE",
+      "NO_CTA_META"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p>Zimmertürgarnitur \"Birmingham\" von Hoppe mit Langschild in Aluminium F2 Neusilber. Ausführung für Buntbart (BB)-Lochung. Nuss: 8 mm.</p><p>Hochwertige Drückergarnitur für Innentüren – zeitloses Design, komfortable Bedienung und einfache Montage. Geeignet für den Wohn- und Objektbereich.</p>"
+  },
+  {
+    "id": "0191fc321440708d9de6beb87ec804eb",
+    "name": "Zimmertürgarnitur Hoppe \"Birmingham\" 1117/202SP, 72 mm PZ, Nuss 8 mm, Langschild, F1",
+    "manufacturer": "Hoppe",
+    "product_number": "3000252986",
+    "desc_length": 283,
+    "has_lists": false,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 70,
+    "issues": [
+      "TOO_SHORT(283)",
+      "WEAK_STRUCTURE",
+      "NO_CTA_META"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p>Zimmertürgarnitur \"Birmingham\" von Hoppe mit Langschild in Aluminium F1 Natur. Ausführung für Profilzylinder (PZ)-Lochung. Nuss: 8 mm.</p><p>Hochwertige Drückergarnitur für Innentüren – zeitloses Design, komfortable Bedienung und einfache Montage. Geeignet für den Wohn- und Objektbereich.</p>"
+  },
+  {
+    "id": "0191fc32144c73078382d03debfce113",
+    "name": "Zimmertürgarnitur Hoppe \"Birmingham\" 1117/202SP, 72 mm PZ, Nuss 8 mm, Langschild, F2",
+    "manufacturer": "Hoppe",
+    "product_number": "3000252989",
+    "desc_length": 287,
+    "has_lists": false,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 70,
+    "issues": [
+      "TOO_SHORT(287)",
+      "WEAK_STRUCTURE",
+      "NO_CTA_META"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p>Zimmertürgarnitur \"Birmingham\" von Hoppe mit Langschild in Aluminium F2 Neusilber. Ausführung für Profilzylinder (PZ)-Lochung. Nuss: 8 mm.</p><p>Hochwertige Drückergarnitur für Innentüren – zeitloses Design, komfortable Bedienung und einfache Montage. Geeignet für den Wohn- und Objektbereich.</p>"
+  },
+  {
+    "id": "0191fc32144571e1afd5c5a5a860722a",
+    "name": "Zimmertürgarnitur Hoppe \"Birmingham\" 1117/202SP, 78 mm BAD/WC, Nuss 8 mm, Langschild, F1",
+    "manufacturer": "Hoppe",
+    "product_number": "3000252987",
+    "desc_length": 270,
+    "has_lists": false,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 70,
+    "issues": [
+      "TOO_SHORT(270)",
+      "WEAK_STRUCTURE",
+      "NO_CTA_META"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p>Zimmertürgarnitur \"Birmingham\" von Hoppe mit Langschild in Aluminium F1 Natur. Ausführung für Bad/WC-Lochung. Nuss: 8 mm.</p><p>Hochwertige Drückergarnitur für Innentüren – zeitloses Design, komfortable Bedienung und einfache Montage. Geeignet für den Wohn- und Objektbereich.</p>"
+  },
+  {
+    "id": "0191fc32144f7009a4ba3a8e446d6148",
+    "name": "Zimmertürgarnitur Hoppe \"Birmingham\" 1117/202SP, 78 mm BAD/WC, Nuss 8 mm, Langschild, F2",
+    "manufacturer": "Hoppe",
+    "product_number": "3000252990",
+    "desc_length": 274,
+    "has_lists": false,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 70,
+    "issues": [
+      "TOO_SHORT(274)",
+      "WEAK_STRUCTURE",
+      "NO_CTA_META"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p>Zimmertürgarnitur \"Birmingham\" von Hoppe mit Langschild in Aluminium F2 Neusilber. Ausführung für Bad/WC-Lochung. Nuss: 8 mm.</p><p>Hochwertige Drückergarnitur für Innentüren – zeitloses Design, komfortable Bedienung und einfache Montage. Geeignet für den Wohn- und Objektbereich.</p>"
+  },
+  {
+    "id": "0191fc32166373ef9a9083bf7969e460",
+    "name": "Zylinderhebelschloss, FORT F42, für Spinde, inkl. 2 Schlüssel",
+    "manufacturer": "Wilhelm Kessler",
+    "product_number": "4750-1435",
+    "desc_length": 272,
+    "has_lists": false,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 70,
+    "issues": [
+      "TOO_SHORT(272)",
+      "WEAK_STRUCTURE",
+      "MFR_NOT_IN_DESC"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p>Zylinderhebelschloss FORT F42 für Spinde, inklusive 2 Schlüssel – kompaktes Schloss für Spindtüren, Schließfächer und Möbel. Zuverlässige Verriegelung durch drehbaren Hebel.</p><p>Einfache Montage in Standard-Bohrungen. Ideal für Umkleiden, Fitnessstudios, Schulen und Betriebe.</p>"
+  },
+  {
+    "id": "0191fc31febe70249966a5ca1479c4fc",
+    "name": "Assa Abloy Türschliesser DC300 EN 3-6 ohne Gestänge silberfarbig",
+    "manufacturer": "IKON",
+    "product_number": "DC300-EV1",
+    "desc_length": 420,
+    "has_lists": false,
+    "has_headings": true,
+    "has_paragraphs": false,
+    "score": 72,
+    "issues": [
+      "WEAK_STRUCTURE",
+      "SINGLE_BLOCK",
+      "MFR_NOT_IN_DESC",
+      "NO_CTA_META"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<div id=\"product_description\">\\n<h2>Produktbeschreibung für Assa Abloy Türschliesser DC300 EN 3-6 ohne Gestänge silberfarbig</h2>\\n<p>Der DC300 ist ein obenliegender Gestängetürschließer mit integrierter Öffnungsdämpfung. Er erfüllt die Anforderungen für Feuer- und Rauchschutztüren in Verbindung mit der optionalen Montageplatte. Der Türschließer kann in Türblattmontage auf der Bandseite oder in Kopf-/Sturzmontage auf der Bandgegenseite verwendet werden</p>\\n</div>"
+  },
+  {
+    "id": "0191fc31ffeb71bdb3b330ebc78223eb",
+    "name": "AXA DWN 50 USB SET W.SIGNAL REAR LIGHT",
+    "manufacturer": "AXA Bike Security",
+    "product_number": "93959295CB",
+    "desc_length": 2044,
+    "has_lists": true,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 72,
+    "issues": [
+      "EMPTY_TAGS(2)",
+      "NAME_NOT_IN_DESC",
+      "MFR_NOT_IN_DESC",
+      "NO_CTA_META"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p>Dieses Set besteht aus dem Dwn 50 Lux Frontlicht und dem Dwn Rücklicht mit Bremslichtfunktion. Beide Leuchten sind per USB aufladbar und eignen sich dank des flexiblen Gummibandes zur Befestigung an fast jedem Fahrrad. Mit diesem Band können Sie das Vorderlicht einfach am Lenker befestigen. Das Rücklicht kann auf 2 Arten montiert werden. Sie können es an der Sattelstütze oder an der Sitzstrebe montieren. Beide Lichter können schnell abgenommen werden.</p>\\n<p>Die Dwn Lichter sind klein, aber sehr stark und haben ein mattes Design. Sie können mit dem mitgelieferten USB-C-Kabel wieder aufgeladen werden. Da die Lampen wieder aufgeladen werden können, sind sie eine nachhaltige Alternative zu den üblichen Batterielampen.</p>\\n<p>Die Dwn 50 Frontleuchte hat 3 Leuchtmodi:</p>\\n<ol>\\n<li>Modus 1, mit 10 Lux, sorgt für maximale Akkulaufzeit</li>\\n<li>Modus 2, mit 30 Lux, ein schöner Zwischenmodus</li>\\n<li>Modus 3, mit 50 Lux, bietet eine optimale Lichtleistung</li>\\n</ol>\\n<p>Der Akku des Vorderlichts bietet bis zu 11 Stunden Betriebsdauer. Der Akku des Rücklichts bietet bis zu 7 Stunden Fahrvergnügen.</p>\\n<p>Das Rücklicht hat eine integrierte Bremslichtfunktion. Eine Bremslichtfunktion macht das Radfahren im Straßenverkehr sicherer. So können Sie sehen, dass das Fahrrad vor Ihnen langsamer wird, und die Person hinter Ihnen kann sehen, dass Sie langsamer werden.</p>\\n<p>Wenn die Batterie fast leer ist, schaltet sich die Batterieanzeige ein. Bei einem Batteriestand zwischen 21-50 % leuchtet sie grün. Wenn sie unter 20 % sinkt, wird sie rot. Wenn Sie den Akku des Frontlichts aufladen, ist er in weniger als 2 Stunden vollständig aufgeladen. Das Rücklicht ist in weniger als 1,5 Stunden vollständig aufgeladen!</p>\\n<p> </p>\\n<p>LICHTKEGEL: 70 Meter 'sehen' 4000 Meter 'gesehen werden'</p>\\n<p>RÜCKLICHT: 300 Meter 'gesehen' werden</p>\\n<p> </p>\\n<p>&lt;iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/KUZKmmQcExk\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen&gt;&lt;/iframe&gt;</p>"
+  },
+  {
+    "id": "0191fc32174d732184fb53e94684c034",
+    "name": "AXA Foldable 800 (grey)",
+    "manufacturer": "AXA Bike Security",
+    "product_number": "59800495SB",
+    "desc_length": 1084,
+    "has_lists": false,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 72,
+    "issues": [
+      "WEAK_STRUCTURE",
+      "NAME_NOT_IN_DESC",
+      "MFR_NOT_IN_DESC",
+      "NO_CTA_META"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p><span style=\"white-space:normal;\">Die AXA Faltschloßserie 800 ist mit einem Schlüssel zu betätigen und ist somit eine Ergänzung zu der </span>AXA Faltschloß - Serie. Geeignet für alle Fahrradtypen. Durch mehrere Drehpunkte ist die aus gehärtetem Stahl klappbare Sperre einfach zu bedienen. Der Bügel hat einen Durchmesser con 8 mm und mit einer Gesamtlänge von 100 cm ist es einfach, das Fahrrad an einem festen Objekt zu fixieren. Der Zylinder wird durch eine Abdeckung vor Feuchtigkeit und Schmutz geschützt, und somit verlängert sich die Lebensdauer des Schlosses. </p>\\n<p>Der internationale Online-Schlüsselservice bietet Ihnen die Möglichkeit, einen Ersatzschlüssel zu jeder Zeit zu bestellen. Das faltbare Schloss ist mit einem Neopren Hülle in der Farbe dunkelgrau ummantelt und kann so im schönen Halter, der montiert werden kann, leicht transportiert werden.</p>\\n<p>&lt;iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/jYsgfL-B6zc\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" allowfullscreen&gt;&lt;/iframe&gt;</p>"
+  },
+  {
+    "id": "0191fc31ff95736698ab33f7e7ac8eea",
+    "name": "DC500 Cam-Motion Türschließer silber EV1",
+    "manufacturer": "ASSA ABLOY",
+    "product_number": "DC500-EV1",
+    "desc_length": 497,
+    "has_lists": false,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 72,
+    "issues": [
+      "NO_CTA_META",
+      "DUPLICATE"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p><strong>ASSA ABLOY DC500 Türschließer</strong></p>\\n<p>ASSA ABLOY Cam-Motion® Gleitschienentürschließer ermöglichen sicheres Schließen und hohen Begehkomfort dank stark abfallendem Öffnungsmoment. Durch die Cam-Motion® Technologie reduziert sich der Gegendruck beim Öffnen der Tür und ihre Handhabung wird gegenüber herkömmlichen Türschließern erleichtert. Dadurch lassen sich produktspezifische Anforderungen, wie sie in der CEN TR15894 / DIN SPEC 1104 (stark abfallendes Öffnungsmoment) empfohlen werden, realisieren.</p>"
+  },
+  {
+    "id": "0191fc31ff9b7005843ee35062c483d8",
+    "name": "DC500 Cam-Motion Türschließer weiß ähnlich RAL9016",
+    "manufacturer": "ASSA ABLOY",
+    "product_number": "DC500-9016",
+    "desc_length": 497,
+    "has_lists": false,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 72,
+    "issues": [
+      "NO_CTA_META",
+      "DUPLICATE"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p><strong>ASSA ABLOY DC500 Türschließer</strong></p>\\n<p>ASSA ABLOY Cam-Motion® Gleitschienentürschließer ermöglichen sicheres Schließen und hohen Begehkomfort dank stark abfallendem Öffnungsmoment. Durch die Cam-Motion® Technologie reduziert sich der Gegendruck beim Öffnen der Tür und ihre Handhabung wird gegenüber herkömmlichen Türschließern erleichtert. Dadurch lassen sich produktspezifische Anforderungen, wie sie in der CEN TR15894 / DIN SPEC 1104 (stark abfallendes Öffnungsmoment) empfohlen werden, realisieren.</p>"
+  },
+  {
+    "id": "0191fc31ffa873f6996d462a8e18c72a",
+    "name": "DC700 Cam-Motion Türschließer silber EV1",
+    "manufacturer": "ASSA ABLOY",
+    "product_number": "DC700--EV1",
+    "desc_length": 497,
+    "has_lists": false,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 72,
+    "issues": [
+      "NO_CTA_META",
+      "DUPLICATE"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p><strong>ASSA ABLOY DC700 Türschließer</strong></p>\\n<p>ASSA ABLOY Cam-Motion® Gleitschienentürschließer ermöglichen sicheres Schließen und hohen Begehkomfort dank stark abfallendem Öffnungsmoment. Durch die Cam-Motion® Technologie reduziert sich der Gegendruck beim Öffnen der Tür und ihre Handhabung wird gegenüber herkömmlichen Türschließern erleichtert. Dadurch lassen sich produktspezifische Anforderungen, wie sie in der CEN TR15894 / DIN SPEC 1104 (stark abfallendes Öffnungsmoment) empfohlen werden, realisieren.</p>"
+  },
+  {
+    "id": "0191fc31ffa5715eba3f9e829146ddfc",
+    "name": "DC700 Cam-Motion Türschließer weiß ähnlich RAL 9016",
+    "manufacturer": "ASSA ABLOY",
+    "product_number": "DC700--9016",
+    "desc_length": 497,
+    "has_lists": false,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 72,
+    "issues": [
+      "NO_CTA_META",
+      "DUPLICATE"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p><strong>ASSA ABLOY DC700 Türschließer</strong></p>\\n<p>ASSA ABLOY Cam-Motion® Gleitschienentürschließer ermöglichen sicheres Schließen und hohen Begehkomfort dank stark abfallendem Öffnungsmoment. Durch die Cam-Motion® Technologie reduziert sich der Gegendruck beim Öffnen der Tür und ihre Handhabung wird gegenüber herkömmlichen Türschließern erleichtert. Dadurch lassen sich produktspezifische Anforderungen, wie sie in der CEN TR15894 / DIN SPEC 1104 (stark abfallendes Öffnungsmoment) empfohlen werden, realisieren.</p>"
+  },
+  {
+    "id": "0191fc3214d271079dc5443e68867b54",
+    "name": "Reparatur-Rohrrahmenschloss Bever Nr. 1022R, PZ gelocht, 35/10/92 mm, 24x340 mm Stulp kantig",
+    "manufacturer": "Bever",
+    "product_number": "49235RR",
+    "desc_length": 401,
+    "has_lists": true,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 72,
+    "issues": [
+      "NO_CTA_META",
+      "DUPLICATE"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p>Bever Reparatur-Rohrrahmenschloss Nr. 1022R – Einsteckschloss mit verlängertem Reparaturstulp (340 mm) speziell für den Austausch defekter Schlösser in Rohrrahmentüren. Der breite Stulp überdeckt vorhandene Ausbrüche.</p><ul><li>Dornmaß: 35 mm</li><li>Entfernung: 92 mm</li><li>Nuss: 10 mm</li><li>Stulp: 24x340 mm (Flachstulp kantig)</li><li>Anschlagrichtung: L / R</li></ul><p>Links und rechts verwendbar. Die ideale Lösung für Renovierung und Reparatur.</p>"
+  },
+  {
+    "id": "0191fc3214d873cdb36de10a3b8eee0c",
+    "name": "Reparatur-Rohrrahmenschloss Bever Nr. 1022R, PZ gelocht, 40/10/92 mm, 24x340 mm Stulp kantig",
+    "manufacturer": "Bever",
+    "product_number": "49240RR",
+    "desc_length": 401,
+    "has_lists": true,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 72,
+    "issues": [
+      "NO_CTA_META",
+      "DUPLICATE"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p>Bever Reparatur-Rohrrahmenschloss Nr. 1022R – Einsteckschloss mit verlängertem Reparaturstulp (340 mm) speziell für den Austausch defekter Schlösser in Rohrrahmentüren. Der breite Stulp überdeckt vorhandene Ausbrüche.</p><ul><li>Dornmaß: 40 mm</li><li>Entfernung: 92 mm</li><li>Nuss: 10 mm</li><li>Stulp: 24x340 mm (Flachstulp kantig)</li><li>Anschlagrichtung: L / R</li></ul><p>Links und rechts verwendbar. Die ideale Lösung für Renovierung und Reparatur.</p>"
+  },
+  {
+    "id": "0191fc3214db71aea162abf8a00bf3a9",
+    "name": "Reparatur-Rohrrahmenschloss Bever Nr. 1022R, PZ gelocht, 45/10/92 mm, 24x340 mm Stulp kantig",
+    "manufacturer": "Bever",
+    "product_number": "49245RR",
+    "desc_length": 401,
+    "has_lists": true,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 72,
+    "issues": [
+      "NO_CTA_META",
+      "DUPLICATE"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p>Bever Reparatur-Rohrrahmenschloss Nr. 1022R – Einsteckschloss mit verlängertem Reparaturstulp (340 mm) speziell für den Austausch defekter Schlösser in Rohrrahmentüren. Der breite Stulp überdeckt vorhandene Ausbrüche.</p><ul><li>Dornmaß: 45 mm</li><li>Entfernung: 92 mm</li><li>Nuss: 10 mm</li><li>Stulp: 24x340 mm (Flachstulp kantig)</li><li>Anschlagrichtung: L / R</li></ul><p>Links und rechts verwendbar. Die ideale Lösung für Renovierung und Reparatur.</p>"
+  },
+  {
+    "id": "0191fc3215fb721f9d0d9f39a5e3cb0e",
+    "name": "Rohrrahmenschloss Nr. 49N PZW, Stulp 16x245 mm, Dorn 30 mm, links / rechts verwendbar, KFV 3469509",
+    "manufacturer": "KFV",
+    "product_number": "4923016",
+    "desc_length": 368,
+    "has_lists": true,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 72,
+    "issues": [
+      "NO_CTA_META",
+      "DUPLICATE"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p>KFV Rohrrahmenschloss Nr. 49N PZW – hochwertiges Einsteckschloss mit Profilzylinder-Lochung und Wechselfunktion für Rohrrahmentüren. Links und rechts verwendbar.</p><ul><li>Dornmaß: 30 mm</li><li>Entfernung: 92 mm</li><li>Nuss: 10 mm</li><li>Stulp: 16x245 mm (kantig)</li><li>Anschlagrichtung: L / R</li></ul><p>Zuverlässige KFV-Qualität für Aluminium-, Stahl- und Kunststoff-Profilrahmentüren im Objekt- und Privatbereich.</p>"
+  },
+  {
+    "id": "0191fc31fd8171499fbaa542d8ff6cd7",
+    "name": "Rohrrahmenschloss Nr. 49N PZW, Stulp 16x245 mm, Dorn 35 mm, links / rechts verwendbar, KFV",
+    "manufacturer": "KFV",
+    "product_number": "4923516",
+    "desc_length": 368,
+    "has_lists": true,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 72,
+    "issues": [
+      "NO_CTA_META",
+      "DUPLICATE"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p>KFV Rohrrahmenschloss Nr. 49N PZW – hochwertiges Einsteckschloss mit Profilzylinder-Lochung und Wechselfunktion für Rohrrahmentüren. Links und rechts verwendbar.</p><ul><li>Dornmaß: 35 mm</li><li>Entfernung: 92 mm</li><li>Nuss: 10 mm</li><li>Stulp: 16x245 mm (kantig)</li><li>Anschlagrichtung: L / R</li></ul><p>Zuverlässige KFV-Qualität für Aluminium-, Stahl- und Kunststoff-Profilrahmentüren im Objekt- und Privatbereich.</p>"
+  },
+  {
+    "id": "0191fc3216037294b8f37ae3410dfb6e",
+    "name": "Rohrrahmenschloss Nr. 49N PZW, Stulp 16x245 mm, Dorn 45 mm, links / rechts verwendbar, KFV 3469521",
+    "manufacturer": "KFV",
+    "product_number": "4286-0163",
+    "desc_length": 368,
+    "has_lists": true,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 72,
+    "issues": [
+      "NO_CTA_META",
+      "DUPLICATE"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p>KFV Rohrrahmenschloss Nr. 49N PZW – hochwertiges Einsteckschloss mit Profilzylinder-Lochung und Wechselfunktion für Rohrrahmentüren. Links und rechts verwendbar.</p><ul><li>Dornmaß: 45 mm</li><li>Entfernung: 92 mm</li><li>Nuss: 10 mm</li><li>Stulp: 16x245 mm (kantig)</li><li>Anschlagrichtung: L / R</li></ul><p>Zuverlässige KFV-Qualität für Aluminium-, Stahl- und Kunststoff-Profilrahmentüren im Objekt- und Privatbereich.</p>"
+  },
+  {
+    "id": "0191fc321606709281412c326afb3b2b",
+    "name": "Rohrrahmenschloss Nr. 49N PZW, Stulp 16x245 mm, Dorn 65 mm, links / rechts verwendbar, KFV 3474910",
+    "manufacturer": "KFV",
+    "product_number": "4286-0171",
+    "desc_length": 368,
+    "has_lists": true,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 72,
+    "issues": [
+      "NO_CTA_META",
+      "DUPLICATE"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p>KFV Rohrrahmenschloss Nr. 49N PZW – hochwertiges Einsteckschloss mit Profilzylinder-Lochung und Wechselfunktion für Rohrrahmentüren. Links und rechts verwendbar.</p><ul><li>Dornmaß: 65 mm</li><li>Entfernung: 92 mm</li><li>Nuss: 10 mm</li><li>Stulp: 16x245 mm (kantig)</li><li>Anschlagrichtung: L / R</li></ul><p>Zuverlässige KFV-Qualität für Aluminium-, Stahl- und Kunststoff-Profilrahmentüren im Objekt- und Privatbereich.</p>"
+  },
+  {
+    "id": "0191fc31fd86720f86738627c3bd6eca",
+    "name": "Rohrrahmenschloss Nr. 49N PZW, Stulp 16x280 mm, Dorn 30 mm, links/rechts verwendbar, KFV 3474057",
+    "manufacturer": "KFV",
+    "product_number": "4286-0167",
+    "desc_length": 368,
+    "has_lists": true,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 72,
+    "issues": [
+      "NO_CTA_META",
+      "DUPLICATE"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p>KFV Rohrrahmenschloss Nr. 49N PZW – hochwertiges Einsteckschloss mit Profilzylinder-Lochung und Wechselfunktion für Rohrrahmentüren. Links und rechts verwendbar.</p><ul><li>Dornmaß: 30 mm</li><li>Entfernung: 92 mm</li><li>Nuss: 10 mm</li><li>Stulp: 16x280 mm (kantig)</li><li>Anschlagrichtung: L / R</li></ul><p>Zuverlässige KFV-Qualität für Aluminium-, Stahl- und Kunststoff-Profilrahmentüren im Objekt- und Privatbereich.</p>"
+  },
+  {
+    "id": "0191fc32160a72dd9d97bdf37ad72612",
+    "name": "Rohrrahmenschloss Nr. 49N PZW, Stulp 16x280 mm, Dorn 35 mm, links/rechts verwendbar, KFV 3474057",
+    "manufacturer": "KFV",
+    "product_number": "4286-0168",
+    "desc_length": 368,
+    "has_lists": true,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 72,
+    "issues": [
+      "NO_CTA_META",
+      "DUPLICATE"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p>KFV Rohrrahmenschloss Nr. 49N PZW – hochwertiges Einsteckschloss mit Profilzylinder-Lochung und Wechselfunktion für Rohrrahmentüren. Links und rechts verwendbar.</p><ul><li>Dornmaß: 35 mm</li><li>Entfernung: 92 mm</li><li>Nuss: 10 mm</li><li>Stulp: 16x280 mm (kantig)</li><li>Anschlagrichtung: L / R</li></ul><p>Zuverlässige KFV-Qualität für Aluminium-, Stahl- und Kunststoff-Profilrahmentüren im Objekt- und Privatbereich.</p>"
+  },
+  {
+    "id": "0191fc32160d71bf8dc585ae64385394",
+    "name": "Rohrrahmenschloss Nr. 49N PZW, Stulp 16x280 mm, Dorn 45 mm, links/rechts verwendbar, KFV 3474057",
+    "manufacturer": "KFV",
+    "product_number": "4286-0164",
+    "desc_length": 368,
+    "has_lists": true,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 72,
+    "issues": [
+      "NO_CTA_META",
+      "DUPLICATE"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p>KFV Rohrrahmenschloss Nr. 49N PZW – hochwertiges Einsteckschloss mit Profilzylinder-Lochung und Wechselfunktion für Rohrrahmentüren. Links und rechts verwendbar.</p><ul><li>Dornmaß: 45 mm</li><li>Entfernung: 92 mm</li><li>Nuss: 10 mm</li><li>Stulp: 16x280 mm (kantig)</li><li>Anschlagrichtung: L / R</li></ul><p>Zuverlässige KFV-Qualität für Aluminium-, Stahl- und Kunststoff-Profilrahmentüren im Objekt- und Privatbereich.</p>"
+  },
+  {
+    "id": "0191fc32161372ef885c72f1e6cc6b9c",
+    "name": "Rohrrahmenschloss Nr. 49N PZW, Stulp 16x280 mm, Dorn 65 mm, links/rechts verwendbar, KFV 3474057",
+    "manufacturer": "KFV",
+    "product_number": "4286-0177",
+    "desc_length": 368,
+    "has_lists": true,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 72,
+    "issues": [
+      "NO_CTA_META",
+      "DUPLICATE"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p>KFV Rohrrahmenschloss Nr. 49N PZW – hochwertiges Einsteckschloss mit Profilzylinder-Lochung und Wechselfunktion für Rohrrahmentüren. Links und rechts verwendbar.</p><ul><li>Dornmaß: 65 mm</li><li>Entfernung: 92 mm</li><li>Nuss: 10 mm</li><li>Stulp: 16x280 mm (kantig)</li><li>Anschlagrichtung: L / R</li></ul><p>Zuverlässige KFV-Qualität für Aluminium-, Stahl- und Kunststoff-Profilrahmentüren im Objekt- und Privatbereich.</p>"
+  },
+  {
+    "id": "0191fc32012a701aa4d79bc08f8329ca",
+    "name": "SimonsVoss | SmartBridge MobileKey - MobileKey",
+    "manufacturer": "SimonsVoss",
+    "product_number": "SV-SMARTBRIGDE",
+    "desc_length": 424,
+    "has_lists": false,
+    "has_headings": false,
+    "has_paragraphs": false,
+    "score": 72,
+    "issues": [
+      "NO_STRUCTURE",
+      "SINGLE_BLOCK"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p>SmartBridge MobileKey \\n<span style=\"color:rgb(82,102,122);font-family:'Inter var', '-apple-system', blinkmacsystemfont, 'San Francisco', 'Segoe UI', roboto, 'Helvetica Neue', sans-serif;font-size:16px;font-style:normal;font-weight:400;letter-spacing:normal;text-indent:0px;text-transform:none;word-spacing:0px;white-space:normal;background-color:rgb(255,255,255);text-decoration-thickness:initial;text-decoration-style:initial;text-decoration-color:initial;float:none;\">MK.SMARTBRIDGE.ER</span>\\n\\nzur Vernetzung der MobileKey-Schließungen mit dem SimonsVoss-Server. Ethernet-Ausführung zur Verbindung mit einem Netzwerkknoten. In der Online-Version sind Ihre digitalen Schließzylinder über eine SmartBridge direkt mit dem Server verbunden. So werden Systemeinrichtungen und Änderungen von Berechtigungen nahezu in Echtzeit umgesetzt. Volle Kontrolle – überall und jederzeit.</p>"
+  },
+  {
+    "id": "0191fc31fc3771f293b48a6cfd6c4832",
+    "name": "Zimmertür-Einsteckschloss BMH Nr. 1, BAD/WC, 55/8+8/78 mm, 18x235 mm Stulp rund, DIN links",
+    "manufacturer": "BMH",
+    "product_number": "4212-0106",
+    "desc_length": 306,
+    "has_lists": true,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 72,
+    "issues": [
+      "NO_CTA_META",
+      "DUPLICATE"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p>BMH Zimmertür-Einsteckschloss Nr. 1 – zuverlässiges Einsteckschloss für Innentüren. Ausführung mit Bad/WC-Lochung.</p><ul><li>Dornmaß: 55 mm</li><li>Entfernung: 78 mm</li><li>Nuss: 8 mm + 8 mm</li><li>Stulp: 18x235 mm (Flachstulp rund/oval)</li><li>Anschlag: L</li></ul><p>Solide Verarbeitung für den täglichen Einsatz an Zimmertüren im Wohn- und Objektbereich.</p>"
+  },
+  {
+    "id": "0191fc32154f7290ab44e763622a1eaf",
+    "name": "Zimmertür-Einsteckschloss BMH Nr. 1, BAD/WC, 55/8+8/78 mm, 18x235 mm Stulp rund, DIN rechts",
+    "manufacturer": "BMH",
+    "product_number": "4212-0107",
+    "desc_length": 306,
+    "has_lists": true,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 72,
+    "issues": [
+      "NO_CTA_META",
+      "DUPLICATE"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p>BMH Zimmertür-Einsteckschloss Nr. 1 – zuverlässiges Einsteckschloss für Innentüren. Ausführung mit Bad/WC-Lochung.</p><ul><li>Dornmaß: 55 mm</li><li>Entfernung: 78 mm</li><li>Nuss: 8 mm + 8 mm</li><li>Stulp: 18x235 mm (Flachstulp rund/oval)</li><li>Anschlag: R</li></ul><p>Solide Verarbeitung für den täglichen Einsatz an Zimmertüren im Wohn- und Objektbereich.</p>"
+  },
+  {
+    "id": "0191fc321548701eb57e6e3481e1f3e1",
+    "name": "Zimmertür-Einsteckschloss BMH Nr. 1, BAD/WC, 55/8+8/78 mm, 20x235 mm Stulp rund, DIN rechts",
+    "manufacturer": "BMH",
+    "product_number": "4212-0109",
+    "desc_length": 310,
+    "has_lists": true,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 72,
+    "issues": [
+      "NO_CTA_META",
+      "DUPLICATE"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p>BMH Zimmertür-Einsteckschloss Nr. 1 – zuverlässiges Einsteckschloss für Innentüren. Ausführung mit Bad/WC-Lochung.</p><ul><li>Dornmaß: 55 mm</li><li>Entfernung: 78 mm</li><li>Nuss: 8 mm + 8 mm</li><li>Stulp: 20x235 mm (Flachstulp rund/oval)</li><li>Anschlag: DIN R</li></ul><p>Solide Verarbeitung für den täglichen Einsatz an Zimmertüren im Wohn- und Objektbereich.</p>"
+  },
+  {
+    "id": "0191fc3214aa711da693972b7a62a83c",
+    "name": "Zimmertür-Einsteckschloss BMH Nr. 1, BB gelocht, 55/8/72 mm, 20x235 mm Stulp rund, DIN links",
+    "manufacturer": "BMH",
+    "product_number": "4212-0120",
+    "desc_length": 310,
+    "has_lists": true,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 72,
+    "issues": [
+      "NO_CTA_META",
+      "DUPLICATE"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p>BMH Zimmertür-Einsteckschloss Nr. 1 – zuverlässiges Einsteckschloss für Innentüren. Ausführung mit Buntbart (BB)-Lochung.</p><ul><li>Dornmaß: 55 mm</li><li>Entfernung: 72 mm</li><li>Nuss: 8 mm</li><li>Stulp: 20x235 mm (Flachstulp rund/oval)</li><li>Anschlag: DIN L</li></ul><p>Solide Verarbeitung für den täglichen Einsatz an Zimmertüren im Wohn- und Objektbereich.</p>"
+  },
+  {
+    "id": "0191fc3214ae7398aab80698618da4a1",
+    "name": "Zimmertür-Einsteckschloss BMH Nr. 1, BB gelocht, 55/8/72 mm, 20x235 mm Stulp rund, DIN rechts",
+    "manufacturer": "BMH",
+    "product_number": "4212-0121",
+    "desc_length": 310,
+    "has_lists": true,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 72,
+    "issues": [
+      "NO_CTA_META",
+      "DUPLICATE"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p>BMH Zimmertür-Einsteckschloss Nr. 1 – zuverlässiges Einsteckschloss für Innentüren. Ausführung mit Buntbart (BB)-Lochung.</p><ul><li>Dornmaß: 55 mm</li><li>Entfernung: 72 mm</li><li>Nuss: 8 mm</li><li>Stulp: 20x235 mm (Flachstulp rund/oval)</li><li>Anschlag: DIN R</li></ul><p>Solide Verarbeitung für den täglichen Einsatz an Zimmertüren im Wohn- und Objektbereich.</p>"
+  },
+  {
+    "id": "0191fc32154b73b99568bbd591f7933a",
+    "name": "Zimmertür-Einsteckschloss BMH Nr. 2, BAD/WC, 55/8+8/78 mm, 18x220 mm TGL Stulp, Anschlag links",
+    "manufacturer": "BMH",
+    "product_number": "4212-0222",
+    "desc_length": 306,
+    "has_lists": true,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 72,
+    "issues": [
+      "NO_CTA_META",
+      "DUPLICATE"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p>BMH Zimmertür-Einsteckschloss Nr. 2 – zuverlässiges Einsteckschloss für Innentüren. Ausführung mit Bad/WC-Lochung.</p><ul><li>Dornmaß: 55 mm</li><li>Entfernung: 78 mm</li><li>Nuss: 8 mm + 8 mm</li><li>Stulp: 18x220 mm (Flachstulp rund/oval)</li><li>Anschlag: L</li></ul><p>Solide Verarbeitung für den täglichen Einsatz an Zimmertüren im Wohn- und Objektbereich.</p>"
+  },
+  {
+    "id": "0191fc32154d701cb069bbf70e04ed27",
+    "name": "Zimmertür-Einsteckschloss BMH Nr. 2, BAD/WC, 55/8+8/78 mm, 18x220 mm TGL Stulp, Anschlag rechts",
+    "manufacturer": "BMH",
+    "product_number": "4212-0223",
+    "desc_length": 306,
+    "has_lists": true,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 72,
+    "issues": [
+      "NO_CTA_META",
+      "DUPLICATE"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p>BMH Zimmertür-Einsteckschloss Nr. 2 – zuverlässiges Einsteckschloss für Innentüren. Ausführung mit Bad/WC-Lochung.</p><ul><li>Dornmaß: 55 mm</li><li>Entfernung: 78 mm</li><li>Nuss: 8 mm + 8 mm</li><li>Stulp: 18x220 mm (Flachstulp rund/oval)</li><li>Anschlag: R</li></ul><p>Solide Verarbeitung für den täglichen Einsatz an Zimmertüren im Wohn- und Objektbereich.</p>"
+  },
+  {
+    "id": "0191fc32153f73099e54d1912e12090d",
+    "name": "Zimmertür-Einsteckschloss BMH Nr. 2, PZ gelocht, 55/8/72 mm, 18x220 mm TGL Stulp, Anschlag links",
+    "manufacturer": "BMH",
+    "product_number": "4212-0220",
+    "desc_length": 312,
+    "has_lists": true,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 72,
+    "issues": [
+      "NO_CTA_META",
+      "DUPLICATE"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p>BMH Zimmertür-Einsteckschloss Nr. 2 – zuverlässiges Einsteckschloss für Innentüren. Ausführung mit Profilzylinder (PZ)-Lochung.</p><ul><li>Dornmaß: 55 mm</li><li>Entfernung: 72 mm</li><li>Nuss: 8 mm</li><li>Stulp: 18x220 mm (Flachstulp rund/oval)</li><li>Anschlag: L</li></ul><p>Solide Verarbeitung für den täglichen Einsatz an Zimmertüren im Wohn- und Objektbereich.</p>"
+  },
+  {
+    "id": "0191fc3215427210aaab5352601ff7ea",
+    "name": "Zimmertür-Einsteckschloss BMH Nr. 2, PZ gelocht, 55/8/72 mm, 18x220 mm TGL Stulp, Anschlag rechts",
+    "manufacturer": "BMH",
+    "product_number": "4212-0221",
+    "desc_length": 312,
+    "has_lists": true,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 72,
+    "issues": [
+      "NO_CTA_META",
+      "DUPLICATE"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p>BMH Zimmertür-Einsteckschloss Nr. 2 – zuverlässiges Einsteckschloss für Innentüren. Ausführung mit Profilzylinder (PZ)-Lochung.</p><ul><li>Dornmaß: 55 mm</li><li>Entfernung: 72 mm</li><li>Nuss: 8 mm</li><li>Stulp: 18x220 mm (Flachstulp rund/oval)</li><li>Anschlag: R</li></ul><p>Solide Verarbeitung für den täglichen Einsatz an Zimmertüren im Wohn- und Objektbereich.</p>"
+  },
+  {
+    "id": "0191fc3215337369945a147be418d235",
+    "name": "Zimmertür-Einsteckschloss BMH Nr. 2, PZ gelocht, 55/8/72 mm, 18x235 mm Stulp, DIN links",
+    "manufacturer": "BMH",
+    "product_number": "4212-0214",
+    "desc_length": 316,
+    "has_lists": true,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 72,
+    "issues": [
+      "NO_CTA_META",
+      "DUPLICATE"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p>BMH Zimmertür-Einsteckschloss Nr. 2 – zuverlässiges Einsteckschloss für Innentüren. Ausführung mit Profilzylinder (PZ)-Lochung.</p><ul><li>Dornmaß: 55 mm</li><li>Entfernung: 72 mm</li><li>Nuss: 8 mm</li><li>Stulp: 18x235 mm (Flachstulp rund/oval)</li><li>Anschlag: DIN L</li></ul><p>Solide Verarbeitung für den täglichen Einsatz an Zimmertüren im Wohn- und Objektbereich.</p>"
+  },
+  {
+    "id": "0191fc32153672e2a565387c65d4b6cc",
+    "name": "Zimmertür-Einsteckschloss BMH Nr. 2, PZ gelocht, 55/8/72 mm, 18x235 mm Stulp, DIN rechts",
+    "manufacturer": "BMH",
+    "product_number": "4212-0216",
+    "desc_length": 316,
+    "has_lists": true,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 72,
+    "issues": [
+      "NO_CTA_META",
+      "DUPLICATE"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p>BMH Zimmertür-Einsteckschloss Nr. 2 – zuverlässiges Einsteckschloss für Innentüren. Ausführung mit Profilzylinder (PZ)-Lochung.</p><ul><li>Dornmaß: 55 mm</li><li>Entfernung: 72 mm</li><li>Nuss: 8 mm</li><li>Stulp: 18x235 mm (Flachstulp rund/oval)</li><li>Anschlag: DIN R</li></ul><p>Solide Verarbeitung für den täglichen Einsatz an Zimmertüren im Wohn- und Objektbereich.</p>"
+  },
+  {
+    "id": "0191fc32153972be98c04e246a1c59f8",
+    "name": "Zimmertür-Einsteckschloss BMH Nr. 2, PZ gelocht, 55/8/72 mm, 20x235 mm Stulp kantig, DIN links",
+    "manufacturer": "BMH",
+    "product_number": "4212-0217",
+    "desc_length": 313,
+    "has_lists": true,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 72,
+    "issues": [
+      "NO_CTA_META",
+      "DUPLICATE"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p>BMH Zimmertür-Einsteckschloss Nr. 2 – zuverlässiges Einsteckschloss für Innentüren. Ausführung mit Profilzylinder (PZ)-Lochung.</p><ul><li>Dornmaß: 55 mm</li><li>Entfernung: 72 mm</li><li>Nuss: 8 mm</li><li>Stulp: 20x235 mm (Flachstulp kantig)</li><li>Anschlag: DIN L</li></ul><p>Solide Verarbeitung für den täglichen Einsatz an Zimmertüren im Wohn- und Objektbereich.</p>"
+  },
+  {
+    "id": "0191fc32153c721c8488782c54e4433e",
+    "name": "Zimmertür-Einsteckschloss BMH Nr. 2, PZ gelocht, 55/8/72 mm, 20x235 mm Stulp kantig, DIN rechts",
+    "manufacturer": "BMH",
+    "product_number": "4212-0218",
+    "desc_length": 313,
+    "has_lists": true,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 72,
+    "issues": [
+      "NO_CTA_META",
+      "DUPLICATE"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p>BMH Zimmertür-Einsteckschloss Nr. 2 – zuverlässiges Einsteckschloss für Innentüren. Ausführung mit Profilzylinder (PZ)-Lochung.</p><ul><li>Dornmaß: 55 mm</li><li>Entfernung: 72 mm</li><li>Nuss: 8 mm</li><li>Stulp: 20x235 mm (Flachstulp kantig)</li><li>Anschlag: DIN R</li></ul><p>Solide Verarbeitung für den täglichen Einsatz an Zimmertüren im Wohn- und Objektbereich.</p>"
+  },
+  {
+    "id": "0191fc3215287193993e4507dad020d7",
+    "name": "Zimmertür-Einsteckschloss BMH Nr. 2, PZ gelocht, 55/8/72 mm, 20x235 mm Stulp rund, DIN links",
+    "manufacturer": "BMH",
+    "product_number": "4212-0210",
+    "desc_length": 316,
+    "has_lists": true,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 72,
+    "issues": [
+      "NO_CTA_META",
+      "DUPLICATE"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p>BMH Zimmertür-Einsteckschloss Nr. 2 – zuverlässiges Einsteckschloss für Innentüren. Ausführung mit Profilzylinder (PZ)-Lochung.</p><ul><li>Dornmaß: 55 mm</li><li>Entfernung: 72 mm</li><li>Nuss: 8 mm</li><li>Stulp: 20x235 mm (Flachstulp rund/oval)</li><li>Anschlag: DIN R</li></ul><p>Solide Verarbeitung für den täglichen Einsatz an Zimmertüren im Wohn- und Objektbereich.</p>"
+  },
+  {
+    "id": "0191fc32152b73058344406694580724",
+    "name": "Zimmertür-Einsteckschloss BMH Nr. 2, PZ gelocht, 55/8/72 mm, 20x235 mm Stulp rund, DIN rechts",
+    "manufacturer": "BMH",
+    "product_number": "4212-0211",
+    "desc_length": 316,
+    "has_lists": true,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 72,
+    "issues": [
+      "NO_CTA_META",
+      "DUPLICATE"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p>BMH Zimmertür-Einsteckschloss Nr. 2 – zuverlässiges Einsteckschloss für Innentüren. Ausführung mit Profilzylinder (PZ)-Lochung.</p><ul><li>Dornmaß: 55 mm</li><li>Entfernung: 72 mm</li><li>Nuss: 8 mm</li><li>Stulp: 20x235 mm (Flachstulp rund/oval)</li><li>Anschlag: DIN L</li></ul><p>Solide Verarbeitung für den täglichen Einsatz an Zimmertüren im Wohn- und Objektbereich.</p>"
+  },
+  {
+    "id": "0191fc32152d7133b5660f315c78cf37",
+    "name": "Zimmertür-Einsteckschloss BMH Nr. 2, PZ gelocht, 55/8/72 mm, 24x235 mm Stulp kantig, DIN links",
+    "manufacturer": "BMH",
+    "product_number": "4212-0212",
+    "desc_length": 313,
+    "has_lists": true,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 72,
+    "issues": [
+      "NO_CTA_META",
+      "DUPLICATE"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p>BMH Zimmertür-Einsteckschloss Nr. 2 – zuverlässiges Einsteckschloss für Innentüren. Ausführung mit Profilzylinder (PZ)-Lochung.</p><ul><li>Dornmaß: 55 mm</li><li>Entfernung: 72 mm</li><li>Nuss: 8 mm</li><li>Stulp: 24x235 mm (Flachstulp kantig)</li><li>Anschlag: DIN L</li></ul><p>Solide Verarbeitung für den täglichen Einsatz an Zimmertüren im Wohn- und Objektbereich.</p>"
+  },
+  {
+    "id": "0191fc321530736db29ee7b43dcbca24",
+    "name": "Zimmertür-Einsteckschloss BMH Nr. 2, PZ gelocht, 55/8/72 mm, 24x235 mm Stulp kantig, DIN rechts",
+    "manufacturer": "BMH",
+    "product_number": "4212-0213",
+    "desc_length": 313,
+    "has_lists": true,
+    "has_headings": false,
+    "has_paragraphs": true,
+    "score": 72,
+    "issues": [
+      "NO_CTA_META",
+      "DUPLICATE"
+    ],
+    "priority": "YELLOW",
+    "current_description": "<p>BMH Zimmertür-Einsteckschloss Nr. 2 – zuverlässiges Einsteckschloss für Innentüren. Ausführung mit Profilzylinder (PZ)-Lochung.</p><ul><li>Dornmaß: 55 mm</li><li>Entfernung: 72 mm</li><li>Nuss: 8 mm</li><li>Stulp: 24x235 mm (Flachstulp kantig)</li><li>Anschlag: DIN R</li></ul><p>Solide Verarbeitung für den täglichen Einsatz an Zimmertüren im Wohn- und Objektbereich.</p>"
+  }
+]

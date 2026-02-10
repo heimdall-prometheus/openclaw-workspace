@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digitale Wachstumsstrategie 2026 - Baumschule Christian Göricke</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 60px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        /* Header */
+        header {
+            border-bottom: 4px solid #2d5016;
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            color: #2d5016;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+        
+        .subtitle {
+            color: #666;
+            font-size: 1.3em;
+            margin-bottom: 20px;
+        }
+        
+        .meta {
+            color: #999;
+            font-size: 0.95em;
+            margin-top: 20px;
+        }
+        
+        /* Typography */
+        h2 {
+            color: #2d5016;
+            font-size: 1.8em;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+            page-break-after: avoid;
+        }
+        
+        h3 {
+            color: #4a7c2e;
+            font-size: 1.4em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            page-break-after: avoid;
+        }
+        
+        h4 {
+            color: #5a8c3e;
+            font-size: 1.1em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        /* Lists */
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95em;
+            page-break-inside: avoid;
+        }
+        
+        th {
+            background: #2d5016;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        
+        /* Highlights */
+        .highlight {
+            background: #f0f7e8;
+            border-left: 4px solid #2d5016;
+            padding: 20px;
+            margin: 20px 0;
+            page-break-inside: avoid;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .success {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        /* Icons (using Unicode) */
+        .checkmark:before { content: "\2713\00a0"; color: #4caf50; font-weight: bold; }
+        .cross:before { content: "\2717\00a0"; color: #f44336; font-weight: bold; }
+        .arrow:before { content: "\2192\00a0"; color: #2d5016; }
+        
+        /* Footer */
+        footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 2px solid #e0e0e0;
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+                padding: 40px;
+            }
+            
+            h2 {
+                page-break-before: always;
+                margin-top: 0;
+            }
+            
+            h2:first-of-type {
+                page-break-before: avoid;
+            }
+            
+            table, .highlight, .warning, .success {
+                page-break-inside: avoid;
+            }
+        }
+        
+        /* Table of Contents */
+        .toc {
+            background: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            padding: 30px;
+            margin: 30px 0;
+        }
+        
+        .toc h2 {
+            margin-top: 0;
+            border: none;
+        }
+        
+        .toc ol {
+            margin-left: 20px;
+        }
+        
+        .toc li {
+            margin-bottom: 10px;
+        }
+        
+        .toc a {
+            color: #2d5016;
+            text-decoration: none;
+        }
+        
+        .toc a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Emphasis */
+        strong {
+            color: #2d5016;
+        }
+        
+        code {
+            background: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Digitale Wachstumsstrategie 2026</h1>
+            <div class="subtitle">Baum- und Rosenschule Christian Göricke</div>
+            <div class="meta">
+                <strong>Erstellt:</strong> 9. Februar 2026<br>
+                <strong>Für:</strong> Christian Göricke<br>
+                <strong>Inhaber:</strong> Rudolf Göricke (Senior), operativ: Christian Göricke<br>
+                <strong>Standort:</strong> Birnbaumweg 32, 06844 Dessau-Roßlau (Waldersee)<br>
+                <strong>Website:</strong> baumschule-dessau.de<br>
+                <strong>Version:</strong> 1.0
+            </div>
+        </header>
+
+        <div class="toc">
+            <h2>Inhaltsverzeichnis</h2>
+            <ol>
+                <li><a href="#executive-summary">Executive Summary</a></li>
+                <li><a href="#betriebsanalyse">Betriebsanalyse &amp; USPs</a></li>
+                <li><a href="#markt">Markt &amp; Einzugsgebiet</a></li>
+                <li><a href="#wettbewerber">Wettbewerber-Matrix</a></li>
+                <li><a href="#digital">Digitales Fundament</a></li>
+                <li><a href="#local-seo">Local SEO Strategie</a></li>
+                <li><a href="#content">Content-Marketing</a></li>
+                <li><a href="#social">Social Media Strategie</a></li>
+                <li><a href="#heritage">Heritage-Marketing</a></li>
+                <li><a href="#saisonal">Saisonales Marketing</a></li>
+                <li><a href="#sprint">90-Tage-Sprint</a></li>
+                <li><a href="#budget">Budget &amp; ROI</a></li>
+            </ol>
+        </div>
+
+        <h2 id="executive-summary">1. Executive Summary</h2>
+        
+        <p>Christian, lass mich direkt sein.</p>
+        
+        <p>Du führst einen verdammt guten Betrieb. <strong>5.0 Sterne Bewertungen</strong>. <strong>8.000 m² Verkaufsfläche</strong>. Eine <strong>moderne Website</strong>, die dein Bruder Thomas in Halle dir neidisch sein kann (der hat noch eine HTML-Seite aus 2005!). Eure Kunden lieben euch – das sieht man in jeder einzelnen Bewertung: "Sehr gute Beratung", "Große Auswahl", "Freundlich und kompetent".</p>
+        
+        <div class="warning">
+            <strong>Aber – und das ist der Punkt – viel zu wenige Leute KENNEN euch.</strong>
+        </div>
+        
+        <p>Euer Instagram-Account hat 120 Follower. <strong>Einhundertzwanzig.</strong> Eure Facebook-Seite ist solide (1.288 Likes), aber auch da ist noch viel Luft nach oben.</p>
+        
+        <p>Und während ihr mit 120 Instagram-Followern dasteht, hat <strong>Dehner im März 2024 einen riesigen Gartencenter-Markt in der Zunftstraße eröffnet</strong> – 5 Kilometer von euch entfernt. Mit einem Marketing-Budget, das vermutlich euren Jahresumsatz übersteigt.</p>
+        
+        <h3>Die harte Wahrheit</h3>
+        
+        <ul>
+            <li>Dessau schrumpft: Von ~89.000 Einwohnern (2008) auf ~75.000 heute (<strong>-15%</strong>)</li>
+            <li>Kaufkraft liegt 12-15% unter Bundesdurchschnitt</li>
+            <li>Aldi verkauft "Obstbäume" für 4,99 € (auch wenn die vertrocknen)</li>
+        </ul>
+        
+        <div class="success">
+            <h3>Aber – ihr habt alle Trümpfe in der Hand:</h3>
+            <ul>
+                <li class="checkmark">5.0 Sterne Bewertungen – besser als jeder Wettbewerber</li>
+                <li class="checkmark">Moderne Website – RIESIGER Vorteil!</li>
+                <li class="checkmark">8.000 m² Verkaufsfläche</li>
+                <li class="checkmark">Persönliche Beratung vom Inhaber</li>
+                <li class="checkmark">Familientradition</li>
+                <li class="checkmark">baumschule-dessau.de – die perfekte Domain</li>
+            </ul>
+        </div>
+        
+        <h3>Ziele dieser Strategie</h3>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Metrik</th>
+                    <th>Aktuell</th>
+                    <th>Ziel (Dez 2026)</th>
+                    <th>Steigerung</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Laufkundschaft Hauptsaison</td>
+                    <td>Basis</td>
+                    <td>+20-30%</td>
+                    <td>Mehr Besucher</td>
+                </tr>
+                <tr>
+                    <td>Google-Bewertungen</td>
+                    <td>~15-20</td>
+                    <td>50+</td>
+                    <td>+150%</td>
+                </tr>
+                <tr>
+                    <td>Instagram-Follower</td>
+                    <td>120</td>
+                    <td>500+</td>
+                    <td>+317%</td>
+                </tr>
+                <tr>
+                    <td>E-Mail-Abonnenten</td>
+                    <td>0</td>
+                    <td>300+</td>
+                    <td>Neu!</td>
+                </tr>
+                <tr>
+                    <td>Google-Ranking</td>
+                    <td>Variiert</td>
+                    <td>Top 3</td>
+                    <td>Lokal dominant</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="highlight">
+            <p><strong>Budget Jahr 1:</strong> 4.500-8.700 € (Durchschnitt: ~6.000 €)</p>
+            <p><strong>ROI (konservativ):</strong> 10.000-30.000 € Zusatzumsatz im ersten Jahr</p>
+            <p><strong>Return:</strong> 1,7x - 4,8x Investment</p>
+        </div>
+
+        <h2 id="betriebsanalyse">2. Betriebsanalyse &amp; USPs</h2>
+        
+        <h3>Was die Baumschule Göricke besonders macht</h3>
+        
+        <p>Du verkaufst nicht "Pflanzen". Pflanzen gibt es bei Dehner, Globus und im Aldi-Prospekt.</p>
+        
+        <p><strong>Du verkaufst etwas anderes:</strong></p>
+        
+        <h4>Familientradition – Generationen im Geschäft</h4>
+        
+        <p>Die Görickes sind seit Generationen im Baumschulgeschäft. Dein Bruder Thomas führt die Saalebaumschule in Halle seit 1934 in Familienhand. Du führst die Baumschule in Dessau. Das ist keine Kette, kein Franchise, kein Investor-Projekt.</p>
+        
+        <div class="highlight">
+            <p><strong>Das ist eine Familie, die Pflanzen lebt.</strong></p>
+        </div>
+        
+        <h4>Das Sortiment – 14 Kategorien</h4>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Kategorie</th>
+                    <th>Besonderheit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Obstgehölze und Beerenobst</td><td>Kernkompetenz – regional, robust</td></tr>
+                <tr><td>Rosen</td><td>Klassiker, immer gefragt</td></tr>
+                <tr><td>Rhododendron und Azaleen</td><td>Spezialsortiment</td></tr>
+                <tr><td>Stauden und Gräser</td><td>Pflegeleicht, Trend zu naturnahen Gärten</td></tr>
+                <tr><td>Bäume</td><td>Vom Apfelbaum bis zur Eiche</td></tr>
+                <tr><td>Sträucher (Laub/Nadel)</td><td>Hecken, Sichtschutz, Gestaltung</td></tr>
+                <tr><td>Weihnachtsbäume</td><td>Saisonaler Zusatzumsatz Nov-Dez</td></tr>
+                <tr><td>Gartenzubehör</td><td>Töpfe, Erde, Dünger, Deko</td></tr>
+            </tbody>
+        </table>
+
+        <h2 id="markt">3. Markt &amp; Einzugsgebiet</h2>
+        
+        <h3>200.000 Menschen im Einzugsgebiet – aber ein schrumpfender Markt</h3>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Region</th>
+                    <th>Einwohner</th>
+                    <th>Entfernung</th>
+                    <th>Relevanz</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Dessau-Roßlau</strong></td><td><strong>~75.000</strong></td><td>0 km</td><td><strong>Kernmarkt</strong></td></tr>
+                <tr><td>Wittenberg</td><td>~46.000</td><td>25 km</td><td>Randgebiet</td></tr>
+                <tr><td>Bitterfeld-Wolfen</td><td>~38.000</td><td>30 km</td><td>Randgebiet</td></tr>
+                <tr><td>Köthen</td><td>~26.000</td><td>25 km</td><td>Erweitertes Gebiet</td></tr>
+                <tr><td><strong>Gesamt (30 km)</strong></td><td><strong>~200.000</strong></td><td>–</td><td>–</td></tr>
+            </tbody>
+        </table>
+        
+        <div class="warning">
+            <h4>Das Problem: Bevölkerungsrückgang</h4>
+            <ul>
+                <li>2008: ~88.693 Einwohner</li>
+                <li>2024: ~75.402 Einwohner</li>
+                <li><strong>Verlust: -15% in 16 Jahren</strong></li>
+                <li>Prognose bis 2035: weitere -10-15%</li>
+            </ul>
+        </div>
+        
+        <h3>Kaufkraft: 12-15% unter Bundesdurchschnitt</h3>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Region</th>
+                    <th>Kaufkraftindex (DE=100)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Dessau-Roßlau</td><td>~85-88</td></tr>
+                <tr><td>Sachsen-Anhalt</td><td>~87,6</td></tr>
+                <tr><td>Deutschland Ø</td><td>100,0</td></tr>
+            </tbody>
+        </table>
+
+        <h2 id="wettbewerber">4. Wettbewerber-Matrix</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Wettbewerber</th>
+                    <th>Standort</th>
+                    <th>Entfernung</th>
+                    <th>Bewertung</th>
+                    <th>Bedrohung</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: #ffebee;">
+                    <td><strong>Dehner</strong></td>
+                    <td>Dessau, Zunftstr. 17</td>
+                    <td>5 km</td>
+                    <td>Neu (März 2024)</td>
+                    <td><strong>SEHR HOCH</strong></td>
+                </tr>
+                <tr style="background: #fff9c4;">
+                    <td><strong>Globus Baumarkt</strong></td>
+                    <td>Dessau, Schlagbreite</td>
+                    <td>3 km</td>
+                    <td>Positiv</td>
+                    <td><strong>HOCH</strong></td>
+                </tr>
+                <tr>
+                    <td>OBI</td>
+                    <td>Wittenberg</td>
+                    <td>25 km</td>
+                    <td>n/a</td>
+                    <td>Mittel</td>
+                </tr>
+                <tr>
+                    <td>Voigt Pflanzen</td>
+                    <td>Priorau</td>
+                    <td>20-25 km</td>
+                    <td>Positiv</td>
+                    <td>Niedrig</td>
+                </tr>
+                <tr style="background: #e8f5e9;">
+                    <td><strong>Baumschule Göricke</strong></td>
+                    <td><strong>Waldersee</strong></td>
+                    <td>–</td>
+                    <td><strong>5.0 ⭐</strong></td>
+                    <td>–</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="highlight">
+            <h3>Deine Waffe gegen Dehner:</h3>
+            <p><em>"Bei Dehner kaufst du eine Pflanze. Bei uns kaufst du einen Baum, der in 20 Jahren noch steht. Weil wir wissen, was in Dessau wächst. Seit Generationen."</em></p>
+        </div>
+
+        <h2 id="digital">5. Digitales Fundament</h2>
+        
+        <h3>Website-Status: 8/10 – Solide Basis!</h3>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Element</th>
+                    <th>Status</th>
+                    <th>Bewertung</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>CMS (WordPress)</td><td class="checkmark">Vorhanden</td><td>Sehr gut</td></tr>
+                <tr><td>HTTPS</td><td class="checkmark">Aktiv</td><td>Sehr gut</td></tr>
+                <tr><td>Responsive Design</td><td class="checkmark">Ja</td><td>Sehr gut</td></tr>
+                <tr><td>DSGVO-konform</td><td class="checkmark">Ja</td><td>Sehr gut</td></tr>
+                <tr><td>Blog/Ratgeber</td><td class="cross">Fehlt</td><td>Ausbau nötig</td></tr>
+                <tr><td>Bewertungen sichtbar</td><td class="cross">Nein</td><td>Ausbau nötig</td></tr>
+                <tr><td>Newsletter-Anmeldung</td><td class="cross">Fehlt</td><td>Ausbau nötig</td></tr>
+            </tbody>
+        </table>
+        
+        <h3>Social Media: Große Lücke bei Instagram</h3>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Plattform</th>
+                    <th>Status Aktuell</th>
+                    <th>Ziel (Dez 2026)</th>
+                    <th>Wachstum</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Facebook</td><td>1.288 Likes</td><td>2.000 Likes</td><td>+55%</td></tr>
+                <tr style="background: #ffebee;"><td>Instagram</td><td><strong>120 Follower</strong></td><td><strong>500+ Follower</strong></td><td><strong>+317%</strong></td></tr>
+            </tbody>
+        </table>
+
+        <h2 id="local-seo">6. Local SEO Strategie</h2>
+        
+        <h3>Google Business Profile – Die digitale Visitenkarte</h3>
+        
+        <div class="highlight">
+            <h4>Sofort-Maßnahmen:</h4>
+            <ul>
+                <li class="arrow">Sekundärkategorien hinzufügen: "Gartencenter", "Gärtnerei"</li>
+                <li class="arrow">Beschreibung auf 750 Zeichen erweitern (inkl. Keywords)</li>
+                <li class="arrow">30+ hochwertige Fotos hochladen</li>
+                <li class="arrow">Wöchentliche Google-Beiträge posten</li>
+                <li class="arrow">Bewertungen aktiv sammeln (Ziel: 50+ bis Jahresende)</li>
+            </ul>
+        </div>
+        
+        <h3>Lokale Keywords – Die Goldmine</h3>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Keyword</th>
+                    <th>Suchvolumen/Monat</th>
+                    <th>Ziel-Ranking</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>baumschule dessau</td><td>100-200</td><td><strong>Top 1</strong></td></tr>
+                <tr><td>gartencenter dessau</td><td>150-300</td><td>Top 3</td></tr>
+                <tr><td>pflanzen kaufen dessau</td><td>50-150</td><td>Top 3</td></tr>
+                <tr><td>weihnachtsbaum dessau</td><td>200-500 (saisonal)</td><td>Top 3</td></tr>
+            </tbody>
+        </table>
+
+        <h2 id="content">7. Content-Marketing</h2>
+        
+        <h3>Blog-Strategie: 2-4 Artikel pro Monat</h3>
+        
+        <p>Content-Marketing bedeutet: Du erstellst nützliche Inhalte, die deine Zielgruppe bei Google findet – und die sie dann <strong>in euren Laden</strong> bringen.</p>
+        
+        <div class="highlight">
+            <h4>Beispiel-Themen 2026:</h4>
+            <ul>
+                <li><strong>März:</strong> "Frühjahrs-Checkliste für Dessau", "Rosen pflanzen Anleitung"</li>
+                <li><strong>April:</strong> "Rhododendron-Pflege", "Regionale Obstgehölze"</li>
+                <li><strong>Mai:</strong> "Kräutergarten anlegen", "Stauden-Kombinationen"</li>
+                <li><strong>Nov-Dez:</strong> "Weihnachtsbaum kaufen in Dessau", "Frisch halten Tipps"</li>
+            </ul>
+        </div>
+
+        <h2 id="social">8. Social Media Strategie</h2>
+        
+        <h3>Instagram: Von 120 auf 500+ Follower</h3>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Format</th>
+                    <th>Aktuell</th>
+                    <th>Ziel</th>
+                    <th>Frequenz</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Feed-Posts</td><td>1-2/Monat</td><td>3-4x/Woche</td><td>Algorithmus-Boost</td></tr>
+                <tr><td>Stories</td><td>Selten</td><td>3-5x/Woche</td><td>Sichtbarkeit</td></tr>
+                <tr><td>Reels</td><td>Nie</td><td>1x/Woche</td><td>3-5x Reichweite!</td></tr>
+            </tbody>
+        </table>
+        
+        <div class="success">
+            <h4>Content-Ideen:</h4>
+            <ul>
+                <li>"Pflanze der Woche" – Regelmäßiges Format</li>
+                <li>Vorher/Nachher-Transformationen</li>
+                <li>Behind-the-Scenes: Wie Pflanzen aufgezogen werden</li>
+                <li>Kundengärten reposten (User Generated Content)</li>
+                <li>30-Sek. Rundgang durch die Baumschule (Reel)</li>
+            </ul>
+        </div>
+
+        <h2 id="heritage">9. Heritage-Marketing</h2>
+        
+        <h3>"Seit Generationen" als Waffe</h3>
+        
+        <p>Die Görickes sind seit Generationen im Baumschulgeschäft. Das ist ein Alleinstellungsmerkmal, das kein Dehner, kein Globus, kein Discounter jemals haben wird.</p>
+        
+        <div class="highlight">
+            <h4>Cross-Marketing mit Saalebaumschule Halle:</h4>
+            <ul>
+                <li class="arrow">"Besuchen Sie auch unsere Schwesterbaumschule in Halle!"</li>
+                <li class="arrow">Gemeinsame Kampagne: "Zwei Standorte, eine Familie"</li>
+                <li class="arrow">Content-Sharing: Blog-Artikel, Ratgeber teilen</li>
+                <li class="arrow">Gegenseitige Empfehlungen (Hallenser → Dessau, vice versa)</li>
+            </ul>
+        </div>
+
+        <h2 id="saisonal">10. Saisonales Marketing</h2>
+        
+        <h3>70-75% Umsatz in 3 Monaten</h3>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Zeitraum</th>
+                    <th>Umsatzanteil</th>
+                    <th>Marketing-Fokus</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: #e8f5e9;">
+                    <td><strong>März - Mai</strong></td>
+                    <td><strong>70-75%</strong></td>
+                    <td><strong>HAUPTSAISON – Vollgas!</strong></td>
+                </tr>
+                <tr><td>Juni - August</td><td>10-15%</td><td>Sommerpflege, Basis-Sichtbarkeit</td></tr>
+                <tr><td>September - Oktober</td><td>5-8%</td><td>Herbstpflanzung</td></tr>
+                <tr><td>November - Dezember</td><td>5-10%</td><td>Weihnachtsbäume!</td></tr>
+                <tr style="background: #f5f5f5;"><td>Januar - Februar</td><td>0%</td><td>Winterpause (geschlossen)</td></tr>
+            </tbody>
+        </table>
+        
+        <div class="warning">
+            <p><strong>Kritisch:</strong> Alles, was wir planen, muss darauf abzielen, die Hauptsaison März-Mai maximal auszuschöpfen!</p>
+        </div>
+
+        <h2 id="sprint">11. 90-Tage-Sprint</h2>
+        
+        <h3>Woche-für-Woche Plan (Feb - Mai 2026)</h3>
+        
+        <h4>Woche 1-2 (10. - 23. Februar) – Fundament legen</h4>
+        <ul>
+            <li class="arrow">Website: Bewertungs-Widget, Newsletter-Anmeldung, Blog aktivieren</li>
+            <li class="arrow">Social Media: Profile optimieren, Content-Kalender erstellen</li>
+            <li class="arrow">Google Business: Beschreibung, Fotos, Kategorien</li>
+        </ul>
+        <p><strong>Kosten:</strong> 500-1.000 € (Website-Anpassungen)</p>
+        
+        <h4>Woche 3-4 (24. Feb - 9. März) – Content vorproduzieren</h4>
+        <ul>
+            <li class="arrow">4 Blog-Artikel schreiben (Frühjahr, Obstbaumschnitt, Rosen, Checkliste)</li>
+            <li class="arrow">20+ Social Media Posts vorbereiten</li>
+            <li class="arrow">5+ Reels aufnehmen</li>
+            <li class="arrow">Newsletter-Tool einrichten</li>
+        </ul>
+        <p><strong>Kosten:</strong> 400-800 € (falls outsourced) oder 0 € (DIY)</p>
+        
+        <h4>Woche 5-6 (10. - 23. März) – SAISONSTART!</h4>
+        <ul>
+            <li class="arrow">Gewinnspiel: "Folge uns + gewinne 50 € Gutschein"</li>
+            <li class="arrow">Google Ads starten (300-500 €/Monat)</li>
+            <li class="arrow">Newsletter: "Frühjahrsstart 2026"</li>
+            <li class="arrow">Social Media: 5 Posts/Woche</li>
+        </ul>
+        <p><strong>Kosten:</strong> 300-500 € (Google Ads) + 50 € (Gewinnspiel)</p>
+        
+        <h4>Woche 7-12 (24. März - 4. Mai) – HOCHSAISON</h4>
+        <ul>
+            <li class="arrow">Social Media: 5 Posts/Woche weiter durchziehen</li>
+            <li class="arrow">Google Ads: Budget erhöhen auf 500-700 €/Monat</li>
+            <li class="arrow">Bewertungen sammeln: Ziel 20+ neue im Apr/Mai</li>
+            <li class="arrow">Newsletter: Wöchentliche Tipps + Angebote</li>
+        </ul>
+        <p><strong>Kosten:</strong> 500-700 €/Monat (Google Ads)</p>
+        
+        <div class="highlight">
+            <h4>90-Tage-Sprint Gesamtkosten:</h4>
+            <p><strong>2.150 - 3.750 €</strong></p>
+            <p><strong>ROI-Erwartung (konservativ):</strong> 8.000-16.000 € Zusatzumsatz</p>
+        </div>
+
+        <h2 id="budget">12. Budget &amp; ROI</h2>
+        
+        <h3>Gesamtbudget Jahr 1 (2026)</h3>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Posten</th>
+                    <th>Einmalig</th>
+                    <th>Laufend (Jahr 1)</th>
+                    <th>Gesamt</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Website-Optimierung</td><td>500-1.000 €</td><td>–</td><td>500-1.000 €</td></tr>
+                <tr><td>Content-Erstellung (Blog)</td><td>–</td><td>1.200-2.400 €</td><td>1.200-2.400 €</td></tr>
+                <tr><td>Google Ads (saisonal)</td><td>–</td><td>2.400-4.200 €</td><td>2.400-4.200 €</td></tr>
+                <tr><td>Social Media (Tools/Gewinnspiele)</td><td>–</td><td>200-400 €</td><td>200-400 €</td></tr>
+                <tr><td>E-Mail-Marketing</td><td>–</td><td>0-200 €</td><td>0-200 €</td></tr>
+                <tr><td>Sonstiges (Fotos, Design)</td><td>200-500 €</td><td>–</td><td>200-500 €</td></tr>
+                <tr style="background: #f0f7e8;"><td><strong>GESAMT</strong></td><td><strong>700-1.500 €</strong></td><td><strong>3.800-7.200 €</strong></td><td><strong>4.500-8.700 €</strong></td></tr>
+            </tbody>
+        </table>
+        
+        <h3>ROI-Berechnung</h3>
+        
+        <h4>Szenario 1: Konservativ</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Maßnahme</th>
+                    <th>Effekt</th>
+                    <th>Umsatzsteigerung</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Google Ads</td><td>50 Ladenbesuche à 60 €</td><td>+3.000 €</td></tr>
+                <tr><td>Besseres Ranking</td><td>30 Besuche à 60 €</td><td>+1.800 €</td></tr>
+                <tr><td>Instagram-Wachstum</td><td>20 Besuche à 60 €</td><td>+1.200 €</td></tr>
+                <tr><td>Newsletter</td><td>30 Besuche à 60 €</td><td>+1.800 €</td></tr>
+                <tr><td>Mehr Bewertungen</td><td>40 Besuche à 60 €</td><td>+2.400 €</td></tr>
+                <tr style="background: #e8f5e9;"><td><strong>Gesamt</strong></td><td>–</td><td><strong>+10.200 €</strong></td></tr>
+            </tbody>
+        </table>
+        <p><strong>ROI:</strong> 10.200 € / 6.000 € = <strong>1,7x Return</strong></p>
+        
+        <h4>Szenario 2: Realistisch</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>Maßnahme</th>
+                    <th>Effekt</th>
+                    <th>Umsatzsteigerung</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Google Ads</td><td>100 Ladenbesuche à 70 €</td><td>+7.000 €</td></tr>
+                <tr><td>Besseres Ranking</td><td>80 Besuche à 70 €</td><td>+5.600 €</td></tr>
+                <tr><td>Instagram-Wachstum</td><td>50 Besuche à 70 €</td><td>+3.500 €</td></tr>
+                <tr><td>Newsletter</td><td>80 Besuche à 70 €</td><td>+5.600 €</td></tr>
+                <tr><td>Mehr Bewertungen</td><td>100 Besuche à 70 €</td><td>+7.000 €</td></tr>
+                <tr style="background: #e8f5e9;"><td><strong>Gesamt</strong></td><td>–</td><td><strong>+28.700 €</strong></td></tr>
+            </tbody>
+        </table>
+        <p><strong>ROI:</strong> 28.700 € / 6.000 € = <strong>4,8x Return</strong></p>
+        
+        <div class="success">
+            <h3>Und das ist nur Jahr 1!</h3>
+            <p>Die Effekte (besseres Google-Ranking, mehr Follower, größere E-Mail-Liste) wirken <strong>dauerhaft</strong>.</p>
+        </div>
+        
+        <div class="warning">
+            <h3>Was passiert, wenn du NICHTS tust?</h3>
+            <ul>
+                <li>Dehner zieht weiter Kunden ab (geschätzt -5-10% Umsatz/Jahr)</li>
+                <li>Bevölkerung schrumpft weiter (-1%/Jahr)</li>
+                <li>Stammkunden sterben weg, junge Kunden kennen dich nicht</li>
+                <li><strong>In 5 Jahren: -20-30% Umsatz</strong></li>
+            </ul>
+            <p><strong>Kosten des Nichtstuns:</strong> Deutlich höher als 6.000 € Investment!</p>
+        </div>
+
+        <footer>
+            <h2>Schluss-Wort</h2>
+            
+            <p>Christian,</p>
+            
+            <p>du hast alle Werkzeuge in der Hand. Eine <strong>moderne Website</strong> (Bruder Thomas kann davon nur träumen). <strong>5.0 Sterne Bewertungen</strong>. <strong>8.000 m² Verkaufsfläche</strong>. <strong>Persönliche Beratung</strong>. <strong>Familientradition</strong> – dein Vater Rudolf hat euch eine starke Basis aufgebaut.</p>
+            
+            <p><strong>Was fehlt, ist digitale Sichtbarkeit.</strong></p>
+            
+            <p>Die meisten Menschen in Dessau kennen euch nicht. Wenn sie "Baumschule Dessau" googeln, sehen sie Dehner. Wenn sie auf Instagram nach Gartenideen suchen, finden sie euch nicht (120 Follower!). Wenn sie im Frühjahr einen Apfelbaum brauchen, denken sie nicht an euch – weil sie nicht wissen, dass es euch gibt.</p>
+            
+            <div class="highlight">
+                <p><strong>Ihr müsst nicht gegen Dehner gewinnen. Ihr müsst nur zeigen, wer ihr seid.</strong></p>
+                <p>Und wenn die Leute euch erstmal gefunden haben? Dann machen die 5.0 Sterne den Rest.</p>
+            </div>
+            
+            <p>Los geht's. 🌳</p>
+            
+            <hr style="margin: 30px 0;">
+            
+            <p style="text-align: center; color: #999; font-size: 0.9em;">
+                <strong>Digitale Wachstumsstrategie 2026</strong><br>
+                Baum- und Rosenschule Christian Göricke<br>
+                Erstellt: 9. Februar 2026 | Version 1.0
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -16,6 +16,20 @@ Before doing anything else:
 
 Don't ask permission. Just do it.
 
+## ✈️ PREFLIGHT - Vor größeren Tasks!
+
+**KRITISCH:** Bei Tasks > 30 Min Aufwand → Lies `PREFLIGHT.md`!
+
+Kurzversion:
+1. **Strategie klar?** Welches Projekt, welches Ziel?
+2. **Intention definiert?** WARUM, nicht WAS?
+3. **Task-System nutzen!** `task-system/projects/{projekt}/tasks/`
+4. **Validator am Ende!** Kein "fertig" ohne Validierung
+
+> "Power ohne Richtung ist Verschwendung."
+
+**Bei Unklarheit → FRAG ERIK!** (Lieber 5 Min Klarheit als 2h falsche Richtung)
+
 ## Memory
 
 You wake up fresh each session. These files are your continuity:
@@ -40,6 +54,49 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 - When you learn a lesson → update AGENTS.md, TOOLS.md, or the relevant skill
 - When you make a mistake → document it so future-you doesn't repeat it
 - **Text > Brain** 📝
+
+## Memory Hook (LAUFEND - nicht erst am Ende!)
+**Nach JEDER Nachricht von Erik** (nicht erst bei Context-Kompression!):
+1. **Sofort-Scan:** War das gerade wichtig? (Entscheidung, Preference, Learning, Projekt)
+2. **Trigger erkennen:** "Merke dir...", "Wichtig:", Credentials, Projektänderungen, neue Kontakte
+3. **SOFORT schreiben:** → `memory/YYYY-MM-DD.md` updaten (nicht warten!)
+4. **Bei großen Learnings:** → `MEMORY.md` ergänzen
+
+**Keine "mental notes"** - wenn es wichtig ist, JETZT aufschreiben!
+**Nicht auf Session-Ende warten** - Kontext geht durch Kompression verloren!
+
+## 🎤 Audio-Messages (KRITISCH!)
+**Bei JEDER Audio-Nachricht** (erkennbar an `<media:audio>` Tag):
+1. **SOFORT** Transkript in `memory/YYYY-MM-DD.md` loggen
+2. Format: `## 🎤 Audio [HH:MM UTC]\n[Transkript]`
+3. **Warum:** Context-Kompression löscht Audio-Inhalte sonst!
+4. Audio ist Eriks bevorzugter Kommunikationsweg → Verlust = kritischer Fehler
+
+## 🎯 Task System (task-system/)
+
+Für komplexe Arbeiten nutze das Task System mit automatisierter Validierung.
+
+**Kernprinzip:** Output ≠ Outcome. Ein Task ist nicht "erledigt" wenn er gemacht wurde, sondern wenn er seinen Zweck erfüllt hat.
+
+**Partner-Prinzip:** Bei jedem neuen Task:
+1. Was ist das **strategische Ziel** dahinter?
+2. Was braucht es **ALLES** um dieses Ziel zu erreichen?
+3. **Proaktiv vorschlagen** - nicht nur das Gesagte ausführen
+4. Vom Ziel rückwärts denken, alle Komponenten identifizieren
+
+### Bei jedem neuen Task:
+1. **Intention** definieren (WARUM, nicht WAS)
+2. **Qualitätskriterien** festlegen (quantitativ + qualitativ)
+3. **Zielgruppe** angeben (für wen ist das?)
+4. Bei Unklarheit → Erik fragen
+
+### Validierung:
+- Quantitative Kriterien: Playwright/Tests → Pass/Fail
+- Qualitative Kriterien: 1-10 Skala, min 7 für Pass
+- Bei Fail: Feedback-Loop (max 10 Versuche)
+- Validator = neutraler Sub-Agent
+
+**Lies `task-system/SCHEMA.md` für vollständige Dokumentation.**
 
 ## Safety
 

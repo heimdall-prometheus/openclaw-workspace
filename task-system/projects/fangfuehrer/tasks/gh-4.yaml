@@ -1,0 +1,42 @@
+id: gh-4
+title: "Docker + Docker Compose"
+status: open
+github_issue: 4
+
+project: fangfuehrer
+strategy: mvp-launch
+phase: 1
+
+intention: |
+  Konsistente Dev/Prod Environments sicherstellen, Deployment vereinfachen.
+
+target_audience: |
+  Entwickler, DevOps
+
+criteria:
+  quantitative:
+    - "docker compose up startet alle Services"
+    - "API + DB kommunizieren"
+    - "Healthchecks grün"
+  
+  qualitative:
+    - "Compose-File gut strukturiert"
+    - "Env-Variablen dokumentiert"
+
+validation:
+  loop_count: 0
+  max_loops: 10
+  min_qualitative_score: 7
+  history: []
+
+created: "2026-02-04T11:45:00Z"
+created_by: heimdall
+updated: "2026-02-04T11:45:00Z"
+completed: ""
+
+artifacts: []
+
+notes: |
+  GitHub Issue: https://github.com/heimdall-prometheus/fangfuehrer/issues/4
+  Type: infra
+  Priority: high

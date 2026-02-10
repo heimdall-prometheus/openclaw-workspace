@@ -1,0 +1,41 @@
+id: fb-strategy-001
+title: "Facebook Post Strategie mein-malbuch"
+status: failed
+created: 2026-02-01T14:08:00Z
+
+intention: |
+  Eine Facebook-Posting-Strategie erstellen, die Eltern (25-45) und Großeltern (50-70)
+  emotional anspricht und zu Käufen von personalisierten Malbüchern führt.
+
+zielgruppe:
+  primaer: "Eltern mit Kindern 3-10 Jahre"
+  sekundaer: "Großeltern auf der Suche nach Geschenken"
+  pain_points:
+    - "Suchen sinnvolle Geschenke (nicht mehr Plastik)"
+    - "Wollen bildschirmfreie Beschäftigung"
+    - "Emotionaler Kaufimpuls (Kinder glücklich machen)"
+
+qualitaetskriterien:
+  quantitativ:
+    - "Mindestens 20 Posts vorbereitet"
+    - "Alle 5 Content Pillars abgedeckt (Emotional/UGC, Produkt, Social Proof, Engagement, Seasonal)"
+    - "Mindestens 4 UGC-Video-Konzepte"
+    - "Jeder Post hat Emotion ODER klaren CTA"
+  qualitativ:
+    - "Emotionaler Ton (berührt das Herz)"
+    - "UGC-Style authentisch (nicht zu werblich)"
+    - "Großeltern-freundlich (nicht zu kompliziert)"
+    - "Produktvorteile klar kommuniziert ohne Hard-Sell"
+    - "Hashtag-Strategie für #MeinMalbuchMoment Campaign"
+
+artefakt: "/home/reisig/.openclaw/workspace/marketing/mein-malbuch/facebook-strategy.md"
+
+strategie_kontext: |
+  Marketing-Strategie für mein-malbuch.com.
+  Ziel: Emotionale Kundenbindung und viraler UGC-Content.
+  Facebook wichtig für Großeltern-Zielgruppe und Community-Building.
+  Pinterest läuft bereits, Facebook soll Engagement + Conversions bringen.
+
+max_loops: 3
+current_loop: 2
+fix_applied: "Seasonal Posts 21-23 hinzugefügt (Weihnachten, Geburtstag, Einschulung)"

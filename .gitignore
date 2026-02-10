@@ -21,3 +21,43 @@ package-lock.json
 # OS
 .DS_Store
 Thumbs.db
+
+# Private/Secret area - never commit
+private/
+
+# Large project data (backed up separately)
+projects/becker-odoo/USBackup.gbk
+projects/becker-odoo/*.fdb
+projects/fishing-app/
+projects/fangfuehrer-web/
+fangfuehrer-web/
+
+# Video templates (too large for git)
+marketing/imr-media/video-templates/
+
+# Build artifacts
+.wrangler/
+.venv/
+.stfolder/
+
+# Logs
+logs/
+
+# Generated (reproducible)
+generated-images/book-covers/
+projects/mein-schluessel/lager-history.db
+projects/mein-schluessel/lager-history.db
+projects/mein-schluessel/backups/
+projects/heimdall-music/output/
+*.tar.gz
+*.wav
+*.mp3
+*.mp4
+projects/imr-media/website/
+fangfuehrer/
+
+# Files with secrets (not for git)
+skills/openai-whisper/transcribe-api.sh
+memory/2026-02-10.md
+memory/2026-02-09.md
+projects/hapex/layout-backup/ROLLBACK.md

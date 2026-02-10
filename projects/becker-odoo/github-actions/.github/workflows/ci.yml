@@ -1,0 +1,208 @@
+name: Becker Odoo CI/CD
+
+on:
+  push:
+    branches: [main, 'feature/**']
+  pull_request:
+    branches: [main]
+
+env:
+  TEST_URL: https://becker-odoo-test.erikreisig.de
+  ODOO_DB: odoo_test
+
+jobs:
+  lint:
+    name: 🔍 Lint
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install linters
+        run: pip install flake8 pylint-odoo
+      
+      - name: Lint Python
+        run: flake8 --max-line-length=120 modules/
+      
+      - name: Lint Odoo XML
+        run: pylint --load-plugins=pylint_odoo modules/
+
+  unit-tests:
+    name: 🧪 Unit Tests
+    runs-on: self-hosted
+    needs: lint
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Run Odoo Tests
+        run: |
+          docker exec odoo-test odoo \
+            --test-enable \
+            --stop-after-init \
+            -d $ODOO_DB \
+            -i becker_techniker_dashboard
+
+  deploy-test:
+    name: 🚀 Deploy to TEST
+    runs-on: self-hosted
+    needs: unit-tests
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Restore TEST from backup
+        run: |
+          # Reset TEST environment to clean state
+          /opt/odoo-backup/restore-test.sh
+      
+      - name: Copy modules to TEST
+        run: |
+          docker cp modules/. odoo-test:/mnt/extra-addons/
+      
+      - name: Update modules
+        run: |
+          docker exec odoo-test odoo \
+            -d $ODOO_DB \
+            -u becker_techniker_dashboard \
+            --stop-after-init
+      
+      - name: Restart Odoo
+        run: docker restart odoo-test
+
+  e2e-tests:
+    name: 🎭 E2E Tests (Playwright)
+    runs-on: self-hosted
+    needs: deploy-test
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Install Playwright
+        run: |
+          cd tests/e2e
+          npm ci
+          npx playwright install chromium
+      
+      - name: Wait for Odoo
+        run: |
+          timeout 60 bash -c 'until curl -s $TEST_URL/web/login; do sleep 2; done'
+      
+      - name: Run E2E Tests
+        run: |
+          cd tests/e2e
+          npx playwright test --reporter=json > results.json
+      
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        with:
+          name: e2e-results
+          path: tests/e2e/results.json
+
+  validate:
+    name: ✅ AI Validation
+    runs-on: self-hosted
+    needs: e2e-tests
+    outputs:
+      score: ${{ steps.validate.outputs.score }}
+      passed: ${{ steps.validate.outputs.passed }}
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Download E2E results
+        uses: actions/download-artifact@v4
+        with:
+          name: e2e-results
+          path: ./results
+      
+      - name: Take screenshots
+        run: |
+          cd tests/e2e
+          npx playwright test screenshot.spec.js
+      
+      - name: AI Validation
+        id: validate
+        run: |
+          # Call validator (could be OpenClaw, Claude API, etc.)
+          python3 scripts/validate.py \
+            --criteria "$(cat .github/criteria/techniker-dashboard.yaml)" \
+            --screenshots tests/e2e/screenshots/ \
+            --e2e-results ./results/results.json \
+            --output validation.json
+          
+          SCORE=$(jq '.score' validation.json)
+          echo "score=$SCORE" >> $GITHUB_OUTPUT
+          
+          if [ "$SCORE" -ge 7 ]; then
+            echo "passed=true" >> $GITHUB_OUTPUT
+          else
+            echo "passed=false" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: Post validation comment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const validation = JSON.parse(fs.readFileSync('validation.json'));
+            
+            github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `## 🤖 AI Validation Result\n\n**Score: ${validation.score}/10**\n\n${validation.feedback}`
+            });
+
+  auto-merge:
+    name: 🔀 Auto-Merge (Score ≥9)
+    runs-on: self-hosted
+    needs: validate
+    if: needs.validate.outputs.score >= 9 && github.event_name == 'pull_request'
+    steps:
+      - name: Auto-merge PR
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.pulls.merge({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number,
+              merge_method: 'squash'
+            });
+
+  request-review:
+    name: 👀 Request Manual Review
+    runs-on: self-hosted
+    needs: validate
+    if: needs.validate.outputs.score >= 7 && needs.validate.outputs.score < 9 && github.event_name == 'pull_request'
+    steps:
+      - name: Request review
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.pulls.requestReviewers({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number,
+              reviewers: ['erikM87']
+            });
+
+  deploy-prod:
+    name: 🚀 Deploy to PRODUCTION
+    runs-on: self-hosted
+    needs: validate
+    if: github.ref == 'refs/heads/main' && needs.validate.outputs.passed == 'true'
+    environment: production  # Requires manual approval
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Deploy to PROD
+        run: |
+          echo "🚀 Deploying to production..."
+          # ssh prod-server "cd /opt/odoo && ./deploy.sh"

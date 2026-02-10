@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Angebot CLED-2026-001</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    @media print {
+      body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .page-break { page-break-before: always; }
+      .no-break { page-break-inside: avoid; }
+    }
+    
+    @page {
+      size: A4;
+      margin: 15mm 15mm 20mm 15mm;
+    }
+    
+    .header-gradient {
+      background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%);
+    }
+    
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    th, td {
+      border: 1px solid #e5e7eb;
+      padding: 8px 12px;
+      text-align: left;
+    }
+    
+    th {
+      background-color: #f3f4f6;
+      font-weight: 600;
+    }
+    
+    .accent-blue { color: #1e3a5f; }
+    .bg-accent { background-color: #1e3a5f; }
+  </style>
+</head>
+<body class="bg-white text-gray-800 text-sm leading-relaxed">
+
+  <!-- HEADER -->
+  <header class="flex justify-between items-center pb-6 border-b-2 border-gray-200 mb-8">
+    <div>
+      <img src="assets/c-led-logo.svg" alt="C-led Solutions" class="h-12">
+    </div>
+    <div class="text-right">
+      <img src="assets/becker-logo.png" alt="Becker Sicherheitstechnik" class="h-14 ml-auto">
+    </div>
+  </header>
+
+  <!-- TITEL -->
+  <div class="header-gradient text-white p-6 rounded-lg mb-8">
+    <p class="text-sm opacity-80 mb-1">Angebot Nr. CLED-2026-001</p>
+    <h1 class="text-2xl font-bold">Odoo ERP Implementation</h1>
+    <p class="text-lg opacity-90">Vollumfang – Plan A</p>
+  </div>
+
+  <!-- ADRESSEN -->
+  <div class="grid grid-cols-2 gap-8 mb-8">
+    <div class="no-break">
+      <h3 class="font-semibold text-gray-500 uppercase text-xs mb-2">Anbieter</h3>
+      <p class="font-semibold">C-led Solutions GmbH</p>
+      <p>Feringastraße 9a</p>
+      <p>85774 Unterföhring</p>
+      <p class="mt-2 text-gray-600">Tel: +49 (089) 809 1314 60</p>
+      <p class="text-gray-600">info@c-led.net</p>
+    </div>
+    <div class="no-break">
+      <h3 class="font-semibold text-gray-500 uppercase text-xs mb-2">Kunde</h3>
+      <p class="font-semibold">Becker Sicherheitstechnik GmbH</p>
+      <p>Robert-Bosch-Str. 56</p>
+      <p>06847 Dessau-Roßlau</p>
+      <p class="mt-2 text-gray-600">z.Hd. Herrn Uwe Becker</p>
+    </div>
+  </div>
+
+  <!-- DATUM & GÜLTIGKEIT -->
+  <div class="bg-gray-50 p-4 rounded-lg mb-8 flex justify-between">
+    <div>
+      <span class="text-gray-500">Datum:</span>
+      <span class="font-semibold">4. Februar 2026</span>
+    </div>
+    <div>
+      <span class="text-gray-500">Gültig bis:</span>
+      <span class="font-semibold">18. Februar 2026</span>
+    </div>
+    <div>
+      <span class="text-gray-500">Projektstart:</span>
+      <span class="font-semibold">9. Februar 2026</span>
+    </div>
+  </div>
+
+  <!-- EINLEITUNG -->
+  <section class="mb-8">
+    <h2 class="text-lg font-bold accent-blue mb-3">Sehr geehrter Herr Becker,</h2>
+    <p class="mb-3">
+      vielen Dank für Ihr Vertrauen und die konstruktiven Gespräche. Wir freuen uns, Ihnen das folgende Angebot 
+      für die Einführung von Odoo ERP bei der Becker Sicherheitstechnik GmbH zu unterbreiten.
+    </p>
+    <p>
+      Das vorliegende Angebot umfasst die vollständige Implementation aller besprochenen Prozessbereiche 
+      mit einem strukturierten Workshop-Ansatz zur optimalen Anforderungsaufnahme.
+    </p>
+  </section>
+
+  <!-- LEISTUNGSUMFANG -->
+  <section class="mb-8 no-break">
+    <h2 class="text-lg font-bold accent-blue mb-4">Leistungsumfang</h2>
+    <table>
+      <thead>
+        <tr>
+          <th class="w-8">#</th>
+          <th>Prozessbereich</th>
+          <th class="w-20 text-right">Aufwand</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Vertrieb & Angebote</td>
+          <td class="text-right">12 PT</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Einkauf & Bestellung</td>
+          <td class="text-right">8 PT</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Projektmanagement & Nachkalkulation</td>
+          <td class="text-right">10 PT</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>CRM & Kundenakte</td>
+          <td class="text-right">8 PT</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Lager & Bestand</td>
+          <td class="text-right">10 PT</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Buchhaltung & DATEV-Schnittstelle</td>
+          <td class="text-right">12 PT</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Monteur-App & Service</td>
+          <td class="text-right">8 PT</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>Schnittstellen (S-Firm, GAEB)</td>
+          <td class="text-right">12 PT</td>
+        </tr>
+        <tr class="bg-gray-100 font-semibold">
+          <td colspan="2">Gesamt</td>
+          <td class="text-right">80 PT</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- KOMMERZIELLE BEDINGUNGEN -->
+  <section class="mb-8 no-break">
+    <h2 class="text-lg font-bold accent-blue mb-4">Kommerzielle Bedingungen</h2>
+    <table>
+      <tbody>
+        <tr>
+          <td class="font-semibold w-1/3">Tagessatz</td>
+          <td>1.000,00 € netto</td>
+        </tr>
+        <tr>
+          <td class="font-semibold">Gesamtaufwand</td>
+          <td>80 Personentage</td>
+        </tr>
+        <tr>
+          <td class="font-semibold">Gesamtpreis netto</td>
+          <td>80.000,00 €</td>
+        </tr>
+        <tr>
+          <td class="font-semibold">MwSt. (19%)</td>
+          <td>15.200,00 €</td>
+        </tr>
+        <tr class="bg-blue-50">
+          <td class="font-bold">Gesamtpreis brutto</td>
+          <td class="font-bold text-lg">95.200,00 €</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <div class="mt-4 text-sm text-gray-600">
+      <p><strong>Abrechnung:</strong> Monatlich nach tatsächlichem Aufwand</p>
+      <p><strong>Zahlungsziel:</strong> 14 Tage netto</p>
+      <p><strong>Kündigungsrecht:</strong> Monatlich durch den Auftraggeber</p>
+    </div>
+  </section>
+
+  <!-- ZEITPLAN -->
+  <section class="mb-8 no-break">
+    <h2 class="text-lg font-bold accent-blue mb-4">Zeitplan</h2>
+    <table>
+      <tbody>
+        <tr>
+          <td class="font-semibold w-1/3">Projektstart</td>
+          <td>9. Februar 2026</td>
+        </tr>
+        <tr>
+          <td class="font-semibold">Projektlaufzeit</td>
+          <td>ca. 23 Wochen</td>
+        </tr>
+        <tr>
+          <td class="font-semibold">Geplantes Go-Live</td>
+          <td>20. Juli 2026</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- LEISTUNGEN ENTHALTEN -->
+  <section class="mb-8">
+    <h2 class="text-lg font-bold accent-blue mb-4">Im Angebot enthalten</h2>
+    <ul class="list-none space-y-2">
+      <li class="flex items-start">
+        <span class="text-green-600 mr-2">✓</span>
+        Prozessanalyse & Anforderungsaufnahme (Workshop-Methodik)
+      </li>
+      <li class="flex items-start">
+        <span class="text-green-600 mr-2">✓</span>
+        Odoo-Konfiguration & Customizing
+      </li>
+      <li class="flex items-start">
+        <span class="text-green-600 mr-2">✓</span>
+        Datenmigration aus Altsystemen
+      </li>
+      <li class="flex items-start">
+        <span class="text-green-600 mr-2">✓</span>
+        Schulung der Key User
+      </li>
+      <li class="flex items-start">
+        <span class="text-green-600 mr-2">✓</span>
+        Testphase & Go-Live Begleitung
+      </li>
+      <li class="flex items-start">
+        <span class="text-green-600 mr-2">✓</span>
+        Projektdokumentation (IST- und SOLL-Prozessmodelle)
+      </li>
+    </ul>
+  </section>
+
+  <!-- NICHT ENTHALTEN -->
+  <section class="mb-8">
+    <h2 class="text-lg font-bold accent-blue mb-4">Nicht im Angebot enthalten</h2>
+    <ul class="list-none space-y-2 text-gray-700">
+      <li class="flex items-start">
+        <span class="text-gray-400 mr-2">–</span>
+        Hardware (Scanner, Etikettendrucker, Tablets)
+      </li>
+      <li class="flex items-start">
+        <span class="text-gray-400 mr-2">–</span>
+        Odoo Hosting & Betrieb (separates Angebot)
+      </li>
+      <li class="flex items-start">
+        <span class="text-gray-400 mr-2">–</span>
+        Reisekosten (falls anfallend, nach Aufwand)
+      </li>
+      <li class="flex items-start">
+        <span class="text-gray-400 mr-2">–</span>
+        Support nach Go-Live (separates Angebot, Stundenbasis)
+      </li>
+      <li class="flex items-start">
+        <span class="text-gray-400 mr-2">–</span>
+        Änderungen nach Abnahme (Change Requests)
+      </li>
+    </ul>
+  </section>
+
+  <!-- PAGE BREAK -->
+  <div class="page-break"></div>
+
+  <!-- HEADER PAGE 2 -->
+  <header class="flex justify-between items-center pb-4 border-b border-gray-200 mb-6">
+    <div class="text-sm text-gray-500">Angebot CLED-2026-001 – C-led Solutions GmbH</div>
+    <div class="text-sm text-gray-500">Seite 2</div>
+  </header>
+
+  <!-- ANLAGEN -->
+  <section class="mb-8">
+    <h2 class="text-lg font-bold accent-blue mb-4">Anlagen</h2>
+    <ul class="list-none space-y-2">
+      <li class="flex items-start">
+        <span class="text-blue-600 mr-2">📎</span>
+        <strong>Anlage 1:</strong> Detaillierte Projektplanung (Prozesse & Aufwände)
+      </li>
+      <li class="flex items-start">
+        <span class="text-blue-600 mr-2">📎</span>
+        <strong>Anlage 2:</strong> Workshop-Methodik
+      </li>
+      <li class="flex items-start">
+        <span class="text-blue-600 mr-2">📎</span>
+        <strong>Anlage 3:</strong> Entwicklungs- und Qualitätsprozess
+      </li>
+    </ul>
+  </section>
+
+  <!-- ANSPRECHPARTNER -->
+  <section class="mb-8">
+    <h2 class="text-lg font-bold accent-blue mb-4">Ihre Ansprechpartner</h2>
+    <div class="grid grid-cols-2 gap-6">
+      <div class="bg-gray-50 p-4 rounded">
+        <p class="font-semibold">Thomas Rosenstiel</p>
+        <p class="text-gray-600 text-sm">Geschäftsführer</p>
+        <p class="text-sm mt-2">rosenstiel@c-led.net</p>
+      </div>
+      <div class="bg-gray-50 p-4 rounded">
+        <p class="font-semibold">Erik Reisig</p>
+        <p class="text-gray-600 text-sm">Technische Projektleitung</p>
+        <p class="text-sm mt-2">reisig@c-led.net</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABSCHLUSS -->
+  <section class="mb-8">
+    <p class="mb-4">
+      Wir freuen uns auf eine erfolgreiche Zusammenarbeit und stehen Ihnen für Rückfragen 
+      jederzeit gerne zur Verfügung.
+    </p>
+    <p>Mit freundlichen Grüßen</p>
+    <p class="mt-6 font-semibold">C-led Solutions GmbH</p>
+    <div class="mt-8 grid grid-cols-2 gap-8">
+      <div>
+        <div class="border-t border-gray-400 pt-2 w-48">
+          <p class="text-sm text-gray-600">Thomas Rosenstiel</p>
+        </div>
+      </div>
+      <div>
+        <div class="border-t border-gray-400 pt-2 w-48">
+          <p class="text-sm text-gray-600">Erik Reisig</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="mt-12 pt-4 border-t border-gray-200 text-xs text-gray-500">
+    <div class="flex justify-between">
+      <div>
+        C-led Solutions GmbH · Feringastraße 9a · 85774 Unterföhring
+      </div>
+      <div>
+        HRB 236270, AG München · USt-IdNr: DE314432775
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

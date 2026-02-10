@@ -1,0 +1,42 @@
+id: gh-9
+title: "Fish ID Integration (Vision AI)"
+status: open
+github_issue: 9
+
+project: fangfuehrer
+strategy: mvp-launch
+phase: 2
+
+intention: |
+  Kernfeature: User sollen Fische per Foto identifizieren können - das Herz der App.
+
+target_audience: |
+  Alle Angler, besonders Anfänger
+
+criteria:
+  quantitative:
+    - "Erkennung >90% für Top-20 DACH-Fische"
+    - "Response <5s"
+    - "Fallback bei API-Failure"
+  
+  qualitative:
+    - "Confidence-Score verständlich dargestellt"
+    - "Alternative Vorschläge bei Unsicherheit"
+
+validation:
+  loop_count: 0
+  max_loops: 10
+  min_qualitative_score: 7
+  history: []
+
+created: "2026-02-04T11:45:00Z"
+created_by: heimdall
+updated: "2026-02-04T11:45:00Z"
+completed: ""
+
+artifacts: []
+
+notes: |
+  GitHub Issue: https://github.com/heimdall-prometheus/fangfuehrer/issues/9
+  Type: feature
+  Priority: critical

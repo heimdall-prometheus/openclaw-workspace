@@ -1,0 +1,47 @@
+id: erikreisig-001
+title: "Personal Brand Page — Consulting + Buch"
+status: validating
+created: 2026-02-08T16:42:00Z
+
+intention: |
+  Erik braucht eine mysteriöse, selbstbewusste Personal Page die sein
+  Consulting Business (E-Commerce, Full-Stack Tech, KI, Beteiligungen)
+  und seinen Debütroman "Auf fremdem Grund" präsentiert. 
+  Keine Transparenz — nur Kompetenz und Gravitas. Kein Foto, kein Portfolio.
+
+audience: |
+  - Potenzielle Beratungskunden (Unternehmer, Mittelstand)
+  - Lions Club / Business-Netzwerk
+  - Literatur-Interessierte / Buchkäufer
+  - Investoren / Partner
+
+quality_criteria:
+  quantitative:
+    - "Seite lädt unter 2 Sekunden"
+    - "Responsive: korrekte Darstellung auf Mobile (375px) und Desktop (1440px)"
+    - "Kontaktformular sendet erfolgreich (POST an api.erikreisig.de/contact)"
+    - "Alle Links funktionieren (EPUB Download, Impressum, Datenschutz)"
+    - "HTTPS aktiv auf erikreisig.de"
+    - "SEO: Meta Title, Description, Open Graph Tags vorhanden"
+    - "Keine Console Errors"
+    - "axe-core: 0 critical/serious accessibility violations"
+  qualitative:
+    - "Design wirkt mysteriös und selbstbewusst, nicht corporate-generisch"
+    - "Typografie ist elegant und konsistent"
+    - "Hero-Statement ist kraftvoll und memorable"
+    - "Beratungsfelder sind klar aber nicht zu detailliert"
+    - "Buch-Sektion ordnet sich dem Consulting unter"
+    - "Kontaktformular wirkt einladend aber exklusiv"
+    - "Gesamteindruck: Würde ein Unternehmer hier Kontakt aufnehmen?"
+    - "Kein AI-Slop, kein generisches Design"
+
+artifacts:
+  - "projects/heinlein-book/website/index.html"
+  - "projects/heinlein-book/website/worker.js"
+  - "https://erikreisig.de"
+  - "https://api.erikreisig.de/contact"
+
+validation:
+  current_loop: 1
+  max_loops: 3
+  results: []

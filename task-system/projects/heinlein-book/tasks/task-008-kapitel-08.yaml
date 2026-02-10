@@ -1,0 +1,67 @@
+task_id: hb-task-008
+title: "Kapitel 8: Blockade"
+project: heinlein-book
+strategy: writing-strategy
+status: open
+created: 2026-02-07
+
+intention: >
+  Die Blockade wirkt. Versorgungsschiffe werden stundenlang "inspiziert". 
+  Vorräte schwinden. Die Bevölkerung wird nervös. Zum ersten Mal wackelt 
+  Nova Ventus. Brenner muss gleichzeitig die Moral halten und einen Ausweg 
+  finden. Sein Gegenüber: Admiral Holt — höflich, professionell, unerbittlich.
+  
+  Hier zahlt Brenner den ersten echten Preis: Ein Diabetiker stirbt weil 
+  Insulin verspätet ankommt. Brenner kennt seinen Namen. Er spricht nie darüber.
+  ABER: Der Leser sieht den Moment. Und Brenners Reaktion ist NICHT Kalkulation.
+
+scene_summary: >
+  Szene 1: Tag 3 der Blockade. Inspektion des Versorgungsschiffs "Doña Elvira".
+  12 Stunden Verzögerung. Kapur inventarisiert medizinische Vorräte. Insulin 
+  für 18 Tage. Blutdruckmedikamente für 22. "Dann wird es ungemütlich."
+  
+  Szene 2: Die Bevölkerung reagiert. Einige wollen gehen. Brenner hält keine 
+  Rede. Jian hält eine — pragmatisch, nüchtern: Wer gehen will, geht. Wer 
+  bleibt, arbeitet. 23 Menschen verlassen Nova Ventus. 317 bleiben.
+  
+  Szene 3: Brenners Gegenzug — er lädt Xinhua ein. Der chinesische Bericht: 
+  "Westliche Seemacht bedroht friedliche Zivilisten." China schickt ein 
+  "Forschungsschiff". Jetzt können die USA nicht mehr zugreifen ohne Peking 
+  einen Vorwand zu liefern. Schachbrett-Diplomatie.
+  
+  Szene 4: Der Tod. Thomas Frey, 54, Diabetiker, Software-Architekt. 
+  Insulin kam 36 Stunden zu spät. Kapur konnte nichts tun. Brenner steht 
+  vor der Tür der Krankenstation. Er fragt nicht nach Details. Er fragt 
+  nach dem Namen. DDR-ECHO: Ein Mann der weiß was es kostet wenn Systeme 
+  Menschen zermalmen. Hier — zum ERSTEN MAL — verliert Brenner für einen 
+  Moment die Kontrolle. Nicht dramatisch. Nicht laut. Er geht ans Geländer, 
+  schaut auf die Lichter der Bataan, und seine Hand umklammert das Metall 
+  so fest dass die Knöchel weiß werden. Zwei Sätze. Dann ist er wieder 
+  Brenner.
+  
+  Szene 5: Brenner an Holt, per Funk: "Admiral. Thomas Frey, 54 Jahre. 
+  Todesursache: Insulinmangel durch Lieferverzögerung. Ich empfehle Ihnen, 
+  diesen Namen zu notieren." Stille. Holt: "Verstanden."
+
+output:
+  path: "projects/heinlein-book/chapters/kapitel-08-blockade.md"
+  length: "3.500-4.500 Wörter"
+  language: "Deutsch"
+
+criteria:
+  quantitative:
+    - criterion: "Länge 3.500-4.500 Wörter"
+    - criterion: "Dialog-Anteil ≥ 40%"
+    - criterion: "Keine Gefühls-Introspektion Brenners"
+  qualitative:
+    - criterion: "Heinlein-Authentizität"
+      min_score: 8
+    - criterion: "TANSTAAFL"
+      description: "Der echte Preis. Ein Mensch stirbt. Das ist nicht kompensierbar."
+      min_score: 9
+    - criterion: "Der unkontrollierte Moment"
+      description: "Brenners Hand am Geländer. 2 Sätze. Die Fassade bricht. Nicht mehr."
+      min_score: 9
+    - criterion: "Geopolitisches Schach"
+      description: "Xinhua-Einladung, China-Forschungsschiff, USA in der Zwickmühle."
+      min_score: 8

@@ -1,0 +1,26 @@
+slug: mvp-launch
+name: "MVP Launch - Core Features Live"
+project: fangfuehrer
+goal: "Funktionsfähige App mit Fish ID, Auth, Catch-Tracking und Gamification für erste Beta-Tester"
+timeframe: "2026-02-01 bis 2026-02-15"
+status: working
+created: 2026-02-04
+
+key_results:
+  - Backend API komplett (Auth, Fish DB, Catches, Fish ID)
+  - PWA lauffähig mit allen Core Features
+  - CI/CD Pipeline funktioniert
+  - Erste Beta-Tester können App nutzen
+
+tactics:
+  - slug: backend-api
+    goal: "API mit allen Endpoints + Fish ID Integration"
+    status: completed
+  
+  - slug: pwa-core
+    goal: "PWA mit Auth, Save Catches, Collection, Profile"
+    status: validating
+    
+  - slug: ci-pipeline
+    goal: "Automatisierte Tests + Deployment"
+    status: working

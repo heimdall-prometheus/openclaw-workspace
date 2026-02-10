@@ -1,0 +1,68 @@
+id: hb-task-print
+title: "Print-Ready Hardcover PDF für Drukatava — 'Auf fremdem Grund'"
+project: heinlein-book
+created: 2026-02-08T10:49:00Z
+created_by: erik
+status: working
+priority: HIGHEST
+
+intention: |
+  Erik will seiner Tochter Sophia ein Hardcover in die Hand drücken.
+  Maximaler Aufwand, höchste Qualität. Print-Ready für Drukatava (Lettland).
+  Das Buch hat tiefe persönliche Bedeutung — Klaus (Eriks Vater) und Sophia
+  (Eriks Tochter) sind die Widmungsempfänger und Namensgeber der Hauptfiguren.
+
+target_audience: |
+  Sophia (Eriks Tochter), Familie, Freunde. Erste physische Ausgabe.
+
+book_metadata:
+  title_de: "Auf fremdem Grund"
+  title_en: "Sovereign."
+  author: "Erik Reisig"
+  imprint: "TANSTAAFL Press"
+  imprint_note: "Dieses Buch wurde von einem Menschen erdacht und mit einer Maschine geschrieben. Keiner von beiden hätte es allein gekonnt. Erik Reisig & Heimdall"
+  dedication: "Für Klaus und Sophia."
+  chapters: 14
+  words: ~57950
+  cover_style: "70s Painted SciFi, Mann an Reling, Plattform, Sonnenuntergang"
+  cover_chosen: "Variante 1"
+
+drukatava_specs:
+  format: "13.5 × 21 cm (A5-nah)"
+  binding: "Hardcover, fadengefheftet"
+  interior_paper: "80g/m² Werkdruck cream"
+  interior_color: "s/w (Schwarz-Weiß)"
+  cover: "Hardcover, CMYK, 300dpi"
+  bleed: "5mm alle Seiten"
+  file_format: "PDF (Press Quality), CMYK"
+  fonts: "In Kurven konvertiert oder eingebettet"
+  crop_marks: "Ja"
+  separate_files: "Cover-PDF + Innenteil-PDF getrennt"
+  pages_per_page: "Jede Seite einzeln, inkl. Leerseiten"
+
+deliverables:
+  - interior_pdf: "Innenteil PDF, alle Seiten, 5mm Bleed, Crop Marks"
+  - cover_pdf: "Cover-Spread PDF (Rückseite + Rücken + Vorderseite), 5mm Bleed"
+  - proof_pdf: "Vorschau-PDF zum visuellen Check"
+
+criteria:
+  quantitative:
+    - "PDF Press Quality, CMYK"
+    - "5mm Bleed auf allen Seiten"
+    - "Crop Marks vorhanden"
+    - "Alle Seiten gleiche Größe + Orientation"
+    - "Fonts eingebettet oder in Kurven"
+    - "Cover + Innenteil als separate PDFs"
+    - "Seitenzahl durch 4 teilbar (Druckbogen)"
+  qualitative:
+    - "Professionelles Typesetting (Schusterjungen/Hurenkinder vermeiden)"
+    - "Angemessene Ränder (innen mehr als außen wg. Bundsteg)"
+    - "Cover-Design: 70s SciFi Painted Style, hochwertig"
+    - "Widmungsseite, Impressum, Titelei korrekt"
+    - min_score: 8
+
+notes: |
+  HÖCHSTE PRIORITÄT — Erik will Sophia ein Buch in die Hand drücken.
+  ISBN bestellt (BE048157, 7 Werktage ab 07.02.)
+  Cover-Varianten existieren: generated-images/book-covers/
+  Kapitel: projects/heinlein-book/chapters/kapitel-01 bis 14

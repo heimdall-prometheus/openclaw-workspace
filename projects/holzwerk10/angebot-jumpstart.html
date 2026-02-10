@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<style>
+  @page { size: A4; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    color: #242930;
+    line-height: 1.6;
+    background: #fff;
+  }
+
+  /* === COVER PAGE === */
+  .cover {
+    width: 210mm; height: 297mm;
+    background-color: #026466;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+  }
+  .cover-content { padding: 40mm 25mm; }
+  .cover h1 {
+    font-size: 42pt; color: #fff; font-weight: 400;
+    letter-spacing: 2px; margin-bottom: 8mm;
+    line-height: 1.2;
+  }
+  .cover .subtitle {
+    font-size: 16pt; color: rgba(255,255,255,0.75);
+    font-style: italic; margin-bottom: 25mm;
+    letter-spacing: 1px;
+  }
+  .cover .divider {
+    width: 60mm; height: 1px;
+    background: rgba(255,255,255,0.4);
+    margin: 0 auto 15mm;
+  }
+  .cover .meta {
+    font-size: 11pt; color: rgba(255,255,255,0.6);
+    line-height: 2;
+  }
+  .cover .brand-mark {
+    position: absolute; bottom: 15mm; right: 20mm;
+    font-size: 9pt; color: rgba(255,255,255,0.35);
+    letter-spacing: 3px; text-transform: uppercase;
+  }
+
+  /* === CONTENT PAGES === */
+  .page {
+    width: 210mm; min-height: 297mm;
+    padding: 20mm 25mm 25mm 25mm;
+    page-break-after: always;
+    position: relative;
+  }
+  .page:last-child { page-break-after: avoid; }
+  .page.no-break { page-break-after: avoid; }
+
+  .page-header {
+    border-bottom: 2px solid #026466;
+    padding-bottom: 4mm; margin-bottom: 10mm;
+    display: flex; justify-content: space-between; align-items: flex-end;
+  }
+  .page-header .logo-text {
+    font-size: 10pt; color: #026466; font-weight: bold;
+    letter-spacing: 2px; text-transform: uppercase;
+  }
+  .page-header .page-title {
+    font-size: 9pt; color: #999; font-style: italic;
+  }
+
+  h2 {
+    font-size: 18pt; color: #026466; font-weight: 400;
+    margin: 5mm 0 3mm; letter-spacing: 0.5px;
+  }
+  h2:first-of-type { margin-top: 0; }
+  h3 {
+    font-size: 12pt; color: #242930; font-weight: bold;
+    margin: 4mm 0 2mm; 
+  }
+  p { font-size: 10pt; margin-bottom: 2mm; color: #333; }
+  
+  .intro {
+    font-size: 10pt; color: #555; font-style: italic;
+    border-left: 3px solid #026466; padding-left: 5mm;
+    margin: 3mm 0 5mm;
+  }
+
+  /* Tables */
+  table {
+    width: 100%; border-collapse: collapse;
+    margin: 2mm 0 4mm; font-size: 9.5pt;
+  }
+  th {
+    background: #026466; color: #fff;
+    padding: 2mm 3mm; text-align: left;
+    font-weight: normal; font-size: 8.5pt;
+    letter-spacing: 0.5px; text-transform: uppercase;
+  }
+  td {
+    padding: 1.5mm 3mm; border-bottom: 1px solid #e8e8e8;
+    vertical-align: top;
+  }
+  tr:nth-child(even) td { background: #f8fafa; }
+  
+  .check { color: #026466; font-weight: bold; }
+  
+  /* Highlight box */
+  .highlight {
+    background: #f0f7f7; border: 1px solid #d0e4e4;
+    border-left: 4px solid #026466;
+    padding: 3mm; margin: 3mm 0;
+    border-radius: 2px;
+  }
+  .highlight p { margin-bottom: 0.5mm; font-size: 9.5pt; }
+  .highlight strong { color: #026466; }
+
+  /* Price box */
+  .price-box {
+    background: #026466; color: #fff;
+    padding: 5mm; margin: 5mm 0;
+    text-align: center; border-radius: 3px;
+  }
+  .price-box .price {
+    font-size: 30pt; font-weight: bold;
+    margin: 2mm 0;
+  }
+  .price-box .price-note {
+    font-size: 10pt; opacity: 0.7;
+  }
+  .price-box .price-sub {
+    font-size: 11pt; opacity: 0.85;
+    margin-top: 2mm;
+  }
+
+  /* List */
+  ul { margin: 2mm 0 4mm 6mm; font-size: 10.5pt; }
+  li { margin-bottom: 1.5mm; color: #333; }
+  li strong { color: #242930; }
+
+  /* Footer */
+  .page-footer {
+    position: absolute; bottom: 10mm; left: 25mm; right: 25mm;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 3mm;
+    font-size: 8pt; color: #aaa;
+    display: flex; justify-content: space-between;
+  }
+
+  /* Result metric */
+  .metrics {
+    display: flex; gap: 5mm; margin: 5mm 0;
+    flex-wrap: wrap;
+  }
+  .metric {
+    flex: 1; min-width: 35mm;
+    background: #f8fafa; border: 1px solid #e4eded;
+    padding: 4mm; text-align: center; border-radius: 2px;
+  }
+  .metric .value { font-size: 20pt; color: #026466; font-weight: bold; }
+  .metric .label { font-size: 8pt; color: #888; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 1mm; }
+
+  .signature-line {
+    margin-top: 15mm;
+    display: flex; gap: 20mm;
+  }
+  .sig-block {
+    flex: 1; padding-top: 15mm;
+    border-top: 1px solid #333;
+  }
+  .sig-block .sig-label { font-size: 9pt; color: #666; }
+  .sig-block .sig-name { font-size: 10pt; font-weight: bold; margin-top: 1mm; }
+</style>
+</head>
+<body>
+
+<!-- ====== COVER ====== -->
+<div class="cover">
+  <div class="cover-content">
+    <h1>SEO Jumpstart</h1>
+    <div class="subtitle">Mehr Sichtbarkeit. Mehr Anfragen. Mehr Aufträge.</div>
+    <div class="divider"></div>
+    <div class="meta">
+      Angebot für Holzwerk 10<br>
+      Joe Ott, Schreinermeister<br><br>
+      Erik Reisig Investment GmbH<br>
+      Februar 2026
+    </div>
+  </div>
+  <div class="brand-mark">Holzwerk 10</div>
+</div>
+
+<!-- ====== PAGE 1: Ausgangslage & Leistungen ====== -->
+<div class="page">
+  <div class="page-header">
+    <span class="logo-text">Holzwerk 10 — SEO Jumpstart</span>
+    <span class="page-title">Leistungsübersicht</span>
+  </div>
+
+  <h2>Ausgangslage</h2>
+  <p class="intro">
+    Holzwerk 10 ist seit 2010 eine feste Größe für hochwertigen Möbelbau und Innenausbau in der Region Landsberg, Ammersee und München. Die Qualität der Arbeit spricht für sich — aber Google weiß das noch nicht.
+  </p>
+
+  <p>Aktuell werden Sie fast ausschließlich über Ihren Firmennamen gefunden. Kunden, die nach „Schreiner Landsberg" oder „Küchen nach Maß" suchen, landen bei Mitbewerbern. Dieses Paket ändert das.</p>
+
+  <h2>Leistungen</h2>
+
+  <h3>On-Page SEO Optimierung</h3>
+  <table>
+    <tr><th style="width:55%">Maßnahme</th><th>Ihr Nutzen</th></tr>
+    <tr>
+      <td><strong>Meta Descriptions</strong> für alle Seiten<br><span style="font-size:9pt;color:#888">(Home, Über uns, Leistungen, Küchen, Showroom, Kontakt, Möbel & Wohnen, Fenster & Türen)</span></td>
+      <td>Google zeigt überzeugende Vorschautexte → mehr Klicks auf Ihr Ergebnis</td>
+    </tr>
+    <tr>
+      <td><strong>Title Tags</strong> mit regionalen Keywords optimieren</td>
+      <td>Besseres Ranking für „Schreiner Landsberg", „Küchen Ammersee" etc.</td>
+    </tr>
+    <tr>
+      <td><strong>Überschriften-Struktur</strong> (H1/H2) aller Seiten optimieren</td>
+      <td>Google versteht Ihre Seitenstruktur → relevantere Rankings</td>
+    </tr>
+    <tr>
+      <td><strong>Bild-Optimierung</strong> — Alt-Texte für alle wichtigen Bilder</td>
+      <td>Sichtbarkeit in der Google Bildersuche (15-20% des Traffics bei Handwerkern!)</td>
+    </tr>
+  </table>
+
+  <h3>Local SEO</h3>
+  <table>
+    <tr><th style="width:55%">Maßnahme</th><th>Ihr Nutzen</th></tr>
+    <tr>
+      <td><strong>Schema Markup</strong> (LocalBusiness) einbauen</td>
+      <td>Google zeigt Adresse, Telefon, Öffnungszeiten direkt in der Suche</td>
+    </tr>
+    <tr>
+      <td><strong>Google Business Profile</strong> vollständig optimieren</td>
+      <td>Besseres Ranking in Google Maps → mehr Laufkundschaft & Anrufe</td>
+    </tr>
+    <tr>
+      <td><strong>Bewertungs-Strategie</strong> einrichten<br><span style="font-size:9pt;color:#888">(Review-Link, Kunden-Ansprache-Vorlagen)</span></td>
+      <td>Systematisch 5-Sterne-Bewertungen sammeln → Vertrauenssignal #1</td>
+    </tr>
+    <tr>
+      <td><strong>NAP-Konsistenz</strong> prüfen & korrigieren</td>
+      <td>Einheitliche Firmendaten überall = besseres lokales Ranking</td>
+    </tr>
+  </table>
+
+  <div class="page-footer">
+    <span>Erik Reisig Investment GmbH</span>
+    <span>Seite 1</span>
+  </div>
+</div>
+
+<!-- ====== PAGE 2: Technisch + Content + Ergebnisse ====== -->
+<div class="page no-break">
+  <div class="page-header">
+    <span class="logo-text">Holzwerk 10 — SEO Jumpstart</span>
+    <span class="page-title">Leistungen & Ergebnisse</span>
+  </div>
+
+  <h3>Technisches SEO</h3>
+  <table>
+    <tr><th style="width:55%">Maßnahme</th><th>Ihr Nutzen</th></tr>
+    <tr>
+      <td><strong>XML-Sitemap</strong> erstellen & bei Google einreichen</td>
+      <td>Google findet und indexiert alle Ihre Seiten zuverlässig</td>
+    </tr>
+    <tr>
+      <td><strong>Google Search Console</strong> einrichten</td>
+      <td>Sie sehen, für welche Begriffe Sie gefunden werden — die Basis für alles Weitere</td>
+    </tr>
+    <tr>
+      <td><strong>Domain-Konsolidierung</strong> (holzwerk10.com → .de)</td>
+      <td>Kein doppelter Inhalt mehr, volle SEO-Kraft auf eine Domain</td>
+    </tr>
+    <tr>
+      <td><strong>Social Sharing</strong> optimieren (Open Graph Tags)</td>
+      <td>Professionelle Vorschau wenn Ihr Link auf WhatsApp oder Facebook geteilt wird</td>
+    </tr>
+    <tr>
+      <td><strong>PageSpeed Quick-Fixes</strong> (Bilder, Caching)</td>
+      <td>Schnellere Website = besseres Google-Ranking + weniger Absprünge</td>
+    </tr>
+  </table>
+
+  <h3>Content: 1 SEO-Blog-Artikel</h3>
+  <div class="highlight">
+    <p><strong>Thema:</strong> „Schreiner in Landsberg finden — Darauf sollten Sie achten"</p>
+    <p><strong>Umfang:</strong> ~1.200 Wörter, suchmaschinen-optimiert</p>
+    <p><strong>Keywords:</strong> Schreiner Landsberg, Schreinerei Landsberg am Lech, Möbel nach Maß Landsberg</p>
+    <p><strong>Ziel:</strong> Top-10-Ranking für Ihr wichtigstes regionales Keyword</p>
+  </div>
+  <p style="font-size:9pt">Positioniert Holzwerk 10 als erste Anlaufstelle für Schreinerei in der Region — mit echtem Mehrwert und den richtigen Signalen für Google.</p>
+
+  <h2>Erwartete Ergebnisse</h2>
+  <p>Innerhalb von 4-8 Wochen nach Umsetzung:</p>
+
+  <div class="metrics">
+    <div class="metric">
+      <div class="value">+150%</div>
+      <div class="label">Organische Besucher</div>
+    </div>
+    <div class="metric">
+      <div class="value">+200%</div>
+      <div class="label">Google Maps Aufrufe</div>
+    </div>
+    <div class="metric">
+      <div class="value">10-15</div>
+      <div class="label">Keywords in Top 50</div>
+    </div>
+    <div class="metric">
+      <div class="value">2×</div>
+      <div class="label">Anfragen pro Monat</div>
+    </div>
+  </div>
+
+  <div class="highlight">
+    <p><strong>Konkretes Beispiel:</strong> Ein zusätzlicher Küchenauftrag pro Monat durch bessere Google-Sichtbarkeit entspricht €5.000-15.000 Umsatz — das Paket zahlt sich bereits mit der ersten zusätzlichen Anfrage aus.</p>
+  </div>
+
+  <h2>Investition</h2>
+
+  <div class="price-box">
+    <div class="price-note">SEO Jumpstart Paket — Festpreis</div>
+    <div class="price">1.000 €</div>
+    <div class="price-sub">zzgl. MwSt. | Einmalig, keine laufenden Kosten</div>
+  </div>
+
+  <p style="text-align:center;font-size:9pt;color:#666">
+    Optional empfohlen: WP Rocket Caching-Plugin (€49/Jahr) + ShortPixel Bildoptimierung (€10 einmalig)
+  </p>
+
+  <div class="page-footer">
+    <span>Erik Reisig Investment GmbH</span>
+    <span>Seite 2</span>
+  </div>
+</div>
+
+<!-- ====== PAGE 3 (last): Ablauf + Perspektive + Unterschrift ====== -->
+<div class="page">
+  <div class="page-header">
+    <span class="logo-text">Holzwerk 10 — SEO Jumpstart</span>
+    <span class="page-title">Ablauf & Nächste Schritte</span>
+  </div>
+
+  <h2>Ablauf</h2>
+
+  <table>
+    <tr><th>Phase</th><th>Was passiert</th></tr>
+    <tr>
+      <td><strong>Woche 1</strong></td>
+      <td>On-Page SEO: Meta Descriptions, Title Tags, Überschriften, Bilder<br>Technisch: Sitemap, Search Console, Domain-Redirect, PageSpeed</td>
+    </tr>
+    <tr>
+      <td><strong>Woche 2</strong></td>
+      <td>Local SEO: Schema Markup, Google Business Profile, Bewertungs-Setup<br>Content: Blog-Artikel „Schreiner in Landsberg finden"</td>
+    </tr>
+    <tr>
+      <td><strong>Woche 3-4</strong></td>
+      <td>Monitoring der ersten Ergebnisse, Feintuning bei Bedarf<br>Übergabe Search Console Zugang + kurze Einweisung</td>
+    </tr>
+  </table>
+
+  <h3>Was wir von Ihnen brauchen</h3>
+  <ul>
+    <li>WordPress Admin-Zugang</li>
+    <li>Zugang zum Google Account (für Search Console & Business Profile)</li>
+    <li>10-20 hochwertige Projekt- und Showroom-Fotos</li>
+    <li>Aktuelle Öffnungszeiten</li>
+  </ul>
+
+  <h2>Perspektive: Wie es weitergehen kann</h2>
+  <p>Das Jumpstart-Paket legt das Fundament. Für nachhaltige Top-Rankings empfehlen wir im Anschluss:</p>
+
+  <table>
+    <tr><th>Maßnahme</th><th>Wirkung</th></tr>
+    <tr>
+      <td><strong>Content-Offensive</strong><br>4 weitere SEO-Artikel zu Ihren Kernthemen</td>
+      <td>Top-3-Rankings für regionale Keywords<br>+300% organischer Traffic</td>
+    </tr>
+    <tr>
+      <td><strong>Lokaler Backlink-Aufbau</strong><br>Handwerkskammer, Branchenbücher, lokale Partner</td>
+      <td>Stärkere Domain-Autorität<br>Bessere Rankings in Google Maps</td>
+    </tr>
+    <tr>
+      <td><strong>Monatliches SEO-Monitoring</strong><br>Report + laufende Optimierung</td>
+      <td>Rankings halten und ausbauen<br>Neue Chancen erkennen</td>
+    </tr>
+  </table>
+
+  <p style="margin-top:5mm">Diese Maßnahmen besprechen wir gerne nach Abschluss des Jumpstarts, wenn Sie die ersten Ergebnisse sehen.</p>
+
+  <h2 style="margin-top:12mm">Nächste Schritte</h2>
+  <div class="highlight">
+    <p>1. Sie bestätigen das Angebot</p>
+    <p>2. Wir erhalten die Zugänge (WordPress, Google)</p>
+    <p>3. Umsetzung startet innerhalb von 3 Werktagen</p>
+    <p>4. Nach 2 Wochen: Alle Maßnahmen live</p>
+  </div>
+
+  <div class="signature-line">
+    <div class="sig-block">
+      <div class="sig-label">Ort, Datum</div>
+    </div>
+    <div class="sig-block">
+      <div class="sig-label">Unterschrift Auftraggeber</div>
+      <div class="sig-name">Joe Ott, Holzwerk 10</div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span>Erik Reisig Investment GmbH — reisig@c-led.net</span>
+    <span>Seite 3</span>
+  </div>
+</div>
+
+</body>
+</html>

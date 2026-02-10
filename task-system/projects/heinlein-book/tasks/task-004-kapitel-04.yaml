@@ -1,0 +1,62 @@
+task_id: hb-task-004
+title: "Kapitel 4: Die ersten Bewohner"
+project: heinlein-book
+strategy: writing-strategy
+status: passed
+created: 2026-02-07
+
+intention: >
+  Kapitel 4 bringt Nova Ventus zum Leben. Fünfzig Menschen ziehen ein — handverlesen, 
+  keine Aussteiger. Der Leser erlebt den Alltag auf einer schwimmenden Stadt: die 
+  Entsalzungsanlage die ausfällt, den Klempner der wichtiger ist als der Kryptograph, 
+  die erste Operation die Kapur durchführt (Emergency, Arbeitsunfall). 
+  
+  Und dann: die erste geopolitische Krise. Sierra Leone beschwert sich bei der AU. 
+  Brenners Antwort ist kein Kampf — es ist ein Deal. Medizinische Versorgung für 
+  die Küstenbevölkerung im Tausch gegen stilles Dulden. Der Gesundheitsminister 
+  nimmt an. Der Verteidigungsminister nicht.
+
+scene_summary: >
+  Szene 1: Ankunft der ersten 50. Versorgungsschiff, Container werden entladen.
+  Kapur sieht die Krankenstation zum ersten Mal. Park sein Labor. Widmer ihren 
+  Serverraum. Brenner hält keine Rede. Er zeigt jedem seine Kabine und fragt: 
+  "Funktioniert die Entsalzungsanlage?" — Sie funktioniert nicht. Jian flucht.
+  
+  Szene 2: Erste Woche. Alltag etabliert sich. Probleme: Wasser, Strom, Internet-
+  Latenz, Seekrankheit. Die pragmatischen Lösungen. Der Koch (von Jian angeheuert) 
+  wird zum wichtigsten Menschen an Bord. Brenner rechnet Betriebskosten.
+  
+  Szene 3: Arbeitsunfall auf dem Oberdeck (Schweißer, Verbrennungen). Kapurs erste
+  OP auf Nova Ventus. Improvisiert, erfolgreich. Kein Ethikkomitee, keine Formulare.
+  Medizin wie sie sein sollte. Brenner sieht zu und sagt nichts.
+  
+  Szene 4: Sierra Leone. Ein Patrouillenboot nähert sich. Funkkontakt. "Unidentifizierte 
+  Struktur, Sie befinden sich in der Nähe unserer AWZ." Krone am Telefon: "202 Seemeilen.
+  Nicht in der Nähe. Jenseits." Die AU-Beschwerde. Brenner fliegt nach Freetown.
+  
+  Szene 5: Freetown. Brenner trifft den Gesundheitsminister und den Verteidigungsminister.
+  Zwei verschiedene Deals, zwei verschiedene Reaktionen. Medizin gegen Duldung. 
+  Der eine nimmt an. Der andere sagt: "Heute dulden wir. Morgen vielleicht nicht."
+
+output:
+  path: "projects/heinlein-book/chapters/kapitel-04-die-ersten-bewohner.md"
+  length: "3.500-4.500 Wörter"
+  language: "Deutsch"
+
+criteria:
+  quantitative:
+    - criterion: "Länge 3.500-4.500 Wörter"
+    - criterion: "Dialog-Anteil ≥ 40%"
+    - criterion: "Keine Gefühls-Introspektion Brenners"
+  qualitative:
+    - criterion: "Heinlein-Authentizität"
+      min_score: 8
+    - criterion: "Alltagsrealismus"
+      description: "Die Plattform muss sich anfühlen wie ein realer Ort mit realen Problemen. Keine Utopie."
+      min_score: 8
+    - criterion: "Der Hustle"
+      description: "Der Sierra-Leone-Deal. Medizin gegen Duldung — klassischer Brenner-Move."
+      min_score: 8
+    - criterion: "Charakter-Tiefe"
+      description: "Kapur, Jian, der Koch — Nebenfiguren gewinnen an Profil."
+      min_score: 7

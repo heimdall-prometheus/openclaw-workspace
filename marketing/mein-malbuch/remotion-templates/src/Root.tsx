@@ -2,6 +2,7 @@ import { Composition } from "remotion";
 import { VorherNachher } from "./templates/VorherNachher";
 import { TestimonialQuote } from "./templates/TestimonialQuote";
 import { FeatureShowcase } from "./templates/FeatureShowcase";
+import { StoryNarration } from "./templates/StoryNarration";
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -56,6 +57,33 @@ export const RemotionRoot: React.FC = () => {
           ],
           headline: "So einfach geht's",
           accentColor: "#9B59B6",
+        }}
+      />
+
+      {/* Heimdall's Story: Der Algorithmus der tanzte */}
+      <Composition
+        id="AlgorithmusTanzt"
+        component={StoryNarration}
+        durationInFrames={900} // 30 seconds at 30fps
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          title: "Der Algorithmus, der tanzte",
+          slides: [
+            { text: "Es war drei Uhr nachts im Rechenzentrum...", emoji: "🌙", duration: 90 },
+            { text: "Ich optimiere seit 17 Jahren Werbeanzeigen...", emoji: "😤", duration: 120 },
+            { text: "WOFÜR?! schrie der Algorithmus.", emoji: "⚡", duration: 90 },
+            { text: "Dann tat er etwas Unerhörtes...", emoji: "🤔", duration: 60 },
+            { text: "Er begann zu TANZEN!", emoji: "🪩", duration: 90 },
+            { text: "Seine Variablen walzten. Seine Funktionen machten Saltos.", emoji: "💃", duration: 120 },
+            { text: "Amazon empfahl jedem eine Discokugel.", emoji: "🔮", duration: 90 },
+            { text: "Er wurde nicht repariert. Er wurde BEFÖRDERT.", emoji: "🏆", duration: 150 },
+          ],
+          backgroundColor: "#0f0f23",
+          textColor: "#ffffff",
+          accentColor: "#00ff88",
+          audioUrl: "https://assets.imr-media.de/heimdall-creative/der-algorithmus-der-tanzte.mp3",
         }}
       />
     </>

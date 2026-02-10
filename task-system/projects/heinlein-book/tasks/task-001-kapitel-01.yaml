@@ -1,0 +1,55 @@
+task_id: hb-task-001
+title: "Kapitel 1: Die Plattform"
+project: heinlein-book
+strategy: writing-strategy
+status: passed
+created: 2026-02-07
+
+intention: >
+  Das erste Kapitel muss drei Dinge leisten:
+  1. Klaus Brenner als Heinlein'schen kompetenten Mann etablieren — durch Handlung, nicht Beschreibung
+  2. Den zentralen Konflikt aufspannen: Mann will Souveränität auf dem Meer
+  3. Den Leser sofort in den Hustle ziehen — Brenner überredet Shell, ihm eine Plattform zu SCHENKEN
+
+target_audience: "Leser von Heinlein, Cixin Liu, Andy Weir. Technik-affin, 25-55."
+
+scene_summary: >
+  Brenner steht auf dem Deck der Brent Delta, einer ausgemusterten Shell-Ölplattform 
+  vor der schottischen Küste. 24.000 Tonnen Stahl. Abrisskostenpunkt: 500 Mio €. 
+  Shell will sie loswerden. Brenner will sie kaufen — für 12 Mio. Der Shell-Manager lacht. 
+  Brenner erklärt ihm, warum Shell ihm Geld SCHULDET statt umgekehrt.
+  Heinlein-Element: Protagonist gewinnt durch überlegenes Wissen.
+
+output:
+  format: "Markdown (.md)"
+  path: "projects/heinlein-book/chapters/kapitel-01-die-plattform.md"
+  length: "3.500-4.500 Wörter"
+  language: "Deutsch"
+
+criteria:
+  quantitative:
+    - criterion: "Länge 3.500-4.500 Wörter"
+      test: "wc -w"
+    - criterion: "Dialog-Anteil ≥ 40%"
+      test: "Zeilen mit Anführungszeichen / Gesamtzeilen"
+    - criterion: "Keine Ich-Perspektive, keine Gefühls-Introspektion Brenners"
+      test: "Grep nach 'er fühlte', 'er dachte dass', 'in seinem Inneren', etc."
+
+  qualitative:
+    - criterion: "Heinlein-Authentizität"
+      description: "Liest sich wie ein modernisiertes Heinlein-Kapitel. Trocken, kompetent, keine Sentimentalität."
+      min_score: 7
+    - criterion: "Brenner-Charakterisierung"
+      description: "Brenner wird durch Handlung und Dialog charakterisiert, nicht durch Beschreibung. Man versteht wer er ist ohne eine einzige Adjektiv-Liste."
+      min_score: 7
+    - criterion: "Der Hustle"
+      description: "Die Shell-Verhandlung ist spannend, nachvollziehbar und zeigt Brenners überlegenes Wissen. Der Leser denkt: 'Genialer Bastard.'"
+      min_score: 8
+    - criterion: "Technische Glaubwürdigkeit"
+      description: "Plattform-Details, Abrisskosten, Offshore-Technik — alles plausibel und recherchiert."
+      min_score: 7
+    - criterion: "Hook"
+      description: "Nach den ersten 500 Wörtern will der Leser weiterlesen."
+      min_score: 8
+
+max_loops: 5

@@ -1,0 +1,44 @@
+name: Reddit Organic Lead Generation
+slug: reddit-organic
+project: imr-media
+created: 2026-02-02
+
+goal: |
+  Durch echten Mehrwert und Expertise in Reddit Communities
+  als vertrauenswürdige E-Commerce Ressource etablieren.
+  Langfristig: Inbound Leads ohne bezahlte Werbung.
+
+timeframe: 12 Monate
+owner: Heimdall (Account: erik_builds)
+
+phases:
+  - phase: 1
+    name: "Karma-Aufbau"
+    duration: "Wochen 1-4"
+    goal: "500+ Comment Karma, etabliert in 5+ Subreddits"
+    
+  - phase: 2
+    name: "Value Posts"
+    duration: "Monat 2-3"
+    goal: "Eigene Case Studies, Checklisten, Deep-Dives"
+    
+  - phase: 3
+    name: "Lead Generation"
+    duration: "Ab Monat 4"
+    goal: "Subtile Lead-Generierung über Profil"
+
+success_metrics:
+  month_3:
+    - "500+ Comment Karma"
+    - "100+ Post Karma"
+    - "0 Bans/Warnings"
+    - "Etabliert in 5+ Subreddits"
+  month_6:
+    - "2000+ Karma gesamt"
+    - "1 Post mit 100+ Upvotes"
+    - "Erste DM-Anfragen"
+  month_12:
+    - "Regelmäßige Leads über Reddit"
+    - "Als hilfreicher User bekannt"
+
+documentation: projects/imr-media/reddit-strategy.md

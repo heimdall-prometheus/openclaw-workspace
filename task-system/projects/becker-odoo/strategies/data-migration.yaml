@@ -1,0 +1,10 @@
+id: data-migration
+title: "Datenmigration Legacy → Odoo"
+goal: |
+  Vollständige, saubere Überführung aller relevanten Daten aus dem 
+  Legacy-ERP (uswBS/InterBase) nach Odoo. Bereinigung alter/redundanter Daten.
+  Dokumentation der Quelldatenbank als Referenz für den gesamten Migrationsprozess.
+horizon: "Q1-Q2 2026"
+project: becker-odoo
+status: active
+created: "2026-02-10"

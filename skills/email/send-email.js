@@ -28,9 +28,10 @@ const to = getArg('--to');
 const subject = getArg('--subject');
 const body = getArg('--body');
 const replyTo = getArg('--reply-to'); // Message-ID to reply to
+const attachment = getArg('--attachment'); // File path for attachment
 
 if (!to || !subject || !body) {
-  console.error('Usage: node send-email.js --to EMAIL --subject "Subject" --body "Body text" [--reply-to MESSAGE-ID]');
+  console.error('Usage: node send-email.js --to EMAIL --subject "Subject" --body "Body text" [--reply-to MESSAGE-ID] [--attachment FILE]');
   process.exit(1);
 }
 
@@ -45,6 +46,14 @@ const mailOptions = {
 if (replyTo) {
   mailOptions.inReplyTo = replyTo;
   mailOptions.references = replyTo;
+}
+
+if (attachment) {
+  const path = require('path');
+  mailOptions.attachments = [{
+    filename: path.basename(attachment),
+    path: attachment
+  }];
 }
 
 // Send

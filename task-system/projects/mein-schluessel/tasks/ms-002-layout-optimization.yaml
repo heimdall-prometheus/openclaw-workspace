@@ -1,0 +1,34 @@
+id: ms-002-layout-optimization
+title: "Layout Optimization — Buybox, Trust Badges, Delivery Date"
+project: mein-schluessel
+created: 2026-02-09
+status: done
+
+intention: |
+  Produktseiten conversion-optimieren: CTA above-the-fold, Trust-Signale sichtbar,
+  konkretes Lieferdatum, kompakter Konfigurator.
+
+validation:
+  quantitative:
+    - name: "Config: CTA above fold (900px)"
+      result: "PASS — CTA at 888px"
+    - name: "Config: Accessories collapsed"
+      result: "PASS — 42px"
+    - name: "Config: Trust badges visible"
+      result: "PASS"
+    - name: "Config: Delivery date shown"
+      result: "PASS — Lieferung bis Do., 12. Feb."
+    - name: "Config: Compact configurator"
+      result: "PASS — padding ≤6px, font ≤14px"
+    - name: "Simple: CTA above fold"
+      result: "PASS — CTA at 643px"
+    - name: "Simple: Trust badges visible"
+      result: "PASS"
+    - name: "Simple: Delivery date shown"
+      result: "PASS"
+    - name: "Simple: Price visible"
+      result: "PASS — at <600px"
+    - name: "Feiertage Sachsen-Anhalt"
+      result: "PASS — 12 Feiertage inkl. Hl. Drei Könige + Reformationstag"
+
+result: "10/10 PASS — deployed 2026-02-09 16:45 UTC"

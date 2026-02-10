@@ -1,0 +1,42 @@
+id: gh-22
+title: "Measurement Backend Sync"
+status: open
+github_issue: 22
+
+project: fangfuehrer
+strategy: mvp-launch
+phase: 4
+
+intention: |
+  AR-Messungen als verifiziert markieren für Leaderboard-Integrität.
+
+target_audience: |
+  Backend/Leaderboard-System
+
+criteria:
+  quantitative:
+    - "AR-Flag im Catch-Model"
+    - "Verifizierungs-Badge in UI"
+    - "API akzeptiert AR-Daten"
+  
+  qualitative:
+    - "Manipulationsschutz"
+    - "Klare Dokumentation"
+
+validation:
+  loop_count: 0
+  max_loops: 10
+  min_qualitative_score: 7
+  history: []
+
+created: "2026-02-04T11:45:00Z"
+created_by: heimdall
+updated: "2026-02-04T11:45:00Z"
+completed: ""
+
+artifacts: []
+
+notes: |
+  GitHub Issue: https://github.com/heimdall-prometheus/fangfuehrer/issues/22
+  Type: feature
+  Priority: high

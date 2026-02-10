@@ -1,0 +1,79 @@
+id: ms-task-002
+title: "WCAG Quick-Wins: Sprint 1 — Footer, Kontraste, Touch-Ziele, Alt-Texte"
+project: mein-schluessel
+created: 2026-02-07T11:41:00Z
+status: in_progress
+branch: feature/wcag-quick-wins
+
+intention: |
+  BFSG-Compliance erfordert WCAG 2.2 AA. Der Audit zeigt 380 Errors über 8 Seiten.
+  Sprint 1 Quick-Wins fixen ~70% aller Violations mit ~4-6h Aufwand.
+  Alle Fixes im Theme-Repo, getestet auf Dev, validiert per axe-core Rescan.
+
+strategic_goal: |
+  Score von 86/100 → 95+/100 (automatisiert). Fundament für BFSG-Compliance.
+
+acceptance_criteria:
+  quantitative:
+    - id: q1
+      description: "axe-core Durchschnittsscore ≥93/100 über alle 8 Seiten"
+    - id: q2
+      description: "Footer ARIA-Violations = 0 (war 32 über 8 Seiten)"
+    - id: q3
+      description: "Farbkontrast-Violations ≤10 (war 104)"
+    - id: q4
+      description: "Touch-Ziel-Violations = 0 (war 12)"
+    - id: q5
+      description: "Alt-Text-Violations ≤3 (war 13, nur Plugin-Bilder bleiben)"
+    - id: q6
+      description: "Theme kompiliert ohne Fehler auf Dev"
+    - id: q7
+      description: "Keine visuellen Regressionen (Storefront sieht identisch aus, nur Farben minimal dunkler)"
+  qualitative:
+    - id: ql1
+      description: "Farben harmonieren mit bestehendem Design (nicht 'hässlich kontrastreich')"
+      min_score: 7
+
+fixes_planned:
+  - id: fix-1
+    name: "Footer ARIA-Fix"
+    wcag: "4.1.2, 1.3.1"
+    file: "src/Resources/views/storefront/layout/footer/footer.html.twig"
+    description: "role='button' auf Collapse-Trigger, role='listitem' auf Footer-Spalten"
+    impact: "32 Violations auf 8 Seiten → 0"
+
+  - id: fix-2
+    name: "Farbkontraste SCSS"
+    wcag: "1.4.3"
+    files: ["src/Resources/app/storefront/src/scss/"]
+    description: |
+      $primary: #11aba8 → #097472 (oder Uwe-approved Alternative)
+      $success: aufhellen/abdunkeln für Topseller-Badge
+      Newsletter-Footer: Text heller oder Hintergrund dunkler
+    impact: "104 Violations → ~10"
+    note: "Branding-Farbe #11aba8 → #097472 braucht Uwe-Approval (task-002-branding blocked)"
+
+  - id: fix-3
+    name: "Touch-Ziele CSS"
+    wcag: "2.5.8"
+    file: "src/Resources/app/storefront/src/scss/"
+    description: "min-width/height 24px auf Newsletter-Checkbox + Zubehör-Checkboxen"
+    impact: "12 Violations → 0"
+
+  - id: fix-4
+    name: "Slider Buttons Labels"
+    wcag: "4.1.2"
+    file: "src/Resources/views/storefront/component/"
+    description: "aria-label auf Prev/Next Buttons, role='group' auf Controls"
+    impact: "6 Violations → 0"
+
+  - id: fix-5
+    name: "Links ohne Text"
+    wcag: "2.4.4"
+    description: "aria-label auf Bild-Links die nur img ohne alt enthalten"
+    impact: "3 Violations → 0"
+
+server:
+  dev: https://ms-dev.erikreisig.de
+  repo: heimdall-prometheus/mein-schluessel-theme
+  branch: feature/wcag-quick-wins

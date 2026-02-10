@@ -1,0 +1,91 @@
+# Task: 4 SEO Blog-Artikel für IMR Media
+
+id: task-2026-01-31-001
+title: "4 SEO Blog-Artikel für Boomer E-Commerce Zielgruppe"
+status: passed
+
+project: imr-media
+strategy: content-q1-2026
+tactic: seo-blog-content
+
+intention: |
+  Boomer Small Business Owners (50-70 Jahre) sollen durch hilfreichen, 
+  verständlichen Content Vertrauen zu IMR Media aufbauen. Die Artikel sollen
+  bei Google ranken und organischen Traffic bringen, der zu Leads konvertiert.
+
+target_audience: |
+  Boomer Small Business Owners (50-70 Jahre):
+  - Weniger digital-affin, brauchen einfache Sprache
+  - Wollen Online-Shop starten oder verbessern
+  - Vertrauen ist wichtiger als Hype
+  - Suchen praktische, umsetzbare Tipps
+  - Entscheiden langsam, brauchen viele Touchpoints
+
+criteria:
+  quantitative:
+    - "Jeder Artikel mindestens 1.500 Wörter"
+    - "Jeder Artikel hat Meta-Title (max 60 Zeichen)"
+    - "Jeder Artikel hat Meta-Description (max 155 Zeichen)"
+    - "Jeder Artikel hat H1 + mindestens 3 H2-Überschriften"
+    - "Jeder Artikel enthält Primary Keyword im Title"
+    - "Jeder Artikel hat CTA am Ende (Kontakt/Service)"
+    
+  qualitative:
+    - "Sprache ist einfach und verständlich (keine Fachbegriffe ohne Erklärung)"
+    - "Ton ist vertrauenswürdig und hilfsbereit (nicht verkäuferisch)"
+    - "Inhalte sind praktisch und umsetzbar (konkrete Tipps)"
+    - "Struktur ist scanbar (Listen, Tabellen, kurze Absätze)"
+    - "Artikel beantwortet die Suchintention vollständig"
+
+validation:
+  loop_count: 1
+  max_loops: 10
+  min_qualitative_score: 7
+  history:
+    - timestamp: "2026-01-31T16:43:00Z"
+      loop: 1
+      result: pass
+      articles:
+        - name: online-shop-kosten
+          word_count: 2342
+          qualitative_avg: 9.0
+          pass: true
+        - name: online-shop-fehler
+          word_count: 2087
+          qualitative_avg: 9.0
+          pass: true
+        - name: online-shop-guide
+          word_count: 2460
+          qualitative_avg: 9.2
+          pass: true
+        - name: webdesign-augsburg
+          word_count: 1900
+          qualitative_avg: 8.4
+          pass: true
+      feedback:
+        - "Artikel 4 (Webdesign Augsburg) etwas Sales-lastiger am Ende - optional kürzen"
+        - "Alle Artikel publish-ready"
+
+created: "2026-01-31T16:42:00Z"
+created_by: heimdall
+updated: "2026-01-31T16:43:00Z"
+completed: "2026-01-31T16:43:00Z"
+
+artifacts:
+  - type: file
+    path: "marketing/imr-media/blog-artikel-online-shop-kosten.md"
+    description: "Artikel 1: Was kostet ein Online-Shop wirklich?"
+  - type: file
+    path: "marketing/imr-media/blog-artikel-online-shop-fehler.md"
+    description: "Artikel 2: 10 Fehler die Einsteiger machen"
+  - type: file
+    path: "marketing/imr-media/blog-artikel-online-shop-guide.md"
+    description: "Artikel 3: Der komplette Online-Shop Guide"
+  - type: file
+    path: "marketing/imr-media/blog-artikel-webdesign-augsburg.md"
+    description: "Artikel 4: Webdesign Augsburg - Agentur finden"
+
+notes: |
+  Erste Validierung mit neuem Task-System - ERFOLGREICH!
+  Alle 4 Artikel haben beim ersten Durchlauf bestanden.
+  Validator-Session: imr-blog-validator

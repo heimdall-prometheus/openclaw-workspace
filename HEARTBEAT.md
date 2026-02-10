@@ -88,3 +88,46 @@ Zusammenfassung: [brief content]
 - Weather (if relevant for Erik's day)
 - Server status (mein-malbuch)
 - Any urgent GitHub notifications
+
+## 🏭 Becker Odoo Server Monitoring (Every Heartbeat)
+
+**Quick Check:**
+```bash
+ssh heimdall@100.71.171.30 "cat /tmp/odoo-alert-latest.txt 2>/dev/null || echo OK"
+```
+
+**If alert found:**
+1. Send Telegram notification to Erik (target: 1424138659)
+2. Format: "🏭 Becker Odoo Alert\n\n{alert_content}"
+
+**Log check (if needed):**
+```bash
+ssh heimdall@100.71.171.30 "tail -5 /var/log/odoo-monitoring.log"
+```
+
+## 🖥️ System Health Monitoring (Every Heartbeat)
+
+**Quick Check:**
+```bash
+./scripts/system-alert.sh
+```
+
+**Thresholds:**
+- RAM Warning: 80% → Alert Erik
+- RAM Critical: 90% → Auto-kill Chrome tab + alert
+- Disk Warning: 85%
+
+**If output starts with "ALERT|":**
+1. Extract alert message (everything after "ALERT|")
+2. Send Telegram notification to Erik (target: 1424138659)
+3. Message format: "🖥️ System Alert\n\n{alert_message}\n\nTimestamp: {now}"
+
+**Check for OOM Kills:**
+```bash
+sudo dmesg | grep -i "killed process" | tail -5
+```
+
+**Sub-Agent Health:**
+- Use `sessions_list` to check active sessions
+- Look for unexpectedly terminated sessions
+- Check memory/system-health.log for patterns before crashes

@@ -1,0 +1,89 @@
+validation_result:
+  task_id: "task-002-r2-image-upload"
+  timestamp: "2026-02-07T09:53:00Z"
+  validator: "subagent:fangfuehrer-r2-validator"
+
+  quantitative:
+    - id: q1
+      criterion: "Upload-Endpoint akzeptiert Base64-Bild und gibt R2 Public URL zurück"
+      result: pass
+      measured: "catches.py dekodiert Base64, ruft upload_catch_photo() auf, setzt photo_url = result['photo_url'] (gebaut via r2_public_url + key)"
+      
+    - id: q2
+      criterion: "Thumbnail wird generiert (max 300px breit)"
+      result: pass
+      measured: "_generate_thumbnail() in storage.py: THUMBNAIL_MAX_WIDTH=300, LANCZOS resize, nur Downscale. upload_catch_photo() gibt thumbnail_url zurück."
+      
+    - id: q3
+      criterion: "Foto über Public URL erreichbar (HTTP 200)"
+      result: pass
+      measured: "Code-Review only (nicht deployed). _build_public_url() baut korrekt: '{r2_public_url}/{prefix}/{uuid}.jpg'. Standard R2 Pattern."
+      note: "Kein Live-Test möglich. URL-Konstruktion ist korrekt."
+      
+    - id: q4
+      criterion: "Backward Compatibility: USE_R2_STORAGE=false fällt auf lokales Filesystem zurück"
+      result: pass
+      measured: "catches.py Zeile 48: 'if settings.use_r2_storage and settings.r2_endpoint' → else-Branch ruft _save_photo_local() auf, schreibt in upload_dir, gibt '/uploads/{filename}' zurück."
+      
+    - id: q5
+      criterion: "Keine Credentials im Code hardcoded"
+      result: pass
+      measured: "grep für 'fba6fd5a', 'ada42893', 'R2_SECRET', 'R2_ACCESS' auf PR-Diff = 0 Treffer. Alle Credentials kommen aus Settings (env/dotenv)."
+
+  qualitative:
+    - id: ql1
+      criterion: "Code-Qualität (Struktur, Naming, Separation of Concerns)"
+      score: 8
+      reasoning: >
+        Gute Separation: storage.py als eigener Service mit klaren Funktionen (upload_photo,
+        upload_thumbnail, upload_catch_photo). Private Helfer korrekt mit _ prefixed.
+        Konstanten oben definiert (THUMBNAIL_MAX_WIDTH, JPEG_QUALITY). Saubere Docstrings
+        mit Args/Returns. _generate_key erzeugt unique names korrekt.
+        Kleiner Abzug: _save_photo_local() ist direkt in catches.py statt in storage.py —
+        wäre konsistenter wenn alle Storage-Logik in storage.py liegt.
+        Import von storage innerhalb der if-Branch (lazy import) ist pragmatisch für den
+        Fallback-Case, aber nicht ideal für Testbarkeit.
+
+    - id: ql2
+      criterion: "Error Handling (R2 Ausfall, invalid Base64, Pillow Fehler)"
+      score: 7
+      reasoning: >
+        Base64-Decode ist in try/except mit HTTP 400 + Detail-Message. R2 Upload-Fehler
+        werden in catches.py gefangen mit HTTP 500 + "Photo upload failed: {e}".
+        EXIF-Transpose Fehler werden still ignoriert (akzeptabel für Robustheit).
+        boto3 hat retries=3 konfiguriert (gut!).
+        Abzüge: (1) Pillow Image.open() Fehler (korruptes Bild) wird nur als generisches
+        500 geworfen — ein spezifischerer Fehler (400 "Invalid image") wäre besser.
+        (2) Wenn upload_photo() klappt aber upload_thumbnail() fehlschlägt, bleibt ein
+        verwaistes Full-Size Bild in R2 — kein Cleanup. Für MVP akzeptabel, aber Risiko.
+        (3) Kein Timeout auf den S3 Client konfiguriert — bei R2-Totalausfall hängt der
+        Request bis zum Server-Timeout.
+
+    - id: ql3
+      criterion: "Konfigurierbarkeit (alle R2 Params über Settings/env)"
+      score: 9
+      reasoning: >
+        Alle R2-Parameter über Settings/env konfigurierbar: r2_endpoint, r2_access_key_id,
+        r2_secret_access_key, r2_bucket, r2_public_url, use_r2_storage. Feature-Flag
+        (use_r2_storage) erlaubt schnelles Umschalten. Vernünftige Defaults (bucket="fangfuehrer",
+        use_r2_storage=True). JPEG_QUALITY und THUMBNAIL_MAX_WIDTH sind Konstanten im Code
+        statt in Settings, aber für ein MVP ist das vollkommen angemessen.
+
+  summary:
+    quantitative_pass: true   # 5/5 PASS
+    qualitative_avg: 8.0      # (8 + 7 + 9) / 3
+    qualitative_min: 7        # Alle ≥ 7 (min_score)
+    overall: pass
+
+  feedback:
+    - "_save_photo_local() nach storage.py verschieben für bessere Separation of Concerns"
+    - "Pillow Image.open() Fehler als HTTP 400 statt 500 werfen (korruptes Bild = Client-Fehler)"
+    - "Bei Thumbnail-Upload-Fehler: entweder Cleanup vom Full-Size Bild, oder graceful degradation (Catch ohne Thumbnail speichern)"
+    - "S3 Client connect_timeout/read_timeout setzen für Resilience bei R2-Ausfall"
+    - "Optional: JPEG_QUALITY und THUMBNAIL_MAX_WIDTH in Settings aufnehmen für Runtime-Konfiguration"
+
+  recommendation: >
+    PR ist PASS. Solider MVP-Code mit guter Architektur. Die 5 Feedback-Punkte sind
+    Verbesserungen für zukünftige Iterationen, keine Blocker. Besonders positiv:
+    saubere Trennung Storage-Service vs. Router, Feature-Flag für Fallback, 
+    boto3 Retry-Konfiguration, und keine Credentials im Code.

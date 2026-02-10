@@ -1,0 +1,47 @@
+# Example Task - Landing Page Optimierung
+
+id: task-2026-01-31-001
+title: "Landing Page Hero Section optimieren"
+status: draft
+
+project: mein-malbuch
+strategy: marketing-q1-2026
+tactic: "Content Marketing"
+
+intention: |
+  Die Hero Section soll Besucher sofort verstehen lassen, was das Produkt ist,
+  und sie emotional ansprechen, sodass sie weiterscrollen oder direkt kaufen.
+
+target_audience: |
+  Eltern (primär Mütter 25-45) die ein besonderes Geschenk für ihr Kind suchen.
+  Oft auf der Suche nach personalisierten/einzigartigen Produkten.
+
+criteria:
+  quantitative:
+    - "Lighthouse Performance Score > 90"
+    - "Largest Contentful Paint < 2.5s"
+    - "CTA Button above the fold sichtbar (ohne Scrollen)"
+    - "Hero-Bild lädt in < 1s"
+    
+  qualitative:
+    - "Headline kommuniziert den Kern-Nutzen in einem Satz"
+    - "Emotionale Ansprache für Eltern (nicht nur Features)"
+    - "Visuell zeigt das Produkt in Aktion (Kind mit Buch)"
+    - "Vertrauenssignal sichtbar (Testimonial, Bewertung, oder Garantie)"
+
+validation:
+  loop_count: 0
+  max_loops: 10
+  min_qualitative_score: 7
+  history: []
+
+created: "2026-01-31T16:35:00Z"
+created_by: heimdall
+updated: "2026-01-31T16:35:00Z"
+completed: ""
+
+artifacts: []
+
+notes: |
+  Beispiel-Task um das System zu demonstrieren.
+  Kann als Vorlage für echte Tasks dienen.

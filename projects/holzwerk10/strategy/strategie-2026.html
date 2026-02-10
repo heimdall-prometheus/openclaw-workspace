@@ -1,0 +1,2474 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Holzwerk 10 – Digitale Wachstumsstrategie 2026</title>
+<style>
+/* ============================================
+   HOLZWERK 10 – STRATEGIE-DOKUMENT
+   Premium Report Design
+   ============================================ */
+
+/* --- FONTS & RESET --- */
+@font-face {
+  font-family: 'Nimbus Regular';
+  src: local('Nimbus Sans'), local('Nimbus Sans L'), local('NimbusSanL-Reg');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 11pt;
+}
+
+body {
+  font-family: 'Nimbus Regular', 'Nimbus Sans', 'Helvetica Neue', Arial, sans-serif;
+  color: #232323;
+  line-height: 1.65;
+  background: #FFFFFF;
+}
+
+/* --- PAGE SETUP (A4) --- */
+@page {
+  size: A4;
+  margin: 20mm 18mm 25mm 18mm;
+}
+
+@media print {
+  body {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  .no-print { display: none !important; }
+  .page-break { page-break-before: always; }
+  .avoid-break { page-break-inside: avoid; }
+}
+
+/* --- TITLE PAGE --- */
+.title-page {
+  width: 100%;
+  min-height: 297mm;
+  background: linear-gradient(160deg, #1a1a1a 0%, #232323 40%, #026064 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 60px 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.title-page::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -30%;
+  width: 80%;
+  height: 200%;
+  background: radial-gradient(ellipse, rgba(2,96,100,0.25) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.title-page .logo-container {
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.title-page .logo-container img {
+  max-width: 280px;
+  height: auto;
+  opacity: 0.95;
+}
+
+.title-page h1 {
+  font-size: 32pt;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  line-height: 1.2;
+  position: relative;
+  z-index: 1;
+  color: #FFFFFF;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.title-page .subtitle {
+  font-size: 16pt;
+  font-weight: 400;
+  color: #FFFFFF;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+}
+
+.title-page .meta-info {
+  font-size: 11pt;
+  color: rgba(255,255,255,0.7);
+  line-height: 2;
+  position: relative;
+  z-index: 1;
+}
+
+.title-page .meta-info strong {
+  color: #FFFFFF;
+}
+
+.title-page .divider-line {
+  width: 80px;
+  height: 3px;
+  background: #2BA0A3;
+  margin: 30px auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* --- CONTENT PAGES --- */
+.content-page {
+  padding: 10px 0;
+}
+
+/* --- HEADERS --- */
+h1 {
+  font-size: 22pt;
+  color: #232323;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #026064;
+}
+
+h2 {
+  font-size: 17pt;
+  color: #026064;
+  font-weight: 700;
+  margin-top: 35px;
+  margin-bottom: 15px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+h3 {
+  font-size: 13pt;
+  color: #333333;
+  font-weight: 700;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+h4 {
+  font-size: 11.5pt;
+  color: #026064;
+  font-weight: 700;
+  margin-top: 18px;
+  margin-bottom: 8px;
+}
+
+/* --- CHAPTER NUMBER BADGES --- */
+.chapter-num {
+  display: inline-block;
+  background: #026064;
+  color: #FFFFFF;
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 16pt;
+  font-weight: 700;
+  margin-right: 12px;
+  vertical-align: middle;
+}
+
+.chapter-title {
+  font-size: 22pt;
+  color: #232323;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #026064;
+  line-height: 1.4;
+}
+
+/* --- SEGMENT BADGES --- */
+.badge {
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 4px;
+  font-size: 9pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+.badge-gold {
+  background: linear-gradient(135deg, #D4AF37, #C5960C);
+  color: #FFFFFF;
+}
+
+.badge-silver {
+  background: linear-gradient(135deg, #A8A9AD, #808080);
+  color: #FFFFFF;
+}
+
+.badge-bronze {
+  background: linear-gradient(135deg, #CD7F32, #A0622E);
+  color: #FFFFFF;
+}
+
+.badge-teal {
+  background: #026064;
+  color: #FFFFFF;
+}
+
+.badge-red {
+  background: #C0392B;
+  color: #FFFFFF;
+}
+
+.badge-green {
+  background: #27AE60;
+  color: #FFFFFF;
+}
+
+.badge-yellow {
+  background: #F39C12;
+  color: #FFFFFF;
+}
+
+/* --- PRIORITY INDICATORS --- */
+.priority-highest {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #C0392B;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+.priority-high {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #F39C12;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+.priority-medium {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #27AE60;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+/* --- TABLES --- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0 20px 0;
+  font-size: 10pt;
+}
+
+table th {
+  background: #026064;
+  color: #FFFFFF;
+  padding: 10px 12px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 9.5pt;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+table td {
+  padding: 9px 12px;
+  border-bottom: 1px solid #e8e8e8;
+  vertical-align: top;
+}
+
+table tr:nth-child(even) td {
+  background: #f7f9f9;
+}
+
+table tr:hover td {
+  background: #eef5f5;
+}
+
+table.compact td,
+table.compact th {
+  padding: 6px 10px;
+  font-size: 9.5pt;
+}
+
+/* --- CALLOUT BOXES --- */
+.callout {
+  padding: 18px 22px;
+  border-radius: 6px;
+  margin: 20px 0;
+  position: relative;
+  page-break-inside: avoid;
+}
+
+.callout-teal {
+  background: #e8f5f5;
+  border-left: 5px solid #026064;
+}
+
+.callout-success {
+  background: #eafaf1;
+  border-left: 5px solid #27AE60;
+}
+
+.callout-warning {
+  background: #fef9e7;
+  border-left: 5px solid #F39C12;
+}
+
+.callout-danger {
+  background: #fdedec;
+  border-left: 5px solid #C0392B;
+}
+
+.callout-dark {
+  background: #2c3e50;
+  border-left: 5px solid #2BA0A3;
+  color: #FFFFFF;
+}
+
+.callout-dark strong {
+  color: #2BA0A3;
+}
+
+.callout-title {
+  font-weight: 700;
+  font-size: 11pt;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.callout-teal .callout-title { color: #026064; }
+.callout-success .callout-title { color: #1e8449; }
+.callout-warning .callout-title { color: #b7950b; }
+.callout-danger .callout-title { color: #922b21; }
+
+/* --- QUOTE BOX --- */
+.quote-box {
+  background: #f0f7f7;
+  border-left: 5px solid #2BA0A3;
+  padding: 20px 25px;
+  margin: 20px 0;
+  font-style: italic;
+  font-size: 12pt;
+  color: #333;
+  line-height: 1.6;
+  page-break-inside: avoid;
+}
+
+/* --- BAR CHARTS (CSS) --- */
+.bar-chart {
+  margin: 15px 0 25px 0;
+}
+
+.bar-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  page-break-inside: avoid;
+}
+
+.bar-label {
+  width: 200px;
+  min-width: 200px;
+  font-size: 9.5pt;
+  color: #333;
+  padding-right: 10px;
+  text-align: right;
+}
+
+.bar-track {
+  flex: 1;
+  background: #ecf0f1;
+  height: 26px;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  color: #FFFFFF;
+  font-size: 9pt;
+  font-weight: 700;
+  transition: width 0.5s;
+}
+
+.bar-fill.teal { background: linear-gradient(90deg, #026064, #2BA0A3); }
+.bar-fill.gold { background: linear-gradient(90deg, #C5960C, #D4AF37); }
+.bar-fill.silver { background: linear-gradient(90deg, #808080, #A8A9AD); }
+.bar-fill.dark { background: linear-gradient(90deg, #2c3e50, #34495e); }
+.bar-fill.red { background: linear-gradient(90deg, #922b21, #C0392B); }
+.bar-fill.green { background: linear-gradient(90deg, #1e8449, #27AE60); }
+
+.bar-value {
+  margin-left: 10px;
+  font-size: 9.5pt;
+  font-weight: 700;
+  color: #333;
+  white-space: nowrap;
+}
+
+/* --- HORIZONTAL COMPARISON CHART --- */
+.comparison-chart {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+  page-break-inside: avoid;
+}
+
+.comparison-item {
+  flex: 1;
+  background: #f7f9f9;
+  border-radius: 8px;
+  padding: 18px;
+  text-align: center;
+  border-top: 4px solid #026064;
+}
+
+.comparison-item .big-number {
+  font-size: 28pt;
+  font-weight: 700;
+  color: #026064;
+  line-height: 1;
+  margin: 8px 0;
+}
+
+.comparison-item .label {
+  font-size: 9pt;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* --- KPI CARDS --- */
+.kpi-row {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0;
+  page-break-inside: avoid;
+}
+
+.kpi-card {
+  flex: 1;
+  background: #FFFFFF;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+}
+
+.kpi-card.highlight {
+  border-color: #026064;
+  background: #f0f7f7;
+}
+
+.kpi-card .kpi-value {
+  font-size: 24pt;
+  font-weight: 700;
+  color: #026064;
+  line-height: 1.1;
+}
+
+.kpi-card .kpi-label {
+  font-size: 8.5pt;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 5px;
+}
+
+.kpi-card .kpi-sub {
+  font-size: 9pt;
+  color: #999;
+  margin-top: 3px;
+}
+
+/* --- STAR RATINGS --- */
+.stars {
+  color: #D4AF37;
+  letter-spacing: 1px;
+}
+
+.stars-empty {
+  color: #ddd;
+}
+
+/* --- SCORE BAR (1-10) --- */
+.score-bar-container {
+  display: inline-flex;
+  gap: 2px;
+  vertical-align: middle;
+}
+
+.score-block {
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+  background: #e0e0e0;
+}
+
+.score-block.filled {
+  background: #026064;
+}
+
+.score-block.filled.red {
+  background: #C0392B;
+}
+
+.score-block.filled.yellow {
+  background: #F39C12;
+}
+
+.score-block.filled.green {
+  background: #27AE60;
+}
+
+/* --- CHECKLIST --- */
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.checklist li {
+  padding: 6px 0 6px 28px;
+  position: relative;
+  font-size: 10.5pt;
+}
+
+.checklist li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #026064;
+  border-radius: 3px;
+}
+
+.checklist li.done::before {
+  background: #026064;
+}
+
+.checklist li.done::after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 12px;
+  width: 8px;
+  height: 5px;
+  border-left: 2px solid #FFFFFF;
+  border-bottom: 2px solid #FFFFFF;
+  transform: rotate(-45deg);
+}
+
+/* --- TIMELINE --- */
+.timeline {
+  position: relative;
+  margin: 20px 0 20px 20px;
+  padding-left: 30px;
+  border-left: 3px solid #026064;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 25px;
+  page-break-inside: avoid;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -38px;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #026064;
+  border: 3px solid #FFFFFF;
+  box-shadow: 0 0 0 2px #026064;
+}
+
+.timeline-item .timeline-title {
+  font-weight: 700;
+  font-size: 12pt;
+  color: #026064;
+  margin-bottom: 5px;
+}
+
+.timeline-item .timeline-subtitle {
+  font-size: 9.5pt;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+/* --- TREE STRUCTURE --- */
+.tree {
+  font-family: 'Nimbus Regular', 'Courier New', monospace;
+  font-size: 9.5pt;
+  line-height: 1.8;
+  background: #f7f9f9;
+  padding: 18px 22px;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  margin: 15px 0;
+  page-break-inside: avoid;
+}
+
+.tree .gold { color: #C5960C; font-weight: 700; }
+.tree .silver { color: #808080; font-weight: 700; }
+.tree .bronze { color: #CD7F32; font-weight: 700; }
+
+/* --- PARAGRAPHS & TEXT --- */
+p {
+  margin-bottom: 12px;
+  text-align: justify;
+  hyphens: auto;
+}
+
+strong {
+  font-weight: 700;
+}
+
+ul, ol {
+  margin: 10px 0 15px 25px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+/* --- TABLE OF CONTENTS --- */
+.toc {
+  padding: 30px 0;
+}
+
+.toc h2 {
+  font-size: 20pt;
+  border-bottom: 3px solid #026064;
+  margin-bottom: 25px;
+}
+
+.toc-list {
+  list-style: none;
+  padding: 0;
+}
+
+.toc-list li {
+  padding: 8px 0;
+  border-bottom: 1px dotted #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.toc-list li.toc-chapter {
+  font-weight: 700;
+  font-size: 11.5pt;
+  color: #232323;
+  padding-top: 12px;
+}
+
+.toc-list li.toc-section {
+  font-weight: 400;
+  font-size: 10.5pt;
+  color: #555;
+  padding-left: 25px;
+}
+
+.toc-num {
+  display: inline-block;
+  background: #026064;
+  color: #FFFFFF;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 9pt;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+/* --- FOOTER --- */
+.page-footer {
+  text-align: center;
+  font-size: 8pt;
+  color: #999;
+  padding-top: 15px;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 40px;
+}
+
+/* --- SECTION SEPARATOR --- */
+.section-sep {
+  height: 2px;
+  background: linear-gradient(90deg, #026064, #2BA0A3, transparent);
+  margin: 30px 0;
+}
+
+/* --- HASHTAG LIST --- */
+.hashtags {
+  background: #f7f9f9;
+  padding: 12px 18px;
+  border-radius: 6px;
+  font-size: 9.5pt;
+  color: #026064;
+  line-height: 2;
+  margin: 10px 0;
+}
+
+/* --- COMPETITOR RATING --- */
+.rating-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 15px 0;
+}
+
+.rating-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 14px;
+  page-break-inside: avoid;
+}
+
+.rating-card .rc-name {
+  font-weight: 700;
+  font-size: 11pt;
+  margin-bottom: 5px;
+}
+
+.rating-card .rc-score {
+  font-size: 9pt;
+  color: #666;
+}
+
+/* --- PRINT SPECIFIC --- */
+@media print {
+  .title-page {
+    height: 297mm;
+    page-break-after: always;
+  }
+
+  .page-break {
+    page-break-before: always;
+  }
+
+  table { font-size: 9pt; }
+
+  .bar-chart,
+  .kpi-row,
+  .comparison-chart,
+  .callout,
+  .quote-box,
+  .timeline-item,
+  .rating-card,
+  table,
+  .avoid-break {
+    page-break-inside: avoid;
+  }
+
+  h2, h3 {
+    page-break-after: avoid;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- ====================================================
+     TITELSEITE
+     ==================================================== -->
+<div class="title-page">
+  <div class="logo-container">
+    <img src="https://holzwerk10.de/wp/wp-content/uploads/2023/03/230329_h10_logo_weiss_header.png" alt="Holzwerk 10 Logo">
+  </div>
+  <h1>Digitale Wachstumsstrategie 2026</h1>
+  <div class="subtitle">F&uuml;r Joe Ott, Schreinermeister</div>
+  <div class="divider-line"></div>
+  <div class="meta-info">
+    
+    <strong>Datum:</strong> Februar 2026<br>
+    <strong>Version:</strong> 1.0 &ndash; Strategisches Grundlagendokument
+  </div>
+</div>
+
+<!-- ====================================================
+     INHALTSVERZEICHNIS
+     ==================================================== -->
+<div class="page-break"></div>
+<div class="content-page toc">
+  <h2>Inhaltsverzeichnis</h2>
+  <ul class="toc-list">
+    <li class="toc-chapter"><span><span class="toc-num">1</span>Executive Summary</span></li>
+    <li class="toc-chapter"><span><span class="toc-num">2</span>Dein Markt: Warum du auf einer Goldmine sitzt</span></li>
+    <li class="toc-section"><span>2.1 Das Einzugsgebiet</span></li>
+    <li class="toc-section"><span>2.2 Die Nachfrage</span></li>
+    <li class="toc-section"><span>2.3 Die Wettbewerber</span></li>
+    <li class="toc-section"><span>2.4 Detaillierte Wettbewerber-Analyse</span></li>
+    <li class="toc-chapter"><span><span class="toc-num">3</span>Kundensegmentierung</span></li>
+    <li class="toc-section"><span>3.1 Die Wahrheit &uuml;ber Auftragswerte</span></li>
+    <li class="toc-section"><span>3.2 Kundensegmente nach strategischem Wert</span></li>
+    <li class="toc-section"><span>3.3 Die 80/20-Regel</span></li>
+    <li class="toc-chapter"><span><span class="toc-num">4</span>Positionierung</span></li>
+    <li class="toc-section"><span>4.1 Dein USP</span></li>
+    <li class="toc-section"><span>4.2 Positionierungsstatement</span></li>
+    <li class="toc-section"><span>4.3 Joe als Marke</span></li>
+    <li class="toc-chapter"><span><span class="toc-num">5</span>Local SEO Strategie</span></li>
+    <li class="toc-section"><span>5.1 &ndash; 5.5 Google Business, Bewertungen, Backlinks, NAP</span></li>
+    <li class="toc-chapter"><span><span class="toc-num">6</span>Website-Strategie</span></li>
+    <li class="toc-section"><span>6.1 Aktuelle Probleme</span></li>
+    <li class="toc-section"><span>6.2 Neue Seitenstruktur</span></li>
+    <li class="toc-section"><span>6.3 Content-Priorit&auml;t nach Kundensegment</span></li>
+    <li class="toc-section"><span>6.4 Content-Formate die funktionieren</span></li>
+    <li class="toc-chapter"><span><span class="toc-num">7</span>Social Media: Instagram als Schaufenster</span></li>
+    <li class="toc-chapter"><span><span class="toc-num">8</span>Technische Quick Fixes</span></li>
+    <li class="toc-chapter"><span><span class="toc-num">9</span>Der 90-Tage-Plan</span></li>
+    <li class="toc-chapter"><span><span class="toc-num">10</span>Erwartete Ergebnisse &amp; ROI</span></li>
+    <li class="toc-chapter"><span><span class="toc-num">11</span>Warum jetzt?</span></li>
+    <li class="toc-chapter"><span><span class="toc-num">A</span>Anhang: Markt- &amp; Wettbewerbsdaten</span></li>
+    <li class="toc-section"><span>N&auml;chste Schritte</span></li>
+  </ul>
+</div>
+
+
+<!-- ====================================================
+     KAPITEL 1: EXECUTIVE SUMMARY
+     ==================================================== -->
+<div class="page-break"></div>
+<div class="content-page">
+  <h1><span class="chapter-num">1</span> Executive Summary</h1>
+
+  <p>Joe, du bist ein hervorragender Schreiner. Deine Arbeit spricht f&uuml;r sich &ndash; Custom-Eichenb&auml;etten, Granitschreibtische, komplette Innenausbauten. Aber deine Website spricht noch nicht f&uuml;r dich.</p>
+
+  <div class="callout callout-danger">
+    <span class="callout-title">Das Problem</span>
+    Google kennt Holzwerk 10 kaum. Wenn jemand &bdquo;Schreiner Landsberg&ldquo; sucht, taucht deine Website nicht auf. Deine Wettbewerber &ndash; Hintr&auml;ger, Aigster, Krist &ndash; werden gefunden. Du nicht.
+  </div>
+
+  <div class="callout callout-success">
+    <span class="callout-title">Die Chance</span>
+    Du sitzt im Einzugsgebiet der <strong>kaufkr&auml;ftigsten Regionen Deutschlands</strong>. Ammersee, Starnberger See, M&uuml;nchen-S&uuml;dwest. Menschen mit Budget f&uuml;r Premium-Schreinerarbeit suchen online &ndash; und finden dich nicht.
+  </div>
+
+  <div class="callout callout-teal">
+    <span class="callout-title">Unser Plan</span>
+    In 90 Tagen machen wir Holzwerk 10 zur <strong>sichtbarsten Schreinerei der Region</strong>. Nicht durch Werbung die Geld kostet, sondern durch clevere Positionierung die Kunden anzieht.
+  </div>
+
+  <h3>Erwartete Ergebnisse auf einen Blick</h3>
+  <div class="kpi-row">
+    <div class="kpi-card highlight">
+      <div class="kpi-value">+300%</div>
+      <div class="kpi-label">Mehr Website-Besucher</div>
+      <div class="kpi-sub">in 3 Monaten</div>
+    </div>
+    <div class="kpi-card highlight">
+      <div class="kpi-value">Top 3</div>
+      <div class="kpi-label">Google Ranking</div>
+      <div class="kpi-sub">&bdquo;Schreiner Landsberg&ldquo;</div>
+    </div>
+    <div class="kpi-card highlight">
+      <div class="kpi-value">5&ndash;10</div>
+      <div class="kpi-label">Zusatzanfragen/Monat</div>
+      <div class="kpi-sub">von neuen Kunden</div>
+    </div>
+    <div class="kpi-card highlight">
+      <div class="kpi-value">&uarr;</div>
+      <div class="kpi-label">Auftragswert</div>
+      <div class="kpi-sub">Gezielte Kundenansprache</div>
+    </div>
+  </div>
+
+  <div class="page-footer">Holzwerk 10 &ndash; Digitale Wachstumsstrategie 2026</div>
+</div>
+
+
+<!-- ====================================================
+     KAPITEL 2: DEIN MARKT
+     ==================================================== -->
+<div class="page-break"></div>
+<div class="content-page">
+  <h1><span class="chapter-num">2</span> Dein Markt: Warum du auf einer Goldmine sitzt</h1>
+
+  <h2>2.1 Das Einzugsgebiet</h2>
+
+  <p>Holzwerk 10 hat zwei Standorte:</p>
+  <ul>
+    <li><strong>Penzing</strong> (Werkstatt &amp; Showroom) &ndash; Landkreis Landsberg am Lech</li>
+    <li><strong>Germering</strong> (Firmensitz) &ndash; Landkreis F&uuml;rstenfeldbruck</li>
+  </ul>
+
+  <p>Das ist strategisch genial. Du bedienst damit einen Radius, der einige der <strong>wohlhabendsten Regionen Deutschlands</strong> umfasst:</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Region</th>
+        <th>Kaufkraft pro Kopf</th>
+        <th>Vergleich zum Bundesschnitt</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Starnberg</strong></td>
+        <td>&euro;40.684</td>
+        <td><span class="badge badge-gold">+72%</span></td>
+      </tr>
+      <tr>
+        <td><strong>M&uuml;nchen (Stadt)</strong></td>
+        <td>~&euro;31.000</td>
+        <td><span class="badge badge-teal">+31%</span></td>
+      </tr>
+      <tr>
+        <td><strong>F&uuml;rstenfeldbruck</strong></td>
+        <td>~&euro;29.000</td>
+        <td><span class="badge badge-teal">+23%</span></td>
+      </tr>
+      <tr>
+        <td><strong>Landsberg am Lech</strong></td>
+        <td>~&euro;27.000</td>
+        <td><span class="badge badge-teal">+14%</span></td>
+      </tr>
+      <tr>
+        <td><strong>Deutschland Durchschnitt</strong></td>
+        <td>&euro;23.637</td>
+        <td>Basis</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout callout-teal">
+    <span class="callout-title">Was bedeutet das?</span>
+    Deine potenziellen Kunden haben Geld. Viel Geld. Die Frage ist nicht &bdquo;k&ouml;nnen sie sich eine Schreinerk&uuml;che f&uuml;r &euro;15.000 leisten?&ldquo; &ndash; sie k&ouml;nnen. Die Frage ist: <strong>Finden sie dich?</strong>
+  </div>
+
+  <!-- Kaufkraft-Vergleich Balkendiagramm -->
+  <h4>Kaufkraft-Vergleich: Dein Einzugsgebiet vs. Bundesdurchschnitt</h4>
+  <div class="bar-chart">
+    <div class="bar-row">
+      <div class="bar-label">Starnberg</div>
+      <div class="bar-track"><div class="bar-fill gold" style="width:100%">&euro;40.684</div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">M&uuml;nchen</div>
+      <div class="bar-track"><div class="bar-fill teal" style="width:76%">&euro;31.000</div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">Germering (FFB)</div>
+      <div class="bar-track"><div class="bar-fill teal" style="width:71%">&euro;29.000</div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">Landsberg am Lech</div>
+      <div class="bar-track"><div class="bar-fill teal" style="width:66%">&euro;27.000</div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">Bundesdurchschnitt</div>
+      <div class="bar-track"><div class="bar-fill dark" style="width:58%">&euro;23.637</div></div>
+    </div>
+  </div>
+
+  <h3>Einwohnerzahlen im Kerneinzugsgebiet</h3>
+  <p>Der <strong>Landkreis Landsberg am Lech</strong> umfasst 122.086 Einwohner in 31 Gemeinden. Das erweiterte Einzugsgebiet (30&ndash;40 km Radius, inkl. F&uuml;rstenfeldbruck und Ammersee-Region) erreicht <strong>200.000&ndash;350.000 Einwohner</strong>.</p>
+
+  <table class="compact">
+    <thead>
+      <tr><th>Ort</th><th>Einwohner</th><th>Entfernung</th><th>Relevanz</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Landsberg am Lech</strong></td><td>29.257</td><td>5 km</td><td><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> Kern</td></tr>
+      <tr><td><strong>Penzing</strong></td><td>4.332</td><td>0 km</td><td><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> Heimat</td></tr>
+      <tr><td><strong>Kaufering</strong></td><td>10.045</td><td>7 km</td><td><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> Kern</td></tr>
+      <tr><td><strong>Die&szlig;en a. Ammersee</strong></td><td>10.673</td><td>20 km</td><td><span class="stars">&#9733;&#9733;&#9733;&#9733;</span> Premium</td></tr>
+      <tr><td><strong>Schondorf a. Ammersee</strong></td><td>~3.800</td><td>15 km</td><td><span class="stars">&#9733;&#9733;&#9733;&#9733;</span> Premium</td></tr>
+      <tr><td><strong>Utting a. Ammersee</strong></td><td>~4.500</td><td>18 km</td><td><span class="stars">&#9733;&#9733;&#9733;&#9733;</span> Premium</td></tr>
+      <tr><td><strong>Germering</strong> (FFB)</td><td>41.000+</td><td>35 km</td><td><span class="stars">&#9733;&#9733;&#9733;&#9733;</span> Kaufkraft</td></tr>
+      <tr><td><strong>Ammersee-Region gesamt</strong></td><td>~40.000</td><td>15&ndash;25 km</td><td><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> Premium</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout callout-warning">
+    <span class="callout-title">Immobilienpreise zeigen die Kaufkraft</span>
+    Ein Einfamilienhaus in Landsberg kostet &oslash; <strong>&euro;600.000&ndash;800.000</strong>. Am Ammersee: <strong>&euro;900.000&ndash;1.500.000+</strong> (Grundst&uuml;cke: bis 1.549 &euro;/m&sup2;). Wer ein 800.000-&euro;-Haus besitzt, gibt gerne 25.000&ndash;50.000 &euro; f&uuml;r eine Ma&szlig;k&uuml;che aus.
+  </div>
+
+  <div class="page-footer">Holzwerk 10 &ndash; Digitale Wachstumsstrategie 2026</div>
+</div>
+
+
+<!-- 2.2 Die Nachfrage -->
+<div class="page-break"></div>
+<div class="content-page">
+  <h2>2.2 Die Nachfrage</h2>
+  <p>Jeden Monat suchen Menschen in deiner Region nach genau dem, was du anbietest:</p>
+
+  <table>
+    <thead>
+      <tr><th>Suchbegriff</th><th>Mtl. Suchen (gesch.)</th><th>Dein Ranking</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>&bdquo;schreiner landsberg&ldquo;</td><td>150&ndash;300</td><td><span class="badge badge-red">Nicht sichtbar</span></td></tr>
+      <tr><td>&bdquo;schreinerei landsberg am lech&ldquo;</td><td>100&ndash;200</td><td><span class="badge badge-red">Nicht sichtbar</span></td></tr>
+      <tr><td>&bdquo;k&uuml;che nach ma&szlig; m&uuml;nchen&ldquo;</td><td>~480</td><td><span class="badge badge-red">Nicht sichtbar</span></td></tr>
+      <tr><td>&bdquo;einbauschrank nach ma&szlig;&ldquo;</td><td>500&ndash;1.200</td><td><span class="badge badge-red">Nicht sichtbar</span></td></tr>
+      <tr><td>&bdquo;innenausbau m&uuml;nchen&ldquo;</td><td>~140</td><td><span class="badge badge-red">Nicht sichtbar</span></td></tr>
+      <tr><td>&bdquo;schreiner germering&ldquo;</td><td>50&ndash;120</td><td><span class="badge badge-red">Nicht sichtbar</span></td></tr>
+      <tr><td>&bdquo;schreiner ammersee&ldquo;</td><td>30&ndash;80</td><td><span class="badge badge-red">Nicht sichtbar</span></td></tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td><strong>Gesamt erreichbare Suchen</strong></td>
+        <td><strong>~3.000+/Monat</strong></td>
+        <td></td>
+      </tr>
+    </tfoot>
+  </table>
+
+  <div class="callout callout-dark">
+    Das sind <strong>~3.000 Menschen pro Monat</strong> die genau das suchen was du anbietest &ndash; und dich nicht finden.
+  </div>
+
+  <!-- Suchvolumen-Balkendiagramm -->
+  <h4>Suchvolumen nach Keywords (monatlich)</h4>
+  <div class="bar-chart">
+    <div class="bar-row">
+      <div class="bar-label">einbauschrank nach ma&szlig;</div>
+      <div class="bar-track"><div class="bar-fill teal" style="width:100%">~1.200</div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">k&uuml;che nach ma&szlig; m&uuml;nchen</div>
+      <div class="bar-track"><div class="bar-fill teal" style="width:40%">~480</div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">schreiner landsberg</div>
+      <div class="bar-track"><div class="bar-fill gold" style="width:32%">~390</div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">schreinerei landsberg</div>
+      <div class="bar-track"><div class="bar-fill gold" style="width:18%">~210</div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">innenausbau m&uuml;nchen</div>
+      <div class="bar-track"><div class="bar-fill silver" style="width:12%">~140</div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">schreiner germering</div>
+      <div class="bar-track"><div class="bar-fill silver" style="width:8%">~90</div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">schreiner ammersee</div>
+      <div class="bar-track"><div class="bar-fill silver" style="width:6%">~70</div></div>
+    </div>
+  </div>
+
+  <h2>2.3 Die Wettbewerber &ndash; &Uuml;bersicht</h2>
+
+  <p>Die gute Nachricht: <strong>Deine Konkurrenz schl&auml;ft online genauso wie du bisher.</strong></p>
+
+  <table>
+    <thead>
+      <tr><th>Schreinerei</th><th>Google Reviews</th><th>Website</th><th>Blog</th><th>Social Media</th><th>Digital-Score</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Schr. Krist</strong></td>
+        <td><span class="stars">&#9733;&#9733;&#9733;&#9733;</span> ~44</td>
+        <td><span class="badge badge-green">Profi</span></td>
+        <td>Teils</td>
+        <td>FB + IG</td>
+        <td>
+          <span class="score-bar-container">
+            <span class="score-block filled green"></span><span class="score-block filled green"></span><span class="score-block filled green"></span><span class="score-block filled green"></span><span class="score-block filled green"></span><span class="score-block filled green"></span><span class="score-block filled green"></span><span class="score-block filled green"></span><span class="score-block filled green"></span><span class="score-block"></span>
+          </span> 9/10
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Schr. Obermayer</strong></td>
+        <td>Wenige</td>
+        <td><span class="badge badge-yellow">Mittel</span></td>
+        <td>Nein</td>
+        <td>Nein</td>
+        <td>
+          <span class="score-bar-container">
+            <span class="score-block filled yellow"></span><span class="score-block filled yellow"></span><span class="score-block filled yellow"></span><span class="score-block filled yellow"></span><span class="score-block"></span><span class="score-block"></span><span class="score-block"></span><span class="score-block"></span><span class="score-block"></span><span class="score-block"></span>
+          </span> 4/10
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Schr. Aigster</strong></td>
+        <td>Wenige</td>
+        <td><span class="badge badge-yellow">D&uuml;nn</span></td>
+        <td>Nein</td>
+        <td>Nein</td>
+        <td>
+          <span class="score-bar-container">
+            <span class="score-block filled red"></span><span class="score-block filled red"></span><span class="score-block filled red"></span><span class="score-block"></span><span class="score-block"></span><span class="score-block"></span><span class="score-block"></span><span class="score-block"></span><span class="score-block"></span><span class="score-block"></span>
+          </span> 3/10
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Schr. Hintr&auml;ger</strong></td>
+        <td>~2</td>
+        <td><span class="badge badge-red">Veraltet</span></td>
+        <td>Nein</td>
+        <td>Nein</td>
+        <td>
+          <span class="score-bar-container">
+            <span class="score-block filled red"></span><span class="score-block filled red"></span><span class="score-block"></span><span class="score-block"></span><span class="score-block"></span><span class="score-block"></span><span class="score-block"></span><span class="score-block"></span><span class="score-block"></span><span class="score-block"></span>
+          </span> 2/10
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Schr. Widmann</strong> &#9888;</td>
+        <td>~1</td>
+        <td><span class="badge badge-red">Stockfotos</span></td>
+        <td>Nein</td>
+        <td>Nein</td>
+        <td>
+          <span class="score-bar-container">
+            <span class="score-block filled red"></span><span class="score-block filled red"></span><span class="score-block"></span><span class="score-block"></span><span class="score-block"></span><span class="score-block"></span><span class="score-block"></span><span class="score-block"></span><span class="score-block"></span><span class="score-block"></span>
+          </span> 2/10
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Holzanstalt H&auml;hr</strong></td>
+        <td>0</td>
+        <td><span class="badge badge-red">Minimal</span></td>
+        <td>Nein</td>
+        <td>Nein</td>
+        <td>
+          <span class="score-bar-container">
+            <span class="score-block filled red"></span><span class="score-block filled red"></span><span class="score-block"></span><span class="score-block"></span><span class="score-block"></span><span class="score-block"></span><span class="score-block"></span><span class="score-block"></span><span class="score-block"></span><span class="score-block"></span>
+          </span> 2/10
+        </td>
+      </tr>
+      <tr>
+        <td><strong>Holzwerk 10</strong></td>
+        <td>&lt;5</td>
+        <td><span class="badge badge-yellow">Design ok</span></td>
+        <td>Nein</td>
+        <td>Nein</td>
+        <td>
+          <span class="score-bar-container">
+            <span class="score-block filled red"></span><span class="score-block filled red"></span><span class="score-block"></span><span class="score-block"></span><span class="score-block"></span><span class="score-block"></span><span class="score-block"></span><span class="score-block"></span><span class="score-block"></span><span class="score-block"></span>
+          </span> 2/10
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout callout-success">
+    <span class="callout-title">Kernerkenntniss</span>
+    <strong>Keiner hat einen Blog. Keiner macht Content-Marketing. Keiner nutzt die Google-Suche strategisch.</strong><br>
+    Das ist deine Chance: Wer als erster professionelles Local SEO macht, dominiert die Region.
+  </div>
+
+  <div class="page-footer">Holzwerk 10 &ndash; Digitale Wachstumsstrategie 2026</div>
+</div>
+
+
+<!-- 2.4 Detaillierte Wettbewerber-Analyse -->
+<div class="page-break"></div>
+<div class="content-page">
+  <h2>2.4 Detaillierte Wettbewerber-Analyse</h2>
+  <p>Basierend auf unserer Research vom 05.02.2026 &ndash; alle &ouml;ffentlich verf&uuml;gbaren Quellen analysiert.</p>
+
+  <!-- Krist -->
+  <h3>Schreinerei Krist GmbH &amp; Co. KG &ndash; <span class="badge badge-red">DER Platzhirsch</span></h3>
+  <table class="compact">
+    <tbody>
+      <tr><td style="width:160px"><strong>Standort</strong></td><td>Graf-Zeppelin-Str. 22, 86899 Landsberg am Lech</td></tr>
+      <tr><td><strong>Betriebsgr&ouml;&szlig;e</strong></td><td>8.000 m&sup2; Standort, <strong>1.000 m&sup2; Showroom</strong>, 800+ Ausstellungsst&uuml;cke</td></tr>
+      <tr><td><strong>Google Reviews</strong></td><td>~44 Bewertungen, 4.0&ndash;4.2 Sterne</td></tr>
+      <tr><td><strong>Social Media</strong></td><td>Facebook: 359 Likes | Instagram: 281 Follower, 354 Posts</td></tr>
+      <tr><td><strong>Besonderheit</strong></td><td>Online-Haust&uuml;r-Konfigurator, Premiumpartner (Internorm, Sch&uuml;co)</td></tr>
+      <tr><td><strong>Digital-Score</strong></td><td><strong>9/10</strong> &ndash; Professionellster Wettbewerber</td></tr>
+    </tbody>
+  </table>
+  <div class="callout callout-warning">
+    <span class="callout-title">Strategische Empfehlung</span>
+    Krist im Bereich T&uuml;ren/Fenster/Showroom NICHT frontal angreifen (zu gro&szlig;, zu etabliert). Stattdessen: Differenzierung &uuml;ber Premium-Ma&szlig;m&ouml;bel, Ammersee-Segment und pers&ouml;nliche Marke.
+  </div>
+
+  <!-- Widmann -->
+  <h3>Schreinerei Widmann GmbH &amp; Co. KG &ndash; <span class="badge badge-yellow">Direkter Nachbar!</span></h3>
+  <table class="compact">
+    <tbody>
+      <tr><td style="width:160px"><strong>Standort</strong></td><td>Graf-Zeppelin-Str. 3, 86929 Penzing &ndash; <strong>selbes Gewerbegebiet wie HW10!</strong></td></tr>
+      <tr><td><strong>Schwerpunkt</strong></td><td>K&uuml;chen, M&ouml;belbau, Innenausbau, Saunen</td></tr>
+      <tr><td><strong>Google Reviews</strong></td><td>~1 Bewertung &ndash; praktisch keine Online-Reputation</td></tr>
+      <tr><td><strong>Schwachstelle</strong></td><td><strong>Stockfotos auf der Website!</strong> (Fotolia/&copy;aluna1 sichtbar)</td></tr>
+      <tr><td><strong>Digital-Score</strong></td><td><strong>2/10</strong> &ndash; Leicht angreifbar durch authentischen Content</td></tr>
+    </tbody>
+  </table>
+
+  <!-- Holzanstalt Hähr -->
+  <h3>Holzanstalt H&auml;hr GmbH &ndash; Penzing-Unterm&uuml;hlhausen</h3>
+  <table class="compact">
+    <tbody>
+      <tr><td style="width:160px"><strong>Gegr&uuml;ndet</strong></td><td>1992 (33+ Jahre Erfahrung)</td></tr>
+      <tr><td><strong>Besonderheit</strong></td><td><strong>Messebau + Ladenbau</strong> als Alleinstellungsmerkmal</td></tr>
+      <tr><td><strong>Google Reviews</strong></td><td>0 Bewertungen &ndash; trotz 33 Jahren!</td></tr>
+      <tr><td><strong>Digital-Score</strong></td><td><strong>2/10</strong> &ndash; Online nahezu unsichtbar</td></tr>
+    </tbody>
+  </table>
+
+  <!-- Hinträger, Aigster, Obermayer -->
+  <h3>Weitere Wettbewerber</h3>
+  <table class="compact">
+    <thead>
+      <tr><th>Betrieb</th><th>Standort</th><th>USP</th><th>Schw&auml;che</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Hintr&auml;ger</strong></td>
+        <td>Reisch/Landsberg</td>
+        <td>Gesch&uuml;tzte &bdquo;Scheitholz-M&ouml;belfronten&ldquo;</td>
+        <td>Website wirkt wie 2010, keine Social Media</td>
+      </tr>
+      <tr>
+        <td><strong>Aigster</strong></td>
+        <td>Pflugdorf</td>
+        <td>Jung (geb. 1997), modern</td>
+        <td>One-Pager, kaum Content</td>
+      </tr>
+      <tr>
+        <td><strong>Obermayer</strong></td>
+        <td>Landsberg</td>
+        <td>Premium-Domain: schreinerei-landsberg-am-lech.de</td>
+        <td>Sehr wenig Text-Content</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout callout-teal">
+    <span class="callout-title">Marktumfeld: 30+ Schreinereien im Landkreis</span>
+    Die Schreinerinnung Landsberg listet <strong>30 Betriebe</strong> allein im Landkreis. Die meisten sind digital unsichtbar. <strong>Holzwerk 10 ist NICHT Mitglied der Innung</strong> &ndash; das sollte sofort ge&auml;ndert werden (Backlink + Vertrauen).
+  </div>
+
+  <div class="page-footer">Holzwerk 10 &ndash; Digitale Wachstumsstrategie 2026</div>
+</div>
+
+
+<!-- ====================================================
+     KAPITEL 3: KUNDENSEGMENTIERUNG
+     ==================================================== -->
+<div class="page-break"></div>
+<div class="content-page">
+  <h1><span class="chapter-num">3</span> Kundensegmentierung: Nicht jeder Kunde ist gleich wertvoll</h1>
+
+  <h2>3.1 Die Wahrheit &uuml;ber Auftragswerte</h2>
+  <p>Ein Schreiner der eine T&uuml;r repariert verdient &euro;300. Ein Schreiner der eine K&uuml;che baut verdient &euro;15.000. Beides dauert Zeit &ndash; aber der Unterschied beim Ertrag ist <strong>50x</strong>.</p>
+
+  <div class="callout callout-dark">
+    <strong>Dein Ziel:</strong> Die richtigen Kunden anziehen, nicht m&ouml;glichst viele.
+  </div>
+
+  <!-- Auftragswert-Balken -->
+  <h4>Typische Auftragswerte im Schreinerhandwerk</h4>
+  <div class="bar-chart">
+    <div class="bar-row">
+      <div class="bar-label">Kompletter Innenausbau</div>
+      <div class="bar-track"><div class="bar-fill gold" style="width:100%">&euro;20.000 &ndash; 100.000+</div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">Objekteinrichtung</div>
+      <div class="bar-track"><div class="bar-fill gold" style="width:90%">&euro;10.000 &ndash; 100.000+</div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">Ma&szlig;k&uuml;che (Massivholz)</div>
+      <div class="bar-track"><div class="bar-fill gold" style="width:65%">&euro;15.000 &ndash; 50.000</div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">Treppe</div>
+      <div class="bar-track"><div class="bar-fill silver" style="width:30%">&euro;5.000 &ndash; 25.000</div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">Premium Custom-M&ouml;bel</div>
+      <div class="bar-track"><div class="bar-fill silver" style="width:22%">&euro;3.000 &ndash; 15.000</div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">Einbauschrank nach Ma&szlig;</div>
+      <div class="bar-track"><div class="bar-fill silver" style="width:15%">&euro;3.000 &ndash; 12.000</div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">Kleinreparatur</div>
+      <div class="bar-track"><div class="bar-fill dark" style="width:3%"></div></div>
+      <span class="bar-value">&euro;100&ndash;500</span>
+    </div>
+  </div>
+
+  <h2>3.2 Kundensegmente nach strategischem Wert</h2>
+
+  <!-- GOLD: Küchen -->
+  <div class="avoid-break">
+    <h3><span class="badge badge-gold">&#9733; GOLD</span> K&uuml;chen &amp; Komplett-Innenausbau (&euro;10.000 &ndash; &euro;50.000+)</h3>
+    <table class="compact">
+      <tbody>
+        <tr><td style="width:140px"><strong>Wer</strong></td><td>Familien die bauen oder sanieren, mit Budget f&uuml;r Qualit&auml;t</td></tr>
+        <tr><td><strong>Warum Gold</strong></td><td>H&ouml;chster Einzelauftragswert, oft Folgeprojekte (erst K&uuml;che, dann Bad, dann Schlafzimmer)</td></tr>
+        <tr><td><strong>Beispiel</strong></td><td>&bdquo;Wir bauen unser Haus am Ammersee und brauchen eine komplette Einbauk&uuml;che in Eiche mit Granitarbeitsplatte.&ldquo;</td></tr>
+        <tr><td><strong>Marketing</strong></td><td><span class="priority-highest"></span> <strong>H&Ouml;CHSTE Priorit&auml;t</strong> &ndash; Eigene Landingpage, Blog-Artikel, Projekt-Showcases</td></tr>
+        <tr><td><strong>Keywords</strong></td><td>k&uuml;che nach ma&szlig; landsberg, schreinerk&uuml;che m&uuml;nchen, einbauk&uuml;che ammersee</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Marktdaten:</strong> Durchschnittlicher K&uuml;chenauftragswert Deutschland 2024: &euro;11.550 (Standardk&uuml;che). Schreinerk&uuml;chen: <strong>&euro;15.000 &ndash; &euro;40.000</strong>.</p>
+  </div>
+
+  <!-- GOLD: Objekteinrichtung -->
+  <div class="avoid-break">
+    <h3><span class="badge badge-gold">&#9733; GOLD</span> Objekteinrichtungen (&euro;10.000 &ndash; &euro;100.000+)</h3>
+    <table class="compact">
+      <tbody>
+        <tr><td style="width:140px"><strong>Wer</strong></td><td>Zahnarztpraxen, Arztpraxen, Friseursalons, B&uuml;ros, Gesch&auml;fte in der Region</td></tr>
+        <tr><td><strong>Warum Gold</strong></td><td>Sehr hohe Auftragswerte, professionelle Entscheider (schnelle Entscheidung, weniger Preisdiskussion), Folgeauftr&auml;ge</td></tr>
+        <tr><td><strong>Marketing</strong></td><td><span class="priority-highest"></span> <strong>H&Ouml;CHSTE Priorit&auml;t</strong> &ndash; Landingpages: /praxiseinrichtung, /bueroeinrichtung, /ladeneinrichtung</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="page-footer">Holzwerk 10 &ndash; Digitale Wachstumsstrategie 2026</div>
+</div>
+
+<!-- Silber + Bronze Segmente -->
+<div class="page-break"></div>
+<div class="content-page">
+
+  <!-- SILBER: Premium Möbel -->
+  <div class="avoid-break">
+    <h3><span class="badge badge-silver">&#9733;&#9733; SILBER</span> Premium Custom-M&ouml;bel (&euro;3.000 &ndash; &euro;15.000)</h3>
+    <table class="compact">
+      <tbody>
+        <tr><td style="width:140px"><strong>Wer</strong></td><td>Design-bewusste Kunden die Unikate wollen</td></tr>
+        <tr><td><strong>Warum Silber</strong></td><td>Guter Auftragswert, starkes Word-of-Mouth, perfekt f&uuml;r Social Media (Instagram!)</td></tr>
+        <tr><td><strong>Beispiel</strong></td><td>Custom-Schreibtisch mit Granitplatte und Eichenbeinen. Ein massives Eichen-Bett nach Ma&szlig;.</td></tr>
+        <tr><td><strong>Marketing</strong></td><td><span class="priority-high"></span> <strong>HOCH</strong> &ndash; Instagram-Pr&auml;senz, Portfolio-Seite, Blog-Artikel</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SILBER: Fenster, Türen -->
+  <div class="avoid-break">
+    <h3><span class="badge badge-silver">&#9733;&#9733; SILBER</span> Fenster, T&uuml;ren &amp; B&ouml;den (&euro;5.000 &ndash; &euro;20.000)</h3>
+    <table class="compact">
+      <tbody>
+        <tr><td style="width:140px"><strong>Wer</strong></td><td>Altbau-Besitzer, Sanierer, energetische Modernisierer</td></tr>
+        <tr><td><strong>Warum Silber</strong></td><td>Solider Auftragswert, oft Teil gr&ouml;&szlig;erer Sanierungsprojekte (Cross-Selling!)</td></tr>
+        <tr><td><strong>Markttrend</strong></td><td>Weniger Neubauten = mehr Bestandssanierung = mehr Auftr&auml;ge f&uuml;r Schreinereien!</td></tr>
+        <tr><td><strong>Marketing</strong></td><td><span class="priority-high"></span> <strong>HOCH</strong> &ndash; Landingpage + Blog-Artikel</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- BRONZE -->
+  <div class="avoid-break">
+    <h3><span class="badge badge-bronze">&#9733;&#9733;&#9733; BRONZE</span> Terrassen &amp; Au&szlig;enbereich (&euro;3.000 &ndash; &euro;10.000)</h3>
+    <table class="compact">
+      <tbody>
+        <tr><td style="width:140px"><strong>Wer</strong></td><td>Hausbesitzer die ihren Garten aufwerten wollen</td></tr>
+        <tr><td><strong>Warum Bronze</strong></td><td>Saisonal (Fr&uuml;hjahr-Sommer), mittlerer Auftragswert, aber gutes Cross-Selling-Potenzial</td></tr>
+        <tr><td><strong>Marketing</strong></td><td><span class="priority-medium"></span> <strong>MITTEL</strong> &ndash; Saisonaler Blog-Artikel + Portfolio-Fotos</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Nicht-Priorität -->
+  <div class="avoid-break">
+    <h3>Nicht-Priorit&auml;t: Kleinreparaturen (&euro;100 &ndash; &euro;500)</h3>
+    <p>Kleiner Auftragswert, hoher Zeitaufwand pro Euro. Joe sollte diese Anfragen nicht ablehnen (Kundenbindung!), aber <strong>nicht aktiv daf&uuml;r werben</strong>.</p>
+  </div>
+
+  <h2>3.3 Die 80/20-Regel f&uuml;r Holzwerk 10</h2>
+
+  <div class="comparison-chart">
+    <div class="comparison-item" style="border-top-color:#D4AF37">
+      <div class="label">Marketing-Budget</div>
+      <div class="big-number">80%</div>
+      <div class="label">GOLD + SILBER Kunden</div>
+      <p style="font-size:9pt;color:#666;margin-top:8px">K&uuml;chen, Innenausbau, Objekteinrichtung, Premium-M&ouml;bel</p>
+    </div>
+    <div class="comparison-item" style="border-top-color:#CD7F32">
+      <div class="label">Marketing-Budget</div>
+      <div class="big-number">20%</div>
+      <div class="label">BRONZE Kunden</div>
+      <p style="font-size:9pt;color:#666;margin-top:8px">Saisonal Terrassen, Standardleistungen</p>
+    </div>
+    <div class="comparison-item" style="border-top-color:#ccc">
+      <div class="label">Marketing-Budget</div>
+      <div class="big-number">0%</div>
+      <div class="label">Kleinauftr&auml;ge</div>
+      <p style="font-size:9pt;color:#666;margin-top:8px">Kommen von alleine wenn der Rest l&auml;uft</p>
+    </div>
+  </div>
+
+  <div class="page-footer">Holzwerk 10 &ndash; Digitale Wachstumsstrategie 2026</div>
+</div>
+
+
+<!-- ====================================================
+     KAPITEL 4: POSITIONIERUNG
+     ==================================================== -->
+<div class="page-break"></div>
+<div class="content-page">
+  <h1><span class="chapter-num">4</span> Positionierung: Wie Joe sich vom Wettbewerb abhebt</h1>
+
+  <h2>4.1 Dein USP (Unique Selling Proposition)</h2>
+  <p>Was macht Holzwerk 10 einzigartig?</p>
+
+  <table>
+    <thead>
+      <tr><th>#</th><th>USP</th><th>Details</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>1</strong></td>
+        <td><strong>Designer + Schreiner in einem</strong></td>
+        <td>Joe ist nicht nur Handwerker, er ist Gestalter. Vom Entwurf bis zum Einbau aus einer Hand.</td>
+      </tr>
+      <tr>
+        <td><strong>2</strong></td>
+        <td><strong>Showroom in Penzing</strong></td>
+        <td>Kunden k&ouml;nnen Materialien anfassen, Holzarten vergleichen. Das hat kaum ein Wettbewerber.</td>
+      </tr>
+      <tr>
+        <td><strong>3</strong></td>
+        <td><strong>15+ Jahre Erfahrung</strong></td>
+        <td>Meisterbetrieb seit 2010, kein Anf&auml;nger.</td>
+      </tr>
+      <tr>
+        <td><strong>4</strong></td>
+        <td><strong>Premium-Materialien</strong></td>
+        <td>Massivholz, Granit, Eiche. Keine Pressspanplatten von der Stange.</td>
+      </tr>
+      <tr>
+        <td><strong>5</strong></td>
+        <td><strong>Zwei Standorte</strong></td>
+        <td>Penzing (Werkstatt) + Germering (B&uuml;ro bei M&uuml;nchen). Perfekte Abdeckung.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>4.2 Positionierungsstatement</h2>
+
+  <div class="quote-box">
+    &bdquo;Holzwerk 10 &ndash; Ihre Schreinerei f&uuml;r Ma&szlig;-M&ouml;bel und Innenausbau im Raum Landsberg, Ammersee und M&uuml;nchen. Seit 2010 gestalten und fertigen wir hochwertige K&uuml;chen, Einrichtungen und Einzelst&uuml;cke aus Massivholz. Vom Entwurf bis zum Einbau &ndash; alles aus einer Hand.&ldquo;
+  </div>
+
+  <p>Dieses Statement sollte auf jeder Seite, in jeder Google-Description, &uuml;berall konsistent erscheinen.</p>
+
+  <h2>4.3 &bdquo;Joe als Marke&ldquo;</h2>
+
+  <p>Ein gro&szlig;er Vorteil: <strong>Joe IST die Marke.</strong> Kunden kaufen nicht bei einer anonymen Firma &ndash; sie kaufen bei Joe Ott, dem Schreinermeister.</p>
+
+  <div class="callout callout-teal">
+    <span class="callout-title">Das nutzen wir:</span>
+    <ul style="margin-top:8px">
+      <li><strong>Foto von Joe auf jeder Seite</strong> (Vertrauen!)</li>
+      <li><strong>&bdquo;Joe empfiehlt&ldquo;</strong> &ndash; Blogformat mit pers&ouml;nlicher Ansprache</li>
+      <li><strong>&Uuml;ber-uns-Seite</strong> mit Joe&apos;s Geschichte (seit 2000 im Handwerk!)</li>
+      <li><strong>Video:</strong> &bdquo;Willkommen bei Holzwerk 10 &ndash; Ihr Schreinermeister Joe Ott&ldquo; (30 Sekunden)</li>
+    </ul>
+  </div>
+
+  <h3>Positionierung vs. Wettbewerb</h3>
+  <div class="callout callout-warning">
+    <span class="callout-title">Strategische Leitlinie</span>
+    <p><strong>NICHT angreifen:</strong> Krist im Bereich T&uuml;ren/Fenster/Showroom (zu gro&szlig;, zu etabliert).</p>
+    <p style="margin-top:8px"><strong>Stattdessen differenzieren:</strong></p>
+    <ul>
+      <li>Premium-Ma&szlig;m&ouml;bel &amp; K&uuml;chen (wo Widmann mit Stockfotos arbeitet)</li>
+      <li>Ammersee-Premium-Segment (wo niemand gezielt kommuniziert)</li>
+      <li>Digitaler Vorsprung (Blog, Instagram, Online-Beratung)</li>
+      <li>Nachhaltigkeit &amp; regionale Materialien als Markenkern</li>
+      <li>Pers&ouml;nlichkeit zeigen (vs. die anonymen GmbHs)</li>
+    </ul>
+  </div>
+
+  <div class="page-footer">Holzwerk 10 &ndash; Digitale Wachstumsstrategie 2026</div>
+</div>
+
+
+<!-- ====================================================
+     KAPITEL 5: LOCAL SEO
+     ==================================================== -->
+<div class="page-break"></div>
+<div class="content-page">
+  <h1><span class="chapter-num">5</span> Local SEO Strategie: Lokal dominieren</h1>
+
+  <h2>5.1 Was ist Local SEO?</h2>
+  <p>Wenn jemand &bdquo;Schreiner Landsberg&ldquo; googelt, zeigt Google zwei Dinge:</p>
+  <ol>
+    <li><strong>Das &bdquo;Local Pack&ldquo;</strong> &ndash; Die 3 Betriebe auf der Karte (mit Sternen, Telefon, &Ouml;ffnungszeiten)</li>
+    <li><strong>Organische Ergebnisse</strong> &ndash; Die normalen Suchergebnisse darunter</li>
+  </ol>
+
+  <div class="callout callout-teal">
+    <span class="callout-title">Ziel</span>
+    Holzwerk 10 im Local Pack auf <strong>Platz 1&ndash;3</strong> f&uuml;r alle relevanten Suchbegriffe.
+  </div>
+
+  <h2>5.2 Google Business Profile (Pflicht!)</h2>
+  <p>Dein Google Business Profile ist dein wichtigstes Marketing-Tool. <strong>Kostenlos, aber extrem wirkungsvoll.</strong></p>
+
+  <h4>Sofort-Ma&szlig;nahmen</h4>
+  <ul class="checklist">
+    <li>Profil f&uuml;r <strong>Penzing</strong> anlegen/optimieren (Werkstatt + Showroom)</li>
+    <li>Profil f&uuml;r <strong>Germering</strong> anlegen/optimieren (B&uuml;ro)</li>
+    <li>Kategorien: Schreinerei, M&ouml;belgesch&auml;ft, Innenausbau, K&uuml;chenstudio</li>
+    <li>Fotos: Mindestens <strong>30 Bilder</strong> (Showroom, Werkstatt, Projekte, Team)</li>
+    <li>&Ouml;ffnungszeiten korrekt eintragen</li>
+    <li>Beschreibung mit Keywords: &bdquo;Schreinermeister in Penzing bei Landsberg am Lech...&ldquo;</li>
+    <li>W&ouml;chentlich 1 Post (Projekt-Foto, Angebot, Tipp)</li>
+  </ul>
+
+  <h2>5.3 Google-Bewertungen: Der Turbo</h2>
+
+  <div class="callout callout-danger">
+    <span class="callout-title">Bewertungen sind der #1 Ranking-Faktor f&uuml;r Local SEO</span>
+  </div>
+
+  <!-- Reviews-Vergleich Balkendiagramm -->
+  <h4>Google Reviews: Wettbewerber-Vergleich</h4>
+  <div class="bar-chart">
+    <div class="bar-row">
+      <div class="bar-label">Krist</div>
+      <div class="bar-track"><div class="bar-fill teal" style="width:100%">~44 Reviews</div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">Hintr&auml;ger</div>
+      <div class="bar-track"><div class="bar-fill silver" style="width:5%"></div></div>
+      <span class="bar-value">~2</span>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">Widmann</div>
+      <div class="bar-track"><div class="bar-fill silver" style="width:2%"></div></div>
+      <span class="bar-value">~1</span>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">H&auml;hr</div>
+      <div class="bar-track"><div class="bar-fill dark" style="width:0%"></div></div>
+      <span class="bar-value">0</span>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label"><strong>Holzwerk 10</strong></div>
+      <div class="bar-track"><div class="bar-fill red" style="width:4%"></div></div>
+      <span class="bar-value">&lt;5</span>
+    </div>
+    <div class="bar-row" style="margin-top:4px;border-top:2px dashed #026064;padding-top:8px;">
+      <div class="bar-label"><strong>Ziel HW10 (90 Tage)</strong></div>
+      <div class="bar-track"><div class="bar-fill green" style="width:57%">25+ Reviews &oslash; 4,8+</div></div>
+    </div>
+  </div>
+
+  <h4>Strategie f&uuml;r 25+ Bewertungen in 3 Monaten</h4>
+  <ul>
+    <li>Nach jedem erfolgreichen Projekt: Pers&ouml;nlich fragen</li>
+    <li>Einfachen Link erstellen: <strong>g.page/holzwerk10</strong></li>
+    <li>Bestehende Kunden kontaktieren: 15 Jahre = viele zufriedene Kunden!</li>
+    <li>Auf jede Bewertung pers&ouml;nlich antworten</li>
+  </ul>
+
+  <div class="callout callout-success">
+    <span class="callout-title">Pro-Tipp</span>
+    Nicht &bdquo;K&ouml;nnen Sie uns eine 5-Sterne-Bewertung geben?&ldquo; &ndash; sondern &bdquo;Wenn Sie m&ouml;chten, teilen Sie Ihre Erfahrung auf Google&ldquo;. <strong>Authentisch &gt; Manipulativ.</strong>
+  </div>
+
+  <div class="page-footer">Holzwerk 10 &ndash; Digitale Wachstumsstrategie 2026</div>
+</div>
+
+<!-- 5.4 + 5.5 -->
+<div class="page-break"></div>
+<div class="content-page">
+  <h2>5.4 Lokale Backlinks</h2>
+  <p>Google vertraut Websites, die von anderen lokalen Quellen verlinkt werden.</p>
+
+  <h4>Quick Wins &ndash; Sofort umsetzbar</h4>
+  <table>
+    <thead>
+      <tr><th>#</th><th>Quelle</th><th>Ma&szlig;nahme</th><th>Aufwand</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td><strong>Schreinerinnung Landsberg</strong></td><td>Holzwerk 10 ist dort NICHT gelistet! Sofort eintragen.</td><td>1 Std</td></tr>
+      <tr><td>2</td><td><strong>IHK M&uuml;nchen &amp; Oberbayern</strong></td><td>Firmenprofil anlegen</td><td>30 Min</td></tr>
+      <tr><td>3</td><td><strong>Gelbe Seiten / 11880</strong></td><td>Eintr&auml;ge pr&uuml;fen und aktualisieren</td><td>30 Min</td></tr>
+      <tr><td>4</td><td><strong>Gemeinde Penzing</strong></td><td>Gewerbeliste</td><td>15 Min</td></tr>
+      <tr><td>5</td><td><strong>Stadt Germering</strong></td><td>Branchenverzeichnis</td><td>15 Min</td></tr>
+      <tr><td>6</td><td><strong>ammersee-region.de</strong></td><td>Brancheneintrag</td><td>15 Min</td></tr>
+      <tr><td>7</td><td><strong>Partner-Websites</strong></td><td>Zulieferer, Handwerker-Netzwerk (gegenseitige Verlinkung)</td><td>Ongoing</td></tr>
+    </tbody>
+  </table>
+
+  <h2>5.5 NAP-Konsistenz</h2>
+  <p><strong>NAP = Name, Adresse, Phone.</strong> Muss &Uuml;BERALL identisch sein:</p>
+
+  <div class="callout callout-teal" style="font-family:monospace;font-size:10.5pt;line-height:1.8">
+    <strong>Holzwerk 10</strong><br>
+    Graf Zeppelinstr. 3<br>
+    86929 Penzing<br>
+    +49 176 45601013<br>
+    joe.ott@holzwerk10.de<br>
+    www.holzwerk10.de
+  </div>
+
+  <p>Pr&uuml;fen auf: Website, Google, Facebook, Instagram, Gelbe Seiten, Xing, alle Verzeichnisse. <strong>Eine abweichende Schreibweise verwirrt Google!</strong></p>
+
+  <h3>Google Business Profile &ndash; Chancen-Matrix</h3>
+  <table>
+    <thead>
+      <tr><th>Faktor</th><th>Ist-Zustand Wettbewerb</th><th>Chance f&uuml;r HW10</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Reviews</td><td>Krist ~44, Rest &lt;5</td><td>Ab 20+ Reviews &#8594; Top 3 realistisch</td></tr>
+      <tr><td>Fotos</td><td>Meist wenige/keine</td><td>50+ echte Fotos = Vorteil</td></tr>
+      <tr><td>GMB-Posts</td><td>Fast niemand nutzt sie</td><td>W&ouml;chentliche Posts = Alleinstellung</td></tr>
+      <tr><td>Q&amp;A</td><td>Nicht genutzt</td><td>FAQ vorpflegen = Trust</td></tr>
+      <tr><td>Kategorien</td><td>Standard &bdquo;Schreiner&ldquo;</td><td>Prim&auml;r: Schreinerei + Sekund&auml;r: M&ouml;bel, K&uuml;chen</td></tr>
+    </tbody>
+  </table>
+
+  <div class="page-footer">Holzwerk 10 &ndash; Digitale Wachstumsstrategie 2026</div>
+</div>
+
+
+<!-- ====================================================
+     KAPITEL 6: WEBSITE-STRATEGIE
+     ==================================================== -->
+<div class="page-break"></div>
+<div class="content-page">
+  <h1><span class="chapter-num">6</span> Website-Strategie: Von 5 Seiten zu 25+</h1>
+
+  <h2>6.1 Aktuelle Probleme</h2>
+
+  <table>
+    <thead>
+      <tr><th>Problem</th><th>Impact</th><th>Aufwand Fix</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Kaputte Links (/wp/kuechen/ = 404!)</td>
+        <td><span class="badge badge-red">HOCH</span></td>
+        <td>30 Min</td>
+      </tr>
+      <tr>
+        <td>Keine Meta Descriptions</td>
+        <td><span class="badge badge-red">HOCH</span></td>
+        <td>1 Stunde</td>
+      </tr>
+      <tr>
+        <td>Kein Schema Markup</td>
+        <td><span class="badge badge-red">HOCH</span></td>
+        <td>1 Stunde</td>
+      </tr>
+      <tr>
+        <td>&bdquo;Under Construction&ldquo; bei www.</td>
+        <td><span class="badge badge-red">HOCH</span></td>
+        <td>15 Min</td>
+      </tr>
+      <tr>
+        <td>Nur 5 Seiten</td>
+        <td><span class="badge badge-yellow">MITTEL</span></td>
+        <td>Ongoing</td>
+      </tr>
+      <tr>
+        <td>Kein Blog</td>
+        <td><span class="badge badge-yellow">MITTEL</span></td>
+        <td>Ongoing</td>
+      </tr>
+      <tr>
+        <td>Keine Projekt-Showcases</td>
+        <td><span class="badge badge-yellow">MITTEL</span></td>
+        <td>2&ndash;3 Stunden</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>6.2 Neue Seitenstruktur</h2>
+
+  <div class="tree">
+    holzwerk10.de/<br>
+    ├── Home (optimiert)<br>
+    ├── &Uuml;ber uns (Joe&apos;s Geschichte)<br>
+    ├── Leistungen/<br>
+    │&nbsp;&nbsp; ├── /kuechen-nach-mass &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="gold">&#9668; GOLD</span><br>
+    │&nbsp;&nbsp; ├── /innenausbau &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="gold">&#9668; GOLD</span><br>
+    │&nbsp;&nbsp; ├── /objekteinrichtungen &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="gold">&#9668; GOLD</span><br>
+    │&nbsp;&nbsp; │&nbsp;&nbsp; ├── /praxiseinrichtung<br>
+    │&nbsp;&nbsp; │&nbsp;&nbsp; ├── /bueroeinrichtung<br>
+    │&nbsp;&nbsp; │&nbsp;&nbsp; └── /ladeneinrichtung<br>
+    │&nbsp;&nbsp; ├── /moebel-nach-mass &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="silver">&#9668; SILBER</span><br>
+    │&nbsp;&nbsp; ├── /fenster-tueren &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="silver">&#9668; SILBER</span><br>
+    │&nbsp;&nbsp; ├── /boeden-treppen &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="silver">&#9668; SILBER</span><br>
+    │&nbsp;&nbsp; ├── /sanierung &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="silver">&#9668; SILBER</span><br>
+    │&nbsp;&nbsp; └── /aussenbereich-terrassen &nbsp;&nbsp;&nbsp;&nbsp;<span class="bronze">&#9668; BRONZE</span><br>
+    ├── Projekte/<br>
+    │&nbsp;&nbsp; ├── /kueche-einfamilienhaus-landsberg<br>
+    │&nbsp;&nbsp; ├── /schreibtisch-eiche-granit<br>
+    │&nbsp;&nbsp; └── /praxiseinrichtung-arztpraxis<br>
+    ├── Showroom/<br>
+    ├── Blog/<br>
+    │&nbsp;&nbsp; ├── /schreiner-landsberg-finden<br>
+    │&nbsp;&nbsp; ├── /kueche-nach-mass-kosten<br>
+    │&nbsp;&nbsp; └── /massivholz-vs-furnier<br>
+    ├── Kontakt/<br>
+    │&nbsp;&nbsp; ├── /standort-penzing<br>
+    │&nbsp;&nbsp; └── /standort-germering<br>
+    └── FAQ/
+  </div>
+
+  <div class="page-footer">Holzwerk 10 &ndash; Digitale Wachstumsstrategie 2026</div>
+</div>
+
+
+<!-- 6.3 Content-Priorität -->
+<div class="page-break"></div>
+<div class="content-page">
+  <h2>6.3 Content-Priorit&auml;t nach Kundensegment</h2>
+
+  <h3>Phase 1 (Woche 1&ndash;4): <span class="badge badge-gold">GOLD</span>-Segment bedienen</h3>
+
+  <table>
+    <thead>
+      <tr><th>#</th><th>Content</th><th>Umfang</th><th>Keywords</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td><strong>Landingpage: K&uuml;chen nach Ma&szlig;</strong><br><small>Was macht eine Schreinerk&uuml;che besonders? Ablauf, Materialien, Preistransparenz (ab &euro;12.000)</small></td>
+        <td>~1.500 W&ouml;rter</td>
+        <td>k&uuml;che nach ma&szlig; landsberg, schreinerk&uuml;che m&uuml;nchen</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><strong>Landingpage: Objekteinrichtungen</strong><br><small>Praxiseinrichtung, B&uuml;ro, Laden + Referenzprojekte</small></td>
+        <td>~1.200 W&ouml;rter</td>
+        <td>praxiseinrichtung landsberg, b&uuml;rom&ouml;bel nach ma&szlig;</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><strong>Blog: &bdquo;Was kostet eine K&uuml;che nach Ma&szlig;?&ldquo;</strong><br><small>DER Artikel f&uuml;r Google-Rankings. Preisbeispiele: klein &euro;8k, Standard &euro;15k, Premium &euro;30k+</small></td>
+        <td>~1.500 W&ouml;rter</td>
+        <td>k&uuml;che nach ma&szlig; kosten, schreinerk&uuml;che preis</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><strong>Blog: &bdquo;Schreiner in Landsberg finden: 7 Tipps&ldquo;</strong><br><small>Neutral beraten, HW10 als L&ouml;sung positionieren</small></td>
+        <td>~1.200 W&ouml;rter</td>
+        <td>schreiner landsberg, schreinerei landsberg am lech</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>Phase 2 (Woche 5&ndash;8): <span class="badge badge-silver">SILBER</span>-Segment &amp; Projekte</h3>
+  <table>
+    <thead>
+      <tr><th>#</th><th>Content</th><th>Umfang</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>5</td><td><strong>Landingpage: M&ouml;bel nach Ma&szlig;</strong></td><td>~1.000 W&ouml;rter</td></tr>
+      <tr><td>6</td><td><strong>Landingpage: Fenster &amp; T&uuml;ren</strong></td><td>~1.000 W&ouml;rter</td></tr>
+      <tr><td>7</td><td><strong>3 Projekt-Showcases</strong> (je Fotos + Story)</td><td>je ~500 W&ouml;rter</td></tr>
+      <tr><td>8</td><td><strong>Blog: &bdquo;Massivholz vs. Furnier&ldquo;</strong></td><td>~1.200 W&ouml;rter</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Phase 3 (Woche 9&ndash;12): Breite aufbauen</h3>
+  <table>
+    <thead>
+      <tr><th>#</th><th>Content</th><th>Umfang</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>9</td><td><strong>Landingpages:</strong> Sanierung, B&ouml;den &amp; Treppen, Au&szlig;enbereich</td><td>je ~800 W&ouml;rter</td></tr>
+      <tr><td>10</td><td><strong>2 weitere Blog-Artikel</strong> (Long-Tail Keywords)</td><td>je ~1.000 W&ouml;rter</td></tr>
+      <tr><td>11</td><td><strong>FAQ-Seite</strong> (h&auml;ufige Fragen, gut f&uuml;r Google!)</td><td>~800 W&ouml;rter</td></tr>
+      <tr><td>12</td><td><strong>Standort-Seiten</strong> optimieren (Penzing + Germering)</td><td>je ~500 W&ouml;rter</td></tr>
+    </tbody>
+  </table>
+
+  <h2>6.4 Content-Formate die funktionieren</h2>
+
+  <div class="comparison-chart" style="flex-wrap:wrap;">
+    <div class="comparison-item" style="flex:1 1 45%;min-width:200px;">
+      <div style="font-size:24pt;margin-bottom:5px;">&#128247;</div>
+      <div class="label" style="font-weight:700;color:#026064;">Vorher / Nachher</div>
+      <p style="font-size:9pt;color:#666;margin-top:6px">Emotionalster Content &uuml;berhaupt</p>
+    </div>
+    <div class="comparison-item" style="flex:1 1 45%;min-width:200px;">
+      <div style="font-size:24pt;margin-bottom:5px;">&#127916;</div>
+      <div class="label" style="font-weight:700;color:#026064;">Zeitraffer-Videos</div>
+      <p style="font-size:9pt;color:#666;margin-top:6px">30 Sek: Aus Holz wird K&uuml;che</p>
+    </div>
+    <div class="comparison-item" style="flex:1 1 45%;min-width:200px;">
+      <div style="font-size:24pt;margin-bottom:5px;">&#128172;</div>
+      <div class="label" style="font-weight:700;color:#026064;">Kundenstimmen</div>
+      <p style="font-size:9pt;color:#666;margin-top:6px">Echte Zitate mit Foto</p>
+    </div>
+    <div class="comparison-item" style="flex:1 1 45%;min-width:200px;">
+      <div style="font-size:24pt;margin-bottom:5px;">&#128176;</div>
+      <div class="label" style="font-weight:700;color:#026064;">Preis-Transparenz</div>
+      <p style="font-size:9pt;color:#666;margin-top:6px">Menschen googeln &bdquo;was kostet...&ldquo;</p>
+    </div>
+  </div>
+
+  <div class="page-footer">Holzwerk 10 &ndash; Digitale Wachstumsstrategie 2026</div>
+</div>
+
+
+<!-- ====================================================
+     KAPITEL 7: SOCIAL MEDIA
+     ==================================================== -->
+<div class="page-break"></div>
+<div class="content-page">
+  <h1><span class="chapter-num">7</span> Social Media: Instagram als Schaufenster</h1>
+
+  <h2>7.1 Warum Instagram perfekt f&uuml;r Schreiner ist</h2>
+  <p>Schreinerei ist <strong>visuell</strong>. Holz, Maserung, Oberfl&auml;chen, der Moment wenn eine K&uuml;che eingebaut wird &ndash; das sind Bilder die auf Instagram funktionieren.</p>
+
+  <h2>7.2 Content-Plan Instagram</h2>
+
+  <table>
+    <thead>
+      <tr><th>Tag</th><th>Content-Typ</th><th>Beispiel</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Montag</strong></td>
+        <td>Projekt-Bild</td>
+        <td>Fertiges M&ouml;belst&uuml;ck, K&uuml;che, Raum</td>
+      </tr>
+      <tr>
+        <td><strong>Mittwoch</strong></td>
+        <td>Behind-the-Scenes</td>
+        <td>Werkstatt, Holzauswahl, Verarbeitung</td>
+      </tr>
+      <tr>
+        <td><strong>Freitag</strong></td>
+        <td>Detail / Material</td>
+        <td>Maserung, Oberfl&auml;che, Verbindung</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4>Zus&auml;tzlich:</h4>
+  <ul>
+    <li><strong>1 Story pro Tag:</strong> Werkstatt-Alltag, Lieferung, Einbau, Showroom-Besucher</li>
+    <li><strong>1 Reel pro Woche:</strong> Zeitraffer (M&ouml;belst&uuml;ck entsteht, 30 Sek), &bdquo;Wood ASMR&ldquo; (Hobeln, Schleifen, &Ouml;len), Vorher/Nachher</li>
+  </ul>
+
+  <h4>Empfohlene Hashtags</h4>
+  <div class="hashtags">
+    #schreinerei #m&ouml;belbau #innenausbau #schreinermeister #ma&szlig;m&ouml;bel #holzwerk #handwerk #madeingermany #landsberg #ammersee #m&uuml;nchen #penzing #germering #k&uuml;chevomschreiner #massivholz #eiche #holzliebe
+  </div>
+
+  <h2>7.3 Joe als Gesicht</h2>
+  <p><strong>People follow people, not logos.</strong> Joe sollte regelm&auml;&szlig;ig selbst in Posts/Stories auftauchen:</p>
+  <ul>
+    <li>Kurzes Video: &bdquo;Hier entsteht gerade eine Eichenk&uuml;che f&uuml;r eine Familie am Ammersee&ldquo;</li>
+    <li>Foto in der Werkstatt (authentisch, nicht gestellt)</li>
+    <li>&bdquo;Ask a Schreiner&ldquo; &ndash; Fragen beantworten (Story-Format)</li>
+  </ul>
+
+  <div class="callout callout-teal">
+    <span class="callout-title">Wettbewerbs-Kontext</span>
+    Nur Schreinerei Krist nutzt Social Media (359 FB-Likes, 281 IG-Follower, 354 Posts) &ndash; und dort nur schwach. <strong>Social Media ist praktisch unbesetztes Terrain</strong> f&uuml;r Schreinereien in der Region.
+  </div>
+
+  <div class="page-footer">Holzwerk 10 &ndash; Digitale Wachstumsstrategie 2026</div>
+</div>
+
+
+<!-- ====================================================
+     KAPITEL 8: TECHNISCHE QUICK FIXES
+     ==================================================== -->
+<div class="page-break"></div>
+<div class="content-page">
+  <h1><span class="chapter-num">8</span> Technische Quick Fixes (Sofort umsetzen!)</h1>
+
+  <h2>8.1 Kritische Fehler beheben</h2>
+
+  <table>
+    <thead>
+      <tr><th>#</th><th>Fix</th><th>Aufwand</th><th>Impact</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>Kaputte Links reparieren (/wp/kuechen/ etc.)</td><td>30 Min</td><td><span class="badge badge-red">HOCH</span></td></tr>
+      <tr><td>2</td><td>www.holzwerk10.de &#8594; holzwerk10.de Redirect</td><td>15 Min</td><td><span class="badge badge-red">HOCH</span></td></tr>
+      <tr><td>3</td><td>holzwerk10.com &#8594; holzwerk10.de Redirect</td><td>15 Min</td><td><span class="badge badge-red">HOCH</span></td></tr>
+      <tr><td>4</td><td>Meta Descriptions f&uuml;r alle Seiten</td><td>1 Std</td><td><span class="badge badge-red">HOCH</span></td></tr>
+      <tr><td>5</td><td>Schema Markup (LocalBusiness) einbauen</td><td>1 Std</td><td><span class="badge badge-red">HOCH</span></td></tr>
+      <tr><td>6</td><td>Open Graph Tags optimieren</td><td>30 Min</td><td><span class="badge badge-yellow">MITTEL</span></td></tr>
+      <tr><td>7</td><td>XML-Sitemap erstellen</td><td>15 Min</td><td><span class="badge badge-yellow">MITTEL</span></td></tr>
+      <tr><td>8</td><td>Google Search Console einrichten</td><td>30 Min</td><td><span class="badge badge-yellow">MITTEL</span></td></tr>
+      <tr><td>9</td><td>WordPress updaten (6.2.8 &#8594; 6.7.x)</td><td>1 Std</td><td><span class="badge badge-yellow">MITTEL</span></td></tr>
+      <tr><td>10</td><td>Bilder komprimieren (Page Speed)</td><td>30 Min</td><td><span class="badge badge-green">NICE</span></td></tr>
+    </tbody>
+  </table>
+
+  <h2>8.2 Meta Descriptions (fertig zum Einsetzen)</h2>
+
+  <table>
+    <thead>
+      <tr><th>Seite</th><th>Meta Description</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Home</strong></td>
+        <td>&bdquo;Holzwerk 10 &ndash; Ihr Schreinermeister in Penzing bei Landsberg am Lech. Hochwertige K&uuml;chen, M&ouml;bel &amp; Innenausbau nach Ma&szlig;. Showroom vor Ort. Seit 2010.&ldquo;</td>
+      </tr>
+      <tr>
+        <td><strong>Leistungen</strong></td>
+        <td>&bdquo;M&ouml;belbau, K&uuml;chen, Innenausbau, Fenster &amp; T&uuml;ren, Sanierungen &ndash; Schreinermeister Joe Ott ber&auml;t Sie im Raum Landsberg, M&uuml;nchen &amp; Ammersee.&ldquo;</td>
+      </tr>
+      <tr>
+        <td><strong>&Uuml;ber uns</strong></td>
+        <td>&bdquo;Schreinermeister Joe Ott &ndash; seit 2010 Probleml&ouml;ser und Wunscherf&uuml;ller in Penzing bei Landsberg. Vom Entwurf bis zum Einbau, alles aus einer Hand.&ldquo;</td>
+      </tr>
+      <tr>
+        <td><strong>Showroom</strong></td>
+        <td>&bdquo;Besuchen Sie unseren Showroom in Penzing: Holzarten anfassen, Materialien vergleichen, Ihr Projekt besprechen. Termin vereinbaren!&ldquo;</td>
+      </tr>
+      <tr>
+        <td><strong>Kontakt</strong></td>
+        <td>&bdquo;Kontaktieren Sie Holzwerk 10 in Penzing &amp; Germering. Schreinermeister Joe Ott ber&auml;t Sie gerne. Telefon: 0176 45601013 oder Kontaktformular.&ldquo;</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="page-footer">Holzwerk 10 &ndash; Digitale Wachstumsstrategie 2026</div>
+</div>
+
+
+<!-- ====================================================
+     KAPITEL 9: DER 90-TAGE-PLAN
+     ==================================================== -->
+<div class="page-break"></div>
+<div class="content-page">
+  <h1><span class="chapter-num">9</span> Der 90-Tage-Plan</h1>
+
+  <div class="timeline">
+    <!-- Woche 1-2 -->
+    <div class="timeline-item">
+      <div class="timeline-title">Woche 1&ndash;2: Foundation</div>
+      <div class="timeline-subtitle">Ziel: Technische Basis schaffen | Aufwand: 8&ndash;10 Stunden</div>
+      <ul class="checklist">
+        <li>WordPress Update (6.2.8 &#8594; 6.7.x)</li>
+        <li>Rank Math SEO Plugin installieren</li>
+        <li>Alle kaputten Links fixen</li>
+        <li>Meta Descriptions einsetzen</li>
+        <li>Schema Markup einbauen</li>
+        <li>www/com Redirects einrichten</li>
+        <li>Google Search Console einrichten</li>
+        <li>Google Business Profile optimieren (Penzing)</li>
+        <li>Google Business Profile anlegen (Germering)</li>
+        <li>30 Fotos auf Google Business hochladen</li>
+      </ul>
+    </div>
+
+    <!-- Woche 3-4 -->
+    <div class="timeline-item">
+      <div class="timeline-title">Woche 3&ndash;4: Content Gold-Segment</div>
+      <div class="timeline-subtitle">Ziel: Hochwertige Kunden anziehen | Aufwand: 12&ndash;15 Stunden</div>
+      <ul class="checklist">
+        <li>Landingpage &bdquo;K&uuml;chen nach Ma&szlig;&ldquo; erstellen</li>
+        <li>Landingpage &bdquo;Objekteinrichtungen&ldquo; erstellen</li>
+        <li>Blog-Artikel &bdquo;Was kostet eine K&uuml;che nach Ma&szlig;?&ldquo;</li>
+        <li>Blog-Artikel &bdquo;Schreiner in Landsberg finden&ldquo;</li>
+        <li>2 Projekt-Showcases erstellen</li>
+        <li>Bewertungs-Kampagne starten (10 bestehende Kunden kontaktieren)</li>
+      </ul>
+    </div>
+
+    <!-- Woche 5-8 -->
+    <div class="timeline-item">
+      <div class="timeline-title">Woche 5&ndash;8: Breite aufbauen</div>
+      <div class="timeline-subtitle">Ziel: Mehr Keywords abdecken | Aufwand: 15&ndash;20 Stunden</div>
+      <ul class="checklist">
+        <li>Landingpage &bdquo;M&ouml;bel nach Ma&szlig;&ldquo;</li>
+        <li>Landingpage &bdquo;Fenster &amp; T&uuml;ren&ldquo;</li>
+        <li>Blog-Artikel &bdquo;Massivholz vs. Furnier&ldquo;</li>
+        <li>Blog-Artikel &bdquo;Innenausbau im Altbau&ldquo;</li>
+        <li>3 weitere Projekt-Showcases</li>
+        <li>Instagram-Account starten</li>
+        <li>Erste 12 Posts planen und erstellen</li>
+        <li>Lokale Backlinks aufbauen (5&ndash;10 Eintr&auml;ge)</li>
+      </ul>
+    </div>
+
+    <!-- Woche 9-12 -->
+    <div class="timeline-item">
+      <div class="timeline-title">Woche 9&ndash;12: Optimieren &amp; Skalieren</div>
+      <div class="timeline-subtitle">Ziel: Ergebnisse messen und optimieren | Aufwand: 10&ndash;12 Stunden</div>
+      <ul class="checklist">
+        <li>Landingpages: Sanierung, B&ouml;den, Au&szlig;enbereich</li>
+        <li>FAQ-Seite erstellen</li>
+        <li>Standort-Seiten optimieren</li>
+        <li>Google Rankings checken (Search Console)</li>
+        <li>Bewertungen: Ziel 25+ erreicht?</li>
+        <li>Top-Artikel optimieren</li>
+        <li>Conversion-Optimierung (CTAs, Kontaktformular)</li>
+        <li>Ergebnisbericht erstellen</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page-footer">Holzwerk 10 &ndash; Digitale Wachstumsstrategie 2026</div>
+</div>
+
+
+<!-- ====================================================
+     KAPITEL 10: ROI
+     ==================================================== -->
+<div class="page-break"></div>
+<div class="content-page">
+  <h1><span class="chapter-num">10</span> Erwartete Ergebnisse &amp; ROI</h1>
+
+  <h2>10.1 Traffic-Prognose</h2>
+
+  <table>
+    <thead>
+      <tr><th>Metrik</th><th>Heute (gesch.)</th><th>Nach 90 Tagen</th><th>Nach 6 Monaten</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Organische Besucher/Monat</td>
+        <td>100&ndash;150</td>
+        <td><strong>400&ndash;500</strong></td>
+        <td><strong>800&ndash;1.200</strong></td>
+      </tr>
+      <tr>
+        <td>Keyword-Rankings Top 10</td>
+        <td>3 (nur Brand)</td>
+        <td><strong>15&ndash;20</strong></td>
+        <td><strong>30&ndash;40</strong></td>
+      </tr>
+      <tr>
+        <td>Google Business Aufrufe</td>
+        <td>~1.500/Monat</td>
+        <td><strong>~5.000/Monat</strong></td>
+        <td><strong>~8.000/Monat</strong></td>
+      </tr>
+      <tr>
+        <td>Google Bewertungen</td>
+        <td>&lt;5</td>
+        <td><strong>25+</strong></td>
+        <td><strong>40+</strong></td>
+      </tr>
+      <tr>
+        <td>Anfragen/Monat</td>
+        <td>5&ndash;8</td>
+        <td><strong>12&ndash;18</strong></td>
+        <td><strong>20&ndash;30</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Traffic Wachstum Balken -->
+  <h4>Organische Besucher: Wachstums-Prognose</h4>
+  <div class="bar-chart">
+    <div class="bar-row">
+      <div class="bar-label">Heute</div>
+      <div class="bar-track"><div class="bar-fill dark" style="width:12%">~125</div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">Nach 90 Tagen</div>
+      <div class="bar-track"><div class="bar-fill teal" style="width:42%">~450</div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">Nach 6 Monaten</div>
+      <div class="bar-track"><div class="bar-fill green" style="width:83%">~1.000</div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-label">Potenzial (12 Mon.)</div>
+      <div class="bar-track"><div class="bar-fill gold" style="width:100%">~1.500+</div></div>
+    </div>
+  </div>
+
+  <h2>10.2 Umsatz-Impact</h2>
+
+  <h3>Szenario A: Konservative Rechnung</h3>
+  <div class="kpi-row">
+    <div class="kpi-card">
+      <div class="kpi-value">+10</div>
+      <div class="kpi-label">Anfragen / Monat</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-value">30%</div>
+      <div class="kpi-label">Abschlussquote</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-value">&euro;8k</div>
+      <div class="kpi-label">&oslash; Auftragswert</div>
+    </div>
+    <div class="kpi-card highlight">
+      <div class="kpi-value">&euro;24k</div>
+      <div class="kpi-label">Zusatz / Monat</div>
+    </div>
+    <div class="kpi-card highlight">
+      <div class="kpi-value">&euro;288k</div>
+      <div class="kpi-label">Zusatz / Jahr</div>
+    </div>
+  </div>
+
+  <h3>Szenario B: Fokus Gold-Segment</h3>
+  <div class="kpi-row">
+    <div class="kpi-card">
+      <div class="kpi-value">+5</div>
+      <div class="kpi-label">Gold-Anfragen / Mon.</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-value">25%</div>
+      <div class="kpi-label">Abschlussquote</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-value">&euro;18k</div>
+      <div class="kpi-label">&oslash; Auftragswert</div>
+    </div>
+    <div class="kpi-card highlight">
+      <div class="kpi-value">&euro;22,5k</div>
+      <div class="kpi-label">Zusatz / Monat</div>
+    </div>
+    <div class="kpi-card highlight">
+      <div class="kpi-value">&euro;270k</div>
+      <div class="kpi-label">Zusatz / Jahr</div>
+    </div>
+  </div>
+
+  <h2>10.3 Investition vs. Return</h2>
+
+  <table>
+    <thead>
+      <tr><th>Position</th><th style="text-align:right">Kosten</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>SEO-Setup &amp; technische Fixes</td><td style="text-align:right">&euro;800</td></tr>
+      <tr><td>Content-Erstellung (10 Seiten + 4 Artikel)</td><td style="text-align:right">&euro;2.400</td></tr>
+      <tr><td>Google Business Optimierung</td><td style="text-align:right">&euro;400</td></tr>
+      <tr><td>Laufende Betreuung (3 Monate)</td><td style="text-align:right">&euro;1.200</td></tr>
+      <tr style="background:#026064;color:#FFFFFF;font-weight:700">
+        <td>Gesamtinvestition</td><td style="text-align:right">&euro;4.800</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="kpi-row" style="margin-top:25px">
+    <div class="kpi-card">
+      <div class="kpi-value">&euro;72k</div>
+      <div class="kpi-label">Zusatz-Umsatz 3 Mon.</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-value">&euro;288k</div>
+      <div class="kpi-label">Zusatz-Umsatz 12 Mon.</div>
+    </div>
+    <div class="kpi-card highlight">
+      <div class="kpi-value">15x</div>
+      <div class="kpi-label">ROI nach 3 Monaten</div>
+    </div>
+    <div class="kpi-card highlight">
+      <div class="kpi-value">60x</div>
+      <div class="kpi-label">ROI nach 12 Monaten</div>
+    </div>
+  </div>
+
+  <p style="margin-top:15px;font-style:italic;color:#666;">Diese Zahlen sind konservativ gesch&auml;tzt. Bei konsequenter Umsetzung ist mehr m&ouml;glich.</p>
+
+  <div class="page-footer">Holzwerk 10 &ndash; Digitale Wachstumsstrategie 2026</div>
+</div>
+
+
+<!-- ====================================================
+     KAPITEL 11: WARUM JETZT?
+     ==================================================== -->
+<div class="page-break"></div>
+<div class="content-page">
+  <h1><span class="chapter-num">11</span> Warum jetzt?</h1>
+
+  <div style="margin:30px 0">
+    <div class="callout callout-teal" style="margin-bottom:15px">
+      <span class="callout-title">1. Die Wettbewerber schlafen.</span>
+      Keiner macht professionelles Online-Marketing. Wer jetzt anf&auml;ngt, hat <strong>6&ndash;12 Monate Vorsprung</strong>. Von 6 analysierten Wettbewerbern hat nur Krist einen ernsthaften digitalen Auftritt.
+    </div>
+    <div class="callout callout-teal" style="margin-bottom:15px">
+      <span class="callout-title">2. Google belohnt Konstanz.</span>
+      SEO braucht 3&ndash;6 Monate. Je fr&uuml;her du startest, desto schneller siehst du Ergebnisse.
+    </div>
+    <div class="callout callout-teal" style="margin-bottom:15px">
+      <span class="callout-title">3. Der Markt ist da.</span>
+      3.000+ monatliche Suchen nach deinen Leistungen in deiner Region &ndash; und du bist unsichtbar.
+    </div>
+    <div class="callout callout-teal">
+      <span class="callout-title">4. Dein Handwerk verdient Sichtbarkeit.</span>
+      Custom Eichenb&auml;etten, Granit-Schreibtische, komplette Innenausbauten &ndash; das ist <strong>Kunst</strong>. Und Kunst muss gesehen werden.
+    </div>
+  </div>
+
+  <h3>Branchenkontext: Die Zeit dr&auml;ngt</h3>
+  <div class="callout callout-warning">
+    <span class="callout-title">Konjunktur-Update 2024/2025</span>
+    <ul style="margin-top:8px">
+      <li>Bayern: Deutlicher R&uuml;ckgang der Baugenehmigungen (&minus;18,5% Q1/2024)</li>
+      <li>Oberbayern: &minus;11,9% weniger Wohnungsfreigaben</li>
+      <li>NRW (Tischler): &bdquo;Erstmals seit 2013 kr&auml;ftige Umsatzverluste 2023/2024&ldquo;</li>
+      <li><strong>Aber:</strong> Weniger Neubau = mehr Bestandssanierung = stabiler Markt f&uuml;r K&uuml;chen &amp; Innenausbau</li>
+      <li><strong>Premium-Segment (Ammersee-Klientel) ist robuster als das Massengesch&auml;ft</strong></li>
+    </ul>
+  </div>
+
+  <h3>Trends die f&uuml;r Holzwerk 10 sprechen</h3>
+  <table>
+    <thead>
+      <tr><th>Trend</th><th>Chance f&uuml;r HW10</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Nachhaltigkeit</strong></td><td>Regionale Materialien, CO2-neutrale Bilanz = Marketing-Vorteil</td></tr>
+      <tr><td><strong>K&uuml;che als Wohnraum</strong></td><td>Offene K&uuml;chen, K&uuml;cheninsel &ndash; ideales GOLD-Segment</td></tr>
+      <tr><td><strong>Alles aus einer Hand</strong></td><td>Joe als Generalunternehmer: Entwurf bis Einbau</td></tr>
+      <tr><td><strong>Smart Home Integration</strong></td><td>M&ouml;bel mit Technik &ndash; Differenzierung m&ouml;glich</td></tr>
+      <tr><td><strong>Spezialisierung</strong></td><td>Ammersee-Premium als Nische besetzen</td></tr>
+    </tbody>
+  </table>
+
+  <div class="page-footer">Holzwerk 10 &ndash; Digitale Wachstumsstrategie 2026</div>
+</div>
+
+
+<!-- ====================================================
+     ANHANG: MARKT- & WETTBEWERBSDATEN
+     ==================================================== -->
+<div class="page-break"></div>
+<div class="content-page">
+  <h1><span class="chapter-num">A</span> Anhang: Markt- &amp; Wettbewerbsdaten</h1>
+
+  <h2>A.1 Branchenkennzahlen Schreinerhandwerk</h2>
+
+  <table>
+    <thead>
+      <tr><th>Kennzahl</th><th>Wert</th><th>Quelle</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Stundenverrechnungssatz (&oslash;)</td><td><strong>&euro;56,55</strong></td><td>Bundesbetriebsvergleich 2018</td></tr>
+      <tr><td>Wertsch&ouml;pfung je Besch&auml;ftigtem</td><td>~&euro;71.000</td><td>Bundesbetriebsvergleich</td></tr>
+      <tr><td>Eigenkapitalquote (&oslash;)</td><td>43,2%</td><td>Bundesbetriebsvergleich</td></tr>
+      <tr><td>Gesamtkapitalrentabilit&auml;t</td><td>9,5%</td><td>Bundesbetriebsvergleich</td></tr>
+      <tr><td>Tariferh&ouml;hung Bayern 2024</td><td><strong>+6%</strong></td><td>IG Metall</td></tr>
+      <tr><td>Fachverband Bayern</td><td>3.000 Betriebe</td><td>schreiner.de</td></tr>
+      <tr><td>Innung Landsberg</td><td>30 Betriebe</td><td>schreinerinnung-landsberg.de</td></tr>
+    </tbody>
+  </table>
+
+  <h2>A.2 Durchschnittliche Umsatzgr&ouml;&szlig;en</h2>
+  <table>
+    <thead>
+      <tr><th>Betriebsgr&ouml;&szlig;e</th><th>Jahresumsatz (gesch.)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Klein (1&ndash;4 Mitarbeiter)</td><td>&euro;200.000 &ndash; 400.000</td></tr>
+      <tr><td>Mittel (5&ndash;9 Mitarbeiter)</td><td>&euro;500.000 &ndash; 800.000</td></tr>
+      <tr><td>Gro&szlig; (10&ndash;19 Mitarbeiter)</td><td>&euro;1.000.000 &ndash; 2.000.000</td></tr>
+      <tr><td>Sehr gro&szlig; (20+ MA, z.B. Krist)</td><td>&euro;2.000.000+</td></tr>
+    </tbody>
+  </table>
+
+  <h2>A.3 Immobilienpreise im Einzugsgebiet (M&auml;rz 2025)</h2>
+  <table>
+    <thead>
+      <tr><th>Ort</th><th>EFH &euro;/m&sup2;</th><th>ETW &euro;/m&sup2;</th><th>Grundst&uuml;cke &euro;/m&sup2;</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Landsberg Stadt</strong></td><td>5.283</td><td>4.596</td><td>672&ndash;1.008</td></tr>
+      <tr><td><strong>Kaufering</strong></td><td>4.950</td><td>4.218</td><td>741&ndash;1.111</td></tr>
+      <tr><td><strong>Penzing</strong></td><td>4.777</td><td>4.181</td><td>629&ndash;943</td></tr>
+      <tr><td><strong>Ammersee-Region</strong></td><td><strong>6.396&ndash;7.542</strong></td><td>5.119&ndash;5.815</td><td>881&ndash;1.549</td></tr>
+    </tbody>
+  </table>
+  <p><small>Quellen: domizilacht.de, immowelt.de, ImmoScout24 (2025)</small></p>
+
+  <h2>A.4 Keyword-Strategie &ndash; Vollst&auml;ndige Liste</h2>
+
+  <h4>Prim&auml;re Keywords (h&ouml;chste Priorit&auml;t)</h4>
+  <table class="compact">
+    <thead>
+      <tr><th>Keyword</th><th>Suchvolumen (mtl.)</th><th>Schwierigkeit</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>&bdquo;schreiner landsberg&ldquo;</td><td>150&ndash;300</td><td>Mittel</td></tr>
+      <tr><td>&bdquo;schreinerei landsberg am lech&ldquo;</td><td>100&ndash;200</td><td>Mittel</td></tr>
+      <tr><td>&bdquo;schreiner ammersee&ldquo;</td><td>30&ndash;80</td><td>Niedrig</td></tr>
+      <tr><td>&bdquo;k&uuml;che nach ma&szlig; landsberg&ldquo;</td><td>20&ndash;60</td><td>Niedrig</td></tr>
+    </tbody>
+  </table>
+
+  <h4>Sekund&auml;re Keywords</h4>
+  <table class="compact">
+    <thead>
+      <tr><th>Keyword</th><th>Suchvolumen (mtl.)</th><th>Schwierigkeit</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>&bdquo;einbauschrank nach ma&szlig;&ldquo;</td><td>500&ndash;1.200</td><td>Mittel-Hoch</td></tr>
+      <tr><td>&bdquo;schreinerei m&uuml;nchen&ldquo;</td><td>1.000&ndash;2.500</td><td>Hoch</td></tr>
+      <tr><td>&bdquo;schreiner germering&ldquo;</td><td>50&ndash;120</td><td>Niedrig</td></tr>
+      <tr><td>&bdquo;innenausbau landsberg&ldquo;</td><td>20&ndash;50</td><td>Niedrig</td></tr>
+      <tr><td>&bdquo;schreinerei kaufering&ldquo;</td><td>20&ndash;50</td><td>Niedrig</td></tr>
+    </tbody>
+  </table>
+
+  <h4>Long-Tail Keywords (Content-Marketing)</h4>
+  <table class="compact">
+    <thead>
+      <tr><th>Keyword</th><th>Content-Typ</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>&bdquo;k&uuml;che nach ma&szlig; preis&ldquo;</td><td>Blog-Artikel</td></tr>
+      <tr><td>&bdquo;einbauschrank schr&auml;ge nach ma&szlig;&ldquo;</td><td>Landingpage</td></tr>
+      <tr><td>&bdquo;schreiner kosten pro stunde&ldquo;</td><td>Blog / FAQ</td></tr>
+      <tr><td>&bdquo;holzk&uuml;che massivholz bayern&ldquo;</td><td>Blog-Artikel</td></tr>
+      <tr><td>&bdquo;badm&ouml;bel nach ma&szlig; schreiner&ldquo;</td><td>Landingpage</td></tr>
+      <tr><td>&bdquo;treppenrenovierung landsberg&ldquo;</td><td>Landingpage</td></tr>
+      <tr><td>&bdquo;begehbarer kleiderschrank nach ma&szlig;&ldquo;</td><td>Blog-Artikel</td></tr>
+    </tbody>
+  </table>
+
+  <h4>Lokale SEO-Landingpages (empfohlen)</h4>
+  <div class="hashtags" style="color:#333">
+    /schreiner-landsberg &bull; /schreiner-kaufering &bull; /schreiner-penzing &bull; /schreiner-diessen-ammersee &bull; /schreiner-germering &bull; /schreiner-utting-ammersee &bull; /schreiner-schondorf-ammersee &bull; /schreiner-geltendorf
+  </div>
+
+  <div class="page-footer">Holzwerk 10 &ndash; Digitale Wachstumsstrategie 2026</div>
+</div>
+
+
+<!-- ====================================================
+     NÄCHSTE SCHRITTE + ABSCHLUSS
+     ==================================================== -->
+<div class="page-break"></div>
+<div class="content-page">
+  <h1>N&auml;chste Schritte</h1>
+
+  <div style="margin:25px 0">
+    <table>
+      <thead>
+        <tr><th>#</th><th>Schritt</th><th>Status</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>1</strong></td>
+          <td>Strategie besprechen (dieses Dokument)</td>
+          <td><span class="badge badge-green">&#10003; BEREIT</span></td>
+        </tr>
+        <tr>
+          <td><strong>2</strong></td>
+          <td>Google Business Profile pr&uuml;fen (hast du Zugang?)</td>
+          <td><span class="badge badge-yellow">OFFEN</span></td>
+        </tr>
+        <tr>
+          <td><strong>3</strong></td>
+          <td>WordPress-Zugang einrichten (f&uuml;r technische Fixes)</td>
+          <td><span class="badge badge-yellow">OFFEN</span></td>
+        </tr>
+        <tr>
+          <td><strong>4</strong></td>
+          <td>Projekt-Fotos sammeln (beste 20 Projekte der letzten Jahre)</td>
+          <td><span class="badge badge-yellow">OFFEN</span></td>
+        </tr>
+        <tr>
+          <td><strong>5</strong></td>
+          <td>Erste Landingpage erstellen (K&uuml;chen nach Ma&szlig;)</td>
+          <td><span class="badge badge-yellow">OFFEN</span></td>
+        </tr>
+        <tr>
+          <td><strong>6</strong></td>
+          <td>Bewertungs-Kampagne starten (bestehende Kunden kontaktieren)</td>
+          <td><span class="badge badge-yellow">OFFEN</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section-sep"></div>
+
+  <!-- Abschluss -->
+  <div style="text-align:center;padding:40px 20px;margin-top:30px">
+    <div style="font-size:16pt;color:#026064;font-weight:700;margin-bottom:15px">
+      Holzwerk 10 hat das Handwerk.
+    </div>
+    <div style="font-size:20pt;color:#232323;font-weight:700;margin-bottom:30px">
+      Jetzt geben wir ihm die B&uuml;hne.
+    </div>
+    <div style="width:60px;height:3px;background:#2BA0A3;margin:0 auto 30px"></div>
+    <div style="font-size:10pt;color:#888;line-height:2">
+      
+      Digitale Wachstumsstrategie 2026<br>
+      Erstellt: Februar 2026
+    </div>
+  </div>
+
+  <div class="section-sep"></div>
+
+  <h2>Quellenverzeichnis</h2>
+  <div style="font-size:8.5pt;color:#666;line-height:1.8;columns:2;column-gap:30px;">
+    <p>1. schreinerei-hintraeger.de &ndash; Website (05.02.2026)</p>
+    <p>2. schreinerei-aigster.de &ndash; Website (05.02.2026)</p>
+    <p>3. krist-schreinerei.de &ndash; Website (05.02.2026)</p>
+    <p>4. schreinerei-obermayer.de &ndash; Website (05.02.2026)</p>
+    <p>5. schreinereiwidmann.de &ndash; Website (05.02.2026)</p>
+    <p>6. holzanstalt.de &ndash; Website (05.02.2026)</p>
+    <p>7. schreinerinnung-landsberg.de &ndash; Mitgliederliste</p>
+    <p>8. landkreis-landsberg.de &ndash; Zahlen und Daten</p>
+    <p>9. Wikipedia &ndash; Gemeinden LK Landsberg</p>
+    <p>10. domizilacht.de &ndash; Marktpreise M&auml;rz 2025</p>
+    <p>11. immowelt.de &ndash; Immobilienpreise Landsberg</p>
+    <p>12. ImmoScout24 &ndash; Preisatlas LK Landsberg</p>
+    <p>13. standortportal.bayern &ndash; Kaufkraft Germering</p>
+    <p>14. germering.de &ndash; Strukturdaten</p>
+    <p>15. lra-ffb.de &ndash; Portrait LK FFB</p>
+    <p>16. handwerk-magazin.de &ndash; Branchencheck</p>
+    <p>17. tischler-schreiner.de &ndash; Betriebsvergleich 2022</p>
+    <p>18. igmetall.de &ndash; Tarifergebnis Bayern 2024</p>
+    <p>19. schreiner.de &ndash; Fachverband Bayern</p>
+    <p>20. statistik.bayern.de &ndash; Baugenehmigungen</p>
+    <p>21. vdwbayern.de &ndash; Wohnungsbau Q1/2024</p>
+    <p>22. facebook.com/kristschreinerei</p>
+    <p>23. instagram.com/schreinerei_krist</p>
+    <p>24. dasoertliche.de &ndash; Bewertungsdaten</p>
+    <p>25. gelbeseiten.de &ndash; Bewertungsdaten</p>
+    <p>26. golocal.de &ndash; Krist Bewertungen</p>
+    <p>27. northdata.com &ndash; Handelsregister</p>
+    <p>28. calvest.de &ndash; Innenausbau Trends 2025</p>
+    <p>29. hausinfo.ch &ndash; K&uuml;chentrends 2025</p>
+    <p>30. mb-research.de &ndash; Kaufkraft 2025</p>
+  </div>
+
+  <div class="page-footer" style="margin-top:30px">Holzwerk 10 &ndash; Digitale Wachstumsstrategie 2026</div>
+</div>
+
+</body>
+</html>

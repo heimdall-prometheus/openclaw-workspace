@@ -1,0 +1,40 @@
+# Project Template
+
+slug: ""           # URL-freundlicher identifier (= Ordnername)
+title: ""
+description: |
+  Worum geht es bei diesem Projekt?
+
+# === OWNER ===
+
+owner: erik        # Wer ist verantwortlich?
+stakeholders:
+  - name: ""
+    role: ""
+
+# === ZIELE ===
+
+vision: |
+  Wo soll das Projekt langfristig hin?
+
+objectives:
+  - ""
+  - ""
+
+# === STATUS ===
+
+status: active     # idea|planning|active|maintenance|archived
+priority: medium   # low|medium|high|critical
+
+# === LINKS ===
+
+links:
+  repository: ""
+  production: ""
+  staging: ""
+  docs: ""
+
+# === META ===
+
+created: ""
+updated: ""

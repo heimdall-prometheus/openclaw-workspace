@@ -1,0 +1,107 @@
+id: ms-task-003
+title: "WCAG Fixes: Footer ARIA + Touch-Ziele + Alt-Texte auf Dev"
+project: mein-schluessel
+created: 2026-02-08T09:07:00Z
+created_by: erik
+status: working
+
+# Kontext
+project: mein-schluessel
+strategy: bfsg-compliance
+parent_task: ms-task-002  # Sprint 1 Quick-Wins
+
+intention: |
+  3 von 5 Quick-Win WCAG-Fixes umsetzen, die KEINE Farb-/Branding-Änderungen erfordern.
+  Diese 3 Fixes eliminieren ~50 Violations über alle 8 Seiten und sind risikofrei
+  (kein visueller Impact auf das bestehende Design).
+  Umsetzung auf Dev-Umgebung (ms-dev.erikreisig.de) zum Testen.
+
+target_audience: |
+  Endkunden mit Screenreadern/Tastatur-Navigation + BFSG-Prüfer
+
+criteria:
+  quantitative:
+    - id: q1
+      description: "Footer ARIA-Violations = 0 auf allen 8 Seiten (war: 32)"
+      check: "axe-core scan footer auf ms-dev.erikreisig.de"
+    - id: q2
+      description: "Touch-Ziel-Violations = 0 (war: 12)"
+      check: "axe-core WCAG 2.5.8 check"
+    - id: q3
+      description: "Alt-Text-Violations ≤3 (war: 13, Plugin-Bilder können bleiben)"
+      check: "axe-core WCAG 1.1.1 check"
+    - id: q4
+      description: "Theme kompiliert ohne Fehler"
+      check: "bin/console theme:compile exit code 0"
+    - id: q5
+      description: "Keine visuellen Regressionen — Seite sieht identisch aus"
+      check: "Screenshots vorher/nachher vergleichen"
+    - id: q6
+      description: "ms-dev.erikreisig.de gibt HTTP 200 nach Deploy"
+      check: "curl -sI https://ms-dev.erikreisig.de | grep 200"
+  qualitative:
+    - id: ql1
+      description: "Fixes sind korrekt implementiert (semantisch, nicht nur 'axe zufriedenstellen')"
+      min_score: 7
+
+fixes:
+  - id: fix-2-footer-aria
+    name: "Footer ARIA-Fix"
+    wcag: "4.1.2 + 1.3.1"
+    file: "footer.html.twig"
+    description: |
+      - role="button" + tabindex="0" auf alle Collapse-Trigger-Divs
+      - role="listitem" auf direkte Kinder von role="list" Containern
+    impact: "32 Violations → 0 (8 Seiten)"
+
+  - id: fix-3-touch-targets
+    name: "Touch-Ziele CSS"
+    wcag: "2.5.8"
+    file: "SCSS component files"
+    description: |
+      - min-width/height 24px auf Newsletter-Checkbox
+      - Auch Zubehör-Checkboxen auf Produktseiten
+    impact: "12 Violations → 0"
+
+  - id: fix-4-alt-texte
+    name: "Fehlende Alt-Texte"
+    wcag: "1.1.1"
+    file: "Twig templates + Slider"
+    description: |
+      - Slider Prev/Next Buttons: aria-label hinzufügen
+      - Prüfen ob Theme-Templates alt="" forcen
+      - Konfigurator-Bilder: alt-Texte wo möglich im Template
+    impact: "13 → ≤3 Violations"
+
+server:
+  dev_url: https://ms-dev.erikreisig.de
+  ssh: "ssh -i credentials/mein-schluessel/erik_id_ed25519 meinschluesselde@116.202.162.231"
+  theme_path: "vendor/meinschluesselde/rdmeinschluesseltheme/"
+  sw_root: "/var/www/vhosts/mein-schluessel.de/httpdocs_sw6/current/"
+
+validation:
+  loop_count: 0
+  max_loops: 10
+  min_qualitative_score: 7
+  history: []
+
+live_url_validation:
+  urls:
+    - url: "https://ms-dev.erikreisig.de/"
+      expect: 200
+      screenshot: true
+    - url: "https://ms-dev.erikreisig.de/sicherheitstechnik/schliesszylinder/"
+      expect: 200
+      screenshot: true
+    - url: "https://ms-dev.erikreisig.de/sicherheitstechnik/schliesszylinder/mechanische-profilzylinder/624/dom-ix-twido-doppelzylinder"
+      expect: 200
+      screenshot: true
+
+artifacts: []
+
+notes: |
+  Erik-Anweisung 2026-02-08: "2 3 4 - bitte umsetzen auf dev Umgebung"
+  Bezieht sich auf Top-5 Probleme aus WCAG-Report:
+  #2 Footer ARIA, #3 Touch-Ziele, #4 Alt-Texte
+  #1 Farbkontraste ausgelassen (braucht Uwe-Approval, siehe task-002-branding)
+  #5 Konfigurator ausgelassen (Sprint 3, 10-15h)

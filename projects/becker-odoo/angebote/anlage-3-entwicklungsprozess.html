@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Anlage 3: Entwicklungs- und Qualitätsprozess</title>
+  <style>
+    @page { margin: 15mm; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      font-size: 10pt;
+      line-height: 1.6;
+      color: #1a1a1a;
+      max-width: 210mm;
+      margin: 0 auto;
+      padding: 10mm;
+    }
+    h1 {
+      font-size: 18pt;
+      color: #1e3a5f;
+      border-bottom: 3px solid #1e3a5f;
+      padding-bottom: 8px;
+      margin-bottom: 5mm;
+    }
+    h2 {
+      font-size: 13pt;
+      color: #2d5a87;
+      margin-top: 8mm;
+      margin-bottom: 3mm;
+    }
+    h3 {
+      font-size: 11pt;
+      color: #374151;
+      margin-top: 5mm;
+      margin-bottom: 2mm;
+    }
+    .header-info {
+      background: #f8fafc;
+      padding: 4mm;
+      border-radius: 4px;
+      margin-bottom: 6mm;
+      font-size: 9pt;
+    }
+    .header-info p { margin: 1mm 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 3mm 0 5mm 0;
+      font-size: 9pt;
+    }
+    th, td {
+      border: 1px solid #d1d5db;
+      padding: 2mm 3mm;
+      text-align: left;
+    }
+    th {
+      background: #1e3a5f;
+      color: white;
+      font-weight: 600;
+    }
+    tr:nth-child(even) { background: #f9fafb; }
+    .intro-box {
+      background: #eff6ff;
+      border-left: 4px solid #1e3a5f;
+      padding: 3mm 4mm;
+      margin: 4mm 0;
+    }
+    .intro-box ul { margin: 2mm 0; padding-left: 5mm; }
+    .env-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 6px;
+      margin: 4mm 0;
+      overflow: hidden;
+      page-break-inside: avoid;
+    }
+    .env-header {
+      padding: 3mm 4mm;
+      font-weight: 600;
+      font-size: 11pt;
+    }
+    .env-dev .env-header { background: #fef3c7; color: #92400e; }
+    .env-test .env-header { background: #dbeafe; color: #2d5a87; }
+    .env-prod .env-header { background: #dcfce7; color: #166534; }
+    .env-body {
+      padding: 3mm 4mm;
+    }
+    .env-body p { margin: 1mm 0; font-size: 9pt; }
+    .env-table {
+      margin: 2mm 0;
+    }
+    .env-table td:first-child {
+      font-weight: 600;
+      width: 30%;
+    }
+    .for-you {
+      background: #f0fdf4;
+      padding: 2mm 3mm;
+      border-radius: 4px;
+      margin-top: 2mm;
+      font-size: 9pt;
+    }
+    .flow-box {
+      background: #f8fafc;
+      border: 1px solid #e5e7eb;
+      border-radius: 6px;
+      padding: 4mm;
+      margin: 4mm 0;
+      font-family: monospace;
+      font-size: 9pt;
+    }
+    .flow-step {
+      display: flex;
+      align-items: center;
+      margin: 2mm 0;
+    }
+    .flow-number {
+      background: #1e3a5f;
+      color: white;
+      width: 6mm;
+      height: 6mm;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 8pt;
+      font-weight: bold;
+      margin-right: 3mm;
+      font-family: sans-serif;
+    }
+    .flow-text {
+      flex: 1;
+    }
+    .benefit-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3mm;
+      margin: 4mm 0;
+    }
+    .benefit-card {
+      background: #f8fafc;
+      border: 1px solid #e5e7eb;
+      border-radius: 4px;
+      padding: 3mm;
+    }
+    .benefit-card h4 {
+      margin: 0 0 2mm 0;
+      font-size: 10pt;
+      color: #2d5a87;
+    }
+    .benefit-card p {
+      margin: 0;
+      font-size: 9pt;
+      color: #4b5563;
+    }
+    .faq-item {
+      margin: 3mm 0;
+      padding: 3mm 4mm;
+      background: #f9fafb;
+      border-radius: 4px;
+    }
+    .faq-q {
+      font-weight: 600;
+      color: #2d5a87;
+      margin-bottom: 1mm;
+    }
+    .faq-a {
+      font-size: 9pt;
+      color: #374151;
+    }
+    ul { margin: 2mm 0; padding-left: 6mm; }
+    li { margin: 1.5mm 0; }
+    .footer {
+      margin-top: 10mm;
+      padding-top: 4mm;
+      border-top: 1px solid #e5e7eb;
+      font-size: 8pt;
+      color: #6b7280;
+      text-align: center;
+    }
+    .page-break { page-break-before: always; }
+    .standard-note {
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      border-radius: 4px;
+      padding: 3mm 4mm;
+      margin-top: 6mm;
+      font-size: 9pt;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Anlage 3: Entwicklungs- und Qualitätsprozess</h1>
+  
+  <div class="header-info">
+    <p><strong>Angebot:</strong> CLED-2026-001 – Odoo ERP Implementation</p>
+    <p><strong>Kunde:</strong> Becker Sicherheitstechnik GmbH</p>
+    <p><strong>Anbieter:</strong> C-led Solutions GmbH</p>
+  </div>
+
+  <h2>Warum dieser Prozess?</h2>
+  <div class="intro-box">
+    <p>Unser Entwicklungsprozess stellt sicher, dass:</p>
+    <ul>
+      <li>Änderungen nachvollziehbar dokumentiert sind</li>
+      <li>Neue Funktionen gründlich getestet werden</li>
+      <li>Das Produktivsystem stabil und sicher bleibt</li>
+      <li>Fehler frühzeitig erkannt werden</li>
+    </ul>
+  </div>
+
+  <h2>Aufgabenverwaltung</h2>
+  
+  <h3>Was ist das?</h3>
+  <p>Ein <strong>digitales Aufgabensystem</strong>, in dem alle Anforderungen, Änderungswünsche und Fehlerberichte erfasst werden.</p>
+  
+  <h3>Wie funktioniert es?</h3>
+  <table>
+    <tr><th>#</th><th>Schritt</th><th>Beschreibung</th></tr>
+    <tr><td>1</td><td>Sie melden einen Wunsch oder Fehler</td><td>Per E-Mail oder Telefon</td></tr>
+    <tr><td>2</td><td>Wir erstellen ein "Issue"</td><td>Digitaler Aufgabenzettel mit Beschreibung</td></tr>
+    <tr><td>3</td><td>Sie sehen den Status</td><td>Offen, In Bearbeitung, Erledigt</td></tr>
+    <tr><td>4</td><td>Alles ist dokumentiert</td><td>Wer hat was wann angefordert/umgesetzt</td></tr>
+  </table>
+  
+  <h3>Ihr Vorteil</h3>
+  <ul>
+    <li>Nichts geht verloren</li>
+    <li>Jederzeit einsehbar was gerade passiert</li>
+    <li>Nachvollziehbar auch nach Monaten</li>
+  </ul>
+
+  <h2>Versionskontrolle</h2>
+  
+  <h3>Was ist das?</h3>
+  <p>Eine Art <strong>"Zeitmaschine" für Software</strong>. Jede Änderung wird gespeichert und kann bei Problemen zurückgesetzt werden.</p>
+  
+  <h3>Warum ist das wichtig?</h3>
+  <ul>
+    <li>Bei Problemen können wir sofort zur letzten funktionierenden Version zurück</li>
+    <li>Alle Änderungen sind dokumentiert (wer, wann, was)</li>
+    <li>Mehrere Entwickler können gleichzeitig arbeiten ohne sich zu behindern</li>
+  </ul>
+  
+  <h3>Ihr Vorteil</h3>
+  <ul>
+    <li><strong>Sicherheit:</strong> Keine Änderung kann das System dauerhaft beschädigen</li>
+    <li><strong>Transparenz:</strong> Jede Anpassung ist nachvollziehbar</li>
+  </ul>
+
+  <div class="page-break"></div>
+
+  <h2>Drei Umgebungen: Dev → Test → Produktion</h2>
+  <p>Wir arbeiten mit <strong>drei getrennten Systemen</strong>. Das schützt Ihr Produktivsystem vor unfertigen Änderungen.</p>
+
+  <div class="env-card env-dev">
+    <div class="env-header">1. Entwicklung (Dev)</div>
+    <div class="env-body">
+      <p><strong>Was:</strong> Hier programmieren wir neue Funktionen</p>
+      <table class="env-table">
+        <tr><td>Zweck</td><td>Neue Features entwickeln</td></tr>
+        <tr><td>Daten</td><td>Testdaten (keine echten Kundendaten)</td></tr>
+        <tr><td>Zugriff</td><td>Nur C-led Entwickler</td></tr>
+        <tr><td>Stabilität</td><td>Kann instabil sein – das ist normal</td></tr>
+      </table>
+      <div class="for-you"><strong>Für Sie:</strong> Unsichtbar, hier arbeiten wir intern.</div>
+    </div>
+  </div>
+
+  <div class="env-card env-test">
+    <div class="env-header">2. Test (Staging)</div>
+    <div class="env-body">
+      <p><strong>Was:</strong> Hier testen Sie neue Funktionen vor dem Go-Live</p>
+      <table class="env-table">
+        <tr><td>Zweck</td><td>Prüfen ob alles funktioniert</td></tr>
+        <tr><td>Daten</td><td>Kopie der Echtdaten (anonymisiert)</td></tr>
+        <tr><td>Zugriff</td><td>C-led + ausgewählte Becker-Mitarbeiter</td></tr>
+        <tr><td>Stabilität</td><td>Stabil, aber nicht für Echtbetrieb</td></tr>
+      </table>
+      <div class="for-you"><strong>Für Sie:</strong> Hier können Sie neue Funktionen ausprobieren, ohne Risiko für den Echtbetrieb.</div>
+    </div>
+  </div>
+
+  <div class="env-card env-prod">
+    <div class="env-header">3. Produktion (Live)</div>
+    <div class="env-body">
+      <p><strong>Was:</strong> Das echte System, mit dem Sie täglich arbeiten</p>
+      <table class="env-table">
+        <tr><td>Zweck</td><td>Tägliche Arbeit</td></tr>
+        <tr><td>Daten</td><td>Echte Geschäftsdaten</td></tr>
+        <tr><td>Zugriff</td><td>Alle Becker-Mitarbeiter</td></tr>
+        <tr><td>Stabilität</td><td>Höchste Priorität</td></tr>
+      </table>
+      <div class="for-you"><strong>Für Sie:</strong> Hier arbeiten Sie. Änderungen kommen nur hierher, wenn sie auf Test geprüft wurden.</div>
+    </div>
+  </div>
+
+  <h2>Der Ablauf einer Änderung</h2>
+  <div class="flow-box">
+    <div class="flow-step"><span class="flow-number">1</span><span class="flow-text">Anforderung – Sie melden einen Wunsch</span></div>
+    <div class="flow-step"><span class="flow-number">2</span><span class="flow-text">Issue erstellt – Wir dokumentieren die Aufgabe</span></div>
+    <div class="flow-step"><span class="flow-number">3</span><span class="flow-text">Entwicklung – Umsetzung auf DEV-System</span></div>
+    <div class="flow-step"><span class="flow-number">4</span><span class="flow-text">Interner Test – Wir prüfen die Funktion</span></div>
+    <div class="flow-step"><span class="flow-number">5</span><span class="flow-text">Test-Freigabe – Bereitstellung auf TEST-System</span></div>
+    <div class="flow-step"><span class="flow-number">6</span><span class="flow-text">Ihre Abnahme – Sie testen und geben frei</span></div>
+    <div class="flow-step"><span class="flow-number">7</span><span class="flow-text">Produktiv-Release – Freischaltung im LIVE-System</span></div>
+  </div>
+
+  <h2>Was bedeutet das für Sie?</h2>
+  <div class="benefit-section">
+    <div class="benefit-card">
+      <h4>Qualität</h4>
+      <p>Jede Änderung wird zweifach getestet (intern + durch Sie). Fehler werden erkannt bevor sie den Echtbetrieb stören.</p>
+    </div>
+    <div class="benefit-card">
+      <h4>Transparenz</h4>
+      <p>Sie sehen jederzeit den Status aller Aufgaben. Alle Änderungen sind dokumentiert.</p>
+    </div>
+    <div class="benefit-card">
+      <h4>Sicherheit</h4>
+      <p>Ihr Produktivsystem ist geschützt. Bei Problemen: Schnelle Rückkehr zum vorherigen Stand.</p>
+    </div>
+    <div class="benefit-card">
+      <h4>Planbarkeit</h4>
+      <p>Klare Abläufe statt chaotischer Änderungen. Releases zu abgesprochenen Zeitpunkten.</p>
+    </div>
+  </div>
+
+  <h2>Häufige Fragen</h2>
+  
+  <div class="faq-item">
+    <div class="faq-q">"Wie lange dauert es bis eine Änderung live ist?"</div>
+    <div class="faq-a">→ Kleine Änderungen: 1-3 Tage. Größere Funktionen: Nach Absprache.</div>
+  </div>
+  
+  <div class="faq-item">
+    <div class="faq-q">"Kann ich direkt im Live-System testen?"</div>
+    <div class="faq-a">→ Nein, dafür gibt es das Test-System. So bleibt Live stabil.</div>
+  </div>
+  
+  <div class="faq-item">
+    <div class="faq-q">"Was passiert wenn nach einem Update etwas nicht funktioniert?"</div>
+    <div class="faq-a">→ Wir können innerhalb von Minuten zur vorherigen Version zurück.</div>
+  </div>
+  
+  <div class="faq-item">
+    <div class="faq-q">"Muss ich mich mit GitHub auskennen?"</div>
+    <div class="faq-a">→ Nein. Sie kommunizieren wie gewohnt per E-Mail/Telefon. Wir übernehmen die technische Dokumentation.</div>
+  </div>
+
+  <div class="standard-note">
+    Dieser Prozess entspricht Industriestandards für professionelle Softwareentwicklung und gewährleistet höchste Qualität bei minimalen Risiken für Ihren Geschäftsbetrieb.
+  </div>
+
+  <div class="footer">
+    C-led Solutions GmbH · Feringastraße 9a · 85774 Unterföhring<br>
+    Anlage 3 zu Angebot CLED-2026-001 · Februar 2026
+  </div>
+
+</body>
+</html>

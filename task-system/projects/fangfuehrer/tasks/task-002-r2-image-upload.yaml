@@ -1,0 +1,51 @@
+slug: task-002-r2-image-upload
+name: "Image Upload auf Cloudflare R2 migrieren"
+project: fangfuehrer
+strategy: mvp-launch
+tactic: backend-api
+status: passed
+created: 2026-02-07
+pr: "https://github.com/heimdall-prometheus/fangfuehrer/pull/40"
+
+intention: |
+  Fisch-Fotos persistent und performant speichern statt lokal auf dem Server.
+  R2 bietet CDN-Performance, keine Datenverlust-Gefahr bei Server-Neustart,
+  und skaliert automatisch.
+
+target_audience: "Angler die Fänge mit Foto dokumentieren (Mobile, DACH)"
+
+quantitative_criteria:
+  - id: q1
+    criterion: "Upload-Endpoint akzeptiert Base64-Bild und gibt R2 Public URL zurück"
+    test: "POST /catches/ mit photo_base64 → response.photo_url startet mit https://"
+    
+  - id: q2
+    criterion: "Thumbnail wird generiert (max 300px breit)"
+    test: "response.thumbnail_url existiert und Bild ist ≤300px breit"
+    
+  - id: q3
+    criterion: "Foto über Public URL erreichbar (HTTP 200)"
+    test: "GET auf photo_url → HTTP 200 + Content-Type image/jpeg"
+    
+  - id: q4
+    criterion: "Backward Compatibility: USE_R2_STORAGE=false fällt auf lokales Filesystem zurück"
+    test: "Code-Review: Fallback-Logik vorhanden"
+    
+  - id: q5
+    criterion: "Keine Credentials im Code hardcoded"
+    test: "grep für API Keys in .py Dateien = 0 Treffer"
+
+qualitative_criteria:
+  - id: ql1
+    criterion: "Code-Qualität des Storage-Service"
+    min_score: 7
+    
+  - id: ql2
+    criterion: "Error Handling (was passiert bei R2 Ausfall, invalid Base64, etc.)"
+    min_score: 7
+    
+  - id: ql3
+    criterion: "Konfigurierbarkeit (alle R2 Params über .env)"
+    min_score: 7
+
+max_loops: 3

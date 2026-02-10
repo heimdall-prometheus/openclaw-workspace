@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FangFührer - Dein Fangbuch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --moss: #2c3e2d;
+            --moss-deep: #1a261a;
+            --moss-light: #4a6b4a;
+            --water: #2a4858;
+            --water-light: #3d6b7a;
+            --gold: #c9a227;
+            --gold-light: #e8c84a;
+            --gold-pale: #f5ecd4;
+            --paper: #faf8f3;
+            --paper-warm: #f0ebe0;
+            --ink: #1a1a18;
+            --ink-soft: #4a4843;
+            
+            --font-display: 'Fraunces', Georgia, serif;
+            --font-body: 'Outfit', sans-serif;
+            
+            --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { font-size: 16px; scroll-behavior: smooth; }
+        
+        body {
+            font-family: var(--font-body);
+            background: var(--paper);
+            color: var(--ink);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .grain {
+            position: fixed;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            pointer-events: none;
+            opacity: 0.035;
+            z-index: 1000;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            animation: grain 8s steps(10) infinite;
+        }
+        
+        @keyframes grain {
+            0%, 100% { transform: translate(0, 0); }
+            10% { transform: translate(-5%, -10%); }
+            30% { transform: translate(3%, -15%); }
+            50% { transform: translate(12%, 9%); }
+            70% { transform: translate(9%, 4%); }
+            90% { transform: translate(-1%, 7%); }
+        }
+        
+        .reveal {
+            opacity: 0;
+            transform: translateY(60px);
+            transition: all 1s var(--ease-out-expo);
+        }
+        
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+            padding: 1.5rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.4s ease;
+        }
+        
+        .nav.scrolled {
+            background: rgba(250, 248, 243, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+        }
+        
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--paper);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: color 0.4s;
+        }
+        
+        .nav.scrolled .logo { color: var(--moss-deep); }
+        
+        .logo-mark {
+            width: 36px; height: 36px;
+            background: var(--gold);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.125rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            font-size: 0.8125rem;
+            font-weight: 500;
+            color: var(--paper);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            transition: all 0.3s;
+        }
+        
+        .nav.scrolled .nav-links a { color: var(--ink-soft); }
+        .nav-links a:hover { color: var(--gold); }
+        
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 55% 45%;
+            position: relative;
+        }
+        
+        .hero-left {
+            background: linear-gradient(135deg, var(--moss-deep) 0%, var(--water) 100%);
+            padding: 10rem 4rem 4rem 6rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .wave-container {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 150px;
+            overflow: hidden;
+        }
+        
+        .wave {
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 200%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%232c3e2d' d='M0,160L48,170.7C96,181,192,203,288,192C384,181,480,139,576,133.3C672,128,768,160,864,186.7C960,213,1056,235,1152,218.7C1248,203,1344,149,1392,122.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'/%3E%3C/svg%3E") repeat-x;
+            background-size: 50% 100%;
+            animation: wave 15s linear infinite;
+            opacity: 0.4;
+        }
+        
+        .wave:nth-child(2) {
+            bottom: 10px;
+            animation: wave 12s linear infinite reverse;
+            opacity: 0.3;
+        }
+        
+        @keyframes wave {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        
+        .hero-tagline {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 0.6875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            color: var(--gold);
+            margin-bottom: 2rem;
+            animation: slideIn 1s var(--ease-out-expo) 0.2s both;
+        }
+        
+        .hero-tagline::before {
+            content: '';
+            width: 50px; height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold));
+        }
+        
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        .hero-title {
+            font-family: var(--font-display);
+            font-size: clamp(3.5rem, 7vw, 6rem);
+            font-weight: 900;
+            line-height: 0.95;
+            color: var(--paper);
+            margin-bottom: 2rem;
+            animation: fadeUp 1s var(--ease-out-expo) 0.4s both;
+            letter-spacing: -0.03em;
+        }
+        
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(60px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .hero-title .line { display: block; }
+        
+        .hero-title .accent {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-style: italic;
+            font-weight: 700;
+        }
+        
+        .hero-title .small {
+            display: block;
+            font-size: 0.22em;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            opacity: 0.8;
+            margin-top: 1em;
+            -webkit-text-fill-color: var(--gold-light);
+        }
+        
+        .hero-desc {
+            font-size: 1.125rem;
+            font-weight: 300;
+            color: var(--paper);
+            opacity: 0.85;
+            max-width: 420px;
+            margin-bottom: 3rem;
+            line-height: 1.8;
+            animation: fadeUp 1s var(--ease-out-expo) 0.6s both;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            animation: fadeUp 1s var(--ease-out-expo) 0.8s both;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1.25rem 2.25rem;
+            font-family: var(--font-body);
+            font-size: 0.8125rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.4s var(--ease-out-expo);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-gold {
+            background: var(--gold);
+            color: var(--moss-deep);
+        }
+        
+        .btn-gold:hover {
+            background: var(--gold-light);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 50px rgba(201, 162, 39, 0.35);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: var(--paper);
+            border: 1.5px solid rgba(255,255,255,0.25);
+        }
+        
+        .btn-outline:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(255,255,255,0.5);
+            transform: translateY(-4px);
+        }
+        
+        /* Hero Right */
+        .hero-right {
+            background: var(--paper-warm);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .hero-right::before {
+            content: '';
+            position: absolute;
+            top: 5%; right: 5%;
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, var(--gold-pale) 0%, transparent 70%);
+            animation: pulse 6s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.2); opacity: 0.8; }
+        }
+        
+        .phone-mockup {
+            position: relative;
+            width: 300px;
+            animation: fadeUp 1.2s var(--ease-out-expo) 0.6s both;
+        }
+        
+        .phone-frame {
+            background: linear-gradient(145deg, #1a1a1a 0%, #2d2d2d 100%);
+            border-radius: 45px;
+            padding: 14px;
+            box-shadow: 
+                0 60px 120px rgba(0,0,0,0.2),
+                0 25px 50px rgba(0,0,0,0.15);
+        }
+        
+        .phone-notch {
+            position: absolute;
+            top: 20px; left: 50%;
+            transform: translateX(-50%);
+            width: 80px; height: 25px;
+            background: #1a1a1a;
+            border-radius: 15px;
+            z-index: 10;
+        }
+        
+        .phone-screen {
+            background: var(--paper);
+            border-radius: 35px;
+            overflow: hidden;
+        }
+        
+        .phone-header {
+            background: linear-gradient(135deg, var(--moss) 0%, var(--water) 100%);
+            padding: 3.5rem 1.5rem 1.75rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        .phone-header::after {
+            content: '';
+            position: absolute;
+            bottom: -20px; left: 0; right: 0;
+            height: 40px;
+            background: linear-gradient(135deg, var(--moss) 0%, var(--water) 100%);
+            clip-path: ellipse(60% 100% at 50% 0%);
+        }
+        
+        .phone-avatar {
+            width: 48px; height: 48px;
+            background: var(--gold);
+            border-radius: 50%;
+            margin: 0 auto 0.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+        }
+        
+        .phone-greeting {
+            font-size: 0.625rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--gold);
+            margin-bottom: 0.25rem;
+        }
+        
+        .phone-title {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--paper);
+        }
+        
+        .phone-stats {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1.5rem 1rem 1rem;
+            background: var(--moss-deep);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .phone-stat { text-align: center; }
+        
+        .phone-stat-num {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--gold);
+            line-height: 1;
+        }
+        
+        .phone-stat-label {
+            font-size: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--paper);
+            opacity: 0.5;
+            margin-top: 0.25rem;
+        }
+        
+        .phone-content { padding: 1rem; }
+        
+        .phone-section-title {
+            font-size: 0.625rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--ink-soft);
+            margin-bottom: 0.75rem;
+        }
+        
+        .phone-card {
+            background: linear-gradient(135deg, var(--paper-warm) 0%, white 100%);
+            border-radius: 16px;
+            padding: 1rem;
+            margin-bottom: 0.625rem;
+            display: flex;
+            gap: 0.875rem;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        }
+        
+        .phone-card-icon {
+            width: 44px; height: 44px;
+            background: var(--moss);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+        }
+        
+        .phone-card-info { flex: 1; }
+        
+        .phone-card-title {
+            font-size: 0.8125rem;
+            font-weight: 600;
+            color: var(--ink);
+        }
+        
+        .phone-card-sub {
+            font-size: 0.625rem;
+            color: var(--ink-soft);
+        }
+        
+        .phone-card-badge {
+            font-size: 0.5625rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            color: var(--moss-deep);
+            padding: 0.375rem 0.625rem;
+            border-radius: 6px;
+        }
+        
+        /* Floating badges */
+        .float-badge {
+            position: absolute;
+            background: white;
+            border-radius: 16px;
+            padding: 1rem 1.25rem;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            color: var(--ink);
+            animation: floatBadge 5s ease-in-out infinite;
+        }
+        
+        .float-badge.top { top: 12%; right: 8%; }
+        .float-badge.bottom { bottom: 18%; left: 3%; animation-delay: 2.5s; }
+        
+        @keyframes floatBadge {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        .float-badge-icon {
+            width: 36px; height: 36px;
+            background: var(--gold-pale);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.125rem;
+        }
+        
+        .float-badge-text span {
+            display: block;
+            font-size: 0.625rem;
+            font-weight: 400;
+            color: var(--ink-soft);
+        }
+        
+        /* Stats Bar */
+        .stats-bar {
+            background: var(--moss-deep);
+            padding: 3rem 6rem;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            position: relative;
+        }
+        
+        .stats-bar::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--gold) 0%, var(--gold-light) 50%, var(--gold) 100%);
+        }
+        
+        .stat-item {
+            text-align: center;
+            position: relative;
+        }
+        
+        .stat-item::after {
+            content: '';
+            position: absolute;
+            top: 50%; right: 0;
+            transform: translateY(-50%);
+            width: 1px; height: 40px;
+            background: rgba(255,255,255,0.1);
+        }
+        
+        .stat-item:last-child::after { display: none; }
+        
+        .stat-num {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--gold);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--paper);
+            opacity: 0.6;
+        }
+        
+        /* Collection Section - NEW */
+        .collection {
+            padding: 8rem 6rem;
+            background: var(--paper);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .collection-bg {
+            position: absolute;
+            top: 3rem; right: 4rem;
+            font-family: var(--font-display);
+            font-size: 15rem;
+            font-weight: 900;
+            color: var(--paper-warm);
+            line-height: 0.8;
+            pointer-events: none;
+            opacity: 0.5;
+        }
+        
+        .collection-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            align-items: center;
+            position: relative;
+        }
+        
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 0.6875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.3em;
+            color: var(--moss);
+            margin-bottom: 1.25rem;
+        }
+        
+        .section-label::before {
+            content: '';
+            width: 50px; height: 1px;
+            background: var(--moss);
+        }
+        
+        .collection-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 900;
+            color: var(--ink);
+            line-height: 1.05;
+            margin-bottom: 1.5rem;
+        }
+        
+        .collection-title .highlight {
+            color: var(--gold);
+        }
+        
+        .collection-desc {
+            font-size: 1.0625rem;
+            color: var(--ink-soft);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+        
+        .collection-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1rem;
+        }
+        
+        .collection-item {
+            aspect-ratio: 1;
+            background: var(--paper-warm);
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            position: relative;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .collection-item.caught {
+            background: white;
+            border-color: var(--gold);
+            box-shadow: 0 5px 20px rgba(201, 162, 39, 0.15);
+        }
+        
+        .collection-item.empty {
+            opacity: 0.4;
+        }
+        
+        .collection-item.empty::after {
+            content: '?';
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--ink-soft);
+        }
+        
+        .collection-item span {
+            font-size: 0.5rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--ink-soft);
+            margin-top: 0.25rem;
+        }
+        
+        .collection-item.caught span {
+            color: var(--moss);
+        }
+        
+        .collection-counter {
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .collection-counter-num {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--gold);
+        }
+        
+        .collection-counter-text {
+            font-size: 1rem;
+            color: var(--ink-soft);
+        }
+        
+        /* Ranking Section - NEW */
+        .ranking {
+            padding: 8rem 6rem;
+            background: linear-gradient(135deg, var(--moss-deep) 0%, var(--water) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .ranking-pattern {
+            position: absolute;
+            inset: 0;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(201, 162, 39, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(201, 162, 39, 0.08) 0%, transparent 35%);
+        }
+        
+        .ranking-content {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            align-items: center;
+        }
+        
+        .ranking-text .section-label {
+            color: var(--gold);
+        }
+        
+        .ranking-text .section-label::before {
+            background: var(--gold);
+        }
+        
+        .ranking-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 900;
+            color: var(--paper);
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+        
+        .ranking-title .highlight {
+            color: var(--gold);
+        }
+        
+        .ranking-desc {
+            font-size: 1.0625rem;
+            color: var(--paper);
+            opacity: 0.8;
+            line-height: 1.85;
+            margin-bottom: 2rem;
+        }
+        
+        .ranking-lake {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: rgba(255,255,255,0.1);
+            padding: 0.75rem 1.25rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            color: var(--paper);
+            margin-bottom: 1.5rem;
+        }
+        
+        .ranking-lake-dot {
+            width: 8px; height: 8px;
+            background: var(--gold);
+            border-radius: 50%;
+            animation: pulse-dot 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+        
+        .ranking-board {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        
+        .ranking-header {
+            background: rgba(0,0,0,0.2);
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .ranking-header-title {
+            font-family: var(--font-display);
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--paper);
+        }
+        
+        .ranking-header-lake {
+            font-size: 0.6875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--gold);
+        }
+        
+        .ranking-list {
+            padding: 0.5rem;
+        }
+        
+        .ranking-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .ranking-item:hover {
+            background: rgba(255,255,255,0.05);
+        }
+        
+        .ranking-item.highlight {
+            background: rgba(201, 162, 39, 0.15);
+            border: 1px solid var(--gold);
+        }
+        
+        .ranking-pos {
+            width: 32px; height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-display);
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--paper);
+        }
+        
+        .ranking-item:nth-child(1) .ranking-pos {
+            background: var(--gold);
+            color: var(--moss-deep);
+            border-radius: 50%;
+        }
+        
+        .ranking-item:nth-child(2) .ranking-pos {
+            background: #c0c0c0;
+            color: var(--moss-deep);
+            border-radius: 50%;
+        }
+        
+        .ranking-item:nth-child(3) .ranking-pos {
+            background: #cd7f32;
+            color: var(--moss-deep);
+            border-radius: 50%;
+        }
+        
+        .ranking-avatar {
+            width: 40px; height: 40px;
+            background: var(--moss);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+        }
+        
+        .ranking-info { flex: 1; }
+        
+        .ranking-name {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--paper);
+        }
+        
+        .ranking-catches {
+            font-size: 0.6875rem;
+            color: var(--paper);
+            opacity: 0.6;
+        }
+        
+        .ranking-score {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--gold);
+        }
+        
+        .ranking-score span {
+            font-size: 0.625rem;
+            font-weight: 400;
+            opacity: 0.7;
+        }
+        
+        /* Features - Simplified */
+        .features {
+            padding: 8rem 6rem;
+            background: var(--paper-warm);
+        }
+        
+        .features-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 4rem;
+        }
+        
+        .features-title {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 900;
+            color: var(--ink);
+            margin-bottom: 1rem;
+        }
+        
+        .features-subtitle {
+            font-size: 1.0625rem;
+            color: var(--ink-soft);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .feature {
+            text-align: center;
+            padding: 2.5rem 2rem;
+            background: white;
+            border-radius: 16px;
+            transition: all 0.4s var(--ease-out-expo);
+        }
+        
+        .feature:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+        }
+        
+        .feature-icon {
+            width: 64px; height: 64px;
+            background: var(--gold-pale);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .feature-title {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--ink);
+            margin-bottom: 0.75rem;
+        }
+        
+        .feature-desc {
+            font-size: 0.9375rem;
+            color: var(--ink-soft);
+            line-height: 1.6;
+        }
+        
+        /* CTA */
+        .cta {
+            padding: 10rem 6rem;
+            background: var(--gold-pale);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 50%;
+            transform: translateX(-50%);
+            width: 1px; height: 100px;
+            background: linear-gradient(180deg, var(--gold) 0%, transparent 100%);
+        }
+        
+        .cta::after {
+            content: '🎣';
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20rem;
+            opacity: 0.04;
+            pointer-events: none;
+        }
+        
+        .cta-content { position: relative; }
+        
+        .cta-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            color: var(--moss-deep);
+            margin-bottom: 1.25rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.05;
+        }
+        
+        .cta-desc {
+            font-size: 1.25rem;
+            color: var(--ink-soft);
+            margin-bottom: 3rem;
+        }
+        
+        .btn-moss {
+            background: var(--moss-deep);
+            color: var(--paper);
+        }
+        
+        .btn-moss:hover {
+            background: var(--moss);
+            transform: translateY(-4px);
+            box-shadow: 0 25px 50px rgba(26, 38, 26, 0.25);
+        }
+        
+        /* Footer */
+        footer {
+            padding: 4rem 6rem;
+            background: var(--ink);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        footer .logo { color: var(--paper); }
+        
+        .footer-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+        
+        .footer-links a {
+            font-size: 0.8125rem;
+            color: var(--paper);
+            opacity: 0.4;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        
+        .footer-links a:hover { opacity: 1; }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero { grid-template-columns: 1fr; }
+            .hero-left { padding: 8rem 3rem 5rem; }
+            .hero-right { min-height: 70vh; padding: 4rem 2rem; }
+            .stats-bar { grid-template-columns: repeat(2, 1fr); padding: 2rem 3rem; }
+            .collection, .ranking, .features, .cta { padding: 5rem 3rem; }
+            .collection-content, .ranking-content { grid-template-columns: 1fr; gap: 3rem; }
+            .collection-bg { display: none; }
+            .collection-grid { order: -1; }
+            .features-grid { grid-template-columns: 1fr; max-width: 400px; }
+            footer { padding: 2rem 3rem; flex-direction: column; gap: 1.5rem; }
+        }
+        
+        @media (max-width: 640px) {
+            .nav { padding: 1rem 1.5rem; }
+            .nav-links { display: none; }
+            .hero-left { padding: 6rem 1.5rem 4rem; }
+            .phone-mockup { width: 260px; }
+            .float-badge { display: none; }
+            .stats-bar { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+            .stat-num { font-size: 2rem; }
+            .collection-grid { grid-template-columns: repeat(5, 1fr); gap: 0.5rem; }
+            .collection-item { font-size: 1.25rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="grain"></div>
+    
+    <nav class="nav" id="nav">
+        <a href="#" class="logo">
+            <span class="logo-mark">🎣</span>
+            FangFührer
+        </a>
+        <ul class="nav-links">
+            <li><a href="#sammlung">Sammlung</a></li>
+            <li><a href="#ranking">Ranking</a></li>
+            <li><a href="#start">Starten</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-left">
+            <div class="wave-container">
+                <div class="wave"></div>
+                <div class="wave"></div>
+            </div>
+            <span class="hero-tagline">Dein digitales Fangbuch</span>
+            <h1 class="hero-title">
+                <span class="line">50 Arten.</span>
+                <span class="line accent">Wie viele</span>
+                <span class="line accent">hast du?</span>
+                <span class="small">Dokumentiere jeden Fang. Vergleiche dich am See.</span>
+            </h1>
+            <p class="hero-desc">Dein persönliches Fangbuch. Halte jeden Fang fest und sieh, wer am deinem Gewässer die Nase vorn hat.</p>
+            <div class="hero-cta">
+                <a href="#" class="btn btn-gold">Fangbuch starten</a>
+                <a href="#sammlung" class="btn btn-outline">So funktioniert's</a>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="float-badge top">
+                <div class="float-badge-icon">🏆</div>
+                <div class="float-badge-text">
+                    <strong>#1 am Silbersee</strong>
+                    <span>Diese Woche</span>
+                </div>
+            </div>
+            <div class="float-badge bottom">
+                <div class="float-badge-icon">🐟</div>
+                <div class="float-badge-text">
+                    <strong>Neue Art!</strong>
+                    <span>Schleie hinzugefügt</span>
+                </div>
+            </div>
+            <div class="phone-mockup">
+                <div class="phone-frame">
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen">
+                        <div class="phone-header">
+                            <div class="phone-avatar">👤</div>
+                            <div class="phone-greeting">Dein Fangkonto</div>
+                            <div class="phone-title">847 Punkte</div>
+                        </div>
+                        <div class="phone-stats">
+                            <div class="phone-stat">
+                                <div class="phone-stat-num">47</div>
+                                <div class="phone-stat-label">Fänge</div>
+                            </div>
+                            <div class="phone-stat">
+                                <div class="phone-stat-num">12</div>
+                                <div class="phone-stat-label">Arten</div>
+                            </div>
+                            <div class="phone-stat">
+                                <div class="phone-stat-num">#3</div>
+                                <div class="phone-stat-label">Rang</div>
+                            </div>
+                        </div>
+                        <div class="phone-content">
+                            <div class="phone-section-title">Letzte Fänge</div>
+                            <div class="phone-card">
+                                <div class="phone-card-icon">🐟</div>
+                                <div class="phone-card-info">
+                                    <div class="phone-card-title">Hecht</div>
+                                    <div class="phone-card-sub">72cm • 3.2kg • Silbersee</div>
+                                </div>
+                                <div class="phone-card-badge">+25</div>
+                            </div>
+                            <div class="phone-card">
+                                <div class="phone-card-icon">🐠</div>
+                                <div class="phone-card-info">
+                                    <div class="phone-card-title">Karpfen</div>
+                                    <div class="phone-card-sub">45cm • 2.1kg • Silbersee</div>
+                                </div>
+                                <div class="phone-card-badge">+15</div>
+                            </div>
+                            <div class="phone-card">
+                                <div class="phone-card-icon">🐡</div>
+                                <div class="phone-card-info">
+                                    <div class="phone-card-title">Schleie</div>
+                                    <div class="phone-card-sub">32cm • 1.1kg • Neu!</div>
+                                </div>
+                                <div class="phone-card-badge">+40</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-bar">
+        <div class="stat-item reveal">
+            <div class="stat-num">50</div>
+            <div class="stat-label">Fischarten</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-1">
+            <div class="stat-num">∞</div>
+            <div class="stat-label">Fänge speichern</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-2">
+            <div class="stat-num">Live</div>
+            <div class="stat-label">Rankings</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-3">
+            <div class="stat-num">0€</div>
+            <div class="stat-label">Kostenlos</div>
+        </div>
+    </section>
+
+    <section class="collection" id="sammlung">
+        <div class="collection-bg">50</div>
+        <div class="collection-content">
+            <div class="collection-text">
+                <span class="section-label reveal">Deine Sammlung</span>
+                <h2 class="collection-title reveal reveal-delay-1">Fang sie <span class="highlight">alle</span></h2>
+                <p class="collection-desc reveal reveal-delay-2">50 heimische Süßwasserfische warten darauf, in dein Fangbuch aufgenommen zu werden. Jede neue Art bringt Bonus-Punkte fürs Fangkonto.</p>
+                <div class="collection-counter reveal reveal-delay-3">
+                    <span class="collection-counter-num">12</span>
+                    <span class="collection-counter-text">von 50 Arten gefangen</span>
+                </div>
+            </div>
+            <div class="collection-grid reveal">
+                <div class="collection-item caught">🐟<span>Hecht</span></div>
+                <div class="collection-item caught">🐠<span>Karpfen</span></div>
+                <div class="collection-item caught">🐡<span>Barsch</span></div>
+                <div class="collection-item caught">🐟<span>Zander</span></div>
+                <div class="collection-item caught">🐠<span>Forelle</span></div>
+                <div class="collection-item caught">🐡<span>Schleie</span></div>
+                <div class="collection-item caught">🐟<span>Rotauge</span></div>
+                <div class="collection-item caught">🐠<span>Brassen</span></div>
+                <div class="collection-item caught">🐡<span>Aal</span></div>
+                <div class="collection-item caught">🐟<span>Wels</span></div>
+                <div class="collection-item caught">🐠<span>Döbel</span></div>
+                <div class="collection-item caught">🐡<span>Güster</span></div>
+                <div class="collection-item empty"></div>
+                <div class="collection-item empty"></div>
+                <div class="collection-item empty"></div>
+                <div class="collection-item empty"></div>
+                <div class="collection-item empty"></div>
+                <div class="collection-item empty"></div>
+                <div class="collection-item empty"></div>
+                <div class="collection-item empty"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ranking" id="ranking">
+        <div class="ranking-pattern"></div>
+        <div class="ranking-content">
+            <div class="ranking-text">
+                <span class="section-label">Lokales Ranking</span>
+                <h2 class="ranking-title reveal">Wer ist <span class="highlight">König</span> am See?</h2>
+                <p class="ranking-desc reveal reveal-delay-1">Sieh live, wer an deinem Gewässer die meisten Punkte sammelt. Jeder Fang zählt. Jede Woche neu.</p>
+                <div class="ranking-lake reveal reveal-delay-2">
+                    <span class="ranking-lake-dot"></span>
+                    Silbersee • 23 aktive Angler
+                </div>
+            </div>
+            <div class="ranking-board reveal reveal-delay-1">
+                <div class="ranking-header">
+                    <div class="ranking-header-title">🏆 Top Angler</div>
+                    <div class="ranking-header-lake">Diese Woche</div>
+                </div>
+                <div class="ranking-list">
+                    <div class="ranking-item">
+                        <div class="ranking-pos">1</div>
+                        <div class="ranking-avatar">👨</div>
+                        <div class="ranking-info">
+                            <div class="ranking-name">FischerFritz92</div>
+                            <div class="ranking-catches">18 Fänge • 8 Arten</div>
+                        </div>
+                        <div class="ranking-score">1.247 <span>Pkt</span></div>
+                    </div>
+                    <div class="ranking-item">
+                        <div class="ranking-pos">2</div>
+                        <div class="ranking-avatar">👩</div>
+                        <div class="ranking-info">
+                            <div class="ranking-name">AngelQueen</div>
+                            <div class="ranking-catches">15 Fänge • 6 Arten</div>
+                        </div>
+                        <div class="ranking-score">986 <span>Pkt</span></div>
+                    </div>
+                    <div class="ranking-item highlight">
+                        <div class="ranking-pos">3</div>
+                        <div class="ranking-avatar">🧑</div>
+                        <div class="ranking-info">
+                            <div class="ranking-name">Du</div>
+                            <div class="ranking-catches">12 Fänge • 5 Arten</div>
+                        </div>
+                        <div class="ranking-score">847 <span>Pkt</span></div>
+                    </div>
+                    <div class="ranking-item">
+                        <div class="ranking-pos">4</div>
+                        <div class="ranking-avatar">👨</div>
+                        <div class="ranking-info">
+                            <div class="ranking-name">KarpfenKarl</div>
+                            <div class="ranking-catches">9 Fänge • 4 Arten</div>
+                        </div>
+                        <div class="ranking-score">623 <span>Pkt</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="features-header reveal">
+            <h2 class="features-title">So einfach geht's</h2>
+            <p class="features-subtitle">Drei Schritte zum vollen Fangbuch</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature reveal">
+                <div class="feature-icon">📸</div>
+                <h3 class="feature-title">Fotografieren</h3>
+                <p class="feature-desc">Fang fotografieren – die App erkennt die Art automatisch.</p>
+            </div>
+            <div class="feature reveal reveal-delay-1">
+                <div class="feature-icon">📖</div>
+                <h3 class="feature-title">Sammeln</h3>
+                <p class="feature-desc">Jeder Fang landet in deinem persönlichen Fangbuch.</p>
+            </div>
+            <div class="feature reveal reveal-delay-2">
+                <div class="feature-icon">🏆</div>
+                <h3 class="feature-title">Vergleichen</h3>
+                <p class="feature-desc">Sieh im Ranking, wer am See die Nase vorn hat.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta" id="start">
+        <div class="cta-content">
+            <h2 class="cta-title reveal">Wer fängt den dicksten Hecht am See?</h2>
+            <p class="cta-desc reveal reveal-delay-1">Starte dein Fangbuch und finde es heraus.</p>
+            <a href="#" class="btn btn-moss reveal reveal-delay-2">Kostenlos starten</a>
+        </div>
+    </section>
+
+    <footer>
+        <a href="#" class="logo">
+            <span class="logo-mark">🎣</span>
+            FangFührer
+        </a>
+        <ul class="footer-links">
+            <li><a href="#">Impressum</a></li>
+            <li><a href="#">Datenschutz</a></li>
+            <li><a href="#">API</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        const reveals = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        
+        reveals.forEach(el => observer.observe(el));
+        
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 100);
+        });
+    </script>
+</body>
+</html>

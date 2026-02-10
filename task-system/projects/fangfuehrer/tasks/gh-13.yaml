@@ -1,0 +1,42 @@
+id: gh-13
+title: "Flutter Auth Screens"
+status: open
+github_issue: 13
+
+project: fangfuehrer
+strategy: mvp-launch
+phase: 3
+
+intention: |
+  Nahtloser Einstieg für neue User, minimale Friction bei Registrierung.
+
+target_audience: |
+  Neue App-User
+
+criteria:
+  quantitative:
+    - "Login Screen funktioniert"
+    - "Register Screen funktioniert"
+    - "Forgot Password Flow"
+  
+  qualitative:
+    - "UI konsistent mit Design System"
+    - "Fehlermeldungen hilfreich"
+
+validation:
+  loop_count: 0
+  max_loops: 10
+  min_qualitative_score: 7
+  history: []
+
+created: "2026-02-04T11:45:00Z"
+created_by: heimdall
+updated: "2026-02-04T11:45:00Z"
+completed: ""
+
+artifacts: []
+
+notes: |
+  GitHub Issue: https://github.com/heimdall-prometheus/fangfuehrer/issues/13
+  Type: feature
+  Priority: critical

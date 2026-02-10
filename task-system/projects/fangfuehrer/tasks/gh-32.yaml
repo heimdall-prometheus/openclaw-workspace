@@ -1,0 +1,42 @@
+id: gh-32
+title: "E2E Testing"
+status: open
+github_issue: 32
+
+project: fangfuehrer
+strategy: mvp-launch
+phase: 7
+
+intention: |
+  Qualität vor Launch sicherstellen, Regressions verhindern.
+
+target_audience: |
+  Entwickler, indirekt alle User
+
+criteria:
+  quantitative:
+    - "Critical Paths getestet"
+    - "Coverage >70% für Core Flows"
+    - "CI-Integration"
+  
+  qualitative:
+    - "Tests sind stabil (kein Flaky)"
+    - "Aussagekräftige Fehlerberichte"
+
+validation:
+  loop_count: 0
+  max_loops: 10
+  min_qualitative_score: 7
+  history: []
+
+created: "2026-02-04T11:45:00Z"
+created_by: heimdall
+updated: "2026-02-04T11:45:00Z"
+completed: ""
+
+artifacts: []
+
+notes: |
+  GitHub Issue: https://github.com/heimdall-prometheus/fangfuehrer/issues/32
+  Type: infra
+  Priority: critical

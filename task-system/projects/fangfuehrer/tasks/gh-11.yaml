@@ -1,0 +1,42 @@
+id: gh-11
+title: "Gewässer-Datenbank"
+status: open
+github_issue: 11
+
+project: fangfuehrer
+strategy: mvp-launch
+phase: 2
+
+intention: |
+  Fänge mit Orten verknüpfen, später Gewässer-spezifische Leaderboards ermöglichen.
+
+target_audience: |
+  Angler die Spots tracken wollen
+
+criteria:
+  quantitative:
+    - "1000+ DACH-Gewässer in DB"
+    - "Suche nach Name/PLZ"
+    - "Koordinaten für Nearby-Funktion"
+  
+  qualitative:
+    - "Datenqualität geprüft"
+    - "Keine Duplikate"
+
+validation:
+  loop_count: 0
+  max_loops: 10
+  min_qualitative_score: 7
+  history: []
+
+created: "2026-02-04T11:45:00Z"
+created_by: heimdall
+updated: "2026-02-04T11:45:00Z"
+completed: ""
+
+artifacts: []
+
+notes: |
+  GitHub Issue: https://github.com/heimdall-prometheus/fangfuehrer/issues/11
+  Type: feature
+  Priority: high

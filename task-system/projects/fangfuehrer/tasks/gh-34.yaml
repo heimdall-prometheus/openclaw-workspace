@@ -1,0 +1,42 @@
+id: gh-34
+title: "App Store Assets"
+status: open
+github_issue: 34
+
+project: fangfuehrer
+strategy: mvp-launch
+phase: 7
+
+intention: |
+  Professionelle Präsentation in den Stores für gute Conversion.
+
+target_audience: |
+  Potenzielle User in App/Play Store
+
+criteria:
+  quantitative:
+    - "Screenshots für alle Geräte"
+    - "App Icon in allen Größen"
+    - "Feature Graphic"
+  
+  qualitative:
+    - "Ansprechend und on-brand"
+    - "Deutsch und Englisch"
+
+validation:
+  loop_count: 0
+  max_loops: 10
+  min_qualitative_score: 7
+  history: []
+
+created: "2026-02-04T11:45:00Z"
+created_by: heimdall
+updated: "2026-02-04T11:45:00Z"
+completed: ""
+
+artifacts: []
+
+notes: |
+  GitHub Issue: https://github.com/heimdall-prometheus/fangfuehrer/issues/34
+  Type: feature
+  Priority: high

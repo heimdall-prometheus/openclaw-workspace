@@ -1,0 +1,42 @@
+id: gh-7
+title: "User Profile API"
+status: open
+github_issue: 7
+
+project: fangfuehrer
+strategy: mvp-launch
+phase: 2
+
+intention: |
+  User können sich identifizieren und ihren Fortschritt verfolgen.
+
+target_audience: |
+  Alle registrierten User
+
+criteria:
+  quantitative:
+    - "GET /me liefert User-Daten"
+    - "PATCH /me aktualisiert Profil"
+    - "Avatar-Upload möglich"
+  
+  qualitative:
+    - "Klare API-Responses"
+    - "Validierung von Inputs"
+
+validation:
+  loop_count: 0
+  max_loops: 10
+  min_qualitative_score: 7
+  history: []
+
+created: "2026-02-04T11:45:00Z"
+created_by: heimdall
+updated: "2026-02-04T11:45:00Z"
+completed: ""
+
+artifacts: []
+
+notes: |
+  GitHub Issue: https://github.com/heimdall-prometheus/fangfuehrer/issues/7
+  Type: feature
+  Priority: critical

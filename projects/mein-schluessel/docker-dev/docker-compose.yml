@@ -1,0 +1,42 @@
+version: "3.8"
+
+# mein-schluessel.de Local Development
+# Shopware 6.6.9.0 + Custom Theme + Designer Plugin
+#
+# Usage:
+#   docker compose up -d
+#   → Shop: http://localhost:8888
+#   → Admin: http://localhost:8888/admin (admin/shopware)
+#   → Adminer: http://localhost:9090
+
+services:
+  shopware:
+    image: dockware/dev:6.6.9.0
+    container_name: ms-shopware-dev
+    ports:
+      - "8888:80"      # Storefront
+      - "8443:443"     # HTTPS
+      - "9998:9998"    # Xdebug (optional)
+    volumes:
+      # Mount Theme + Designer as plugins for live editing
+      - ../rdmeinschluesseltheme:/var/www/html/custom/plugins/RdMeinSchluesselTheme
+      - ../schliessanlagendesigner:/var/www/html/custom/plugins/SchliessanlagenDesigner
+    environment:
+      - XDEBUG_ENABLED=0
+      - PHP_VERSION=8.2
+      - SHOPWARE_ADMIN_USERNAME=admin
+      - SHOPWARE_ADMIN_PASSWORD=shopware
+    networks:
+      - ms-dev
+
+  adminer:
+    image: adminer:latest
+    container_name: ms-adminer
+    ports:
+      - "9090:8080"
+    networks:
+      - ms-dev
+
+networks:
+  ms-dev:
+    driver: bridge

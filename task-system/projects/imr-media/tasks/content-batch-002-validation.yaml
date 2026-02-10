@@ -1,0 +1,35 @@
+id: content-batch-002-validation
+title: "Validierung: Videos + Blog Artikel Batch 2"
+status: validating
+created: 2026-02-01T14:39:00Z
+
+artefakte:
+  videos:
+    - url: https://assets.imr-media.de/imr-media/videos/shop-fehler-video.mp4
+      title: "Top 3 Shop-Fehler"
+      duration: "~60 Sek"
+      
+    - url: https://assets.imr-media.de/imr-media/videos/produktfoto-tutorial.mp4
+      title: "Produktfoto Tutorial"
+      duration: "~90 Sek"
+      
+    - url: https://assets.imr-media.de/imr-media/videos/projekt-einblick.mp4
+      title: "Projekt-Einblick"
+      duration: "~45 Sek"
+      
+  blog_articles:
+    - path: /home/reisig/.openclaw/workspace/marketing/imr-media/blog-artikel-website-kosten-kmu.md
+      title: "Website-Kosten für kleine Unternehmen"
+      
+    - path: /home/reisig/.openclaw/workspace/marketing/imr-media/blog-artikel-produktfotos.md
+      title: "Produktfotos selbst machen"
+
+qualitaetskriterien:
+  quantitativ:
+    - "3 Videos produziert und auf R2 hochgeladen ✅"
+    - "2 Blog-Artikel geschrieben (1500+ Wörter)"
+    - "Videos in bestehende Artikel eingebettet"
+  qualitativ:
+    - "Boomer-freundliche Sprache"
+    - "Videos: Klarer Mehrwert in unter 90 Sek"
+    - "Artikel: SEO-optimiert mit Keywords"

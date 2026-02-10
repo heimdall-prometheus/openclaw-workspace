@@ -1,0 +1,80 @@
+name: lektor-strategy
+description: >
+  Permanenter Lektor-Pass nach jedem Kapitel. Scannt auf stilistische Tics,
+  Wiederholungen und Manierismen. Läuft VOR den 3-Rollen-Validatoren.
+
+triggers:
+  - after_writing
+  - before_validation
+
+scan_categories:
+  
+  1_stille_pattern:
+    description: "Stille. X Sekunden." als Manier
+    max_per_chapter: 4
+    action: >
+      Behalte die stärksten (emotionale Schlüsselmomente).
+      Ersetze den Rest durch: Handlung, Blicke, physische Gesten,
+      Geräusche, oder streiche ganz.
+    examples_keep:
+      - "Neunzig Sekunden. Die längste Stille im Roman." (Kap 9 Volkov)
+      - "Brenner stand zehn Sekunden, fünfzehn." (Kap 8 Reling)
+    examples_replace:
+      - "Stille. Dann:" → streichen, direkt weiter
+      - "X schwieg drei Sekunden." → Handlung stattdessen
+
+  2_sentence_patterns:
+    description: Wiederkehrende syntaktische Muster
+    scan_for:
+      - "die Sorte [Substantiv], die [Relativsatz]"
+      - "X schwieg Y Sekunden. Dann:"
+      - "Stille. Dann:"
+      - "das Geräusch das [jemand machte/nicht machte]"
+      - "[Zahl] Sekunden. [Zahl] Sekunden."
+    max_identical_pattern: 2 per chapter, 8 per book
+
+  3_word_repetitions:
+    description: Übernutzte Wörter/Phrasen
+    scan_for:
+      - "kompetent/Kompetenz" (max 3x pro Kapitel)
+      - "Spreadsheet/Tabelle" (max 2x)
+      - "Kaffee, schwarz" (max 1x pro Kapitel)
+      - "fünf Seemeilen, neun Komma drei Kilometer" (max 2x gesamt)
+      - "dreihundertsiebzehn/dreihundertvierzig" (max 3x pro Kapitel)
+    action: Variieren oder streichen
+
+  4_metaphor_freshness:
+    description: Bilder die sich wiederholen
+    scan_for:
+      - "wie Nägel in Holz" (nur 1x im Buch)
+      - "Schachbrett/Schachfiguren" (Genre-Klischee, vermeiden)
+      - "Schlinge/zuziehen" (max 1x)
+    action: Einmal = Stil. Zweimal = Methode. Streichen.
+
+  5_leitmotif_dosierung:
+    description: Leitmotive die zu oft kommen
+    rules:
+      - "auf fremdem Grund": max 2x pro Kapitel, 6x gesamt
+      - "blaues Heft/blauer Ausweis": max 1x pro Kapitel
+      - "Karton": max 1x außerhalb Kap 2
+      - "Genossen/Genossenschaft": Kap 9 + Akt III, sonst nie
+    action: >
+      Leitmotive sind Gewürze. Einmal = Resonanz. Zweimal = Verstärkung.
+      Dreimal = Pädagogik.
+
+output_format:
+  per_chapter:
+    - pattern_found: "[Muster]"
+      line: [Zeilennummer]
+      action: "keep|replace|delete"
+      replacement: "[Alternative wenn replace]"
+  summary:
+    total_issues: [Zahl]
+    critical: [Muster die sofort gefixt werden müssen]
+    minor: [Muster die beim nächsten Durchgang gefixt werden]
+
+integration:
+  - Lektor-Pass läuft als Sub-Agent nach jedem geschriebenen Kapitel
+  - Lektor EDITIERT die Datei direkt (keine Vorschläge, Fixes)
+  - Danach erst 3-Rollen-Validierung
+  - Lektor-Strategie wird in writing-strategy.yaml referenziert

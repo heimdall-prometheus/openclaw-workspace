@@ -1,0 +1,86 @@
+task_id: hb-task-009
+title: "Kapitel 9: Der Verrat"
+project: heinlein-book
+strategy: writing-strategy
+status: open
+created: 2026-02-07
+
+intention: >
+  Volkov. Der Investor der Rendite will, nicht Revolution. Er hat mit der EU 
+  verhandelt: Wenn Nova Ventus sich europäischer Finanzaufsicht unterstellt, 
+  heben sie die Sanktionen auf. Volkov hat 51% der Stimmrechte.
+  
+  Die Konfrontation — nachts auf dem Oberdeck. Brenner vs. Volkov. 
+  Der Deal im Deal: Brenner hat die Eigentumsstruktur längst umgebaut.
+  Die Plattform gehört einer Genossenschaft der Bewohner. Volkov hat 
+  Anteile an einer Firma die nichts mehr besitzt.
+  
+  ABER: Das ist kein triumphaler Moment. Brenner hat Volkov betrogen — 
+  den Mann der ihm 350 Millionen gegeben hat. TANSTAAFL in seiner 
+  dunkelsten Form. Und die DDR-Schublade geht auf: In Rostock hat 
+  der Staat die Eigentumsstruktur über Nacht geändert. Brenner hat 
+  gerade dasselbe getan. Der Unterschied? Diesmal hat ER es getan.
+  Die Parallele ist sein privater Abgrund.
+
+scene_summary: >
+  Szene 1: Volkovs Ankunft. Per Hubschrauber, nicht per Versorgungsschiff.
+  Der Mann der 350 Millionen investiert hat, will sein Investment sehen.
+  Und er hat einen EU-Unterhändler im Schlepptau. Brenner empfängt beide 
+  auf dem Oberdeck. Kaffee, kein Essen.
+  
+  Szene 2: Das Angebot. Volkov legt es dar: EU hebt Sanktionen auf, 
+  Versorgung normalisiert sich, Blockade endet. Preis: Finanzaufsicht, 
+  Transparenzregeln, AML-Compliance. "Du verlierst nichts als deine 
+  Anarchie, Klaus." Der EU-Mann nickt. Es ist ein vernünftiges Angebot.
+  Krone sagt leise: "Es ist sogar ein gutes Angebot."
+  
+  Szene 3: Die Nacht. Volkov und Brenner allein auf dem Oberdeck.
+  Wind. Volkov spielt offen: Er hat 51% der Stimmrechte. Er KANN 
+  Brenner überstimmen. Er sagt es nicht als Drohung — als Fakt.
+  
+  Brenner schweigt 90 Sekunden. (Die längste Stille im Roman.)
+  
+  Dann: "Sergei, du hast einen Denkfehler. Du hast 51% der Holding. 
+  Aber die Plattform gehört keiner Holding. Sie gehört ihren Bewohnern.
+  Wir haben letzte Woche abgestimmt."
+  
+  Szene 4: DDR-MOMENT. Die Schublade geht auf. Brenner allein, nach 
+  Volkovs Abflug. Er hat gerade jemandem das Eigentum entzogen. Legal,
+  demokratisch, richtig. Aber er weiß was es bedeutet, weil sein Vater 
+  auf der anderen Seite stand. "In Rostock hatte der Staat über Nacht 
+  die Regeln geändert." Der blaue Ausweis. Nicht Sentimentalität — 
+  Selbsterkenntnis. Brenner IST das System geworden das er bekämpft.
+  Oder? Die Frage bleibt offen. DAS ist der unkontrollierte Moment.
+  
+  Szene 5: Morgens. Krone findet Brenner auf dem Oberdeck. Kaffee kalt.
+  Krone: "War das nötig?" Brenner: "Das war der Preis." 
+  Ende Akt II.
+
+output:
+  path: "projects/heinlein-book/chapters/kapitel-09-der-verrat.md"
+  length: "3.500-4.500 Wörter"
+  language: "Deutsch"
+
+criteria:
+  quantitative:
+    - criterion: "Länge 3.500-4.500 Wörter"
+    - criterion: "Dialog-Anteil ≥ 40%"
+    - criterion: "Keine Gefühls-Introspektion Brenners"
+  qualitative:
+    - criterion: "Heinlein-Authentizität"
+      min_score: 8
+    - criterion: "Der Deal im Deal"
+      description: "Volkov-Genossenschafts-Twist. Legal, brillant, moralisch ambivalent."
+      min_score: 9
+    - criterion: "DDR-Parallele"
+      description: >
+        Brenner erkennt: Er hat gerade dasselbe getan wie der Staat. Das muss BRENNEN.
+        SCHLÜSSELWORT: "Genossenschaft" — die Bewohner-Kooperative die Volkov enteignet.
+        Das Wort MUSS fallen, und es MUSS resonieren: "Genossen" = DDR-Kameraden die 
+        Brenners Vater alles nahmen. "Genossenschaft" = Brenners Waffe gegen Volkov. 
+        Gleiche Silben, gleiche Mechanik, andere Seite. Krone oder Volkov darf das 
+        Wort kommentieren ("Genossenschaft. Ausgerechnet.") — Brenner reagiert nicht.
+      min_score: 9
+    - criterion: "TANSTAAFL"
+      description: "Der Preis des Projekts ist moralisch, nicht finanziell. Brenner hat sich verändert."
+      min_score: 9

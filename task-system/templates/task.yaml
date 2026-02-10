@@ -1,0 +1,69 @@
+# Task Template
+# Kopieren und ausfüllen für neue Tasks
+
+id: task-YYYY-MM-DD-NNN
+title: ""
+status: draft  # draft|open|working|validating|passed|failed|blocked|aborted
+
+# Kontext-Kette (verlinkt zu übergeordneten Elementen)
+project: ""      # project-slug
+strategy: ""     # strategy-slug  
+tactic: ""       # tactic-name (optional, kann auch direkt unter Strategie hängen)
+
+# === DAS WICHTIGE ===
+
+intention: |
+  Warum machen wir das? Was soll erreicht werden?
+  (Nicht WAS, sondern WARUM)
+
+target_audience: |
+  Für wen ist das? Wer profitiert davon?
+  (Kann eine Person, Gruppe oder "Erik" sein)
+
+# === KRITERIEN ===
+
+criteria:
+  # Messbare, testbare Kriterien (Playwright, Tools, Zahlen)
+  quantitative:
+    - ""
+    - ""
+  
+  # Bewertbare Kriterien (1-10 Skala, min 7 für Pass)
+  qualitative:
+    - ""
+    - ""
+
+# === VALIDIERUNG ===
+
+validation:
+  loop_count: 0
+  max_loops: 10
+  min_qualitative_score: 7
+  history: []
+  # History-Einträge haben Format:
+  # - timestamp: "ISO-date"
+  #   loop: 1
+  #   result: pass|fail
+  #   quantitative_pass: true|false
+  #   qualitative_avg: 7.5
+  #   feedback: ["...", "..."]
+
+# === META ===
+
+created: ""      # ISO timestamp
+created_by: ""   # heimdall|erik
+updated: ""      # ISO timestamp
+completed: ""    # ISO timestamp (wenn passed)
+
+# === ARTEFAKTE ===
+
+artifacts: []
+# Liste von Ergebnissen/Outputs
+# - type: file|url|code
+#   path: "/path/to/file"
+#   description: "Was ist das?"
+
+# === NOTIZEN ===
+
+notes: |
+  Zusätzlicher Kontext, Entscheidungen, Links zu Ressourcen

@@ -1,0 +1,43 @@
+id: gh-14
+title: "Kamera + Upload Flow"
+status: open
+github_issue: 14
+
+project: fangfuehrer
+strategy: mvp-launch
+phase: 3
+
+intention: |
+  Schnellster Weg vom Fang zum identifizierten Fisch - der Core-Loop.
+
+target_audience: |
+  Angler am Wasser (oft mit nassen Händen, wenig Zeit)
+
+criteria:
+  quantitative:
+    - "Kamera öffnet <1s"
+    - "Foto-Aufnahme funktioniert"
+    - "Upload startet automatisch"
+    - "Gallery-Import möglich"
+  
+  qualitative:
+    - "One-Tap-to-Capture UX"
+    - "Funktioniert auch bei schlechtem Netz"
+
+validation:
+  loop_count: 0
+  max_loops: 10
+  min_qualitative_score: 7
+  history: []
+
+created: "2026-02-04T11:45:00Z"
+created_by: heimdall
+updated: "2026-02-04T11:45:00Z"
+completed: ""
+
+artifacts: []
+
+notes: |
+  GitHub Issue: https://github.com/heimdall-prometheus/fangfuehrer/issues/14
+  Type: feature
+  Priority: critical

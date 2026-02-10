@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Ihr Weg zum Online-Shop - In Medias Reh</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Caveat:wght@500&display=swap');
         
@@ -34,7 +35,7 @@
             border-bottom: 3px solid #AEBFC8;
         }
         
-        .logo { height: 55px; }
+        .logo { height: 70px; }
         .header-right { text-align: right; font-size: 9pt; color: #888; }
         
         /* Titles */
@@ -131,7 +132,8 @@
             background: #f5f7f8;
             border-radius: 8px;
             padding: 15px;
-            margin: 15px 0;
+            margin: 20px 0;
+            page-break-inside: avoid;
         }
         
         .question-box p {
@@ -165,8 +167,9 @@
             color: white;
             padding: 25px;
             border-radius: 10px;
-            margin: 20px 0;
+            margin: 30px 0;
             text-align: center;
+            page-break-inside: avoid;
         }
         
         .quote {
@@ -233,6 +236,8 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 15px;
+            margin: 20px 0;
+            page-break-inside: avoid;
         }
         
         .mini-checklist {
@@ -263,13 +268,44 @@
             margin-right: 8px;
             margin-left: 0;
         }
+        
+        /* Print-specific styles for clean 3-page PDF */
+        @media print {
+            body { background: white; }
+            
+            .page {
+                min-height: auto;
+                height: auto;
+                page-break-after: always;
+                page-break-inside: avoid;
+            }
+            
+            .page:last-child {
+                page-break-after: avoid;
+            }
+            
+            .checklist,
+            .intro-box,
+            .tip-box,
+            .quote-section,
+            .cta-section,
+            .question-box,
+            .two-col {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @page {
+            size: A4;
+            margin: 15mm;
+        }
     </style>
 </head>
 <body>
     <!-- PAGE 1 -->
     <div class="page">
         <div class="header">
-            <img src="../brand-assets/logo-light-blaugrau.png" alt="In Medias Reh" class="logo">
+            <img src="https://assets.imr-media.de/imr-media/brand/logo-light-blaugrau.png" alt="In Medias Reh" class="logo">
             <div class="header-right">www.imr-media.de<br>+49 1556 333 91 22</div>
         </div>
         
@@ -279,14 +315,18 @@
         <div class="intro-box">
             <p>Liebe Unternehmerin, lieber Unternehmer,</p>
             <p style="margin-top: 8px;">Sie denken darüber nach, Ihr Geschäft ins Internet zu bringen? <span class="highlight">Das ist eine gute Entscheidung!</span></p>
-            <p style="margin-top: 8px;">Diese Checkliste zeigt Ihnen, was wichtig ist. <strong>Und das Beste: Sie müssen das nicht alleine machen.</strong></p>
+            <p style="margin-top: 8px;">In Deutschland gibt es viele rechtliche Anforderungen: DSGVO, Impressumspflicht, Widerrufsrecht, AGB... <strong>Klingt kompliziert? Keine Sorge – wir kümmern uns darum.</strong></p>
+        </div>
+        
+        <div class="tip-box" style="margin-bottom: 20px;">
+            <strong><i class="fa-solid fa-shield-halved" style="color:#C18E65"></i> Rechtssicher in Deutschland:</strong> Wir sorgen dafür, dass Ihr Shop alle gesetzlichen Anforderungen erfüllt – von der Datenschutzerklärung bis zur Widerrufsbelehrung.
         </div>
         
         <h2>Die 10 wichtigsten Punkte</h2>
         
         <div class="checklist">
             <div class="check-item">
-                <div class="check-icon">📦</div>
+                <div class="check-icon"><i class="fa-solid fa-box"></i></div>
                 <div class="check-content">
                     <h3>1. Welche Produkte verkaufen Sie online?</h3>
                     <p>Starten Sie mit Ihren 10-20 beliebtesten Artikeln</p>
@@ -295,16 +335,16 @@
             </div>
             
             <div class="check-item">
-                <div class="check-icon">⚖️</div>
+                <div class="check-icon"><i class="fa-solid fa-scale-balanced"></i></div>
                 <div class="check-content">
-                    <h3>2. Rechtliche Grundlagen</h3>
-                    <p>Impressum, Datenschutz, AGB – wir helfen Ihnen dabei</p>
+                    <h3>2. Rechtssicher in Deutschland</h3>
+                    <p>DSGVO, Impressum, AGB, Widerrufsrecht – <strong>wir erledigen das für Sie</strong></p>
                 </div>
                 <div class="checkbox"></div>
             </div>
             
             <div class="check-item">
-                <div class="check-icon">💳</div>
+                <div class="check-icon"><i class="fa-solid fa-credit-card"></i></div>
                 <div class="check-content">
                     <h3>3. Zahlungsarten festlegen</h3>
                     <p>PayPal + Rechnung deckt 80% aller Kunden ab</p>
@@ -313,7 +353,7 @@
             </div>
             
             <div class="check-item">
-                <div class="check-icon">🚚</div>
+                <div class="check-icon"><i class="fa-solid fa-truck"></i></div>
                 <div class="check-content">
                     <h3>4. Versand organisieren</h3>
                     <p>Klare Kosten und Lieferzeiten schaffen Vertrauen</p>
@@ -322,7 +362,7 @@
             </div>
             
             <div class="check-item">
-                <div class="check-icon">🧮</div>
+                <div class="check-icon"><i class="fa-solid fa-calculator"></i></div>
                 <div class="check-content">
                     <h3>5. Preise kalkulieren</h3>
                     <p>Versand, Gebühren und Retouren einplanen</p>
@@ -332,20 +372,20 @@
         </div>
         
         <div class="tip-box">
-            <strong>💡 Gut zu wissen:</strong> Sie müssen sich nicht mit Technik beschäftigen. Wir richten alles für Sie ein – Sie konzentrieren sich aufs Verkaufen.
+            <strong><i class="fa-solid fa-lightbulb" style="color:#C18E65"></i> Gut zu wissen:</strong> Sie müssen sich nicht mit Technik beschäftigen. Wir richten alles für Sie ein – Sie konzentrieren sich aufs Verkaufen.
         </div>
     </div>
     
     <!-- PAGE 2 -->
     <div class="page">
         <div class="header">
-            <img src="../brand-assets/logo-light-blaugrau.png" alt="In Medias Reh" class="logo">
+            <img src="https://assets.imr-media.de/imr-media/brand/logo-light-blaugrau.png" alt="In Medias Reh" class="logo">
             <div class="header-right">Seite 2</div>
         </div>
         
         <div class="checklist">
             <div class="check-item">
-                <div class="check-icon">📞</div>
+                <div class="check-icon"><i class="fa-solid fa-phone"></i></div>
                 <div class="check-content">
                     <h3>6. Kundenservice einplanen</h3>
                     <p>Erreichbarkeit schafft Vertrauen bei Ihren Kunden</p>
@@ -354,7 +394,7 @@
             </div>
             
             <div class="check-item">
-                <div class="check-icon">🛠️</div>
+                <div class="check-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
                 <div class="check-content">
                     <h3>7. Das richtige Shop-System</h3>
                     <p>WooCommerce, Shopify, Shopware – wir beraten Sie</p>
@@ -363,7 +403,7 @@
             </div>
             
             <div class="check-item">
-                <div class="check-icon">🎨</div>
+                <div class="check-icon"><i class="fa-solid fa-palette"></i></div>
                 <div class="check-content">
                     <h3>8. Design das zu Ihnen passt</h3>
                     <p>Professionell und einladend – so gewinnen Sie Kunden</p>
@@ -372,7 +412,7 @@
             </div>
             
             <div class="check-item">
-                <div class="check-icon">🔍</div>
+                <div class="check-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
                 <div class="check-content">
                     <h3>9. Bei Google gefunden werden</h3>
                     <p>Das Wichtigste für langfristigen Erfolg online</p>
@@ -381,7 +421,7 @@
             </div>
             
             <div class="check-item">
-                <div class="check-icon">🤝</div>
+                <div class="check-icon"><i class="fa-solid fa-handshake"></i></div>
                 <div class="check-content">
                     <h3>10. Langfristige Betreuung</h3>
                     <p>Nach dem Start sind wir weiterhin für Sie da</p>
@@ -400,14 +440,14 @@
         
         <div class="two-col">
             <div class="mini-checklist">
-                <h4>💳 Zahlungsarten</h4>
+                <h4><i class="fa-solid fa-credit-card"></i> Zahlungsarten</h4>
                 <div class="mini-check"><div class="checkbox"></div> PayPal</div>
                 <div class="mini-check"><div class="checkbox"></div> Kreditkarte</div>
                 <div class="mini-check"><div class="checkbox"></div> Rechnung</div>
                 <div class="mini-check"><div class="checkbox"></div> Lastschrift</div>
             </div>
             <div class="mini-checklist">
-                <h4>🚚 Versand</h4>
+                <h4><i class="fa-solid fa-truck"></i> Versand</h4>
                 <div class="mini-check"><div class="checkbox"></div> DHL</div>
                 <div class="mini-check"><div class="checkbox"></div> Hermes</div>
                 <div class="mini-check"><div class="checkbox"></div> DPD</div>
@@ -424,7 +464,7 @@
     <!-- PAGE 3 -->
     <div class="page">
         <div class="header">
-            <img src="../brand-assets/logo-light-blaugrau.png" alt="In Medias Reh" class="logo">
+            <img src="https://assets.imr-media.de/imr-media/brand/logo-light-blaugrau.png" alt="In Medias Reh" class="logo">
             <div class="header-right">Seite 3</div>
         </div>
         
@@ -435,8 +475,8 @@
             <p>Lassen Sie uns unverbindlich sprechen.<br>Wir nehmen uns Zeit für Ihre Fragen.</p>
             
             <div class="contact-row">
-                <div class="contact-item">📞 +49 1556 333 91 22</div>
-                <div class="contact-item">✉️ info@imr-media.de</div>
+                <div class="contact-item"><i class="fa-solid fa-phone"></i> +49 1556 333 91 22</div>
+                <div class="contact-item"><i class="fa-solid fa-envelope"></i> info@imr-media.de</div>
             </div>
             
             <a href="tel:+4915563339122" class="cta-button">Jetzt anrufen</a>

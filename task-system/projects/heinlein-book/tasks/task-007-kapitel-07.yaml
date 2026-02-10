@@ -1,0 +1,62 @@
+task_id: hb-task-007
+title: "Kapitel 7: Die Resolution"
+project: heinlein-book
+strategy: writing-strategy
+status: working
+created: 2026-02-07
+
+intention: >
+  Die Welt reagiert. Die UN debattiert eine Resolution gegen künstliche Strukturen 
+  auf hoher See. 147 zu 3 Stimmen — nur Palau, Nauru und Marshall-Inseln dagegen.
+  Brenners drei Abkommen zeigen ihre einzige Wirkung: Sie sind die Neinstimmen.
+  
+  Gleichzeitig eskaliert die geopolitische Lage. Die Resolution hat "keine Zähne" —
+  aber sie legitimiert härtere Maßnahmen. Frankreich drängt auf NATO-Eingreifen.
+  Admiral Holt bekommt seinen Marschbefehl.
+
+scene_summary: >
+  Szene 1: New York, UN-Generalversammlung. Krone beobachtet per Livestream aus 
+  Hamburg. Die Debatte: Frankreichs Botschafter spricht von "Präzedenzfall der 
+  das Seerecht untergräbt". Estlands Vertreter widerspricht leise. Die Abstimmung 
+  ist eine Formalität — 147:3. Krone ruft Brenner an: "Erwartet." Brenner: 
+  "Resolutionen haben keine Zähne." Krone: "Die NATO hat welche."
+  
+  Szene 2: Nova Ventus. Der Alltag geht weiter — aber es ändert sich etwas.
+  DBS friert das Konto ein. Versorgungsschiffe werden "routinemäßig inspiziert".
+  Die Lieferzeiten verdoppeln sich. Brenner rechnet: Bei dieser Rate 
+  reichen die Vorräte 90 Tage. Jian: "Und dann?" Brenner: "Dann müssen wir 
+  kreativ werden."
+  
+  Szene 3: Pentagon. Admiral Holt bekommt den Auftrag. USS Bataan, 
+  Amphibious Assault Ship. "Routine-Übung, 5 Seemeilen Abstand, beobachten 
+  und berichten." Holt ist ein professioneller Mann — er versteht die Botschaft.
+  
+  Szene 4: Brenner auf dem Oberdeck, nachts. Die Lichter der Bataan am Horizont.
+  Fünf Seemeilen. Funkkontakt: "Mr. Brenner, wir empfehlen Ihnen, Ihre Bewohner 
+  zu evakuieren." Brenner: "Admiral, das empfehle ich Ihnen auch. Wir haben 
+  besseres Internet." Aber nach dem Funk: Brenner bleibt stehen. Die Lichter.
+  DDR-ECHO: Ein Mann der als Kind gelernt hat was es heißt wenn der Staat 
+  aufmarschiert.
+
+output:
+  path: "projects/heinlein-book/chapters/kapitel-07-die-resolution.md"
+  length: "3.500-4.500 Wörter"
+  language: "Deutsch"
+
+criteria:
+  quantitative:
+    - criterion: "Länge 3.500-4.500 Wörter"
+    - criterion: "Dialog-Anteil ≥ 40%"
+    - criterion: "Keine Gefühls-Introspektion Brenners"
+  qualitative:
+    - criterion: "Heinlein-Authentizität"
+      min_score: 8
+    - criterion: "Eskalation"
+      description: "Von Resolution zu Blockade. Die Schlinge zieht sich zu."
+      min_score: 8
+    - criterion: "DDR-Echo"
+      description: "Die Lichter der Bataan = der Staat der aufmarschiert. Subtil, nicht erklärt."
+      min_score: 8
+    - criterion: "Admiral Holt"
+      description: "Kein Bösewicht. Ein kompetenter Mann auf der anderen Seite."
+      min_score: 8

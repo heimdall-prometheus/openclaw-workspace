@@ -1,0 +1,28 @@
+slug: task-001-wcag-barrierefreiheit
+name: "Barrierefreiheit nach WCAG 2.2 AA"
+project: mein-schluessel
+status: draft
+created: 2026-02-07
+priority: high
+
+intention: |
+  Ab Juni 2025 gilt das Barrierefreiheitsstärkungsgesetz (BFSG) für E-Commerce.
+  mein-schluessel.de muss WCAG 2.2 Level AA erfüllen um rechtlich konform zu sein
+  und allen Nutzern (auch mit Einschränkungen) ein gutes Einkaufserlebnis zu bieten.
+
+target_audience: "Alle Besucher von mein-schluessel.de, insbesondere Menschen mit Seh-, Hör- oder motorischen Einschränkungen"
+
+notes: |
+  - Workflow muss noch definiert werden (Shopware 6 Theme-Anpassungen vs. Plugin vs. Custom)
+  - Erst Audit, dann Maßnahmenplan, dann Umsetzung
+  - Standard: WCAG 2.2 Level AA
+  - Plattform: Shopware 6.6.9.0
+
+todo_before_start:
+  - Workflow definieren (wie greifen wir ins Shopware Theme ein?)
+  - Audit-Tool auswählen (Lighthouse, axe, WAVE)
+  - Scope klären (nur Frontend? Checkout? PDF-Rechnungen?)
+  - Priorisierung der Kriterien
+
+quantitative_criteria: []  # Wird nach Audit definiert
+qualitative_criteria: []   # Wird nach Audit definiert

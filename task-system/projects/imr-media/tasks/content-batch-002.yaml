@@ -1,0 +1,55 @@
+id: content-batch-002
+title: "Videos + Blog Artikel Batch (Woche 3-4)"
+status: working
+created: 2026-02-01T14:18:00Z
+
+intention: |
+  Content-Pipeline für IMR Media weiter ausbauen:
+  - 3 Videos für bestehende Blog-Artikel (SEO + Social Engagement)
+  - 2 neue Blog-Artikel für Woche 3 (SEO-Reichweite)
+  Authority und organische Sichtbarkeit erhöhen.
+
+zielgruppe:
+  primaer: "Boomer Small Business Owners (50-70 Jahre)"
+  sekundaer: "KMU-Inhaber die online verkaufen wollen"
+
+deliverables:
+  videos:
+    - title: "Top 3 Online-Shop Fehler"
+      for_article: "online-shop-fehler-vermeiden"
+      duration: "60 Sek"
+      style: "Talking Head / Erklärvideo"
+      
+    - title: "Produktfoto Tutorial"  
+      for_article: "produktfotos-selbst-machen"
+      duration: "90 Sek"
+      style: "Tutorial mit Beispielen"
+      
+    - title: "Projekt-Einblick"
+      for_article: "(Behind-the-Scenes)"
+      duration: "45 Sek"
+      style: "BTS / Authentisch"
+
+  blog_articles:
+    - title: "Website-Kosten für kleine Unternehmen"
+      slug: "website-kosten-kleine-unternehmen"
+      words: "1800+"
+      publish_date: "2026-02-18"
+      
+    - title: "Produktfotos selbst machen: Anleitung"
+      slug: "produktfotos-selbst-machen"
+      words: "1500+"
+      publish_date: "2026-02-20"
+
+qualitaetskriterien:
+  quantitativ:
+    - "3 Videos produziert und auf R2 hochgeladen"
+    - "2 Blog-Artikel geschrieben (1500+ Wörter)"
+    - "Videos in bestehende Artikel eingebettet"
+  qualitativ:
+    - "Boomer-freundliche Sprache (keine Fachbegriffe ohne Erklärung)"
+    - "Videos: Klarer Mehrwert in unter 90 Sek"
+    - "Artikel: SEO-optimiert mit Keywords"
+
+max_loops: 3
+current_loop: 1

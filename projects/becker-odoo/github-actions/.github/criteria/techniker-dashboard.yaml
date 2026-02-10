@@ -1,0 +1,53 @@
+# Validation Criteria: Techniker Dashboard
+# Used by AI Validator to score the implementation
+
+intention: |
+  Servicetechniker im Außendienst brauchen beim Login einen schnellen 
+  Überblick über ihre Tagesaufgaben, ohne komplexe Navigation.
+
+zielgruppe: "Servicetechniker (Rolle: Techniker)"
+
+kriterien:
+  quantitativ:
+    - id: auto_redirect
+      beschreibung: "Nach Login als Techniker wird Dashboard automatisch angezeigt"
+      test: "login-redirects-to-dashboard.spec.js"
+      gewicht: 2
+      
+    - id: own_tasks_only
+      beschreibung: "Dashboard zeigt nur eigene Aufträge (nicht alle)"
+      test: "shows-only-own-tasks.spec.js"
+      gewicht: 3
+      
+    - id: widgets_present
+      beschreibung: "Mindestens 3 Widgets vorhanden"
+      test: "widgets-present.spec.js"
+      gewicht: 2
+      
+    - id: performance
+      beschreibung: "Ladezeit < 2 Sekunden"
+      test: "performance.spec.js"
+      gewicht: 1
+      
+    - id: responsive
+      beschreibung: "Mobile-tauglich (Responsive)"
+      test: "mobile-responsive.spec.js"
+      gewicht: 1
+
+  qualitativ:
+    - id: intuitive_ui
+      beschreibung: "UI ist intuitiv und selbsterklärend"
+      gewicht: 3
+      
+    - id: design_consistency
+      beschreibung: "Design passt zum Odoo-Standard"
+      gewicht: 2
+      
+    - id: information_density
+      beschreibung: "Informationsdichte angemessen (nicht überladen)"
+      gewicht: 2
+
+bewertung:
+  minimum_pass: 7
+  auto_merge: 9
+  max_loops: 10

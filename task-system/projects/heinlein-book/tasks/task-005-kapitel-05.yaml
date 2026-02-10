@@ -1,0 +1,60 @@
+task_id: hb-task-005
+title: "Kapitel 5: Tuvalu"
+project: heinlein-book
+strategy: writing-strategy
+status: passed
+created: 2026-02-07
+
+intention: >
+  Der erste echte Rückschlag. Australien zwingt Tuvalu, den MOU mit Brenner zu 
+  kündigen. Brenners Souveränitäts-Hack ist tot. Aber Brenner braucht keine Sekunde 
+  zum Trauern — er schaltet sofort auf Plan B: De-facto-Staatlichkeit über die 
+  Montevideo-Konvention, ohne Anerkennung durch bestehende Staaten. Bilaterale 
+  Abkommen mit Mikronationen und Kleinstaaten als Ersatz.
+  
+  Gleichzeitig: Nova Ventus wächst. 150 Bewohner. Die ersten Businesses starten. 
+  Die Warteliste explodiert. Das Geld beginnt zu fließen.
+
+scene_summary: >
+  Szene 1: Maatia ruft an. Schlechte Verbindung, Regen in Funafuti. "Mister Brenner, 
+  ich muss Ihnen etwas mitteilen." Australien hat gedroht, Klimahilfen zu streichen. 
+  Tuvalu zieht den MOU zurück. Brenner: "Ich verstehe." Keine Wut, kein Drama.
+  
+  Szene 2: Krone am Telefon. "Ich hab dir gesagt, Staaten sind unzuverlässig." 
+  Brenner (sofort): "Dann werden wir ein Staat ohne Staaten zu fragen." Krone 
+  erklärt die Montevideo-Strategie: permanente Bevölkerung ✓, definiertes Territorium 
+  (schwimmt) ✓, Regierung ✓, diplomatische Fähigkeit — das fehlt. Brenners Lösung: 
+  Bilaterale Abkommen mit jedem der eine UN-Stimme hat.
+  
+  Szene 3: Montage — Brenner reist. Palau (historisch offen für Meeresprojekte). 
+  Nauru (braucht Geld, Phosphat erschöpft). Marshall-Inseln (gleiche Klimaprobleme 
+  wie Tuvalu). Drei Mini-Deals, drei UN-Stimmen. Keine Anerkennung — aber 
+  bilaterale Kooperationsabkommen.
+  
+  Szene 4: Zurück auf Nova Ventus. 150 Bewohner jetzt. Park führt erste 
+  CRISPR-Versuche durch. Widmers Settlement-System wickelt erste Transaktionen ab.
+  Die Warteliste: 12.000 Bewerbungen. Brenner wählt persönlich aus. Kriterium: 
+  "Können Sie etwas, das die Welt braucht aber nicht zulässt?"
+
+output:
+  path: "projects/heinlein-book/chapters/kapitel-05-tuvalu.md"
+  length: "3.500-4.500 Wörter"
+  language: "Deutsch"
+
+criteria:
+  quantitative:
+    - criterion: "Länge 3.500-4.500 Wörter"
+    - criterion: "Dialog-Anteil ≥ 40%"
+    - criterion: "Keine Gefühls-Introspektion Brenners"
+  qualitative:
+    - criterion: "Heinlein-Authentizität"
+      min_score: 8
+    - criterion: "Rückschlag ohne Pathos"
+      description: "Tuvalu-Verlust ist ein Schlag, aber Brenner reagiert mit Berechnung, nicht Emotion."
+      min_score: 8
+    - criterion: "Der Hustle"
+      description: "Montevideo-Strategie + Mikronationen-Diplomatie. Plan B ist besser als Plan A."
+      min_score: 8
+    - criterion: "Plot-Momentum"
+      description: "Von Rückschlag zu neuem, stärkerem Fundament. Eskalation."
+      min_score: 8

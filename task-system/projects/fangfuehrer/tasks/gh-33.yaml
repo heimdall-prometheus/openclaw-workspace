@@ -1,0 +1,43 @@
+id: gh-33
+title: "Performance Optimization"
+status: open
+github_issue: 33
+
+project: fangfuehrer
+strategy: mvp-launch
+phase: 7
+
+intention: |
+  App fühlt sich schnell und flüssig an - gute erste Impression.
+
+target_audience: |
+  Alle User
+
+criteria:
+  quantitative:
+    - "App Start <3s"
+    - "Fish ID <5s"
+    - "60fps bei Animationen"
+    - "Lighthouse >90 (PWA)"
+  
+  qualitative:
+    - "Keine Jank bei Scrolling"
+    - "Offline-Graceful"
+
+validation:
+  loop_count: 0
+  max_loops: 10
+  min_qualitative_score: 7
+  history: []
+
+created: "2026-02-04T11:45:00Z"
+created_by: heimdall
+updated: "2026-02-04T11:45:00Z"
+completed: ""
+
+artifacts: []
+
+notes: |
+  GitHub Issue: https://github.com/heimdall-prometheus/fangfuehrer/issues/33
+  Type: infra
+  Priority: high

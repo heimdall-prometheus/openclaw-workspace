@@ -1,0 +1,191 @@
+id: task-001
+slug: pwa-core-features
+name: "PWA Core Features: Auth, User State, Save Catches, Collections"
+project: fangfuehrer
+strategy: mvp-launch
+tactic: pwa-core
+status: complete
+created: 2026-02-04T22:16:00Z
+assignee: heimdall
+
+# ═══════════════════════════════════════════════════════════
+# INTENTION (WARUM?)
+# ═══════════════════════════════════════════════════════════
+
+intention: |
+  User können sich registrieren/anmelden, Fische fotografieren, 
+  ihre Catches speichern und ihre Sammlung betrachten.
+  
+  Ziel: MVP-reife PWA die erste Beta-Tester produktiv nutzen können.
+  
+  Ohne funktionierende Auth + Save-Flow ist die App unbrauchbar.
+  User sollen ihre Fortschritte behalten (nicht Gast-only).
+
+# ═══════════════════════════════════════════════════════════
+# ZIELGRUPPE
+# ═══════════════════════════════════════════════════════════
+
+audience: |
+  - Angler (Hobby + Profi) in DACH-Region
+  - Mobile-First User (Smartphone am See)
+  - Tech-affin genug für PWA Installation
+  - Wollen Catches tracken + vergleichen
+
+# ═══════════════════════════════════════════════════════════
+# QUALITÄTSKRITERIEN
+# ═══════════════════════════════════════════════════════════
+
+criteria:
+  quantitative:
+    - name: "Auth Flow funktioniert"
+      test: "Register → Login → Token persistence → Page reload → User bleibt eingeloggt"
+      expected: "Pass"
+      
+    - name: "Save Catch ohne Login redirected zu /auth"
+      test: "Als Gast Fish ID machen → Save klicken → Redirect zu /auth Page"
+      expected: "Pass"
+      
+    - name: "Save Catch mit Login speichert in DB"
+      test: "Eingeloggt → Fish ID → Save → Catch erscheint in Collection"
+      expected: "Pass"
+      
+    - name: "User Stats aktualisieren sich"
+      test: "Catch speichern → Homepage Stats +1 Catch → Profile Stats +1 Catch"
+      expected: "Pass"
+      
+    - name: "Logout funktioniert"
+      test: "Profile → Logout → Token gelöscht → User nicht mehr eingeloggt"
+      expected: "Pass"
+
+  qualitative:
+    - name: "User Experience Clarity"
+      question: "Ist sofort klar was die App tut und wie man Catches speichert?"
+      scale: "1-10 (min 7)"
+      
+    - name: "Auth Flow Intuitivität"
+      question: "Fühlt sich Login/Register flüssig an? Keine verwirrenden Schritte?"
+      scale: "1-10 (min 7)"
+      
+    - name: "Collection Usefulness"
+      question: "Zeigt die Collection Page sinnvolle Infos? (Datum, Größe, XP, etc.)"
+      scale: "1-10 (min 7)"
+      
+    - name: "Profile Value"
+      question: "Bietet Profile Page Mehrwert? (Stats, Level, Progress sichtbar?)"
+      scale: "1-10 (min 7)"
+      
+    - name: "Mobile Usability"
+      question: "Funktioniert alles auf Mobile? Touch-friendly? Keine Layout-Breaks?"
+      scale: "1-10 (min 7)"
+
+# ═══════════════════════════════════════════════════════════
+# DELIVERABLES
+# ═══════════════════════════════════════════════════════════
+
+deliverables:
+  - path: "fangfuehrer-web/src/app/auth/page.tsx"
+    description: "Auth Page mit Login/Register + Guest Mode"
+    
+  - path: "fangfuehrer-web/src/app/page.tsx"
+    description: "Homepage mit User State, Real Stats, Save Catch Flow"
+    
+  - path: "fangfuehrer-web/src/lib/api.ts"
+    description: "API Client mit Token Management"
+
+commits:
+  - hash: "d1097bb"
+    message: "✨ Complete PWA core features: Auth, User State, Save Catches, Collections"
+    repo: "heimdall-prometheus/fangfuehrer-web"
+
+# ═══════════════════════════════════════════════════════════
+# VALIDATION CONFIG
+# ═══════════════════════════════════════════════════════════
+
+validation:
+  max_loops: 10
+  current_loop: 5
+  validator_agent: "default"
+  timeout_seconds: 600
+  
+  loop_history:
+    - loop: 1
+      timestamp: "2026-02-04T22:26:00Z"
+      result: "fail"
+      score: 5.0
+      issues:
+        - "Auth Flow broken: Register missing username field"
+        - "Login using JSON instead of form-data"
+        - "Frontend/Backend schema mismatch"
+      fixes_applied:
+        - commit: "7f7bfd0"
+          message: "Add username field + OAuth2 form-data login"
+    
+    - loop: 2
+      timestamp: "2026-02-04T22:36:00Z"
+      result: "fail"
+      score: 5.4
+      issues:
+        - "Register successful but no access_token returned"
+        - "Backend /auth/register returns UserResponse instead of Token"
+      fixes_applied:
+        - backend_fix: "auth.py - Register returns Token with access_token"
+        - backend_fix: "config.py - Add OpenAI/Anthropic API key fields"
+    
+    - loop: 3
+      timestamp: "2026-02-04T22:45:00Z"
+      result: "conditional_pass"
+      score: 7.6
+      issues:
+        - "Error messages show '[object Object]' instead of readable text"
+        - "Camera tests not possible in headless browser (needs real device)"
+      successes:
+        - "Auth Flow 100% functional (Register + Login + Token + Logout)"
+        - "Backend fix verified - auto-login after register works"
+        - "Score 7.6/10 meets threshold"
+      fixes_applied:
+        - commit: "807ac24"
+          message: "Enhanced error handling - prevent [object Object] display"
+    
+    - loop: 4
+      timestamp: "2026-02-04T22:52:00Z"
+      result: "fail"
+      score: 7.4
+      issues:
+        - "Register error display STILL shows '[object Object]'"
+        - "Root cause: Pydantic errors returned as Array, not String"
+      successes:
+        - "Login error display FIXED - shows readable text"
+        - "Qualitative score 7.4/10 meets threshold"
+      fixes_applied:
+        - commit: "86d8b7b"
+          message: "Handle Pydantic Array errors - extract firstError.msg"
+    
+    - loop: 5
+      timestamp: "2026-02-04T23:25:00Z"
+      result: "pass"
+      score: 8.2
+      issues: []
+      successes:
+        - "🎉 Register error display FIXED - Pydantic errors readable!"
+        - "All error messages human-readable - no more [object Object]"
+        - "Auth Flow Intuitivität improved from 6/10 to 9/10"
+        - "Qualitative average increased from 7.4 to 8.2"
+        - "All testable quantitative criteria PASS"
+        - "Commit 86d8b7b verified working correctly"
+      fixes_applied:
+        - verification: "commit 86d8b7b"
+          status: "✅ FULLY FUNCTIONAL"
+          details: "API Client now handles Pydantic Array errors correctly"
+
+# ═══════════════════════════════════════════════════════════
+# NOTES
+# ═══════════════════════════════════════════════════════════
+
+notes: |
+  Gebaut autonom nach Erik's "Autonom weiter" Anweisung.
+  
+  Backend API war bereits komplett.
+  PWA hatte Grundgerüst (Camera, Fish ID), fehlte Auth + Save Flow.
+  
+  Wichtig: Retrospektive Validierung - Code bereits committed.
+  Falls Validator Fails findet → Feedback Loop für Fixes.

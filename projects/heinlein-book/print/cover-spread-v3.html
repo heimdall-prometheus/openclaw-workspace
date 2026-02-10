@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<style>
+/* ===========================================
+   COVER SPREAD v3 — Spine 21.6mm
+   Munken Print Cream 90g, 312 Seiten
+   ===========================================
+   Layout (left to right):
+     Back cover + bleed:  153.0mm  (5mm bleed + 148mm trim)
+     Spine:                21.6mm
+     Front cover + bleed: 153.0mm  (148mm trim + 5mm bleed)
+     TOTAL WIDTH:         327.6mm
+   Height: 220mm (5mm bleed top + 210mm trim + 5mm bleed bottom)
+   Bleed: 5mm all sides
+   =========================================== */
+
+@page {
+  size: 327.6mm 220mm;
+  margin: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 327.6mm;
+  height: 220mm;
+  position: relative;
+  overflow: hidden;
+  font-family: 'EB Garamond', 'Georgia', 'Times New Roman', serif;
+  color: #fff;
+}
+
+/* ============================
+   BACKGROUND — full navy
+   ============================ */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0a1628;
+}
+
+/* ============================
+   FRONT COVER IMAGE
+   Right side: 153mm (from spine-right edge to right edge)
+   ============================ */
+.front-cover-bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 153mm; /* front cover area including bleed */
+  height: 100%;
+  background-image: url('file:///home/reisig/.openclaw/workspace/projects/heinlein-book/print/cover-v1-upscaled.png');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Gradient overlay for text readability on front cover */
+.front-cover-gradient {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 153mm;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.6) 0%,
+    rgba(0,0,0,0.1) 25%,
+    rgba(0,0,0,0.0) 40%,
+    rgba(0,0,0,0.0) 70%,
+    rgba(0,0,0,0.5) 90%,
+    rgba(0,0,0,0.7) 100%
+  );
+}
+
+/* ============================
+   FRONT COVER TEXT
+   Positioned within front 153mm, padded inside trim area
+   ============================ */
+.front-cover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 153mm;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20mm 17mm 17mm 12mm;
+  z-index: 10;
+}
+
+.front-title-area {
+  text-align: center;
+}
+
+.front-subtitle {
+  font-size: 10pt;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 5mm;
+  opacity: 0.9;
+}
+
+.front-title {
+  font-size: 32pt;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.15;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+}
+
+.front-author-area {
+  text-align: center;
+}
+
+.front-author {
+  font-size: 14pt;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.8);
+}
+
+/* ============================
+   SPINE — 21.6mm wide
+   Left edge at 153mm (end of back cover area)
+   ============================ */
+.spine {
+  position: absolute;
+  top: 0;
+  left: 153mm;
+  width: 21.6mm;
+  height: 100%;
+  background: #0a1628;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.spine-content {
+  transform: rotate(90deg);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 6mm;
+}
+
+.spine-title {
+  font-size: 9.5pt;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+}
+
+.spine-author {
+  font-size: 8pt;
+  letter-spacing: 0.08em;
+}
+
+.spine-publisher {
+  font-size: 6pt;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.spine-divider {
+  width: 1px;
+  height: 3mm;
+  background: rgba(255,255,255,0.5);
+  transform: rotate(90deg);
+}
+
+/* ============================
+   BACK COVER
+   Left 153mm of the spread
+   ============================ */
+.back-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 153mm;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 25mm 15mm 25mm 20mm;
+  z-index: 10;
+}
+
+.back-blurb {
+  font-size: 10.5pt;
+  line-height: 1.65;
+  color: #d0d8e8;
+  font-style: italic;
+  margin-bottom: 10mm;
+  text-align: justify;
+}
+
+.back-blurb p {
+  margin-bottom: 4mm;
+}
+
+.back-blurb p:last-child {
+  margin-bottom: 0;
+}
+
+.back-bio {
+  font-size: 8.5pt;
+  line-height: 1.55;
+  color: #a0aec0;
+  font-style: normal;
+  margin-bottom: 12mm;
+  text-align: justify;
+}
+
+.back-divider {
+  width: 30mm;
+  height: 0.5px;
+  background: rgba(255,255,255,0.3);
+  margin-bottom: 10mm;
+}
+
+.back-divider-lower {
+  width: 20mm;
+  height: 0.5px;
+  background: rgba(255,255,255,0.2);
+  margin-bottom: 8mm;
+}
+
+.back-publisher {
+  font-size: 8pt;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #8898b8;
+  margin-bottom: 8mm;
+}
+
+.back-isbn {
+  font-size: 8pt;
+  color: #687898;
+}
+
+/* ============================
+   CROP MARKS
+   0.25pt lines, 3mm long, at bleed boundaries
+   ============================ */
+.crop-mark {
+  position: absolute;
+  background: #000;
+  z-index: 100;
+}
+
+/* --- Four corners (5mm bleed inset) --- */
+
+/* Top-left */
+.crop-tl-h { top: 5mm;    left: 0;    width: 3mm;    height: 0.25pt; }
+.crop-tl-v { top: 0;      left: 5mm;  width: 0.25pt; height: 3mm; }
+
+/* Top-right */
+.crop-tr-h { top: 5mm;    right: 0;   width: 3mm;    height: 0.25pt; }
+.crop-tr-v { top: 0;      right: 5mm; width: 0.25pt; height: 3mm; }
+
+/* Bottom-left */
+.crop-bl-h { bottom: 5mm; left: 0;    width: 3mm;    height: 0.25pt; }
+.crop-bl-v { bottom: 0;   left: 5mm;  width: 0.25pt; height: 3mm; }
+
+/* Bottom-right */
+.crop-br-h { bottom: 5mm; right: 0;   width: 3mm;    height: 0.25pt; }
+.crop-br-v { bottom: 0;   right: 5mm; width: 0.25pt; height: 3mm; }
+
+/* --- Spine fold marks --- */
+/* Left spine edge at 153mm */
+.crop-spine-l-t { top: 0;    left: 153mm;   width: 0.25pt; height: 3mm; }
+.crop-spine-l-b { bottom: 0; left: 153mm;   width: 0.25pt; height: 3mm; }
+
+/* Right spine edge at 153mm + 21.6mm = 174.6mm */
+.crop-spine-r-t { top: 0;    left: 174.6mm; width: 0.25pt; height: 3mm; }
+.crop-spine-r-b { bottom: 0; left: 174.6mm; width: 0.25pt; height: 3mm; }
+
+</style>
+</head>
+<body>
+
+<!-- Background -->
+<div class="background"></div>
+
+<!-- Front cover image -->
+<div class="front-cover-bg"></div>
+<div class="front-cover-gradient"></div>
+
+<!-- Front cover text -->
+<div class="front-cover">
+  <div class="front-title-area">
+    <div class="front-subtitle">Ein Roman</div>
+    <div class="front-title">Auf fremdem<br>Grund</div>
+  </div>
+  <div class="front-author-area">
+    <div class="front-author">Erik Reisig</div>
+  </div>
+</div>
+
+<!-- Spine -->
+<div class="spine">
+  <div class="spine-content">
+    <span class="spine-author">Erik Reisig</span>
+    <span class="spine-divider"></span>
+    <span class="spine-title">Auf fremdem Grund</span>
+    <span class="spine-divider"></span>
+    <span class="spine-publisher">TANSTAAFL Press</span>
+  </div>
+</div>
+
+<!-- Back cover -->
+<div class="back-cover">
+  <div class="back-divider"></div>
+  <div class="back-blurb">
+    <p>Die Brent Delta ist vierundzwanzigtausend Tonnen toter Stahl in der Nordsee. Shell will sie verschrotten. Klaus Brenner sieht etwas anderes: einen Staat.</p>
+    <p>Er kauft die Plattform für einen Bruchteil der Abrisskosten, schleppt sie in internationale Gewässer und beginnt das ambitionierteste Experiment seit der Gründung Singapurs&nbsp;— eine souveräne Nation auf dem offenen Meer, gebaut von Ingenieuren, Ärzten und Programmierern, die genug haben von den Regeln an Land.</p>
+    <p>Doch was als Pioniertraum beginnt, wird zum geopolitischen Schachspiel. Die UN debattiert. Die Marine kommt. Und nicht jeder an Bord meint es ehrlich.</p>
+  </div>
+  <div class="back-divider-lower"></div>
+  <div class="back-bio">
+    ERIK REISIG gründet und berät Technologieunternehmen in Deutschland. <em>Auf fremdem Grund</em> ist sein erster Roman&nbsp;— geschrieben mit der Überzeugung, dass die besten Geschichten von denen erzählt werden, die Dinge tatsächlich bauen.
+  </div>
+  <div class="back-publisher">TANSTAAFL Press</div>
+  <div class="back-isbn">ISBN 000-0-00-000000-0</div>
+</div>
+
+<!-- Crop marks — corners -->
+<div class="crop-mark crop-tl-h"></div>
+<div class="crop-mark crop-tl-v"></div>
+<div class="crop-mark crop-tr-h"></div>
+<div class="crop-mark crop-tr-v"></div>
+<div class="crop-mark crop-bl-h"></div>
+<div class="crop-mark crop-bl-v"></div>
+<div class="crop-mark crop-br-h"></div>
+<div class="crop-mark crop-br-v"></div>
+
+<!-- Crop marks — spine fold lines -->
+<div class="crop-mark crop-spine-l-t"></div>
+<div class="crop-mark crop-spine-l-b"></div>
+<div class="crop-mark crop-spine-r-t"></div>
+<div class="crop-mark crop-spine-r-b"></div>
+
+</body>
+</html>

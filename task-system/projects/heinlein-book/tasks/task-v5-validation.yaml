@@ -1,0 +1,59 @@
+id: heinlein-v5-validation
+project: heinlein-book
+title: "V5 Komplett-Validation unter neuen Prämissen"
+created: 2026-02-08T01:14:00Z
+status: in_progress
+
+intention: |
+  Das Buch soll INNERLICH funktionieren — fesselnd, glaubwürdig, handwerklich exzellent.
+  Keine externen Checklisten (Bechdel, Sensitivity). Fokus auf Qualität.
+
+context: |
+  - 14 Kapitel, ~57.000 Wörter (inkl. 2 neue Sophia-Szenen in Kap 4 + 9)
+  - V4 Score: Ø 8.5 (6 Rollen ohne Sensitivity)
+  - Lektor-Cleanup teilweise durchgeführt (6/50 Änderungen)
+  - Framework: 6 Rollen (Reader, Critic, Heinlein Fan, Lektor, Geopolitik, Verlag)
+  - KEIN Sensitivity Reader, KEIN Bechdel-Test, KEINE Gender-Checkliste
+  - Ferretti: Brenner tötet ihn. Das ist eine Stärke.
+
+quality_criteria:
+  quantitative:
+    - metric: "Jede Rolle bewertet 1-10"
+    - metric: "Durchschnitt aller 6 Rollen berechnet"
+    - metric: "Vergleich mit V4 Scores dokumentiert"
+    - pass_threshold: "Ø ≥ 8.0"
+  qualitative:
+    - criterion: "Ehrliche Bewertung ohne Checklisten-Mentalität"
+    - criterion: "Innere Konsistenz über externe Ideologie"
+    - criterion: "Konkrete Verbesserungsvorschläge wo nötig"
+    - criterion: "Sophia-Szenen separat bewertet"
+    - min_score: 7
+
+validation:
+  type: external_subagent
+  method: "Sub-Agent liest alle 14 Kapitel und bewertet aus 6 Perspektiven"
+  output: "projects/heinlein-book/validation/v5-complete.md"
+
+roles:
+  - name: "Regular Reader"
+    focus: "Unterhaltung, Spannung, Page-Turner"
+  - name: "Literary Critic" 
+    focus: "Sprache, Struktur, Figuren, Thema (FAZ/Zeit Niveau)"
+  - name: "Heinlein Fan"
+    focus: "TANSTAAFL, Competent Man, Dialog, Anti-Held"
+  - name: "Lektor"
+    focus: "Wort-Tics, Pacing, Kürzungsbedarf, Druckfertigkeit"
+  - name: "Geopolitik-Experte"
+    focus: "Seerecht, Flaggenstaat, Multipolar, Finanzarchitektur"
+  - name: "Verlag"
+    focus: "Publishability, Markt, Hörbuch, International, Film"
+
+removed_roles:
+  - name: "Sensitivity Reader"
+    reason: "Erik 2026-02-08: Keine externen Checklisten. Buch muss innerlich funktionieren."
+  - name: "Bechdel-Test"
+    reason: "Erik 2026-02-08: Irrelevant für diesen Roman. Nie wieder verwenden."
+
+notes: |
+  Eriks Prämisse: "Ein fantastisch gutes Buch, das sich nicht um Blödsinn kümmert, 
+  aber dafür inhärent interessant ist und innerlich funktioniert."

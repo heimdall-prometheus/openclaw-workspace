@@ -1,0 +1,241 @@
+{
+  "crawl_datum": "2026-02-06",
+  "unser_shop": {
+    "name": "mein-schluessel.de",
+    "firma": "Becker Sicherheitstechnik GmbH (22.5% Erik)",
+    "plattform": "Shopware 6",
+    "gesamt_produkte": 1455,
+    "aktive_produkte": 1100,
+    "hersteller": [
+      "Becker Sicherheitstechnik GmbH", "Master Lock", "BMH", "SimonsVoss", "Silca",
+      "Bever", "AXA Bike Security", "KBV", "GEZE", "BKS", "Hoppe", "Salto", "EDI",
+      "Abus", "DOM", "Burg Wächter", "effeff ASSA ABLOY", "WILKA", "BASI", "IKON",
+      "KFV", "ASSA ABLOY", "Lienbacher", "ISEO", "Winkhaus", "Fuhr", "Häfele",
+      "Interflon", "Wilhelm Kessler", "Woelm", "Rottner Tresor GmbH", "ToniTec",
+      "Athmer", "FSB", "Schake", "BMB", "CTS", "Karcher GmbH", "Dormakaba",
+      "HEWI", "Malte Block", "HEKATRON", "Leabox", "Fridavo", "SSF", "Wasu",
+      "Euro-Locks", "Intersteel", "DENI", "MWS", "PLANO", "CES", "Schnegel",
+      "NEMEF", "Planet", "Locinox", "ERGO", "Promat", "eSafe", "SUDHAUS GmbH", "GSG"
+    ],
+    "kategorien": [
+      "Schließanlagen",
+      "Sicherheitstechnik",
+      "Schließzylinder (mechanisch)",
+      "Elektronische Schließsysteme (SimonsVoss, Salto, DOM, Winkhaus)",
+      "Türschlösser / Einsteckschlösser",
+      "Türbeschläge",
+      "Türschließer (GEZE)",
+      "Vorhängeschlösser",
+      "Schlüsseldienst-Bedarf (Silca, Rohmaschinen)",
+      "Einbausicherungen (ISEO)",
+      "Panikschlösser (BKS)",
+      "Fahrradschlösser (AXA)"
+    ],
+    "top_hersteller_produkte": {
+      "SimonsVoss": 52,
+      "GEZE": 43,
+      "BKS": 36,
+      "Salto": 31,
+      "DOM": 24,
+      "ISEO": 8,
+      "Winkhaus": 8
+    }
+  },
+  "wettbewerber": [
+    {
+      "name": "endlich-sicher.de",
+      "firma": "FERSYS GmbH",
+      "standort": "Deutschland",
+      "groesse": "sehr groß",
+      "geschaetzte_produkte": "15000+",
+      "staerken": "Breitestes Sortiment, SEO-Marktführer, auch Werkzeuge/Haushalt, sehr gute Content-Strategie",
+      "usp": "One-Stop-Shop für Sicherheitstechnik + Werkzeuge + Haushalt",
+      "hersteller": [
+        "ABUS", "BKS", "Burg Wächter", "CES", "DOM", "dormakaba", "EVVA",
+        "FSB", "GEZE", "HEWI", "Hoppe", "IKON", "ISEO", "KESO",
+        "SimonsVoss", "Winkhaus", "Wilka", "Brennenstuhl", "Ei Electronics",
+        "Hekatron", "Pyrexx", "SPAX", "Pattex", "WERA"
+      ],
+      "kategorien": [
+        "Tür- & Torbedarf", "Profilzylinder", "Türschließer", "Türbeschläge",
+        "Schlösser", "Fenstersicherung", "Brandschutz", "Smart Home",
+        "Werkzeuge", "Haushalt", "Briefkästen", "Tresore", "Alarmanlagen",
+        "Überwachungskameras"
+      ],
+      "fuehrt_unsere_top": {
+        "SimonsVoss": true,
+        "Salto": false,
+        "DOM": true,
+        "Winkhaus": true,
+        "GEZE": true,
+        "BKS": true,
+        "ISEO": true
+      }
+    },
+    {
+      "name": "wagner-sicherheit.de",
+      "firma": "Wagner Sicherheitstechnik AG",
+      "standort": "Würzburg",
+      "groesse": "groß",
+      "geschaetzte_produkte": "10000+",
+      "staerken": "Seit 1956, 250.000+ Kunden, 1.6M Besucher/Jahr, starker Fachhandel",
+      "usp": "Traditionsunternehmen mit breitem Sortiment + Schlüsseldienst",
+      "hersteller": [
+        "ABUS", "Ballistol", "Bever", "BKS", "Burg Wächter", "CES", "Creone",
+        "Dictator", "Digibox", "DOM", "EMKA", "Erich Dieckmann", "Euro-Locks",
+        "EVVA", "Fridavo", "GEZE", "GfS", "HEIBI", "Hekna", "Hermat",
+        "Hettich", "Huwil", "JuNie", "KESO", "Master Lock", "MLM / Lehmann",
+        "Nuki", "Schnegel", "SimonsVoss", "Squire", "SSF", "STUV", "Sudhaus",
+        "SvenskaV", "Tedee", "Vosker", "WD-40", "Weber Protect", "Wilka",
+        "Winkhaus", "Wittenbauer", "WSS", "Salto"
+      ],
+      "kategorien": [
+        "Profilzylinder", "Schließanlagen", "Schlüsseldienst",
+        "Sicherheitstechnik", "Zutrittskontrolle", "Türschließer",
+        "Türbeschläge", "Fenstersicherheit", "Videoüberwachung",
+        "Alarmanlagen", "Briefkästen", "Garten/Haus", "Tresore"
+      ],
+      "fuehrt_unsere_top": {
+        "SimonsVoss": true,
+        "Salto": true,
+        "DOM": true,
+        "Winkhaus": true,
+        "GEZE": true,
+        "BKS": true,
+        "ISEO": false
+      }
+    },
+    {
+      "name": "sicher24.de",
+      "firma": "FELGNER Sicherheitstechnik GmbH & Co. KG",
+      "standort": "Dresden",
+      "groesse": "groß",
+      "geschaetzte_produkte": "8000+",
+      "staerken": "Seit 1967, Zylinder-Spezialist, breites Digital-Sortiment, eigene Tresore",
+      "usp": "Zylinderexperte mit größtem Digital-Schließsystem-Vergleich",
+      "hersteller": [
+        "ABUS", "ASSA ABLOY", "BKS", "Burg Wächter", "CES", "Danalock",
+        "DOM", "dormakaba", "EVVA", "GEZE", "Hoppe", "IKON", "ISEO",
+        "KESO", "MEFA", "Renz", "Rottner Tresor", "SALTO", "SimonsVoss",
+        "SÜD-METALL", "Tapkey", "Tedee", "Weissensee", "Winkhaus", "Wilka",
+        "Müller Safe", "Phoenix Safes", "SISTEC", "Stückrad"
+      ],
+      "kategorien": [
+        "Schlösser", "Profilzylinder", "Beschläge", "Digitale Schließzylinder",
+        "Postkästen/Briefkästen", "Türtechnik", "Türzusatzsicherung",
+        "Fensterzusatzsicherungen", "Tresore (Möbeltresore, Tresorraumtüren)",
+        "Hebelzylinder", "Geldkassetten", "Pflegemittel"
+      ],
+      "fuehrt_unsere_top": {
+        "SimonsVoss": true,
+        "Salto": true,
+        "DOM": true,
+        "Winkhaus": true,
+        "GEZE": true,
+        "BKS": true,
+        "ISEO": true
+      }
+    },
+    {
+      "name": "schliessanlage-kaufen.de / siko-shop.de",
+      "firma": "Sicherheitstechnik Kortus",
+      "standort": "Schmölln, Thüringen",
+      "groesse": "mittel",
+      "geschaetzte_produkte": "2000+",
+      "staerken": "Eigene Schließanlagen-Fertigung, persönliche Beratung, Konfigurator",
+      "usp": "Schließanlagen-Spezialist mit Konfigurator + eigene Fertigung",
+      "hersteller": [
+        "ISEO", "ABUS", "EVVA", "Wilka", "Zi-IKON", "Winkhaus", "DOM",
+        "SimonsVoss", "ASSA ABLOY"
+      ],
+      "kategorien": [
+        "Mechanische Schließanlagen", "Elektronische Schließsysteme",
+        "Schließzylinder", "Tresore", "Videoüberwachung", "Einbruchschutz"
+      ],
+      "fuehrt_unsere_top": {
+        "SimonsVoss": true,
+        "Salto": false,
+        "DOM": true,
+        "Winkhaus": true,
+        "GEZE": false,
+        "BKS": false,
+        "ISEO": true
+      }
+    },
+    {
+      "name": "graefe24.de",
+      "firma": "Gräfe GmbH",
+      "standort": "Deutschland",
+      "groesse": "mittel",
+      "geschaetzte_produkte": "3000+",
+      "staerken": "Fachhandel, elektronische Schließanlagen, Beratung",
+      "usp": "Fachhändler-Beratung + breites Zylinderportfolio",
+      "hersteller": [
+        "ABUS", "EVVA", "KESO", "SimonsVoss", "dormakaba", "DOM", "BKS", "IKON"
+      ],
+      "kategorien": [
+        "Profilzylinder", "Schließanlagen", "Elektronische Schließsysteme",
+        "Türsprechanlagen", "Überwachungskameras", "Türsicherheit", "Alarmanlagen"
+      ],
+      "fuehrt_unsere_top": {
+        "SimonsVoss": true,
+        "Salto": false,
+        "DOM": true,
+        "Winkhaus": false,
+        "GEZE": false,
+        "BKS": true,
+        "ISEO": false
+      }
+    },
+    {
+      "name": "profilzylinderprofi.de",
+      "firma": "Profilzylinderprofi",
+      "standort": "Deutschland",
+      "groesse": "klein-mittel",
+      "geschaetzte_produkte": "1500+",
+      "staerken": "Spezialist für Schließzylinder, deutsche Hersteller",
+      "usp": "Reiner Zylinder-Spezialist mit Konfiguratorservice",
+      "hersteller": [
+        "DOM", "BKS", "IKON", "dormakaba", "CES"
+      ],
+      "kategorien": [
+        "Schließzylinder", "Schließanlagen", "Elektronische Schließsysteme"
+      ],
+      "fuehrt_unsere_top": {
+        "SimonsVoss": false,
+        "Salto": false,
+        "DOM": true,
+        "Winkhaus": false,
+        "GEZE": false,
+        "BKS": true,
+        "ISEO": false
+      }
+    },
+    {
+      "name": "beschlagverkauf24.de",
+      "firma": "Beschlagverkauf24",
+      "standort": "Deutschland",
+      "groesse": "mittel",
+      "geschaetzte_produkte": "3000+",
+      "staerken": "Beschlag-Spezialist, Designmarken, auch Schiffsbeschläge",
+      "usp": "Premium-Beschläge von JATEC, Bisschop, Dauby, FSB",
+      "hersteller": [
+        "JATEC", "Bisschop", "Dauby", "FSB", "HEWI", "RANDI", "Intersteel",
+        "Karcher", "Samuel Heath", "ABUS", "Brundert"
+      ],
+      "kategorien": [
+        "Haustürbeschläge", "Zimmertürbeschläge", "Fensterbeschläge",
+        "Möbelbeschläge", "Schiffsbeschläge", "Elektronische Schließanlagen"
+      ],
+      "fuehrt_unsere_top": {
+        "SimonsVoss": false,
+        "Salto": false,
+        "DOM": false,
+        "Winkhaus": false,
+        "GEZE": false,
+        "BKS": false,
+        "ISEO": false
+      }
+    }
+  ]
+}

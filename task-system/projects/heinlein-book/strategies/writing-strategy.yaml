@@ -1,0 +1,74 @@
+name: "Kapitelweise Produktion mit Qualitätskontrolle"
+slug: writing-strategy
+project: heinlein-book
+created: 2026-02-07
+
+goal: >
+  Jedes Kapitel als eigenständiger Task mit Validator-Prüfung.
+  Qualität vor Geschwindigkeit. Lieber ein exzellentes Kapitel pro Session
+  als drei mittelmäßige.
+
+approach:
+  - "1 Task = 1 Kapitel (~4.000 Wörter)"
+  - "Jedes Kapitel wird gegen Heinlein-Stil-Kriterien validiert"
+  - "Validator prüft: Stil, Plot-Konsistenz, Charakter-Treue, Technik-Glaubwürdigkeit"
+  - "Erik reviewt nach bestandener Validierung"
+  - "Kapitel werden sequentiell geschrieben (Plotkohärenz)"
+
+quality_criteria_global:
+  style:
+    - "Dritte Person, nah an Brenner"
+    - "Dialog-getrieben (min. 40% Dialog)"
+    - "Keine innere Einkehr / Gefühlsbeschreibungen des Protagonisten"
+    - "Technische Details präzise und als Storytelling-Element"
+    - "Trocken, kompetent, gelegentlich zynisch"
+    - "Kein Pathos, kein Filler ('Great question!'-Energie vermeiden)"
+  
+  structure:
+    - "Heinlein-Picaresque: Hindernis → Schachzug → Teilerfolg → nächstes Hindernis"
+    - "Kein Campbell Hero's Journey"
+    - "Jedes Kapitel hat einen klaren Move / Deal / Wendung"
+  
+  characters:
+    - "Brenner = kompetenter Mann der Tat, spricht nicht über Gefühle"
+    - "Nebenfiguren durch Handlung charakterisiert, nicht durch Beschreibung"
+    - "Keine Schurken — nur Systeme und Menschen die sie bedienen"
+  
+  themes:
+    - "Sovereign Individual-Philosophie konsistent eingewebt"
+    - "Multipolares Geopolitik-Schach (keine binären Konflikte)"
+    - "Technik als Poesie, nicht als Infodump"
+
+validator_prompt_additions: |
+  Du bewertest ein Kapitel eines Romans im Stile von Robert A. Heinlein.
+  
+  BESONDERE PRÜFPUNKTE:
+  1. Klingt es nach Heinlein? Nicht nach modernem Literary Fiction, nicht nach YA, nicht nach Thriller.
+     Heinlein = kompetent, trocken, dialog-getrieben, technisch präzise, kein Pathos.
+  2. Hat der Protagonist innere Monologe über Gefühle? → FAIL. Brenner zeigt Emotion durch Handlung.
+  3. Gibt es einen klaren Hustle/Move in diesem Kapitel? → Wenn nicht, fehlt der Plot-Motor.
+  4. Sind die technischen/rechtlichen Details plausibel? → Recherche-Check.
+  5. Liest es sich wie ein Heinlein-Kapitel aus den 1950ern, modernisiert? → Das ist der Goldstandard.
+
+# REGEL: IMMER externe Validierung (eigener Sub-Agent). 
+# Keine Selbst-Validierung als Ersatz. Erik's Anweisung 2026-02-07.
+
+# QM-PIPELINE (nach jedem Kapitel):
+# 1. Lektor-Pass (Sub-Agent) → editiert Datei direkt
+#    Ref: strategies/lektor-strategy.yaml
+#    Scannt: Stille-Tics, Satz-Muster, Wort-Wiederholungen, Metaphern, Leitmotiv-Dosierung
+# 2. DANN erst 3-Rollen-Validierung (Reader + Kritiker + Heinlein-Fan)
+# Erik's Anweisung 2026-02-07: "Grundsätzliche Lösung für QM, nicht nur für einen Tic"
+
+# V5 Framework Update (2026-02-08, Erik's Entscheidung)
+validation_framework:
+  roles: ["Reader", "Critic", "Heinlein Fan", "Lektor", "Geopolitik", "Verlag"]
+  removed:
+    - role: "Sensitivity Reader"
+      reason: "Keine externen Checklisten. Buch muss innerlich funktionieren."
+      date: 2026-02-08
+    - role: "Bechdel-Test"
+      reason: "Irrelevant. Nie wieder verwenden."
+      date: 2026-02-08
+  principle: "Innere Qualität über externe Ideologie"
+  ferretti_rule: "Brenner tötet Ferretti. Das ist eine Stärke, kein Problem."

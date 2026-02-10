@@ -1,0 +1,42 @@
+id: gh-29
+title: "Leaderboard Backend"
+status: open
+github_issue: 29
+
+project: fangfuehrer
+strategy: mvp-launch
+phase: 6
+
+intention: |
+  Wettbewerb ermöglichen - der größte Motivator für viele Angler.
+
+target_audience: |
+  Kompetitive User
+
+criteria:
+  quantitative:
+    - "Global Leaderboard"
+    - "Per-Gewässer Rankings"
+    - "Zeitbasiert (Woche/Monat/All-Time)"
+  
+  qualitative:
+    - "Performant bei vielen Entries"
+    - "Anti-Cheat Grundlagen"
+
+validation:
+  loop_count: 0
+  max_loops: 10
+  min_qualitative_score: 7
+  history: []
+
+created: "2026-02-04T11:45:00Z"
+created_by: heimdall
+updated: "2026-02-04T11:45:00Z"
+completed: ""
+
+artifacts: []
+
+notes: |
+  GitHub Issue: https://github.com/heimdall-prometheus/fangfuehrer/issues/29
+  Type: feature
+  Priority: critical

@@ -1,0 +1,92 @@
+# Task: Shopsystem-Vergleich Artikel
+
+id: task-2026-01-31-002
+title: "Blog-Artikel: Shopify vs. WooCommerce vs. Shopware Vergleich 2026"
+status: open
+
+project: imr-media
+strategy: content-q1-2026
+tactic: seo-blog-content
+
+intention: |
+  Boomer Business Owners stehen vor der Entscheidung welches Shopsystem sie nutzen sollen.
+  Der Artikel soll ihnen helfen, eine informierte Entscheidung zu treffen - mit KLARER 
+  IMR-Empfehlung basierend auf echter Projekterfahrung.
+  
+  Sekundär: SEO-Traffic für Keywords wie "shopsystem vergleich", "shopify vs woocommerce"
+
+target_audience: |
+  Boomer Small Business Owners (50-70 Jahre):
+  - Stehen vor erster Shop-Entscheidung
+  - Kennen vielleicht Namen (Shopify), aber keine Details
+  - Wollen EINFACHE Empfehlung, keine technischen Details
+  - Budget-bewusst, aber bereit für Qualität zu zahlen
+  - Brauchen "das richtige für MICH", nicht "das beste"
+
+# === IMR MEDIA POSITION (von Erik bestätigt 2026-01-31) ===
+editorial_position:
+  woocommerce: 
+    recommendation: "NICHT EMPFOHLEN"
+    reason: "WordPress-basiert = Wartungs-Hölle, Sicherheitsprobleme, Plugin-Chaos"
+    tone: "Fair behandeln, aber ehrlich abraten"
+  shopify:
+    recommendation: "EMPFOHLEN für simple Fälle"
+    reason: "Schneller Start, wenig Technik-Aufwand, gut für Einsteiger"
+    ideal_for: "Kleine Shops, <100 Produkte, schnell starten wollen"
+  shopware:
+    recommendation: "EMPFOHLEN für komplexe Fälle"
+    reason: "Deutscher Markt, skalierbar, professionell, B2B-fähig"
+    ideal_for: "Wachstum geplant, >100 Produkte, DE-Markt, B2B"
+  vendure:
+    recommendation: "EMPFOHLEN für Headless"
+    reason: "Modern, flexibel, Tech-Stack nach Wahl"
+    ideal_for: "Tech-savvy, individuelle Anforderungen, API-first"
+    note: "Optional erwähnen als 4. Option für fortgeschrittene Fälle"
+
+criteria:
+  quantitative:
+    - "Mindestens 2.500 Wörter"
+    - "Meta-Title vorhanden (max 60 Zeichen)"
+    - "Meta-Description vorhanden (max 155 Zeichen)"
+    - "H1 + mindestens 5 H2-Überschriften"
+    - "Vergleichstabelle vorhanden (alle 3 Hauptsysteme)"
+    - "Preisvergleich mit konkreten Zahlen"
+    - "CTA am Ende"
+    
+  qualitative:
+    - "Ehrliche IMR-Empfehlung klar kommuniziert"
+    - "WooCommerce fair aber kritisch behandelt (warum nicht)"
+    - "Empfehlungen nach USE-CASE strukturiert"
+    - "Keine technischen Begriffe ohne Erklärung"
+    - "Entscheidungshilfe am Ende ('Wenn Sie X, dann Y')"
+    - "Vertrauenswürdig - Erfahrung zeigen, nicht Marketing-Sprech"
+
+validation:
+  loop_count: 0
+  max_loops: 10
+  min_qualitative_score: 7
+  stages:
+    - name: content
+      description: "Artikel-Inhalt validieren"
+      status: pending
+    - name: deployment
+      description: "Live auf Website prüfen"  
+      status: pending
+  history: []
+
+created: "2026-01-31T16:47:00Z"
+created_by: heimdall
+updated: "2026-01-31T16:48:00Z"
+
+artifacts: []
+
+notes: |
+  Artikel 5 laut Content-Plan Q1.
+  Geplante Veröffentlichung: Donnerstag 13.02.2026
+  Slug: /blog/shopsystem-vergleich
+  
+  WICHTIG: Position von Erik bestätigt am 2026-01-31:
+  - WooCommerce NIE empfehlen (WordPress-Hass)
+  - Shopify für simple Fälle
+  - Shopware für komplexe Fälle
+  - Vendure für Headless (optional erwähnen)

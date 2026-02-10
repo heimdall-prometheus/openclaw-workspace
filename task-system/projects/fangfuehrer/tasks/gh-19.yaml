@@ -1,0 +1,42 @@
+id: gh-19
+title: "ARKit Integration (iOS)"
+status: open
+github_issue: 19
+
+project: fangfuehrer
+strategy: mvp-launch
+phase: 4
+
+intention: |
+  Premium-Feature: Fische exakt vermessen ohne Maßband - Differentiator zu Web.
+
+target_audience: |
+  iOS-User, besonders Wettkampf-Angler
+
+criteria:
+  quantitative:
+    - "AR Session startet ohne Crash"
+    - "Fischerkennung funktioniert"
+    - "Messung ±2cm Genauigkeit"
+  
+  qualitative:
+    - "Intuitive Bedienung"
+    - "Funktioniert bei verschiedenen Lichtverhältnissen"
+
+validation:
+  loop_count: 0
+  max_loops: 10
+  min_qualitative_score: 7
+  history: []
+
+created: "2026-02-04T11:45:00Z"
+created_by: heimdall
+updated: "2026-02-04T11:45:00Z"
+completed: ""
+
+artifacts: []
+
+notes: |
+  GitHub Issue: https://github.com/heimdall-prometheus/fangfuehrer/issues/19
+  Type: feature
+  Priority: critical

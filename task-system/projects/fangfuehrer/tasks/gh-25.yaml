@@ -1,0 +1,42 @@
+id: gh-25
+title: "Achievement-Engine"
+status: open
+github_issue: 25
+
+project: fangfuehrer
+strategy: mvp-launch
+phase: 5
+
+intention: |
+  Automatische Erkennung von Achievements - Überraschungsmomente schaffen.
+
+target_audience: |
+  Alle aktiven User
+
+criteria:
+  quantitative:
+    - "Event-basierte Checks"
+    - "Batch-Processing für historische Fänge"
+    - "Notification bei Unlock"
+  
+  qualitative:
+    - "Keine False Positives"
+    - "Performance bei vielen Usern"
+
+validation:
+  loop_count: 0
+  max_loops: 10
+  min_qualitative_score: 7
+  history: []
+
+created: "2026-02-04T11:45:00Z"
+created_by: heimdall
+updated: "2026-02-04T11:45:00Z"
+completed: ""
+
+artifacts: []
+
+notes: |
+  GitHub Issue: https://github.com/heimdall-prometheus/fangfuehrer/issues/25
+  Type: feature
+  Priority: high

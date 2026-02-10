@@ -1,0 +1,8 @@
+name: Hapex (Lebensmittel Sonderposten)
+slug: hapex
+description: Shopware 6.7 Shop — Consulting Mandat 4h/Woche
+url_dev: https://dev2.lebensmittel-sonderposten.de
+server: root@46.101.247.162
+path: /var/www/dev2.lebensmittel-sonderposten.de/web
+plugin_path: custom/plugins/LebensmittelSonderposten
+budget_weekly: 4h

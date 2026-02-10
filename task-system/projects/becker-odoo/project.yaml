@@ -1,0 +1,9 @@
+id: becker-odoo
+title: "Becker Sicherheitstechnik - Odoo ERP Migration"
+description: |
+  Migration des Legacy-ERP (uswBS/InterBase) zu Odoo 17.
+  Umfasst: Datenanalyse, Bereinigung, Import, Konfiguration, Schulung.
+client: "Becker Sicherheitstechnik GmbH"
+partner: "Uwe Becker"
+status: active
+created: "2026-02-04"

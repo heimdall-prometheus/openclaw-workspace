@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; color: #333; line-height: 1.6; }
+h1 { color: #1a3a5c; border-bottom: 2px solid #1a3a5c; padding-bottom: 10px; }
+h2 { color: #2d5a87; margin-top: 30px; }
+h3 { color: #4a7ab5; }
+table { border-collapse: collapse; width: 100%; margin: 15px 0; }
+th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+th { background: #f5f7fa; }
+.header { text-align: center; margin-bottom: 40px; }
+.header h1 { border: none; }
+.header p { color: #666; }
+.section { margin-bottom: 25px; }
+ul { margin: 10px 0; }
+li { margin: 5px 0; }
+</style>
+</head>
+<body>
+
+<div class="header">
+<h1>Heimdall Analytics — Design Documentation</h1>
+<p>Google Ads API Tool Documentation</p>
+<p>Erik Reisig Investment GmbH</p>
+<p>February 2026</p>
+</div>
+
+<div class="section">
+<h2>1. Overview</h2>
+<p><strong>Heimdall Analytics</strong> is an internal reporting and analytics tool developed by Erik Reisig Investment GmbH for managing and optimizing Google Ads campaigns across our portfolio of e-commerce properties.</p>
+<p>The tool is used exclusively for internal purposes — it is not a third-party application, SaaS product, or publicly available service. It serves as a centralized dashboard combining Google Ads performance data with Google Search Console metrics for holistic search marketing analysis.</p>
+</div>
+
+<div class="section">
+<h2>2. Purpose & Use Cases</h2>
+<table>
+<tr><th>Use Case</th><th>Description</th><th>API Features Used</th></tr>
+<tr><td>Performance Reporting</td><td>Automated daily/weekly reports combining Ads + organic search data</td><td>GoogleAdsService.SearchStream (read-only)</td></tr>
+<tr><td>Campaign Analysis</td><td>Analyze campaign, ad group, and keyword performance metrics</td><td>GoogleAdsService.SearchStream (read-only)</td></tr>
+<tr><td>Budget Monitoring</td><td>Track spend vs. budget across campaigns</td><td>GoogleAdsService.SearchStream (read-only)</td></tr>
+<tr><td>Keyword Research</td><td>Identify high-potential keywords from combined GSC + Ads data</td><td>KeywordPlanService (read-only)</td></tr>
+</table>
+</div>
+
+<div class="section">
+<h2>3. Architecture</h2>
+<h3>3.1 System Components</h3>
+<ul>
+<li><strong>Data Collection:</strong> Python scripts using the Google Ads API client library (google-ads-python) to fetch campaign performance data via GAQL queries</li>
+<li><strong>Data Storage:</strong> Local JSON/CSV files for reporting; no external database</li>
+<li><strong>Analysis:</strong> Python-based analysis combining Google Ads metrics with Google Search Console API data</li>
+<li><strong>Output:</strong> Internal reports delivered via secure messaging (Telegram) to company stakeholders</li>
+</ul>
+
+<h3>3.2 Technical Stack</h3>
+<ul>
+<li>Language: Python 3.12</li>
+<li>Google Ads API Client: google-ads v29.0 (Python)</li>
+<li>Authentication: OAuth 2.0 (Desktop application flow)</li>
+<li>Hosting: Private Linux server (Ubuntu 24.04)</li>
+</ul>
+
+<h3>3.3 Data Flow</h3>
+<p>Google Ads API → Python Script → Local Analysis → Internal Report</p>
+<p>All data remains on our private server. No data is shared with third parties or stored in cloud services.</p>
+</div>
+
+<div class="section">
+<h2>4. API Usage</h2>
+<h3>4.1 Operations</h3>
+<p>The tool performs <strong>read-only operations only</strong>. We do not create, modify, or delete any campaigns, ads, or settings via the API. All campaign management is done through the Google Ads UI.</p>
+
+<h3>4.2 API Methods Used</h3>
+<ul>
+<li><code>GoogleAdsService.SearchStream</code> — Query campaign, ad group, keyword, and metrics data</li>
+<li><code>CustomerService.ListAccessibleCustomers</code> — Discover linked accounts</li>
+</ul>
+
+<h3>4.3 Rate Limiting</h3>
+<p>Expected API usage: 10-50 requests per day (reporting queries). The tool runs scheduled reports 2-3 times daily and on-demand analysis as needed.</p>
+
+<h3>4.4 Managed Accounts</h3>
+<p>The tool manages a small number of accounts (1-5) owned by Erik Reisig Investment GmbH and its portfolio companies.</p>
+</div>
+
+<div class="section">
+<h2>5. Authentication & Security</h2>
+<ul>
+<li>OAuth 2.0 Desktop application flow with offline refresh tokens</li>
+<li>Credentials stored securely on a private server with restricted file permissions (chmod 600)</li>
+<li>No credentials are exposed in source code or logs</li>
+<li>Access limited to authorized internal users only</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>6. Compliance</h2>
+<ul>
+<li>The tool complies with the Google Ads API Terms of Service</li>
+<li>No automated bidding or campaign modifications via API</li>
+<li>No data reselling or sharing with third parties</li>
+<li>GDPR-compliant: No personal user data is collected or processed</li>
+<li>The tool is for internal analytics only and is not offered as a service to external clients</li>
+</ul>
+</div>
+
+<div class="section">
+<h2>7. Company Information</h2>
+<table>
+<tr><td><strong>Company</strong></td><td>Erik Reisig Investment GmbH</td></tr>
+<tr><td><strong>Address</strong></td><td>Duringstraße 23, 82299 Türkenfeld, Germany</td></tr>
+<tr><td><strong>Registry</strong></td><td>HRB 210714, AG München</td></tr>
+<tr><td><strong>Contact</strong></td><td>reisig@c-led.net</td></tr>
+<tr><td><strong>Website</strong></td><td>https://erikreisig.de</td></tr>
+</table>
+</div>
+
+</body>
+</html>

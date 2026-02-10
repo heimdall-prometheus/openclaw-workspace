@@ -1,0 +1,16 @@
+slug: fangfuehrer
+name: "FangFührer - Pokédex für Angler"
+description: "Mobile-first App für Fisch-Identifikation per Foto, Catch-Tracking und Gamification"
+owner: Erik
+status: active
+created: 2026-02-04
+tech_stack:
+  - Flutter (iOS/Android)
+  - Next.js PWA
+  - FastAPI Backend
+  - PostgreSQL + Redis
+  - GPT-4o Vision + Claude (Fish ID)
+repos:
+  - heimdall-prometheus/fangfuehrer
+  - heimdall-prometheus/fangfuehrer-web
+api: https://fangfuehrer-api.erikreisig.de

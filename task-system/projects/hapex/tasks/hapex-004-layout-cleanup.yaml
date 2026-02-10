@@ -1,0 +1,71 @@
+id: hapex-004
+project: hapex
+strategy: shop-optimization
+title: "CMS Layout Cleanup - Safe Delete unbenutzte Layouts"
+status: passed
+created: 2026-02-10
+assignee: heimdall
+
+intention: |
+  Shopware 6 Erlebniswelten/CMS-Layouts bereinigen, die 0 Zuweisungen haben.
+  Hapex hat nach Layout-Wildwuchs gefragt. Sauberes System = weniger Verwirrung.
+  Backup ermöglicht Rollback falls nötig.
+
+target_audience: "Hapex Team (lebensmittel-sonderposten.de)"
+
+quality_criteria:
+  quantitative:
+    - "Alle 15 Layouts mit 0 Zuweisungen gelöscht"
+    - "Backup-SQL kann jedes Layout einzeln wiederherstellen"
+    - "Keine zugewiesenen Layouts berührt"
+    - "Keine Fehler im Shopware Admin nach Cleanup"
+  qualitative:
+    - "Rollback-Script dokumentiert und getestet"
+    - "Löschung nur nach Backup-Verifikation"
+
+delete_targets:
+  # Unlocked, 0 assignments:
+  - id: "01932efb7dba708c852027a7fe5728ae"
+    name: "AGB (alt)"
+  - id: "ec5c825449ff45ac9b53960c9047c951"
+    name: "Biloba Hersteller Pro A-Z Liste"
+  - id: "8b75441bbf43459a8a5e62327c0ba585"
+    name: "Biloba Hersteller Pro Bilder Raster"
+  - id: "c2a8e865733049e6adfe3e0e8d31d43c"
+    name: "Biloba Hersteller Pro Detailseite"
+  - id: "01957281bec3798cad1db04cddc57bb9"
+    name: "Custom Product Page Layout"
+  - id: "01932efb7e0d7341a53b774826b90fff"
+    name: "Datenschutz (alt)"
+  - id: "019570af0ddc74ae9f10065d976dd74e"
+    name: "Homepage2 (Vorgänger)"
+  - id: "019c03fb975a734f882b9ac48a8c74b0"
+    name: "Homepage2 TEST - Kopie"
+  - id: "01997feafe1174ae8b7292049035099d"
+    name: "Rapid Mail Formular"
+  - id: "019a0b9648c371899a8fb96f86aca292"
+    name: "Unsere App - Kopie"
+  - id: "01932efb7d9472aea0f374c703810130"
+    name: "Versand und Zahlung (alt)"
+  - id: "01932efb7de472a9a5e3bf2c81205470"
+    name: "Widerrufsbelehrungen (alt)"
+
+  # Locked system defaults, 0 assignments (replaced by custom ones):
+  - id: "01932efb5eed737bb6360620e96b6b44"
+    name: "Standard Kategorie-Layout mit Sidebar"
+  - id: "01932efb71af72818e00f9df863203c9"
+    name: "Standard Shopseiten-Layout mit Kontaktformular"
+  - id: "01932efb71da73a0bd461b54f43b6cd0"
+    name: "Standard Shopseiten-Layout mit Newsletterformular"
+
+do_not_touch:
+  - "Standard Kategorie-Layout (1472 Kategorien)"
+  - "Homepage2 TEST (alle Sales Channels)"
+  - "Alle Layouts mit >= 1 Zuweisung"
+
+time_spent: "30min"
+
+notes: |
+  - Locked Layouts brauchen SET locked=0 vor DELETE
+  - Backup enthält cms_page + cms_page_translation + cms_section + cms_block + cms_slot + slot_translation
+  - Rollback: Einzelne SQL-Files pro Layout, einfach einspielen

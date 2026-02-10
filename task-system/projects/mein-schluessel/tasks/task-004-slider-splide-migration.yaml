@@ -1,0 +1,62 @@
+id: ms-task-004
+title: "Slider Migration: Tiny Slider → Splide.js (WCAG a11y)"
+project: mein-schluessel
+created: 2026-02-08T09:56:00Z
+created_by: erik
+status: working
+
+project: mein-schluessel
+strategy: bfsg-compliance
+parent_task: ms-task-002
+
+intention: |
+  Tiny Slider (tns) hat ein fundamentales a11y-Problem: Geklonte Slides mit 
+  aria-hidden="true" enthalten fokussierbare Elemente (18 Violations auf Startseite).
+  Splide.js ist von Grund auf WCAG-konform (ARIA-Rollen, Fokus-Management, 
+  Keyboard-Navigation). Ersetzt die Library sauber statt Workaround.
+
+target_audience: |
+  Screenreader-Nutzer, Tastatur-Nutzer, BFSG-Prüfer
+
+criteria:
+  quantitative:
+    - id: q1
+      description: "aria-hidden-focus Violations = 0 auf Startseite"
+    - id: q2
+      description: "Alle Produkt-Slider funktionieren (Prev/Next, Touch-Swipe, Auto-Play)"
+    - id: q3
+      description: "Keyboard-Navigation funktioniert (Tab, Enter, Pfeiltasten)"
+    - id: q4
+      description: "Theme kompiliert ohne Fehler"
+    - id: q5
+      description: "ms-dev.erikreisig.de HTTP 200, keine visuellen Regressionen"
+  qualitative:
+    - id: ql1
+      description: "Slider sieht visuell identisch aus (gleiche Produkt-Karten, gleiche Abstände)"
+      min_score: 7
+
+server:
+  dev_url: https://ms-dev.erikreisig.de
+  ssh: "ssh heimdall@46.225.103.201"
+  docker: ms-shopware-dev
+  theme_path: "/var/www/html/custom/plugins/RdMeinSchluesselTheme/"
+
+validation:
+  loop_count: 0
+  max_loops: 10
+  min_qualitative_score: 7
+  history: []
+
+live_url_validation:
+  urls:
+    - url: "https://ms-dev.erikreisig.de/"
+      expect: 200
+      screenshot: true
+    - url: "https://ms-dev.erikreisig.de/sicherheitstechnik/schliesszylinder/"
+      expect: 200
+      screenshot: true
+
+notes: |
+  Erik-Anweisung 2026-02-08: "B" (Splide.js, saubere Lösung)
+  Aufwand: 4-6h
+  NUR auf Dev deployen!

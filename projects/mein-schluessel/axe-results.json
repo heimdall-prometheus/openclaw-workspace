@@ -1,0 +1,2257 @@
+[
+  {
+    "name": "Startseite",
+    "url": "https://www.mein-schluessel.de",
+    "finalUrl": "https://www.mein-schluessel.de/",
+    "totalViolations": 9,
+    "totalNodes": 59,
+    "violations": [
+      {
+        "id": "aria-allowed-attr",
+        "impact": "critical",
+        "description": "Ensure an element's role supports its ARIA attributes",
+        "help": "Elements must only use supported ARIA attributes",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-allowed-attr?application=axe-puppeteer",
+        "tags": [
+          "wcag2a",
+          "wcag412"
+        ],
+        "nodes": [
+          {
+            "html": "<div class=\"footer-column-headline footer-headline js-collapse-footer-column-trigger\" id=\"collapseFooterNewsletterTitle\" data-target=\"#collapseFooterNewsletterTitle\" aria-expanded=\"true\" aria-controls",
+            "target": [
+              "#collapseFooterNewsletterTitle"
+            ],
+            "failureSummary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"true\""
+          },
+          {
+            "html": "<div class=\"footer-column-headline footer-headline js-collapse-footer-column-trigger\" data-bs-target=\"#collapseFooterTitle1\" aria-expanded=\"true\" aria-controls=\"collapseFooter1\">",
+            "target": [
+              "div[data-bs-target=\"#collapseFooterTitle1\"]"
+            ],
+            "failureSummary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"true\""
+          }
+        ]
+      },
+      {
+        "id": "aria-hidden-focus",
+        "impact": "serious",
+        "description": "Ensure aria-hidden elements are not focusable nor contain focusable elements",
+        "help": "ARIA hidden element must not be focusable or contain focusable elements",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-hidden-focus?application=axe-puppeteer",
+        "tags": [
+          "wcag2a",
+          "wcag412"
+        ],
+        "nodes": [
+          {
+            "html": "<div class=\"image-slider-item-container tns-item tns-slide-cloned\" tabindex=\"-1\" aria-hidden=\"true\">",
+            "target": [
+              ".image-slider-item-container.tns-slide-cloned[aria-hidden=\"true\"]:nth-child(1)"
+            ],
+            "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+          },
+          {
+            "html": "<div class=\"image-slider-item-container tns-item tns-slide-cloned\" tabindex=\"-1\" aria-hidden=\"true\">",
+            "target": [
+              ".image-slider-item-container.tns-slide-cloned[aria-hidden=\"true\"]:nth-child(6)"
+            ],
+            "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+          },
+          {
+            "html": "<div class=\"product-slider-item tns-item tns-slide-cloned\" tabindex=\"-1\" aria-hidden=\"true\">",
+            "target": [
+              "#tns2 > .tns-slide-cloned.tns-item[aria-hidden=\"true\"]:nth-child(1)"
+            ],
+            "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+          },
+          {
+            "html": "<div class=\"product-slider-item tns-item tns-slide-cloned\" tabindex=\"-1\" aria-hidden=\"true\">",
+            "target": [
+              "#tns2 > .tns-slide-cloned.tns-item[aria-hidden=\"true\"]:nth-child(2)"
+            ],
+            "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+          },
+          {
+            "html": "<div class=\"product-slider-item tns-item tns-slide-cloned\" tabindex=\"-1\" aria-hidden=\"true\">",
+            "target": [
+              "#tns2 > .tns-slide-cloned.tns-item[aria-hidden=\"true\"]:nth-child(3)"
+            ],
+            "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+          },
+          {
+            "html": "<div class=\"product-slider-item tns-item tns-slide-cloned\" tabindex=\"-1\" aria-hidden=\"true\">",
+            "target": [
+              "#tns2 > .tns-slide-cloned.tns-item[aria-hidden=\"true\"]:nth-child(4)"
+            ],
+            "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+          },
+          {
+            "html": "<div class=\"product-slider-item tns-item tns-slide-cloned\" tabindex=\"-1\" aria-hidden=\"true\">",
+            "target": [
+              "#tns2 > .tns-slide-cloned.tns-item[aria-hidden=\"true\"]:nth-child(5)"
+            ],
+            "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+          },
+          {
+            "html": "<div class=\"product-slider-item tns-item tns-slide-cloned\" tabindex=\"-1\" aria-hidden=\"true\">",
+            "target": [
+              "#tns2 > .tns-slide-cloned.tns-item[aria-hidden=\"true\"]:nth-child(6)"
+            ],
+            "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+          },
+          {
+            "html": "<div class=\"product-slider-item tns-item tns-slide-cloned\" tabindex=\"-1\" aria-hidden=\"true\">",
+            "target": [
+              ".tns-slide-cloned.tns-item[aria-hidden=\"true\"]:nth-child(7)"
+            ],
+            "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+          },
+          {
+            "html": "<div class=\"product-slider-item tns-item tns-slide-cloned\" tabindex=\"-1\" aria-hidden=\"true\">",
+            "target": [
+              ".tns-slide-cloned.tns-item[aria-hidden=\"true\"]:nth-child(8)"
+            ],
+            "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+          },
+          {
+            "html": "<div class=\"product-slider-item tns-item tns-slide-cloned\" tabindex=\"-1\" aria-hidden=\"true\">",
+            "target": [
+              ".tns-slide-cloned.tns-item[aria-hidden=\"true\"]:nth-child(19)"
+            ],
+            "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+          },
+          {
+            "html": "<div class=\"product-slider-item tns-item tns-slide-cloned\" tabindex=\"-1\" aria-hidden=\"true\">",
+            "target": [
+              ".tns-slide-cloned.tns-item[aria-hidden=\"true\"]:nth-child(20)"
+            ],
+            "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+          },
+          {
+            "html": "<div class=\"product-slider-item tns-item tns-slide-cloned\" tabindex=\"-1\" aria-hidden=\"true\">",
+            "target": [
+              ".tns-slide-cloned.tns-item[aria-hidden=\"true\"]:nth-child(21)"
+            ],
+            "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+          },
+          {
+            "html": "<div class=\"product-slider-item tns-item tns-slide-cloned\" tabindex=\"-1\" aria-hidden=\"true\">",
+            "target": [
+              ".tns-slide-cloned.tns-item[aria-hidden=\"true\"]:nth-child(22)"
+            ],
+            "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+          },
+          {
+            "html": "<div class=\"product-slider-item tns-item tns-slide-cloned\" tabindex=\"-1\" aria-hidden=\"true\">",
+            "target": [
+              ".tns-slide-cloned.tns-item[aria-hidden=\"true\"]:nth-child(23)"
+            ],
+            "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+          },
+          {
+            "html": "<div class=\"product-slider-item tns-item tns-slide-cloned\" tabindex=\"-1\" aria-hidden=\"true\">",
+            "target": [
+              ".tns-slide-cloned.tns-item[aria-hidden=\"true\"]:nth-child(24)"
+            ],
+            "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+          },
+          {
+            "html": "<div class=\"product-slider-item tns-item tns-slide-cloned\" tabindex=\"-1\" aria-hidden=\"true\">",
+            "target": [
+              ".tns-slide-cloned.tns-item[aria-hidden=\"true\"]:nth-child(25)"
+            ],
+            "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+          },
+          {
+            "html": "<div class=\"product-slider-item tns-item tns-slide-cloned\" tabindex=\"-1\" aria-hidden=\"true\">",
+            "target": [
+              ".tns-slide-cloned.tns-item[aria-hidden=\"true\"]:nth-child(26)"
+            ],
+            "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+          },
+          {
+            "html": "<div class=\"product-slider-item manufacturer-slider-item tns-item tns-slide-cloned\" tabindex=\"-1\" aria-hidden=\"true\">",
+            "target": [
+              ".tns-slide-cloned.manufacturer-slider-item[aria-hidden=\"true\"]:nth-child(1)"
+            ],
+            "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+          },
+          {
+            "html": "<div class=\"product-slider-item manufacturer-slider-item tns-item tns-slide-cloned\" tabindex=\"-1\" aria-hidden=\"true\">",
+            "target": [
+              ".tns-slide-cloned.manufacturer-slider-item[aria-hidden=\"true\"]:nth-child(2)"
+            ],
+            "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+          },
+          {
+            "html": "<div class=\"product-slider-item manufacturer-slider-item tns-item tns-slide-cloned\" tabindex=\"-1\" aria-hidden=\"true\">",
+            "target": [
+              ".tns-slide-cloned.manufacturer-slider-item[aria-hidden=\"true\"]:nth-child(3)"
+            ],
+            "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+          },
+          {
+            "html": "<div class=\"product-slider-item manufacturer-slider-item tns-item tns-slide-cloned\" tabindex=\"-1\" aria-hidden=\"true\">",
+            "target": [
+              ".tns-slide-cloned.manufacturer-slider-item[aria-hidden=\"true\"]:nth-child(4)"
+            ],
+            "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+          },
+          {
+            "html": "<div class=\"product-slider-item manufacturer-slider-item tns-item tns-slide-cloned\" tabindex=\"-1\" aria-hidden=\"true\">",
+            "target": [
+              ".tns-slide-cloned.manufacturer-slider-item[aria-hidden=\"true\"]:nth-child(5)"
+            ],
+            "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+          },
+          {
+            "html": "<div class=\"product-slider-item manufacturer-slider-item tns-item tns-slide-cloned\" tabindex=\"-1\" aria-hidden=\"true\">",
+            "target": [
+              ".tns-slide-cloned.manufacturer-slider-item[aria-hidden=\"true\"]:nth-child(30)"
+            ],
+            "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+          },
+          {
+            "html": "<div class=\"product-slider-item manufacturer-slider-item tns-item tns-slide-cloned\" tabindex=\"-1\" aria-hidden=\"true\">",
+            "target": [
+              ".tns-slide-cloned.manufacturer-slider-item[aria-hidden=\"true\"]:nth-child(31)"
+            ],
+            "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+          },
+          {
+            "html": "<div class=\"product-slider-item manufacturer-slider-item tns-item tns-slide-cloned\" tabindex=\"-1\" aria-hidden=\"true\">",
+            "target": [
+              ".tns-slide-cloned.manufacturer-slider-item[aria-hidden=\"true\"]:nth-child(32)"
+            ],
+            "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+          },
+          {
+            "html": "<div class=\"product-slider-item manufacturer-slider-item tns-item tns-slide-cloned\" tabindex=\"-1\" aria-hidden=\"true\">",
+            "target": [
+              ".tns-slide-cloned.manufacturer-slider-item[aria-hidden=\"true\"]:nth-child(33)"
+            ],
+            "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+          },
+          {
+            "html": "<div class=\"product-slider-item manufacturer-slider-item tns-item tns-slide-cloned\" tabindex=\"-1\" aria-hidden=\"true\">",
+            "target": [
+              ".tns-slide-cloned.manufacturer-slider-item[aria-hidden=\"true\"]:nth-child(34)"
+            ],
+            "failureSummary": "Fix all of the following:\n  Focusable content should have tabindex=\"-1\" or be removed from the DOM"
+          }
+        ]
+      },
+      {
+        "id": "aria-prohibited-attr",
+        "impact": "serious",
+        "description": "Ensure ARIA attributes are not prohibited for an element's role",
+        "help": "Elements must only use permitted ARIA attributes",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-prohibited-attr?application=axe-puppeteer",
+        "tags": [
+          "wcag2a",
+          "wcag412"
+        ],
+        "nodes": [
+          {
+            "html": "<div class=\"base-slider-controls\" data-product-slider-controls=\"true\" aria-label=\"Carousel Navigation\" tabindex=\"0\">",
+            "target": [
+              ".cms-block-product-slider > .cms-block-container > .cms-row.cms-block-container-row.row > .col-12 > .cms-element-product-slider > .product-slider.has-nav[data-product-slider=\"true\"] > .product-slider-controls-container > .base-slider-controls[data-product-slider-controls=\"true\"][aria-label=\"Carousel Navigation\"]"
+            ],
+            "failureSummary": "Fix all of the following:\n  aria-label attribute cannot be used on a div with no valid role attribute."
+          },
+          {
+            "html": "<div class=\"base-slider-controls\" data-product-slider-controls=\"true\" aria-label=\"Carousel Navigation\" tabindex=\"0\">",
+            "target": [
+              ".cms-element-manufacturer-slider > .product-slider.has-nav[data-product-slider=\"true\"] > .product-slider-controls-container > .base-slider-controls[data-product-slider-controls=\"true\"][aria-label=\"Carousel Navigation\"]"
+            ],
+            "failureSummary": "Fix all of the following:\n  aria-label attribute cannot be used on a div with no valid role attribute."
+          }
+        ]
+      },
+      {
+        "id": "aria-required-children",
+        "impact": "critical",
+        "description": "Ensure elements with an ARIA role that require child roles contain them",
+        "help": "Certain ARIA roles must contain particular children",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-required-children?application=axe-puppeteer",
+        "tags": [
+          "wcag2a",
+          "wcag131"
+        ],
+        "nodes": [
+          {
+            "html": "<div id=\"footerColumnsNewsletter\" class=\"row footer-columns\" data-collapse-footer-columns=\"true\" role=\"list\">",
+            "target": [
+              "#footerColumnsNewsletter"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: div[aria-controls], div[aria-labelledby]"
+          },
+          {
+            "html": "<div id=\"footerColumns\" class=\"row footer-columns\" data-collapse-footer-columns=\"true\" role=\"list\">",
+            "target": [
+              "#footerColumns"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: div[aria-controls], div[aria-labelledby]"
+          }
+        ]
+      },
+      {
+        "id": "button-name",
+        "impact": "critical",
+        "description": "Ensure buttons have discernible text",
+        "help": "Buttons must have discernible text",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/button-name?application=axe-puppeteer",
+        "tags": [
+          "wcag2a",
+          "wcag412"
+        ],
+        "nodes": [
+          {
+            "html": "<button class=\"base-slider-controls-prev product-slider-controls-prev\" aria-controls=\"tns2\" tabindex=\"-1\" data-controls=\"prev\">",
+            "target": [
+              ".product-slider-controls-prev.base-slider-controls-prev[aria-controls=\"tns2\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          },
+          {
+            "html": "<button class=\"base-slider-controls-next product-slider-controls-next\" aria-controls=\"tns2\" tabindex=\"-1\" data-controls=\"next\">",
+            "target": [
+              ".product-slider-controls-next.base-slider-controls-next[aria-controls=\"tns2\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          },
+          {
+            "html": "<button class=\"base-slider-controls-prev product-slider-controls-prev\" aria-controls=\"tns3\" tabindex=\"-1\" data-controls=\"prev\">",
+            "target": [
+              ".product-slider-controls-prev.base-slider-controls-prev[aria-controls=\"tns3\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          },
+          {
+            "html": "<button class=\"base-slider-controls-next product-slider-controls-next\" aria-controls=\"tns3\" tabindex=\"-1\" data-controls=\"next\">",
+            "target": [
+              ".product-slider-controls-next.base-slider-controls-next[aria-controls=\"tns3\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element does not have inner text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          }
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=axe-puppeteer",
+        "tags": [
+          "wcag2aa",
+          "wcag143"
+        ],
+        "nodes": [
+          {
+            "html": "<span class=\"badge bg-success badge-topseller\">Topseller</span>",
+            "target": [
+              "#tns2-item1 > .product-box.box-minimal.card > .card-body > .product-badges > div > .badge.badge-topseller.bg-success"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.31 (foreground color: #ffffff, background color: #3cc261, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"badge bg-success badge-topseller\">Topseller</span>",
+            "target": [
+              "#tns2-item2 > .product-box.box-minimal.card > .card-body > .product-badges > div > .badge.badge-topseller.bg-success"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.31 (foreground color: #ffffff, background color: #3cc261, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"badge bg-success badge-topseller\">Topseller</span>",
+            "target": [
+              "#tns2-item3 > .product-box.box-minimal.card > .card-body > .product-badges > div > .badge.badge-topseller.bg-success"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.31 (foreground color: #ffffff, background color: #3cc261, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"badge bg-success badge-topseller\">Topseller</span>",
+            "target": [
+              "#tns2-item4 > .product-box.box-minimal.card > .card-body > .product-badges > div > .badge.badge-topseller.bg-success"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.31 (foreground color: #ffffff, background color: #3cc261, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"badge bg-success badge-topseller\">Topseller</span>",
+            "target": [
+              "#tns2-item5 > .product-box.box-minimal.card > .card-body > .product-badges > div > .badge.badge-topseller.bg-success"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.31 (foreground color: #ffffff, background color: #3cc261, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<div class=\"footer-column-headline footer-headline js-collapse-footer-column-trigger\" id=\"collapseFooterNewsletterTitle\" data-target=\"#collapseFooterNewsletterTitle\" aria-expanded=\"true\" aria-controls",
+            "target": [
+              "#collapseFooterNewsletterTitle"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.81 (foreground color: #01425e, background color: #11aba8, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<div class=\"footer_newsletter_text\">",
+            "target": [
+              ".footer_newsletter_text"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<label for=\"form-privacy-opt-in-\" class=\"form-check-label\">",
+            "target": [
+              ".form-check-label"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<a data-ajax-modal=\"true\" data-url=\"/widgets/cms/0191fc1ccc727058b6c43f09980d856f\" href=\"/widgets/cms/0191fc1ccc727058b6c43f09980d856f\" title=\"Datenschutzbestimmungen\">Datenschutzbestimmungen</a>",
+            "target": [
+              "a[title=\"Datenschutzbestimmungen\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.81 (foreground color: #01425e, background color: #11aba8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<a data-ajax-modal=\"true\" data-url=\"/widgets/cms/0191fc1ccc5972a399bd907127378f02\" href=\"/widgets/cms/0191fc1ccc5972a399bd907127378f02\" title=\"AGB\">AGB</a>",
+            "target": [
+              "a[title=\"AGB\"][data-ajax-modal=\"true\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.81 (foreground color: #01425e, background color: #11aba8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button type=\"submit\" class=\"btn btn-primary\">\n                                            Alle Cookies akzeptieren\n                                        </button>",
+            "target": [
+              ".js-cookie-accept-all-button > .btn-primary.btn[type=\"submit\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      },
+      {
+        "id": "image-alt",
+        "impact": "critical",
+        "description": "Ensure <img> elements have alternative text or a role of none or presentation",
+        "help": "Images must have alternative text",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/image-alt?application=axe-puppeteer",
+        "tags": [
+          "wcag2a",
+          "wcag111"
+        ],
+        "nodes": [
+          {
+            "html": "<img src=\"https://www.mein-sch...\" srcset=\"https://www.mein-sch...\" sizes=\"(min-width: 1200px) ...\" class=\"img-fluid image-slid...\" tabindex=\"0\" data-object-fit=\"contain\" loading=\"eager\">",
+            "target": [
+              "#tns1-item0 > .image-slider-item.is-contain > .image-slider-image.img-fluid[loading=\"eager\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          },
+          {
+            "html": "<img src=\"https://www.mein-sch...\" srcset=\"https://www.mein-sch...\" sizes=\"(min-width: 1200px) ...\" class=\"img-fluid image-slid...\" tabindex=\"-1\" data-object-fit=\"contain\" loading=\"eager\">",
+            "target": [
+              ".image-slider-link > .is-not-first.image-slider-item.is-contain > .image-slider-image.img-fluid[loading=\"eager\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          },
+          {
+            "html": "<img src=\"https://www.mein-sch...\" srcset=\"https://www.mein-sch...\" sizes=\"(min-width: 1200px) ...\" class=\"img-fluid image-slid...\" tabindex=\"0\" data-object-fit=\"contain\" loading=\"eager\">",
+            "target": [
+              "#tns1-item2 > .is-not-first.image-slider-item.is-contain > .image-slider-image.img-fluid[loading=\"eager\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          },
+          {
+            "html": "<img src=\"https://www.mein-sch...\" srcset=\"https://www.mein-sch...\" sizes=\"(min-width: 1200px) ...\" class=\"img-fluid image-slid...\" tabindex=\"0\" data-object-fit=\"contain\" loading=\"eager\">",
+            "target": [
+              "#tns1-item3 > .is-not-first.image-slider-item.is-contain > .image-slider-image.img-fluid[loading=\"eager\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          },
+          {
+            "html": "<img src=\"https://www.mein-sch...\" srcset=\"https://www.mein-sch...\" sizes=\"(min-width: 1200px) ...\" class=\"cms-image\" loading=\"lazy\">",
+            "target": [
+              ".cms-image-link[href$=\"schliessanlagen-designer\"] > .w-100.cms-image-container.is-stretch > .cms-image[loading=\"lazy\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          },
+          {
+            "html": "<img src=\"https://www.mein-sch...\" srcset=\"https://www.mein-sch...\" sizes=\"(min-width: 1200px) ...\" class=\"cms-image\" loading=\"lazy\">",
+            "target": [
+              ".col-md-6:nth-child(2) > .cms-element-image.justify-content-start > .cms-image-link > .w-100.cms-image-container.is-stretch > .cms-image[loading=\"lazy\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          }
+        ]
+      },
+      {
+        "id": "link-name",
+        "impact": "serious",
+        "description": "Ensure links have discernible text",
+        "help": "Links must have discernible text",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/link-name?application=axe-puppeteer",
+        "tags": [
+          "wcag2a",
+          "wcag244",
+          "wcag412"
+        ],
+        "nodes": [
+          {
+            "html": "<a href=\"https://www.mein-schluessel.de/briefkastenanlagen\" class=\"image-slider-link\">",
+            "target": [
+              ".image-slider-link"
+            ],
+            "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+          },
+          {
+            "html": "<a href=\"/schliessanlagen-designer\" class=\"cms-image-link\">",
+            "target": [
+              ".cms-image-link[href$=\"schliessanlagen-designer\"]"
+            ],
+            "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+          },
+          {
+            "html": "<a href=\"https://www.mein-schluessel.de/briefkastenanlagen/\" class=\"cms-image-link\">",
+            "target": [
+              ".col-md-6:nth-child(2) > .cms-element-image.justify-content-start > .cms-image-link"
+            ],
+            "failureSummary": "Fix all of the following:\n  Element is in tab order and does not have accessible text\n\nFix any of the following:\n  Element does not have text that is visible to screen readers\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+          }
+        ]
+      },
+      {
+        "id": "target-size",
+        "impact": "serious",
+        "description": "Ensure touch targets have sufficient size and space",
+        "help": "All touch targets must be 24px large, or leave sufficient space",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/target-size?application=axe-puppeteer",
+        "tags": [
+          "wcag22aa",
+          "wcag258"
+        ],
+        "nodes": [
+          {
+            "html": "<input name=\"privacy\" type=\"checkbox\" class=\"form-check-input\" id=\"form-privacy-opt-in-\" required=\"\">",
+            "target": [
+              "#form-privacy-opt-in-"
+            ],
+            "failureSummary": "Fix any of the following:\n  Target has insufficient size (16px by 16px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 20px instead of at least 24px."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Kategorie (Sicherheitstechnik)",
+    "url": "https://www.mein-schluessel.de/sicherheitstechnik/",
+    "finalUrl": "https://www.mein-schluessel.de/sicherheitstechnik/",
+    "totalViolations": 4,
+    "totalNodes": 58,
+    "violations": [
+      {
+        "id": "aria-allowed-attr",
+        "impact": "critical",
+        "description": "Ensure an element's role supports its ARIA attributes",
+        "help": "Elements must only use supported ARIA attributes",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-allowed-attr?application=axe-puppeteer",
+        "tags": [
+          "wcag2a",
+          "wcag412"
+        ],
+        "nodes": [
+          {
+            "html": "<div class=\"footer-column-headline footer-headline js-collapse-footer-column-trigger\" id=\"collapseFooterNewsletterTitle\" data-target=\"#collapseFooterNewsletterTitle\" aria-expanded=\"true\" aria-controls",
+            "target": [
+              "#collapseFooterNewsletterTitle"
+            ],
+            "failureSummary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"true\""
+          },
+          {
+            "html": "<div class=\"footer-column-headline footer-headline js-collapse-footer-column-trigger\" data-bs-target=\"#collapseFooterTitle1\" aria-expanded=\"true\" aria-controls=\"collapseFooter1\">",
+            "target": [
+              "div[data-bs-target=\"#collapseFooterTitle1\"]"
+            ],
+            "failureSummary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"true\""
+          }
+        ]
+      },
+      {
+        "id": "aria-required-children",
+        "impact": "critical",
+        "description": "Ensure elements with an ARIA role that require child roles contain them",
+        "help": "Certain ARIA roles must contain particular children",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-required-children?application=axe-puppeteer",
+        "tags": [
+          "wcag2a",
+          "wcag131"
+        ],
+        "nodes": [
+          {
+            "html": "<div id=\"footerColumnsNewsletter\" class=\"row footer-columns\" data-collapse-footer-columns=\"true\" role=\"list\">",
+            "target": [
+              "#footerColumnsNewsletter"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: div[aria-controls], div[aria-labelledby]"
+          },
+          {
+            "html": "<div id=\"footerColumns\" class=\"row footer-columns\" data-collapse-footer-columns=\"true\" role=\"list\">",
+            "target": [
+              "#footerColumns"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: div[aria-controls], div[aria-labelledby]"
+          }
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=axe-puppeteer",
+        "tags": [
+          "wcag2aa",
+          "wcag143"
+        ],
+        "nodes": [
+          {
+            "html": "<a class=\"btn btn-secbg\" href=\"#fullinformation\">Weiterlesen</a>",
+            "target": [
+              ".btn-secbg"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"badge bg-success badge-topseller\">Topseller</span>",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(1) > .product-box.box-standard.card > .card-body > .product-badges > div > .badge-topseller.badge.bg-success"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.31 (foreground color: #ffffff, background color: #3cc261, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button class=\"btn btn-buy\" title=\"In den Warenkorb\">\n                                                                                    In den Warenkorb\n                                             ",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(1) > .product-box.box-standard.card > .card-body > .product-info > .product-action > .buy-widget[action=\"/checkout/line-item/add\"][data-add-to-cart=\"true\"] > .d-grid > .btn-buy[title=\"In den Warenkorb\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"badge bg-success badge-topseller\">Topseller</span>",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(2) > .product-box.box-standard.card > .card-body > .product-badges > div > .badge-topseller.badge.bg-success"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.31 (foreground color: #ffffff, background color: #3cc261, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button class=\"btn btn-buy\" title=\"In den Warenkorb\">\n                                                                                    In den Warenkorb\n                                             ",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(2) > .product-box.box-standard.card > .card-body > .product-info > .product-action > .buy-widget[action=\"/checkout/line-item/add\"][data-add-to-cart=\"true\"] > .d-grid > .btn-buy[title=\"In den Warenkorb\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"badge bg-success badge-topseller\">Topseller</span>",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(3) > .product-box.box-standard.card > .card-body > .product-badges > div > .badge-topseller.badge.bg-success"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.31 (foreground color: #ffffff, background color: #3cc261, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"badge bg-success badge-topseller\">Topseller</span>",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(4) > .product-box.box-standard.card > .card-body > .product-badges > div > .badge-topseller.badge.bg-success"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.31 (foreground color: #ffffff, background color: #3cc261, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button class=\"btn btn-buy\" title=\"In den Warenkorb\">\n                                                                                    In den Warenkorb\n                                             ",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(4) > .product-box.box-standard.card > .card-body > .product-info > .product-action > .buy-widget[action=\"/checkout/line-item/add\"][data-add-to-cart=\"true\"] > .d-grid > .btn-buy[title=\"In den Warenkorb\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"badge bg-success badge-moorl-forms\">Konfigurierbar</span>",
+            "target": [
+              ".badge-moorl-forms"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.31 (foreground color: #ffffff, background color: #3cc261, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"badge bg-success badge-topseller\">Topseller</span>",
+            "target": [
+              "div:nth-child(2) > .badge-topseller.badge.bg-success"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.31 (foreground color: #ffffff, background color: #3cc261, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"badge bg-success badge-topseller\">Topseller</span>",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(6) > .product-box.box-standard.card > .card-body > .product-badges > div > .badge-topseller.badge.bg-success"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.31 (foreground color: #ffffff, background color: #3cc261, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button class=\"btn btn-buy\" title=\"In den Warenkorb\">\n                                                                                    In den Warenkorb\n                                             ",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(6) > .product-box.box-standard.card > .card-body > .product-info > .product-action > .buy-widget[action=\"/checkout/line-item/add\"][data-add-to-cart=\"true\"] > .d-grid > .btn-buy[title=\"In den Warenkorb\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"badge bg-success badge-topseller\">Topseller</span>",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(7) > .product-box.box-standard.card > .card-body > .product-badges > div > .badge-topseller.badge.bg-success"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.31 (foreground color: #ffffff, background color: #3cc261, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button class=\"btn btn-buy\" title=\"In den Warenkorb\">\n                                                                                    In den Warenkorb\n                                             ",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(7) > .product-box.box-standard.card > .card-body > .product-info > .product-action > .buy-widget[action=\"/checkout/line-item/add\"][data-add-to-cart=\"true\"] > .d-grid > .btn-buy[title=\"In den Warenkorb\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"badge bg-success badge-topseller\">Topseller</span>",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(8) > .product-box.box-standard.card > .card-body > .product-badges > div > .badge-topseller.badge.bg-success"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.31 (foreground color: #ffffff, background color: #3cc261, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button class=\"btn btn-buy\" title=\"In den Warenkorb\">\n                                                                                    In den Warenkorb\n                                             ",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(8) > .product-box.box-standard.card > .card-body > .product-info > .product-action > .buy-widget[action=\"/checkout/line-item/add\"][data-add-to-cart=\"true\"] > .d-grid > .btn-buy[title=\"In den Warenkorb\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"badge bg-success badge-topseller\">Topseller</span>",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(9) > .product-box.box-standard.card > .card-body > .product-badges > div > .badge-topseller.badge.bg-success"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.31 (foreground color: #ffffff, background color: #3cc261, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"badge bg-success badge-topseller\">Topseller</span>",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(10) > .product-box.box-standard.card > .card-body > .product-badges > div > .badge-topseller.badge.bg-success"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.31 (foreground color: #ffffff, background color: #3cc261, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button class=\"btn btn-buy\" title=\"In den Warenkorb\">\n                                                                                    In den Warenkorb\n                                             ",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(10) > .product-box.box-standard.card > .card-body > .product-info > .product-action > .buy-widget[action=\"/checkout/line-item/add\"][data-add-to-cart=\"true\"] > .d-grid > .btn-buy[title=\"In den Warenkorb\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"badge bg-success badge-topseller\">Topseller</span>",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(11) > .product-box.box-standard.card > .card-body > .product-badges > div > .badge-topseller.badge.bg-success"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.31 (foreground color: #ffffff, background color: #3cc261, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button class=\"btn btn-buy\" title=\"In den Warenkorb\">\n                                                                                    In den Warenkorb\n                                             ",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(11) > .product-box.box-standard.card > .card-body > .product-info > .product-action > .buy-widget[action=\"/checkout/line-item/add\"][data-add-to-cart=\"true\"] > .d-grid > .btn-buy[title=\"In den Warenkorb\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"badge bg-success badge-topseller\">Topseller</span>",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(12) > .product-box.box-standard.card > .card-body > .product-badges > div > .badge-topseller.badge.bg-success"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.31 (foreground color: #ffffff, background color: #3cc261, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button class=\"btn btn-buy\" title=\"In den Warenkorb\">\n                                                                                    In den Warenkorb\n                                             ",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(12) > .product-box.box-standard.card > .card-body > .product-info > .product-action > .buy-widget[action=\"/checkout/line-item/add\"][data-add-to-cart=\"true\"] > .d-grid > .btn-buy[title=\"In den Warenkorb\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"badge bg-success badge-topseller\">Topseller</span>",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(13) > .product-box.box-standard.card > .card-body > .product-badges > div > .badge-topseller.badge.bg-success"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.31 (foreground color: #ffffff, background color: #3cc261, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button class=\"btn btn-buy\" title=\"In den Warenkorb\">\n                                                                                    In den Warenkorb\n                                             ",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(13) > .product-box.box-standard.card > .card-body > .product-info > .product-action > .buy-widget[action=\"/checkout/line-item/add\"][data-add-to-cart=\"true\"] > .d-grid > .btn-buy[title=\"In den Warenkorb\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"badge bg-success badge-topseller\">Topseller</span>",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(14) > .product-box.box-standard.card > .card-body > .product-badges > div > .badge-topseller.badge.bg-success"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.31 (foreground color: #ffffff, background color: #3cc261, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button class=\"btn btn-buy\" title=\"In den Warenkorb\">\n                                                                                    In den Warenkorb\n                                             ",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(14) > .product-box.box-standard.card > .card-body > .product-info > .product-action > .buy-widget[action=\"/checkout/line-item/add\"][data-add-to-cart=\"true\"] > .d-grid > .btn-buy[title=\"In den Warenkorb\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"badge bg-success badge-topseller\">Topseller</span>",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(15) > .product-box.box-standard.card > .card-body > .product-badges > div > .badge-topseller.badge.bg-success"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.31 (foreground color: #ffffff, background color: #3cc261, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button class=\"btn btn-buy\" title=\"In den Warenkorb\">\n                                                                                    In den Warenkorb\n                                             ",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(15) > .product-box.box-standard.card > .card-body > .product-info > .product-action > .buy-widget[action=\"/checkout/line-item/add\"][data-add-to-cart=\"true\"] > .d-grid > .btn-buy[title=\"In den Warenkorb\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"badge bg-success badge-topseller\">Topseller</span>",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(16) > .product-box.box-standard.card > .card-body > .product-badges > div > .badge-topseller.badge.bg-success"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.31 (foreground color: #ffffff, background color: #3cc261, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button class=\"btn btn-buy\" title=\"In den Warenkorb\">\n                                                                                    In den Warenkorb\n                                             ",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(16) > .product-box.box-standard.card > .card-body > .product-info > .product-action > .buy-widget[action=\"/checkout/line-item/add\"][data-add-to-cart=\"true\"] > .d-grid > .btn-buy[title=\"In den Warenkorb\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"badge bg-success badge-topseller\">Topseller</span>",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(17) > .product-box.box-standard.card > .card-body > .product-badges > div > .badge-topseller.badge.bg-success"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.31 (foreground color: #ffffff, background color: #3cc261, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button class=\"btn btn-buy\" title=\"In den Warenkorb\">\n                                                                                    In den Warenkorb\n                                             ",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(17) > .product-box.box-standard.card > .card-body > .product-info > .product-action > .buy-widget[action=\"/checkout/line-item/add\"][data-add-to-cart=\"true\"] > .d-grid > .btn-buy[title=\"In den Warenkorb\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"badge bg-success badge-topseller\">Topseller</span>",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(18) > .product-box.box-standard.card > .card-body > .product-badges > div > .badge-topseller.badge.bg-success"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.31 (foreground color: #ffffff, background color: #3cc261, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button class=\"btn btn-buy\" title=\"In den Warenkorb\">\n                                                                                    In den Warenkorb\n                                             ",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(18) > .product-box.box-standard.card > .card-body > .product-info > .product-action > .buy-widget[action=\"/checkout/line-item/add\"][data-add-to-cart=\"true\"] > .d-grid > .btn-buy[title=\"In den Warenkorb\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"badge bg-success badge-topseller\">Topseller</span>",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(19) > .product-box.box-standard.card > .card-body > .product-badges > div > .badge-topseller.badge.bg-success"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.31 (foreground color: #ffffff, background color: #3cc261, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button class=\"btn btn-buy\" title=\"In den Warenkorb\">\n                                                                                    In den Warenkorb\n                                             ",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(19) > .product-box.box-standard.card > .card-body > .product-info > .product-action > .buy-widget[action=\"/checkout/line-item/add\"][data-add-to-cart=\"true\"] > .d-grid > .btn-buy[title=\"In den Warenkorb\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"badge bg-success badge-topseller\">Topseller</span>",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(20) > .product-box.box-standard.card > .card-body > .product-badges > div > .badge-topseller.badge.bg-success"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.31 (foreground color: #ffffff, background color: #3cc261, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button class=\"btn btn-buy\" title=\"In den Warenkorb\">\n                                                                                    In den Warenkorb\n                                             ",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(20) > .product-box.box-standard.card > .card-body > .product-info > .product-action > .buy-widget[action=\"/checkout/line-item/add\"][data-add-to-cart=\"true\"] > .d-grid > .btn-buy[title=\"In den Warenkorb\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"badge bg-success badge-topseller\">Topseller</span>",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(21) > .product-box.box-standard.card > .card-body > .product-badges > div > .badge-topseller.badge.bg-success"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.31 (foreground color: #ffffff, background color: #3cc261, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button class=\"btn btn-buy\" title=\"In den Warenkorb\">\n                                                                                    In den Warenkorb\n                                             ",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(21) > .product-box.box-standard.card > .card-body > .product-info > .product-action > .buy-widget[action=\"/checkout/line-item/add\"][data-add-to-cart=\"true\"] > .d-grid > .btn-buy[title=\"In den Warenkorb\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"badge bg-success badge-topseller\">Topseller</span>",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(22) > .product-box.box-standard.card > .card-body > .product-badges > div > .badge-topseller.badge.bg-success"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.31 (foreground color: #ffffff, background color: #3cc261, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button class=\"btn btn-buy\" title=\"In den Warenkorb\">\n                                                                                    In den Warenkorb\n                                             ",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(22) > .product-box.box-standard.card > .card-body > .product-info > .product-action > .buy-widget[action=\"/checkout/line-item/add\"][data-add-to-cart=\"true\"] > .d-grid > .btn-buy[title=\"In den Warenkorb\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"badge bg-success badge-topseller\">Topseller</span>",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(23) > .product-box.box-standard.card > .card-body > .product-badges > div > .badge-topseller.badge.bg-success"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.31 (foreground color: #ffffff, background color: #3cc261, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button class=\"btn btn-buy\" title=\"In den Warenkorb\">\n                                                                                    In den Warenkorb\n                                             ",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(23) > .product-box.box-standard.card > .card-body > .product-info > .product-action > .buy-widget[action=\"/checkout/line-item/add\"][data-add-to-cart=\"true\"] > .d-grid > .btn-buy[title=\"In den Warenkorb\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"badge bg-success badge-topseller\">Topseller</span>",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(24) > .product-box.box-standard.card > .card-body > .product-badges > div > .badge-topseller.badge.bg-success"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.31 (foreground color: #ffffff, background color: #3cc261, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button class=\"btn btn-buy\" title=\"In den Warenkorb\">\n                                                                                    In den Warenkorb\n                                             ",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(24) > .product-box.box-standard.card > .card-body > .product-info > .product-action > .buy-widget[action=\"/checkout/line-item/add\"][data-add-to-cart=\"true\"] > .d-grid > .btn-buy[title=\"In den Warenkorb\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<div class=\"footer-column-headline footer-headline js-collapse-footer-column-trigger\" id=\"collapseFooterNewsletterTitle\" data-target=\"#collapseFooterNewsletterTitle\" aria-expanded=\"true\" aria-controls",
+            "target": [
+              "#collapseFooterNewsletterTitle"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.81 (foreground color: #01425e, background color: #11aba8, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<div class=\"footer_newsletter_text\">",
+            "target": [
+              ".footer_newsletter_text"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<label for=\"form-privacy-opt-in-\" class=\"form-check-label\">",
+            "target": [
+              "label[for=\"form-privacy-opt-in-\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<a data-ajax-modal=\"true\" data-url=\"/widgets/cms/0191fc1ccc727058b6c43f09980d856f\" href=\"/widgets/cms/0191fc1ccc727058b6c43f09980d856f\" title=\"Datenschutzbestimmungen\">Datenschutzbestimmungen</a>",
+            "target": [
+              "a[title=\"Datenschutzbestimmungen\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.81 (foreground color: #01425e, background color: #11aba8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<a data-ajax-modal=\"true\" data-url=\"/widgets/cms/0191fc1ccc5972a399bd907127378f02\" href=\"/widgets/cms/0191fc1ccc5972a399bd907127378f02\" title=\"AGB\">AGB</a>",
+            "target": [
+              "a[title=\"AGB\"][data-ajax-modal=\"true\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.81 (foreground color: #01425e, background color: #11aba8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button type=\"submit\" class=\"btn btn-primary\">\n                                            Alle Cookies akzeptieren\n                                        </button>",
+            "target": [
+              ".js-cookie-accept-all-button > .btn-primary[type=\"submit\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      },
+      {
+        "id": "target-size",
+        "impact": "serious",
+        "description": "Ensure touch targets have sufficient size and space",
+        "help": "All touch targets must be 24px large, or leave sufficient space",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/target-size?application=axe-puppeteer",
+        "tags": [
+          "wcag22aa",
+          "wcag258"
+        ],
+        "nodes": [
+          {
+            "html": "<input name=\"privacy\" type=\"checkbox\" class=\"form-check-input\" id=\"form-privacy-opt-in-\" required=\"\">",
+            "target": [
+              "#form-privacy-opt-in-"
+            ],
+            "failureSummary": "Fix any of the following:\n  Target has insufficient size (16px by 16px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 20px instead of at least 24px."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Produktdetail (Aufschraubschloss)",
+    "url": "https://www.mein-schluessel.de/Aufschraubschloss-PZ-gelocht-Breite-95-mm-Hoehe-177-mm-links-rechts-verwendbar/Schn-WA093PZW",
+    "finalUrl": "https://www.mein-schluessel.de/Aufschraubschloss-PZ-gelocht-Breite-95-mm-Hoehe-177-mm-links-rechts-verwendbar/Schn-WA093PZW",
+    "totalViolations": 4,
+    "totalNodes": 15,
+    "violations": [
+      {
+        "id": "aria-allowed-attr",
+        "impact": "critical",
+        "description": "Ensure an element's role supports its ARIA attributes",
+        "help": "Elements must only use supported ARIA attributes",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-allowed-attr?application=axe-puppeteer",
+        "tags": [
+          "wcag2a",
+          "wcag412"
+        ],
+        "nodes": [
+          {
+            "html": "<div class=\"footer-column-headline footer-headline js-collapse-footer-column-trigger\" id=\"collapseFooterNewsletterTitle\" data-target=\"#collapseFooterNewsletterTitle\" aria-expanded=\"true\" aria-controls",
+            "target": [
+              "#collapseFooterNewsletterTitle"
+            ],
+            "failureSummary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"true\""
+          },
+          {
+            "html": "<div class=\"footer-column-headline footer-headline js-collapse-footer-column-trigger\" data-bs-target=\"#collapseFooterTitle1\" aria-expanded=\"true\" aria-controls=\"collapseFooter1\">",
+            "target": [
+              "div[data-bs-target=\"#collapseFooterTitle1\"]"
+            ],
+            "failureSummary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"true\""
+          }
+        ]
+      },
+      {
+        "id": "aria-required-children",
+        "impact": "critical",
+        "description": "Ensure elements with an ARIA role that require child roles contain them",
+        "help": "Certain ARIA roles must contain particular children",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-required-children?application=axe-puppeteer",
+        "tags": [
+          "wcag2a",
+          "wcag131"
+        ],
+        "nodes": [
+          {
+            "html": "<div id=\"footerColumnsNewsletter\" class=\"row footer-columns\" data-collapse-footer-columns=\"true\" role=\"list\">",
+            "target": [
+              "#footerColumnsNewsletter"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: div[aria-controls], div[aria-labelledby]"
+          },
+          {
+            "html": "<div id=\"footerColumns\" class=\"row footer-columns\" data-collapse-footer-columns=\"true\" role=\"list\">",
+            "target": [
+              "#footerColumns"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: div[aria-controls], div[aria-labelledby]"
+          }
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=axe-puppeteer",
+        "tags": [
+          "wcag2aa",
+          "wcag143"
+        ],
+        "nodes": [
+          {
+            "html": "<button class=\"btn btn-primary btn-buy\" title=\"In den Warenkorb\" aria-label=\"In den Warenkorb\" data-neon-configurator-dynamic-text=\"\">\n            In den Warenkorb\n        </button>",
+            "target": [
+              ".btn-buy"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span>Informationen zum Produkt:</span>",
+            "target": [
+              ".text-info > span"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #11aba8, background color: #ffffff, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<th>Produkteigenschaften</th>",
+            "target": [
+              "tr:nth-child(1) > th:nth-child(1)"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 10.5pt (14px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"badge bg-success badge-topseller\">Topseller</span>",
+            "target": [
+              ".badge"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.31 (foreground color: #ffffff, background color: #3cc261, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<div class=\"footer-column-headline footer-headline js-collapse-footer-column-trigger\" id=\"collapseFooterNewsletterTitle\" data-target=\"#collapseFooterNewsletterTitle\" aria-expanded=\"true\" aria-controls",
+            "target": [
+              "#collapseFooterNewsletterTitle"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.81 (foreground color: #01425e, background color: #11aba8, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<div class=\"footer_newsletter_text\">",
+            "target": [
+              ".footer_newsletter_text"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<label for=\"form-privacy-opt-in-\" class=\"form-check-label\">",
+            "target": [
+              ".form-check-label"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<a data-ajax-modal=\"true\" data-url=\"/widgets/cms/0191fc1ccc727058b6c43f09980d856f\" href=\"/widgets/cms/0191fc1ccc727058b6c43f09980d856f\" title=\"Datenschutzbestimmungen\">Datenschutzbestimmungen</a>",
+            "target": [
+              "a[title=\"Datenschutzbestimmungen\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.81 (foreground color: #01425e, background color: #11aba8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<a data-ajax-modal=\"true\" data-url=\"/widgets/cms/0191fc1ccc5972a399bd907127378f02\" href=\"/widgets/cms/0191fc1ccc5972a399bd907127378f02\" title=\"AGB\">AGB</a>",
+            "target": [
+              "a[title=\"AGB\"][data-ajax-modal=\"true\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.81 (foreground color: #01425e, background color: #11aba8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button type=\"submit\" class=\"btn btn-primary\">\n                                            Alle Cookies akzeptieren\n                                        </button>",
+            "target": [
+              ".js-cookie-accept-all-button > .btn-primary.btn[type=\"submit\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      },
+      {
+        "id": "target-size",
+        "impact": "serious",
+        "description": "Ensure touch targets have sufficient size and space",
+        "help": "All touch targets must be 24px large, or leave sufficient space",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/target-size?application=axe-puppeteer",
+        "tags": [
+          "wcag22aa",
+          "wcag258"
+        ],
+        "nodes": [
+          {
+            "html": "<input name=\"privacy\" type=\"checkbox\" class=\"form-check-input\" id=\"form-privacy-opt-in-\" required=\"\">",
+            "target": [
+              "#form-privacy-opt-in-"
+            ],
+            "failureSummary": "Fix any of the following:\n  Target has insufficient size (16px by 16px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 20px instead of at least 24px."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Suche",
+    "url": "https://www.mein-schluessel.de/search?search=dom",
+    "finalUrl": "https://www.mein-schluessel.de/search?search=dom",
+    "totalViolations": 4,
+    "totalNodes": 38,
+    "violations": [
+      {
+        "id": "aria-allowed-attr",
+        "impact": "critical",
+        "description": "Ensure an element's role supports its ARIA attributes",
+        "help": "Elements must only use supported ARIA attributes",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-allowed-attr?application=axe-puppeteer",
+        "tags": [
+          "wcag2a",
+          "wcag412"
+        ],
+        "nodes": [
+          {
+            "html": "<div class=\"footer-column-headline footer-headline js-collapse-footer-column-trigger\" id=\"collapseFooterNewsletterTitle\" data-target=\"#collapseFooterNewsletterTitle\" aria-expanded=\"true\" aria-controls",
+            "target": [
+              "#collapseFooterNewsletterTitle"
+            ],
+            "failureSummary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"true\""
+          },
+          {
+            "html": "<div class=\"footer-column-headline footer-headline js-collapse-footer-column-trigger\" data-bs-target=\"#collapseFooterTitle1\" aria-expanded=\"true\" aria-controls=\"collapseFooter1\">",
+            "target": [
+              "div[data-bs-target=\"#collapseFooterTitle1\"]"
+            ],
+            "failureSummary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"true\""
+          }
+        ]
+      },
+      {
+        "id": "aria-required-children",
+        "impact": "critical",
+        "description": "Ensure elements with an ARIA role that require child roles contain them",
+        "help": "Certain ARIA roles must contain particular children",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-required-children?application=axe-puppeteer",
+        "tags": [
+          "wcag2a",
+          "wcag131"
+        ],
+        "nodes": [
+          {
+            "html": "<div id=\"footerColumnsNewsletter\" class=\"row footer-columns\" data-collapse-footer-columns=\"true\" role=\"list\">",
+            "target": [
+              "#footerColumnsNewsletter"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: div[aria-controls], div[aria-labelledby]"
+          },
+          {
+            "html": "<div id=\"footerColumns\" class=\"row footer-columns\" data-collapse-footer-columns=\"true\" role=\"list\">",
+            "target": [
+              "#footerColumns"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: div[aria-controls], div[aria-labelledby]"
+          }
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=axe-puppeteer",
+        "tags": [
+          "wcag2aa",
+          "wcag143"
+        ],
+        "nodes": [
+          {
+            "html": "<span class=\"badge bg-success badge-topseller\">Topseller</span>",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(1) > .product-box.box-minimal.card > .card-body > .product-badges > div > .badge.badge-topseller.bg-success"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.31 (foreground color: #ffffff, background color: #3cc261, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button class=\"btn btn-buy\" title=\"In den Warenkorb\">\n                                                                                    In den Warenkorb\n                                             ",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(1) > .product-box.box-minimal.card > .card-body > .product-info > .product-action > .buy-widget[action=\"/checkout/line-item/add\"][data-add-to-cart=\"true\"] > .d-grid > .btn-buy[title=\"In den Warenkorb\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"badge bg-success badge-topseller\">Topseller</span>",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(2) > .product-box.box-minimal.card > .card-body > .product-badges > div > .badge.badge-topseller.bg-success"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.31 (foreground color: #ffffff, background color: #3cc261, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button class=\"btn btn-buy\" title=\"In den Warenkorb\">\n                                                                                    In den Warenkorb\n                                             ",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(2) > .product-box.box-minimal.card > .card-body > .product-info > .product-action > .buy-widget[action=\"/checkout/line-item/add\"][data-add-to-cart=\"true\"] > .d-grid > .btn-buy[title=\"In den Warenkorb\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"badge bg-success badge-topseller\">Topseller</span>",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(6) > .product-box.box-minimal.card > .card-body > .product-badges > div > .badge.badge-topseller.bg-success"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.31 (foreground color: #ffffff, background color: #3cc261, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button class=\"btn btn-buy\" title=\"In den Warenkorb\">\n                                                                                    In den Warenkorb\n                                             ",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(6) > .product-box.box-minimal.card > .card-body > .product-info > .product-action > .buy-widget[action=\"/checkout/line-item/add\"][data-add-to-cart=\"true\"] > .d-grid > .btn-buy[title=\"In den Warenkorb\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"badge bg-success badge-topseller\">Topseller</span>",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(7) > .product-box.box-minimal.card > .card-body > .product-badges > div > .badge.badge-topseller.bg-success"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.31 (foreground color: #ffffff, background color: #3cc261, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button class=\"btn btn-buy\" title=\"In den Warenkorb\">\n                                                                                    In den Warenkorb\n                                             ",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(7) > .product-box.box-minimal.card > .card-body > .product-info > .product-action > .buy-widget[action=\"/checkout/line-item/add\"][data-add-to-cart=\"true\"] > .d-grid > .btn-buy[title=\"In den Warenkorb\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"badge bg-success badge-topseller\">Topseller</span>",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(8) > .product-box.box-minimal.card > .card-body > .product-badges > div > .badge.badge-topseller.bg-success"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.31 (foreground color: #ffffff, background color: #3cc261, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button class=\"btn btn-buy\" title=\"In den Warenkorb\">\n                                                                                    In den Warenkorb\n                                             ",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(8) > .product-box.box-minimal.card > .card-body > .product-info > .product-action > .buy-widget[action=\"/checkout/line-item/add\"][data-add-to-cart=\"true\"] > .d-grid > .btn-buy[title=\"In den Warenkorb\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"badge bg-success badge-topseller\">Topseller</span>",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(9) > .product-box.box-minimal.card > .card-body > .product-badges > div > .badge.badge-topseller.bg-success"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.31 (foreground color: #ffffff, background color: #3cc261, font size: 13.5pt (18px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button class=\"btn btn-buy\" title=\"In den Warenkorb\">\n                                                                                    In den Warenkorb\n                                             ",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(9) > .product-box.box-minimal.card > .card-body > .product-info > .product-action > .buy-widget[action=\"/checkout/line-item/add\"][data-add-to-cart=\"true\"] > .d-grid > .btn-buy[title=\"In den Warenkorb\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button class=\"btn btn-buy\" title=\"In den Warenkorb\">\n                                                                                    In den Warenkorb\n                                             ",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(10) > .product-box.box-minimal.card > .card-body > .product-info > .product-action > .buy-widget[action=\"/checkout/line-item/add\"][data-add-to-cart=\"true\"] > .d-grid > .btn-buy[title=\"In den Warenkorb\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button class=\"btn btn-buy\" title=\"In den Warenkorb\">\n                                                                                    In den Warenkorb\n                                             ",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(11) > .product-box.box-minimal.card > .card-body > .product-info > .product-action > .buy-widget[action=\"/checkout/line-item/add\"][data-add-to-cart=\"true\"] > .d-grid > .btn-buy[title=\"In den Warenkorb\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button class=\"btn btn-buy\" title=\"In den Warenkorb\">\n                                                                                    In den Warenkorb\n                                             ",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(12) > .product-box.box-minimal.card > .card-body > .product-info > .product-action > .buy-widget[action=\"/checkout/line-item/add\"][data-add-to-cart=\"true\"] > .d-grid > .btn-buy[title=\"In den Warenkorb\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button class=\"btn btn-buy\" title=\"In den Warenkorb\">\n                                                                                    In den Warenkorb\n                                             ",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(13) > .product-box.box-minimal.card > .card-body > .product-info > .product-action > .buy-widget[action=\"/checkout/line-item/add\"][data-add-to-cart=\"true\"] > .d-grid > .btn-buy[title=\"In den Warenkorb\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button class=\"btn btn-buy\" title=\"In den Warenkorb\">\n                                                                                    In den Warenkorb\n                                             ",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(14) > .product-box.box-minimal.card > .card-body > .product-info > .product-action > .buy-widget[action=\"/checkout/line-item/add\"][data-add-to-cart=\"true\"] > .d-grid > .btn-buy[title=\"In den Warenkorb\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button class=\"btn btn-buy\" title=\"In den Warenkorb\">\n                                                                                    In den Warenkorb\n                                             ",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(15) > .product-box.box-minimal.card > .card-body > .product-info > .product-action > .buy-widget[action=\"/checkout/line-item/add\"][data-add-to-cart=\"true\"] > .d-grid > .btn-buy[title=\"In den Warenkorb\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button class=\"btn btn-buy\" title=\"In den Warenkorb\">\n                                                                                    In den Warenkorb\n                                             ",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(16) > .product-box.box-minimal.card > .card-body > .product-info > .product-action > .buy-widget[action=\"/checkout/line-item/add\"][data-add-to-cart=\"true\"] > .d-grid > .btn-buy[title=\"In den Warenkorb\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button class=\"btn btn-buy\" title=\"In den Warenkorb\">\n                                                                                    In den Warenkorb\n                                             ",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(17) > .product-box.box-minimal.card > .card-body > .product-info > .product-action > .buy-widget[action=\"/checkout/line-item/add\"][data-add-to-cart=\"true\"] > .d-grid > .btn-buy[title=\"In den Warenkorb\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button class=\"btn btn-buy\" title=\"In den Warenkorb\">\n                                                                                    In den Warenkorb\n                                             ",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(18) > .product-box.box-minimal.card > .card-body > .product-info > .product-action > .buy-widget[action=\"/checkout/line-item/add\"][data-add-to-cart=\"true\"] > .d-grid > .btn-buy[title=\"In den Warenkorb\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button class=\"btn btn-buy\" title=\"In den Warenkorb\">\n                                                                                    In den Warenkorb\n                                             ",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(19) > .product-box.box-minimal.card > .card-body > .product-info > .product-action > .buy-widget[action=\"/checkout/line-item/add\"][data-add-to-cart=\"true\"] > .d-grid > .btn-buy[title=\"In den Warenkorb\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button class=\"btn btn-buy\" title=\"In den Warenkorb\">\n                                                                                    In den Warenkorb\n                                             ",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(20) > .product-box.box-minimal.card > .card-body > .product-info > .product-action > .buy-widget[action=\"/checkout/line-item/add\"][data-add-to-cart=\"true\"] > .d-grid > .btn-buy[title=\"In den Warenkorb\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button class=\"btn btn-buy\" title=\"In den Warenkorb\">\n                                                                                    In den Warenkorb\n                                             ",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(21) > .product-box.box-minimal.card > .card-body > .product-info > .product-action > .buy-widget[action=\"/checkout/line-item/add\"][data-add-to-cart=\"true\"] > .d-grid > .btn-buy[title=\"In den Warenkorb\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button class=\"btn btn-buy\" title=\"In den Warenkorb\">\n                                                                                    In den Warenkorb\n                                             ",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(22) > .product-box.box-minimal.card > .card-body > .product-info > .product-action > .buy-widget[action=\"/checkout/line-item/add\"][data-add-to-cart=\"true\"] > .d-grid > .btn-buy[title=\"In den Warenkorb\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button class=\"btn btn-buy\" title=\"In den Warenkorb\">\n                                                                                    In den Warenkorb\n                                             ",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(23) > .product-box.box-minimal.card > .card-body > .product-info > .product-action > .buy-widget[action=\"/checkout/line-item/add\"][data-add-to-cart=\"true\"] > .d-grid > .btn-buy[title=\"In den Warenkorb\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button class=\"btn btn-buy\" title=\"In den Warenkorb\">\n                                                                                    In den Warenkorb\n                                             ",
+            "target": [
+              ".cms-listing-col.col-sm-6.col-lg-6:nth-child(24) > .product-box.box-minimal.card > .card-body > .product-info > .product-action > .buy-widget[action=\"/checkout/line-item/add\"][data-add-to-cart=\"true\"] > .d-grid > .btn-buy[title=\"In den Warenkorb\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<div class=\"footer-column-headline footer-headline js-collapse-footer-column-trigger\" id=\"collapseFooterNewsletterTitle\" data-target=\"#collapseFooterNewsletterTitle\" aria-expanded=\"true\" aria-controls",
+            "target": [
+              "#collapseFooterNewsletterTitle"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.81 (foreground color: #01425e, background color: #11aba8, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<div class=\"footer_newsletter_text\">",
+            "target": [
+              ".footer_newsletter_text"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<label for=\"form-privacy-opt-in-\" class=\"form-check-label\">",
+            "target": [
+              "label[for=\"form-privacy-opt-in-\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<a data-ajax-modal=\"true\" data-url=\"/widgets/cms/0191fc1ccc727058b6c43f09980d856f\" href=\"/widgets/cms/0191fc1ccc727058b6c43f09980d856f\" title=\"Datenschutzbestimmungen\">Datenschutzbestimmungen</a>",
+            "target": [
+              "a[title=\"Datenschutzbestimmungen\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.81 (foreground color: #01425e, background color: #11aba8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<a data-ajax-modal=\"true\" data-url=\"/widgets/cms/0191fc1ccc5972a399bd907127378f02\" href=\"/widgets/cms/0191fc1ccc5972a399bd907127378f02\" title=\"AGB\">AGB</a>",
+            "target": [
+              "a[title=\"AGB\"][data-ajax-modal=\"true\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.81 (foreground color: #01425e, background color: #11aba8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button type=\"submit\" class=\"btn btn-primary\">\n                                            Alle Cookies akzeptieren\n                                        </button>",
+            "target": [
+              ".js-cookie-accept-all-button > .btn-primary[type=\"submit\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      },
+      {
+        "id": "target-size",
+        "impact": "serious",
+        "description": "Ensure touch targets have sufficient size and space",
+        "help": "All touch targets must be 24px large, or leave sufficient space",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/target-size?application=axe-puppeteer",
+        "tags": [
+          "wcag22aa",
+          "wcag258"
+        ],
+        "nodes": [
+          {
+            "html": "<input name=\"privacy\" type=\"checkbox\" class=\"form-check-input\" id=\"form-privacy-opt-in-\" required=\"\">",
+            "target": [
+              "#form-privacy-opt-in-"
+            ],
+            "failureSummary": "Fix any of the following:\n  Target has insufficient size (16px by 16px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 20px instead of at least 24px."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Warenkorb",
+    "url": "https://www.mein-schluessel.de/checkout/cart",
+    "finalUrl": "https://www.mein-schluessel.de/checkout/cart",
+    "totalViolations": 4,
+    "totalNodes": 11,
+    "violations": [
+      {
+        "id": "aria-allowed-attr",
+        "impact": "critical",
+        "description": "Ensure an element's role supports its ARIA attributes",
+        "help": "Elements must only use supported ARIA attributes",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-allowed-attr?application=axe-puppeteer",
+        "tags": [
+          "wcag2a",
+          "wcag412"
+        ],
+        "nodes": [
+          {
+            "html": "<div class=\"footer-column-headline footer-headline js-collapse-footer-column-trigger\" id=\"collapseFooterNewsletterTitle\" data-target=\"#collapseFooterNewsletterTitle\" aria-expanded=\"true\" aria-controls",
+            "target": [
+              "#collapseFooterNewsletterTitle"
+            ],
+            "failureSummary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"true\""
+          },
+          {
+            "html": "<div class=\"footer-column-headline footer-headline js-collapse-footer-column-trigger\" data-bs-target=\"#collapseFooterTitle1\" aria-expanded=\"true\" aria-controls=\"collapseFooter1\">",
+            "target": [
+              "div[data-bs-target=\"#collapseFooterTitle1\"]"
+            ],
+            "failureSummary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"true\""
+          }
+        ]
+      },
+      {
+        "id": "aria-required-children",
+        "impact": "critical",
+        "description": "Ensure elements with an ARIA role that require child roles contain them",
+        "help": "Certain ARIA roles must contain particular children",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-required-children?application=axe-puppeteer",
+        "tags": [
+          "wcag2a",
+          "wcag131"
+        ],
+        "nodes": [
+          {
+            "html": "<div id=\"footerColumnsNewsletter\" class=\"row footer-columns\" data-collapse-footer-columns=\"true\" role=\"list\">",
+            "target": [
+              "#footerColumnsNewsletter"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: div[aria-controls], div[aria-labelledby]"
+          },
+          {
+            "html": "<div id=\"footerColumns\" class=\"row footer-columns\" data-collapse-footer-columns=\"true\" role=\"list\">",
+            "target": [
+              "#footerColumns"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: div[aria-controls], div[aria-labelledby]"
+          }
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=axe-puppeteer",
+        "tags": [
+          "wcag2aa",
+          "wcag143"
+        ],
+        "nodes": [
+          {
+            "html": "<div class=\"footer-column-headline footer-headline js-collapse-footer-column-trigger\" id=\"collapseFooterNewsletterTitle\" data-target=\"#collapseFooterNewsletterTitle\" aria-expanded=\"true\" aria-controls",
+            "target": [
+              "#collapseFooterNewsletterTitle"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.81 (foreground color: #01425e, background color: #11aba8, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<div class=\"footer_newsletter_text\">",
+            "target": [
+              ".footer_newsletter_text"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<label for=\"form-privacy-opt-in-\" class=\"form-check-label\">",
+            "target": [
+              ".form-check-label"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<a data-ajax-modal=\"true\" data-url=\"/widgets/cms/0191fc1ccc727058b6c43f09980d856f\" href=\"/widgets/cms/0191fc1ccc727058b6c43f09980d856f\" title=\"Datenschutzbestimmungen\">Datenschutzbestimmungen</a>",
+            "target": [
+              "a[title=\"Datenschutzbestimmungen\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.81 (foreground color: #01425e, background color: #11aba8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<a data-ajax-modal=\"true\" data-url=\"/widgets/cms/0191fc1ccc5972a399bd907127378f02\" href=\"/widgets/cms/0191fc1ccc5972a399bd907127378f02\" title=\"AGB\">AGB</a>",
+            "target": [
+              "a[title=\"AGB\"][data-ajax-modal=\"true\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.81 (foreground color: #01425e, background color: #11aba8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button type=\"submit\" class=\"btn btn-primary\">\n                                            Alle Cookies akzeptieren\n                                        </button>",
+            "target": [
+              ".js-cookie-accept-all-button > .btn-primary.btn[type=\"submit\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      },
+      {
+        "id": "target-size",
+        "impact": "serious",
+        "description": "Ensure touch targets have sufficient size and space",
+        "help": "All touch targets must be 24px large, or leave sufficient space",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/target-size?application=axe-puppeteer",
+        "tags": [
+          "wcag22aa",
+          "wcag258"
+        ],
+        "nodes": [
+          {
+            "html": "<input name=\"privacy\" type=\"checkbox\" class=\"form-check-input\" id=\"form-privacy-opt-in-\" required=\"\">",
+            "target": [
+              "#form-privacy-opt-in-"
+            ],
+            "failureSummary": "Fix any of the following:\n  Target has insufficient size (16px by 16px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 20px instead of at least 24px."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Impressum",
+    "url": "https://www.mein-schluessel.de/shop-service/impressum/",
+    "finalUrl": "https://www.mein-schluessel.de/shop-service/impressum/",
+    "totalViolations": 4,
+    "totalNodes": 11,
+    "violations": [
+      {
+        "id": "aria-allowed-attr",
+        "impact": "critical",
+        "description": "Ensure an element's role supports its ARIA attributes",
+        "help": "Elements must only use supported ARIA attributes",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-allowed-attr?application=axe-puppeteer",
+        "tags": [
+          "wcag2a",
+          "wcag412"
+        ],
+        "nodes": [
+          {
+            "html": "<div class=\"footer-column-headline footer-headline js-collapse-footer-column-trigger\" id=\"collapseFooterNewsletterTitle\" data-target=\"#collapseFooterNewsletterTitle\" aria-expanded=\"true\" aria-controls",
+            "target": [
+              "#collapseFooterNewsletterTitle"
+            ],
+            "failureSummary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"true\""
+          },
+          {
+            "html": "<div class=\"footer-column-headline footer-headline js-collapse-footer-column-trigger\" data-bs-target=\"#collapseFooterTitle1\" aria-expanded=\"true\" aria-controls=\"collapseFooter1\">",
+            "target": [
+              "div[data-bs-target=\"#collapseFooterTitle1\"]"
+            ],
+            "failureSummary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"true\""
+          }
+        ]
+      },
+      {
+        "id": "aria-required-children",
+        "impact": "critical",
+        "description": "Ensure elements with an ARIA role that require child roles contain them",
+        "help": "Certain ARIA roles must contain particular children",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-required-children?application=axe-puppeteer",
+        "tags": [
+          "wcag2a",
+          "wcag131"
+        ],
+        "nodes": [
+          {
+            "html": "<div id=\"footerColumnsNewsletter\" class=\"row footer-columns\" data-collapse-footer-columns=\"true\" role=\"list\">",
+            "target": [
+              "#footerColumnsNewsletter"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: div[aria-controls], div[aria-labelledby]"
+          },
+          {
+            "html": "<div id=\"footerColumns\" class=\"row footer-columns\" data-collapse-footer-columns=\"true\" role=\"list\">",
+            "target": [
+              "#footerColumns"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: div[aria-controls], div[aria-labelledby]"
+          }
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=axe-puppeteer",
+        "tags": [
+          "wcag2aa",
+          "wcag143"
+        ],
+        "nodes": [
+          {
+            "html": "<div class=\"footer-column-headline footer-headline js-collapse-footer-column-trigger\" id=\"collapseFooterNewsletterTitle\" data-target=\"#collapseFooterNewsletterTitle\" aria-expanded=\"true\" aria-controls",
+            "target": [
+              "#collapseFooterNewsletterTitle"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.81 (foreground color: #01425e, background color: #11aba8, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<div class=\"footer_newsletter_text\">",
+            "target": [
+              ".footer_newsletter_text"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<label for=\"form-privacy-opt-in-\" class=\"form-check-label\">",
+            "target": [
+              ".form-check-label"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<a data-ajax-modal=\"true\" data-url=\"/widgets/cms/0191fc1ccc727058b6c43f09980d856f\" href=\"/widgets/cms/0191fc1ccc727058b6c43f09980d856f\" title=\"Datenschutzbestimmungen\">Datenschutzbestimmungen</a>",
+            "target": [
+              "a[title=\"Datenschutzbestimmungen\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.81 (foreground color: #01425e, background color: #11aba8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<a data-ajax-modal=\"true\" data-url=\"/widgets/cms/0191fc1ccc5972a399bd907127378f02\" href=\"/widgets/cms/0191fc1ccc5972a399bd907127378f02\" title=\"AGB\">AGB</a>",
+            "target": [
+              "a[title=\"AGB\"][data-ajax-modal=\"true\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.81 (foreground color: #01425e, background color: #11aba8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button type=\"submit\" class=\"btn btn-primary\">\n                                            Alle Cookies akzeptieren\n                                        </button>",
+            "target": [
+              ".js-cookie-accept-all-button > .btn-primary.btn[type=\"submit\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      },
+      {
+        "id": "target-size",
+        "impact": "serious",
+        "description": "Ensure touch targets have sufficient size and space",
+        "help": "All touch targets must be 24px large, or leave sufficient space",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/target-size?application=axe-puppeteer",
+        "tags": [
+          "wcag22aa",
+          "wcag258"
+        ],
+        "nodes": [
+          {
+            "html": "<input name=\"privacy\" type=\"checkbox\" class=\"form-check-input\" id=\"form-privacy-opt-in-\" required=\"\">",
+            "target": [
+              "#form-privacy-opt-in-"
+            ],
+            "failureSummary": "Fix any of the following:\n  Target has insufficient size (16px by 16px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 20px instead of at least 24px."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Login",
+    "url": "https://www.mein-schluessel.de/account/login",
+    "finalUrl": "https://www.mein-schluessel.de/account/login",
+    "totalViolations": 5,
+    "totalNodes": 12,
+    "violations": [
+      {
+        "id": "aria-allowed-attr",
+        "impact": "critical",
+        "description": "Ensure an element's role supports its ARIA attributes",
+        "help": "Elements must only use supported ARIA attributes",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-allowed-attr?application=axe-puppeteer",
+        "tags": [
+          "wcag2a",
+          "wcag412"
+        ],
+        "nodes": [
+          {
+            "html": "<div class=\"footer-column-headline footer-headline js-collapse-footer-column-trigger\" id=\"collapseFooterNewsletterTitle\" data-target=\"#collapseFooterNewsletterTitle\" aria-expanded=\"true\" aria-controls",
+            "target": [
+              "#collapseFooterNewsletterTitle"
+            ],
+            "failureSummary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"true\""
+          },
+          {
+            "html": "<div class=\"footer-column-headline footer-headline js-collapse-footer-column-trigger\" data-bs-target=\"#collapseFooterTitle1\" aria-expanded=\"true\" aria-controls=\"collapseFooter1\">",
+            "target": [
+              "div[data-bs-target=\"#collapseFooterTitle1\"]"
+            ],
+            "failureSummary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"true\""
+          }
+        ]
+      },
+      {
+        "id": "aria-required-children",
+        "impact": "critical",
+        "description": "Ensure elements with an ARIA role that require child roles contain them",
+        "help": "Certain ARIA roles must contain particular children",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-required-children?application=axe-puppeteer",
+        "tags": [
+          "wcag2a",
+          "wcag131"
+        ],
+        "nodes": [
+          {
+            "html": "<div id=\"footerColumnsNewsletter\" class=\"row footer-columns\" data-collapse-footer-columns=\"true\" role=\"list\">",
+            "target": [
+              "#footerColumnsNewsletter"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: div[aria-controls], div[aria-labelledby]"
+          },
+          {
+            "html": "<div id=\"footerColumns\" class=\"row footer-columns\" data-collapse-footer-columns=\"true\" role=\"list\">",
+            "target": [
+              "#footerColumns"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: div[aria-controls], div[aria-labelledby]"
+          }
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=axe-puppeteer",
+        "tags": [
+          "wcag2aa",
+          "wcag143"
+        ],
+        "nodes": [
+          {
+            "html": "<div class=\"footer-column-headline footer-headline js-collapse-footer-column-trigger\" id=\"collapseFooterNewsletterTitle\" data-target=\"#collapseFooterNewsletterTitle\" aria-expanded=\"true\" aria-controls",
+            "target": [
+              "#collapseFooterNewsletterTitle"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.81 (foreground color: #01425e, background color: #11aba8, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<div class=\"footer_newsletter_text\">",
+            "target": [
+              ".footer_newsletter_text"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<label for=\"form-privacy-opt-in-\" class=\"form-check-label\">",
+            "target": [
+              ".form-check-label"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<a data-ajax-modal=\"true\" data-url=\"/widgets/cms/0191fc1ccc727058b6c43f09980d856f\" href=\"/widgets/cms/0191fc1ccc727058b6c43f09980d856f\" title=\"Datenschutzbestimmungen\">Datenschutzbestimmungen</a>",
+            "target": [
+              ".form-check-label > a[title=\"Datenschutzbestimmungen\"][data-ajax-modal=\"true\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.81 (foreground color: #01425e, background color: #11aba8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<a data-ajax-modal=\"true\" data-url=\"/widgets/cms/0191fc1ccc5972a399bd907127378f02\" href=\"/widgets/cms/0191fc1ccc5972a399bd907127378f02\" title=\"AGB\">AGB</a>",
+            "target": [
+              ".form-check-label > a[title=\"AGB\"][data-ajax-modal=\"true\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.81 (foreground color: #01425e, background color: #11aba8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button type=\"submit\" class=\"btn btn-primary\">\n                                            Alle Cookies akzeptieren\n                                        </button>",
+            "target": [
+              ".js-cookie-accept-all-button > .btn-primary.btn[type=\"submit\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      },
+      {
+        "id": "image-alt",
+        "impact": "critical",
+        "description": "Ensure <img> elements have alternative text or a role of none or presentation",
+        "help": "Images must have alternative text",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/image-alt?application=axe-puppeteer",
+        "tags": [
+          "wcag2a",
+          "wcag111"
+        ],
+        "nodes": [
+          {
+            "html": "<img src=\"https://m.media-amazon.com/images/G/02/AmazonPay/Maxo/Button-SignIn-ProductPage-de_DE.svg\">",
+            "target": [
+              [
+                "#swag-amazon-pay-button-container-account-login",
+                "img"
+              ]
+            ],
+            "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          }
+        ]
+      },
+      {
+        "id": "target-size",
+        "impact": "serious",
+        "description": "Ensure touch targets have sufficient size and space",
+        "help": "All touch targets must be 24px large, or leave sufficient space",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/target-size?application=axe-puppeteer",
+        "tags": [
+          "wcag22aa",
+          "wcag258"
+        ],
+        "nodes": [
+          {
+            "html": "<input name=\"privacy\" type=\"checkbox\" class=\"form-check-input\" id=\"form-privacy-opt-in-\" required=\"\">",
+            "target": [
+              "#form-privacy-opt-in-"
+            ],
+            "failureSummary": "Fix any of the following:\n  Target has insufficient size (16px by 16px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 20px instead of at least 24px."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Schließanlagen Designer",
+    "url": "https://www.mein-schluessel.de/schliessanlagen-designer",
+    "finalUrl": "https://www.mein-schluessel.de/schliessanlagen-designer",
+    "totalViolations": 6,
+    "totalNodes": 33,
+    "violations": [
+      {
+        "id": "aria-allowed-attr",
+        "impact": "critical",
+        "description": "Ensure an element's role supports its ARIA attributes",
+        "help": "Elements must only use supported ARIA attributes",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-allowed-attr?application=axe-puppeteer",
+        "tags": [
+          "wcag2a",
+          "wcag412"
+        ],
+        "nodes": [
+          {
+            "html": "<div class=\"footer-column-headline footer-headline js-collapse-footer-column-trigger\" id=\"collapseFooterNewsletterTitle\" data-target=\"#collapseFooterNewsletterTitle\" aria-expanded=\"true\" aria-controls",
+            "target": [
+              "#collapseFooterNewsletterTitle"
+            ],
+            "failureSummary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"true\""
+          },
+          {
+            "html": "<div class=\"footer-column-headline footer-headline js-collapse-footer-column-trigger\" data-bs-target=\"#collapseFooterTitle1\" aria-expanded=\"true\" aria-controls=\"collapseFooter1\">",
+            "target": [
+              "div[data-bs-target=\"#collapseFooterTitle1\"]"
+            ],
+            "failureSummary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"true\""
+          }
+        ]
+      },
+      {
+        "id": "aria-required-children",
+        "impact": "critical",
+        "description": "Ensure elements with an ARIA role that require child roles contain them",
+        "help": "Certain ARIA roles must contain particular children",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/aria-required-children?application=axe-puppeteer",
+        "tags": [
+          "wcag2a",
+          "wcag131"
+        ],
+        "nodes": [
+          {
+            "html": "<div id=\"footerColumnsNewsletter\" class=\"row footer-columns\" data-collapse-footer-columns=\"true\" role=\"list\">",
+            "target": [
+              "#footerColumnsNewsletter"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: div[aria-controls], div[aria-labelledby]"
+          },
+          {
+            "html": "<div id=\"footerColumns\" class=\"row footer-columns\" data-collapse-footer-columns=\"true\" role=\"list\">",
+            "target": [
+              "#footerColumns"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has children which are not allowed: div[aria-controls], div[aria-labelledby]"
+          }
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=axe-puppeteer",
+        "tags": [
+          "wcag2aa",
+          "wcag143"
+        ],
+        "nodes": [
+          {
+            "html": "<span class=\"breadcrumb_label\">Objekt</span>",
+            "target": [
+              "div[onclick=\"back_to_system_type()\"] > .breadcrumb_label"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #10aba7, background color: #ffffff, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<div class=\"select_object_type_label\">Wohnung</div>",
+            "target": [
+              ".select_system_type_col[system_type=\"wohnung\"][onclick=\"selectSystemType(this);\"] > .select_object_type_wrapper > .select_object_type_label"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #10aba7, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<div class=\"select_object_type_label\">Einfamilienhaus\n                        </div>",
+            "target": [
+              ".select_system_type_col[system_type=\"efh\"][onclick=\"selectSystemType(this);\"] > .select_object_type_wrapper > .select_object_type_label"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #10aba7, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<div class=\"select_object_type_label\">Mehrfamilienhaus\n\n\n                        </div>",
+            "target": [
+              ".select_system_type_col[system_type=\"mfh\"][onclick=\"selectSystemType(this);\"] > .select_object_type_wrapper > .select_object_type_label"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #10aba7, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<div class=\"select_object_type_label\">Gewerbeobjekt\n\n                        </div>",
+            "target": [
+              ".select_system_type_col[system_type=\"gewerbe\"][onclick=\"selectSystemType(this);\"] > .select_object_type_wrapper > .select_object_type_label"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #10aba7, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<div class=\"select_object_type_label\">Öffentliche Hand\n\n                        </div>",
+            "target": [
+              ".select_system_type_col[system_type=\"oeffentlich\"][onclick=\"selectSystemType(this);\"] > .select_object_type_wrapper > .select_object_type_label"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #10aba7, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<div class=\"select_object_type_label\">Sonstiges\n                        </div>",
+            "target": [
+              ".select_system_type_col[system_type=\"sonstiges\"][onclick=\"selectSystemType(this);\"] > .select_object_type_wrapper > .select_object_type_label"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #10aba7, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<span class=\"cookie_info_text\">Die Schließanlage während der Bearbeitung <br> speichern, um Sie\n                        mir später zur Verfügung zu stellen</span>",
+            "target": [
+              ".cookie_info_text"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #10aba7, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button class=\"matrix_btn\" onclick=\"show_matrix();\">Direkt zur Schließmatrix\n                    </button>",
+            "target": [
+              "#choose_system_type_div > .columns:nth-child(4) > .main_nav_col.column > .matrix_btn[onclick=\"show_matrix();\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #10aba7, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<div class=\"footer-column-headline footer-headline js-collapse-footer-column-trigger\" id=\"collapseFooterNewsletterTitle\" data-target=\"#collapseFooterNewsletterTitle\" aria-expanded=\"true\" aria-controls",
+            "target": [
+              "#collapseFooterNewsletterTitle"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.81 (foreground color: #01425e, background color: #11aba8, font size: 12.0pt (16px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<div class=\"footer_newsletter_text\">",
+            "target": [
+              ".footer_newsletter_text"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<label for=\"form-privacy-opt-in-\" class=\"form-check-label\">",
+            "target": [
+              ".form-check-label"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<a data-ajax-modal=\"true\" data-url=\"/widgets/cms/0191fc1ccc727058b6c43f09980d856f\" href=\"/widgets/cms/0191fc1ccc727058b6c43f09980d856f\" title=\"Datenschutzbestimmungen\">Datenschutzbestimmungen</a>",
+            "target": [
+              "a[title=\"Datenschutzbestimmungen\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.6 (foreground color: #3273dc, background color: #11aba8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<a data-ajax-modal=\"true\" data-url=\"/widgets/cms/0191fc1ccc5972a399bd907127378f02\" href=\"/widgets/cms/0191fc1ccc5972a399bd907127378f02\" title=\"AGB\">AGB</a>",
+            "target": [
+              "a[title=\"AGB\"][data-ajax-modal=\"true\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.6 (foreground color: #3273dc, background color: #11aba8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "html": "<button type=\"submit\" class=\"btn btn-primary\">\n                                            Alle Cookies akzeptieren\n                                        </button>",
+            "target": [
+              ".js-cookie-accept-all-button > .btn-primary.btn[type=\"submit\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.83 (foreground color: #ffffff, background color: #11aba8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      },
+      {
+        "id": "image-alt",
+        "impact": "critical",
+        "description": "Ensure <img> elements have alternative text or a role of none or presentation",
+        "help": "Images must have alternative text",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/image-alt?application=axe-puppeteer",
+        "tags": [
+          "wcag2a",
+          "wcag111"
+        ],
+        "nodes": [
+          {
+            "html": "<img src=\"https://www.mein-schluessel.de/bundles/schliessanlagendesignerplugin/img/wohnung.png?1770028404\">",
+            "target": [
+              ".select_system_type_col[system_type=\"wohnung\"][onclick=\"selectSystemType(this);\"] > .select_object_type_wrapper > div:nth-child(1) > img"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          },
+          {
+            "html": "<img src=\"https://www.mein-schluessel.de/bundles/schliessanlagendesignerplugin/img/efh.png?1770028404\">",
+            "target": [
+              ".select_system_type_col[system_type=\"efh\"][onclick=\"selectSystemType(this);\"] > .select_object_type_wrapper > div:nth-child(1) > img"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          },
+          {
+            "html": "<img src=\"https://www.mein-schluessel.de/bundles/schliessanlagendesignerplugin/img/mfh.png?1770028404\">",
+            "target": [
+              ".select_system_type_col[system_type=\"mfh\"][onclick=\"selectSystemType(this);\"] > .select_object_type_wrapper > div:nth-child(1) > img"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          },
+          {
+            "html": "<img src=\"https://www.mein-schluessel.de/bundles/schliessanlagendesignerplugin/img/gewerbe.png?1770028404\">",
+            "target": [
+              ".select_system_type_col[system_type=\"gewerbe\"][onclick=\"selectSystemType(this);\"] > .select_object_type_wrapper > div:nth-child(1) > img"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          },
+          {
+            "html": "<img src=\"https://www.mein-schluessel.de/bundles/schliessanlagendesignerplugin/img/oeffentlich.png?1770028404\">",
+            "target": [
+              ".select_system_type_col[system_type=\"oeffentlich\"][onclick=\"selectSystemType(this);\"] > .select_object_type_wrapper > div:nth-child(1) > img"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          },
+          {
+            "html": "<img src=\"https://www.mein-schluessel.de/bundles/schliessanlagendesignerplugin/img/sonssiges.png?1770028404\">",
+            "target": [
+              ".select_system_type_col[system_type=\"sonstiges\"][onclick=\"selectSystemType(this);\"] > .select_object_type_wrapper > div:nth-child(1) > img"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element does not have an alt attribute\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          }
+        ]
+      },
+      {
+        "id": "label",
+        "impact": "critical",
+        "description": "Ensure every form element has a label",
+        "help": "Form elements must have labels",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/label?application=axe-puppeteer",
+        "tags": [
+          "wcag2a",
+          "wcag412"
+        ],
+        "nodes": [
+          {
+            "html": "<input type=\"radio\" name=\"system_type\" value=\"wohnung\" class=\"select_object_type_radio\">",
+            "target": [
+              "input[value=\"wohnung\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          },
+          {
+            "html": "<input type=\"radio\" name=\"system_type\" value=\"efh\" class=\"select_object_type_radio\">",
+            "target": [
+              "input[value=\"efh\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          },
+          {
+            "html": "<input type=\"radio\" name=\"system_type\" value=\"mfh\" class=\"select_object_type_radio\">",
+            "target": [
+              "input[value=\"mfh\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          },
+          {
+            "html": "<input type=\"radio\" name=\"system_type\" value=\"gewerbe\" class=\"select_object_type_radio\">",
+            "target": [
+              "input[value=\"gewerbe\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          },
+          {
+            "html": "<input type=\"radio\" name=\"system_type\" value=\"oeffentlich\" class=\"select_object_type_radio\">",
+            "target": [
+              "input[value=\"oeffentlich\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          },
+          {
+            "html": "<input type=\"radio\" name=\"system_type\" value=\"sonstiges\" class=\"select_object_type_radio\">",
+            "target": [
+              "input[value=\"sonstiges\"]"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          },
+          {
+            "html": "<input type=\"checkbox\" id=\"set_cookie_input\" onclick=\"toggle_cookie();\" onchange=\"toggle_cookie();\">",
+            "target": [
+              "#set_cookie_input"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element does not have an implicit (wrapped) <label>\n  Element does not have an explicit <label>\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute\n  Element has no placeholder attribute\n  Element's default semantics were not overridden with role=\"none\" or role=\"presentation\""
+          }
+        ]
+      },
+      {
+        "id": "target-size",
+        "impact": "serious",
+        "description": "Ensure touch targets have sufficient size and space",
+        "help": "All touch targets must be 24px large, or leave sufficient space",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/target-size?application=axe-puppeteer",
+        "tags": [
+          "wcag22aa",
+          "wcag258"
+        ],
+        "nodes": [
+          {
+            "html": "<input name=\"privacy\" type=\"checkbox\" class=\"form-check-input\" id=\"form-privacy-opt-in-\" required=\"\">",
+            "target": [
+              "#form-privacy-opt-in-"
+            ],
+            "failureSummary": "Fix any of the following:\n  Target has insufficient size (16px by 16px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 20px instead of at least 24px."
+          }
+        ]
+      }
+    ]
+  }
+]

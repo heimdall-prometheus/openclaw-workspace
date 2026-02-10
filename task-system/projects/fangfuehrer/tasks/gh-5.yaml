@@ -1,0 +1,42 @@
+id: gh-5
+title: "GitHub Actions CI/CD"
+status: open
+github_issue: 5
+
+project: fangfuehrer
+strategy: mvp-launch
+phase: 1
+
+intention: |
+  Automatisierte Qualitätssicherung bei jedem Push, schnellere Iteration.
+
+target_audience: |
+  Entwickler
+
+criteria:
+  quantitative:
+    - "Tests laufen bei PR"
+    - "Linting aktiv"
+    - "Build-Artefakte erstellt"
+  
+  qualitative:
+    - "Pipeline-Zeit <5min"
+    - "Klare Fehlermeldungen"
+
+validation:
+  loop_count: 0
+  max_loops: 10
+  min_qualitative_score: 7
+  history: []
+
+created: "2026-02-04T11:45:00Z"
+created_by: heimdall
+updated: "2026-02-04T11:45:00Z"
+completed: ""
+
+artifacts: []
+
+notes: |
+  GitHub Issue: https://github.com/heimdall-prometheus/fangfuehrer/issues/5
+  Type: infra
+  Priority: high

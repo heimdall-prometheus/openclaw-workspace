@@ -1,0 +1,74 @@
+{
+  "date": "2026-02-01",
+  "dayOfWeek": "Samstag",
+  "meals": [
+    {
+      "time": "10:10",
+      "name": "Frühstück",
+      "photo": "/home/reisig/.openclaw/media/inbound/file_25---da44e26a-0ca4-4b50-9efe-e9dc1b92aa23.jpg",
+      "items": [
+        {
+          "food": "hähnchen_tk",
+          "amount": 500,
+          "unit": "g",
+          "macros": {
+            "calories": 825,
+            "protein": 155,
+            "fat": 18,
+            "carbs": 0
+          }
+        },
+        {
+          "food": "ei_m",
+          "amount": 4,
+          "unit": "Stück",
+          "macros": {
+            "calories": 312,
+            "protein": 25.2,
+            "fat": 21.2,
+            "carbs": 2.4
+          }
+        },
+        {
+          "food": "champignon",
+          "amount": 90,
+          "unit": "g",
+          "note": "~3 Stück",
+          "macros": {
+            "calories": 20,
+            "protein": 2.8,
+            "fat": 0.3,
+            "carbs": 3
+          }
+        },
+        {
+          "food": "olivenöl",
+          "amount": 1,
+          "unit": "EL",
+          "note": "geschätzt zum Braten",
+          "macros": {
+            "calories": 119,
+            "protein": 0,
+            "fat": 13.5,
+            "carbs": 0
+          }
+        }
+      ],
+      "totals": {
+        "calories": 1276,
+        "protein": 183,
+        "fat": 53,
+        "carbs": 5.4
+      },
+      "notes": "Nach Kunden-Session gestern Abend. Protein-Frühstück mit TK-Hähnchen."
+    }
+  ],
+  "dailyTotals": {
+    "calories": 1276,
+    "protein": 183,
+    "fat": 53,
+    "carbs": 5.4
+  },
+  "notes": "Tracking gestartet! Phase 1: Baseline ermitteln (keine Limits).",
+  "context": "Kunden-Termin gestern, evtl. Alkohol"
+}

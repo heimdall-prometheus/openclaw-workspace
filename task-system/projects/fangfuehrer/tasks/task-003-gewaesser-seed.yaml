@@ -1,0 +1,51 @@
+slug: task-003-gewaesser-seed
+name: "Deutsche Gewässer-Datenbank befüllen (500+)"
+project: fangfuehrer
+strategy: mvp-launch
+tactic: backend-api
+status: passed
+created: 2026-02-07
+
+intention: |
+  Angler brauchen bei jedem Fang eine Gewässer-Zuordnung. Ohne ausreichend
+  Gewässer in der DB ist die Nearby-Suche nutzlos und der User muss manuell
+  eingeben. 500+ deutsche Angelgewässer als Basis, damit die meisten Angler
+  in 25km Umkreis mindestens 3-5 Gewässer finden.
+
+target_audience: "Angler in DACH, primär Deutschland, Mobile-First"
+
+quantitative_criteria:
+  - id: q1
+    criterion: "Mindestens 500 Gewässer in der DB"
+    test: "GET /waters/?limit=1 → Count total via DB oder API"
+
+  - id: q2
+    criterion: "Alle 16 Bundesländer mit mindestens 5 Gewässern vertreten"
+    test: "GROUP BY state → min(count) >= 5"
+
+  - id: q3
+    criterion: "Nearby-Suche findet in 50km um 5 Großstädte je mind. 3 Gewässer"
+    test: "GET /waters/nearby für Berlin, München, Hamburg, Köln, Leipzig"
+
+  - id: q4
+    criterion: "Keine Duplikate (gleicher Name + gleiches Bundesland)"
+    test: "SELECT name, state, COUNT(*) HAVING COUNT(*) > 1 = 0 Treffer"
+
+  - id: q5
+    criterion: "Seed-Script im Repo mit PR"
+    test: "PR existiert auf heimdall-prometheus/fangfuehrer"
+
+qualitative_criteria:
+  - id: ql1
+    criterion: "Datenqualität — echte, bekannte Angelgewässer (keine Pfützen/Klärteiche)"
+    min_score: 7
+
+  - id: ql2
+    criterion: "Typ-Zuordnung korrekt (See/Fluss/Kanal/Teich)"
+    min_score: 7
+
+  - id: ql3
+    criterion: "Gleichmäßige regionale Verteilung (nicht nur 1 Region überrepräsentiert)"
+    min_score: 7
+
+max_loops: 3

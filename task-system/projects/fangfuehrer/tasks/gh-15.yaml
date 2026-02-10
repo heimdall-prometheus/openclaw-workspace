@@ -1,0 +1,42 @@
+id: gh-15
+title: "Fish ID Result Screen"
+status: open
+github_issue: 15
+
+project: fangfuehrer
+strategy: mvp-launch
+phase: 3
+
+intention: |
+  Nutzer soll sofort verstehen welchen Fisch er gefangen hat und sich darüber freuen.
+
+target_audience: |
+  Angler nach Foto-Upload
+
+criteria:
+  quantitative:
+    - "Fischart wird angezeigt"
+    - "Confidence-Score sichtbar"
+    - "Alternative Vorschläge bei <80%"
+  
+  qualitative:
+    - "Celebration Animation bei Match"
+    - "Infos zum Fisch (Schonzeit, Rekorde)"
+
+validation:
+  loop_count: 0
+  max_loops: 10
+  min_qualitative_score: 7
+  history: []
+
+created: "2026-02-04T11:45:00Z"
+created_by: heimdall
+updated: "2026-02-04T11:45:00Z"
+completed: ""
+
+artifacts: []
+
+notes: |
+  GitHub Issue: https://github.com/heimdall-prometheus/fangfuehrer/issues/15
+  Type: feature
+  Priority: critical

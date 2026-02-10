@@ -1,0 +1,38 @@
+id: "001"
+title: "Backend Deployment"
+project: fangfuehrer
+strategy: mvp-launch
+tactic: core-mvp
+status: passed
+created: 2026-02-03
+priority: high
+
+intention: |
+  Backend API muss erreichbar sein, damit die Flutter App 
+  damit kommunizieren kann. Ohne laufendes Backend keine 
+  Entwicklung der App-Features möglich.
+
+criteria:
+  quantitative:
+    - "API erreichbar unter https://fangfuehrer-api.erikreisig.de"
+    - "Health-Endpoint /health antwortet mit 200 OK"
+    - "Auth-Endpoints funktionieren (register, login)"
+    - "Response Time < 500ms"
+  qualitative:
+    - "SSL/HTTPS korrekt konfiguriert"
+    - "Logging funktioniert"
+    - "Restart-Resilient (kommt nach Neustart wieder hoch)"
+
+target_audience: "Entwickler (Erik + Heimdall)"
+
+dependencies: []
+
+validation:
+  type: playwright
+  test_file: null  # Wird erstellt
+  max_loops: 10
+
+notes: |
+  DNS Record für erikreisig.de erstellen
+  Docker Compose auf mein-malbuch Server deployen
+  Nginx Reverse Proxy konfigurieren

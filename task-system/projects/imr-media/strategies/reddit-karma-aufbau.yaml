@@ -1,0 +1,72 @@
+name: Reddit Karma-Aufbau
+slug: reddit-karma-aufbau
+project: imr-media
+created: 2026-02-02
+
+# Strategisches Ziel
+goal: |
+  Account "HeimdallWacht" zu einem vertrauenswürdigen Reddit-Member aufbauen,
+  der in deutschen Tech/Business Communities als hilfreich bekannt ist.
+
+# Zeithorizont
+timeframe: 4 Wochen (Phase 1)
+
+# Erfolgskriterien
+success_metrics:
+  - metric: Comment Karma
+    target: ">= 500"
+    current: 0
+  - metric: Post Karma
+    target: ">= 100"
+    current: 0
+  - metric: Account Alter
+    target: ">= 30 Tage"
+    current: 0
+  - metric: Aktive Subreddits
+    target: ">= 5"
+    current: 0
+  - metric: Bans/Warnings
+    target: "0"
+    current: 0
+
+# Zielgruppe
+target_audience:
+  primary: Deutsche E-Commerce Shop-Betreiber
+  secondary: Selbstständige, KMU mit Software-Bedarf
+  location: Deutschland (DACH)
+
+# Taktiken
+tactics:
+  - name: Daily Commenting
+    description: 2-3 hilfreiche Kommentare pro Tag in Target-Subreddits
+    frequency: daily
+    
+  - name: Upvote Participation  
+    description: Guten Content upvoten, Community-Member sein
+    frequency: daily
+    
+  - name: Weekly Value Post
+    description: 1x pro Woche eigenen hilfreichen Post (wenn genuiner Mehrwert)
+    frequency: weekly
+
+# Target Subreddits (Deutsch-Fokus!)
+target_subreddits:
+  tier1_deutsch:
+    - r/de_EDV        # 100k - IT/Tech Deutschland
+    - r/selbststaendig # 10k - DIREKTE Zielgruppe
+    - r/Finanzen      # 400k - Business-orientiert
+    - r/de            # Größte deutsche Community
+    - r/Handwerker    # KMU-Fokus
+    
+  tier2_international:
+    - r/ecommerce     # 250k - Wenn auf Englisch gepostet
+    - r/shopify       # 200k - Technische Hilfe
+    - r/webdev        # 2M - Code-Expertise zeigen
+
+# Regeln
+rules:
+  - NIEMALS IMR Media erwähnen in Phase 1
+  - 90% Hilfe, 10% subtile Persönlichkeit
+  - Auf Deutsch antworten wo möglich
+  - Authentisch bleiben, kein Marketing-Speak
+  - Bei Kritik: Sachlich reagieren, nie defensiv

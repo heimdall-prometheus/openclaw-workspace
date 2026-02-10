@@ -1,0 +1,41 @@
+id: gh-26
+title: "Achievement Definitions (20+)"
+status: open
+github_issue: 26
+
+project: fangfuehrer
+strategy: mvp-launch
+phase: 5
+
+intention: |
+  Vielfältige Ziele für verschiedene Spielertypen - Collector, Competitor, Explorer.
+
+target_audience: |
+  Verschiedene User-Personas
+
+criteria:
+  quantitative:
+    - "20+ verschiedene Achievements"
+    - "Kategorisiert (Sammeln, Größe, Gewässer, Zeit)"
+  
+  qualitative:
+    - "Mix aus Easy und Hard"
+    - "Deutsche Namen und Beschreibungen"
+
+validation:
+  loop_count: 0
+  max_loops: 10
+  min_qualitative_score: 7
+  history: []
+
+created: "2026-02-04T11:45:00Z"
+created_by: heimdall
+updated: "2026-02-04T11:45:00Z"
+completed: ""
+
+artifacts: []
+
+notes: |
+  GitHub Issue: https://github.com/heimdall-prometheus/fangfuehrer/issues/26
+  Type: feature
+  Priority: high

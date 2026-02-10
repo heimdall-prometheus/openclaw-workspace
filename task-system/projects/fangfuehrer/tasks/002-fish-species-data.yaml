@@ -1,0 +1,40 @@
+id: "002"
+title: "Fischarten-Datenbank"
+project: fangfuehrer
+strategy: mvp-launch
+tactic: core-mvp
+status: validating
+created: 2026-02-03
+priority: high
+
+intention: |
+  Die App braucht eine Liste der DACH-Süßwasserfische mit 
+  Bildern, Größenangaben und Seltenheit. Ohne diese Daten
+  kann die Sammlung/Pokédex-Mechanik nicht funktionieren.
+
+criteria:
+  quantitative:
+    - "Mindestens 50 Fischarten erfasst"
+    - "Jede Art hat: Name (DE), Name (Latein), Durchschnittsgröße, Max-Größe"
+    - "Trophäen-Schwellen definiert (Bronze/Silber/Gold)"
+    - "Daten als JSON/SQL Seed verfügbar"
+  qualitative:
+    - "Biologisch korrekte Informationen"
+    - "Sinnvolle Trophäen-Schwellen (erreichbar aber herausfordernd)"
+    - "Häufige Arten abgedeckt (Karpfen, Hecht, Zander, Barsch, etc.)"
+
+target_audience: "Angler in DACH"
+
+dependencies: []
+
+validation:
+  type: manual
+  checklist:
+    - "50+ Arten in Datenbank"
+    - "Alle Pflichtfelder ausgefüllt"
+    - "Stichprobe: 5 zufällige Arten auf Korrektheit prüfen"
+  max_loops: 5
+
+notes: |
+  Quellen: Wikipedia, Fischereibehörden, Angelbücher
+  Bilder: Public Domain oder selbst generieren

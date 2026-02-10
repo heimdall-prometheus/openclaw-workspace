@@ -1,0 +1,44 @@
+id: gh-39
+title: "PWA/Web Version (Mobile-First)"
+status: open
+github_issue: 39
+
+project: fangfuehrer
+strategy: mvp-launch
+phase: 1
+
+intention: |
+  Niedrigschwelliger Einstieg ohne App-Download - schnelle Validierung und SEO-Traffic.
+
+target_audience: |
+  Mobile Angler die zögern Apps zu installieren, SEO-Traffic
+
+criteria:
+  quantitative:
+    - "Lighthouse PWA Score >90"
+    - "Camera API funktioniert (iOS Safari + Chrome)"
+    - "Installierbar (A2HS)"
+    - "Core Journey komplett"
+  
+  qualitative:
+    - "Mobile-First responsive"
+    - "Lädt <3s"
+    - "Offline-Fallback für kritische Screens"
+
+validation:
+  loop_count: 0
+  max_loops: 10
+  min_qualitative_score: 7
+  history: []
+
+created: "2026-02-04T11:45:00Z"
+created_by: heimdall
+updated: "2026-02-04T11:45:00Z"
+completed: ""
+
+artifacts: []
+
+notes: |
+  GitHub Issue: https://github.com/heimdall-prometheus/fangfuehrer/issues/39
+  Type: feature
+  Priority: critical

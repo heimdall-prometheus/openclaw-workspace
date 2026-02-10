@@ -1,0 +1,42 @@
+id: gh-6
+title: "Auth System (JWT + OAuth)"
+status: open
+github_issue: 6
+
+project: fangfuehrer
+strategy: mvp-launch
+phase: 2
+
+intention: |
+  Sichere User-Identifikation ermöglichen, damit Fänge und Achievements personalisiert gespeichert werden.
+
+target_audience: |
+  Alle App-User
+
+criteria:
+  quantitative:
+    - "Register/Login/Logout funktioniert"
+    - "JWT Token wird korrekt validiert"
+    - "Token Refresh implementiert"
+  
+  qualitative:
+    - "Sichere Passwort-Hashing (bcrypt)"
+    - "OAuth vorbereitet (Google/Apple)"
+
+validation:
+  loop_count: 0
+  max_loops: 10
+  min_qualitative_score: 7
+  history: []
+
+created: "2026-02-04T11:45:00Z"
+created_by: heimdall
+updated: "2026-02-04T11:45:00Z"
+completed: ""
+
+artifacts: []
+
+notes: |
+  GitHub Issue: https://github.com/heimdall-prometheus/fangfuehrer/issues/6
+  Type: feature
+  Priority: critical

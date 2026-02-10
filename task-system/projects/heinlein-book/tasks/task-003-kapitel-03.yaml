@@ -1,0 +1,74 @@
+task_id: hb-task-003
+title: "Kapitel 3: Der Schlepp"
+project: heinlein-book
+strategy: writing-strategy
+status: passed
+created: 2026-02-07
+
+intention: >
+  Kapitel 3 ist das technische Herzstück des ersten Akts. Die Plattform wird von 
+  Schottland nach Westafrika geschleppt — 4.200 Seemeilen, 28 Tage. Hier zeigt sich 
+  Heinleins "Technik als Poesie": Die Details der Schleppoperation sind so präzise, 
+  dass der Leser glaubt, er könnte es nachbauen.
+  
+  Gleichzeitig: Erste geopolitische Friktionen (Spanien, Royal Navy). Der Moment wo 
+  die Welt begreift, dass Brenner es ernst meint. Und am Ende: Ankunft. Kein Pathos,
+  keine Flagge — Brenner schaltet den Mobilfunkmast ein und stellt die erste Rechnung.
+
+target_audience: "Leser von Heinlein, Cixin Liu, Andy Weir. Technik-affin, 25-55."
+
+scene_summary: >
+  Szene 1: Kapstadt-Werft. Die Brent Delta wird umgebaut — FPSO-Konversion, Ballast-Tanks,
+  Wohnmodule. Jian Chen leitet den Umbau. Technische Details die Storytelling sind: 
+  Metacentric height, Rollperioden, Entsalzungsanlage. Brenner ist nicht vor Ort — 
+  er telefoniert mit Versicherern, Schleppunternehmen, dem Wetter.
+  
+  Szene 2: Der Schlepp beginnt. Zwei Hochseeschlepper, die Route (Kapstadt → Westküste 
+  Afrika → Position 200nm vor Sierra Leone). Das Wetterfenster. Spanien verweigert die 
+  Durchfahrt durch seine AWZ — Brenner umgeht sie über den offenen Atlantik. 
+  Die Royal Navy "begleitet" den Konvoi: nicht feindlich, neugierig.
+  
+  Szene 3: Auf See. 28 Tage auf einer Plattform die geschleppt wird. Jian dokumentiert.
+  Brenner rechnet. Ein Sturm vor den Kanaren testet die Stabilität. Die Plattform hält.
+  "Dreieinhalb Grad Krängung. Die Berechnung sagte drei Komma zwei." Jian: "Ich runde 
+  nicht auf. Das Meer schon."
+  
+  Szene 4: Ankunft. Position erreicht. Internationales Gewässer. Brenner hisst keine Flagge.
+  Er schaltet den Mobilfunkmast ein, registriert .nv (Nova Ventus), stellt die erste 
+  Rechnung aus: Serverhosting, steuerfrei. Krone reicht bei der UN einen Antrag auf 
+  Beobachterstatus ein. Nicht weil er durchkommt — weil der Antrag einen Präzedenzfall 
+  schafft. Die ersten 50 Bewohner kommen an Bord.
+
+output:
+  format: "Markdown (.md)"
+  path: "projects/heinlein-book/chapters/kapitel-03-der-schlepp.md"
+  length: "3.500-4.500 Wörter"
+  language: "Deutsch"
+
+criteria:
+  quantitative:
+    - criterion: "Länge 3.500-4.500 Wörter"
+      test: "wc -w"
+    - criterion: "Dialog-Anteil ≥ 40%"
+      test: "Zeilen mit Anführungszeichen / Gesamtzeilen"
+    - criterion: "Keine Gefühls-Introspektion Brenners"
+      test: "Grep nach Introspektion-Pattern"
+
+  qualitative:
+    - criterion: "Heinlein-Authentizität"
+      description: "Technik als Poesie. Die Schleppoperation muss sich lesen wie etwas das man nachbauen könnte."
+      min_score: 8
+    - criterion: "Technische Glaubwürdigkeit"
+      description: "Schleppgeschwindigkeit, Wetterfenster, Stabilitätswerte, Route — alles muss plausibel sein."
+      min_score: 8
+    - criterion: "Geopolitische Spannung"
+      description: "Spanien, Royal Navy — die Welt reagiert. Aber noch nicht feindlich, eher: irritiert."
+      min_score: 7
+    - criterion: "Die Ankunft"
+      description: "Understatement. Kein Pathos. Mobilfunkmast statt Flagge. Der Leser muss trotzdem Gänsehaut kriegen."
+      min_score: 8
+    - criterion: "Plot-Momentum"
+      description: "Von 'er hat das Geld und die Leute' zu 'die Plattform ist da, der Staat existiert de facto'. Eskalation."
+      min_score: 8
+
+max_loops: 5

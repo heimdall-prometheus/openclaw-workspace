@@ -1,0 +1,49 @@
+# Q1 2026 Marketing Strategy
+
+slug: marketing-q1-2026
+title: "Q1 2026 Marketing Push"
+project: mein-malbuch
+
+objective: |
+  Organische Reichweite aufbauen und erste profitable Verkäufe generieren.
+  Fokus auf Pinterest und Content Marketing.
+
+key_results:
+  - description: "Pinterest Follower"
+    target: "500"
+    current: "0"
+    
+  - description: "Organische Website-Besucher/Monat"
+    target: "1000"
+    current: "~50"
+    
+  - description: "Conversion Rate"
+    target: "2%"
+    current: "unknown"
+
+timeframe:
+  start: "2026-01-01"
+  end: "2026-03-31"
+  review: "weekly"
+
+tactics:
+  - name: "Pinterest Organic"
+    goal: "Reichweite über visuelle Plattform aufbauen"
+    tasks: []
+    
+  - name: "Content Marketing"
+    goal: "SEO Traffic durch hilfreiche Inhalte"
+    tasks: []
+    
+  - name: "UGC/Social Proof"
+    goal: "Vertrauen durch echte Kunden-Inhalte"
+    tasks: []
+
+status: active
+
+notes: |
+  Phase 1 (Wochenende 2026-01-30) abgeschlossen:
+  - Pinterest Account + 10 Pins live
+  - UGC Video erstellt
+  - Remotion Templates gebaut
+  - Content Kalender erstellt

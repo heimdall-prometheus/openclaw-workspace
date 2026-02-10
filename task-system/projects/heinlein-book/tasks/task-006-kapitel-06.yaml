@@ -1,0 +1,58 @@
+task_id: hb-task-006
+title: "Kapitel 6: Das Business"
+project: heinlein-book
+strategy: writing-strategy
+status: working
+created: 2026-02-07
+
+intention: >
+  Nova Ventus wird zur Wirtschaftsmacht. Montage-Kapitel: der Krypto-Exchange, das 
+  Biotech-Lab, das GDPR-freie Rechenzentrum. 340 Bewohner, 12.000 auf der Warteliste.
+  Das Geld fließt — und mit dem Geld die Aufmerksamkeit.
+  
+  Dann: CNN. Ein Reporter dreht eine Doku. "Pirate Paradise or Future Nation?" 
+  Brenner gibt 20 Minuten Interview und zeigt Bilanzen statt Visionen.
+  
+  Abschluss Akt I / Übergang zu Akt II: Die Welt nimmt Nova Ventus ernst. 
+  Und das ist gefährlicher als ignoriert zu werden.
+
+scene_summary: >
+  Szene 1: Montage — Nova Ventus als funktionierender Mikrostaat. Exchange-Volumen 
+  2 Mrd im ersten Monat. Parks Labor produziert erste Ergebnisse. Widmers Settlement-
+  System läuft. Bevölkerung 340. Warteliste 12.000. Brenner rechnet.
+  
+  Szene 2: CNN-Team kommt an Bord. Reporter Sarah Mitchell, skeptisch, erwartet 
+  Pirateninsel. Findet: Spreadsheets, Entsalzungsanlagen, eine Chirurgin die 
+  Blinddarm-OPs macht. Brenner gibt 20 Minuten. Zeigt Bilanzen. "Kriminalitätsrate 
+  niedriger als Hamburg, Pro-Kopf-Einkommen höher als Luxemburg."
+  
+  Szene 3: Die Doku läuft. "Pirate Paradise or Future Nation?" Weltweite Reaktion.
+  Hälfte feiert, Hälfte verdammt. Brenner liest keine Rezensionen. Krone liest alle.
+  
+  Szene 4: Die Konsequenz. Regierungen reagieren. Die EU beginnt Sanktionen zu 
+  diskutieren. Die USA stufen Nova Ventus als "entity of concern" ein. 
+  Brenner: "Gut. Jetzt nehmen sie uns ernst." Krone: "Die NATO hat Zähne."
+  Ende Akt I.
+
+output:
+  path: "projects/heinlein-book/chapters/kapitel-06-das-business.md"
+  length: "3.500-4.500 Wörter"
+  language: "Deutsch"
+
+criteria:
+  quantitative:
+    - criterion: "Länge 3.500-4.500 Wörter"
+    - criterion: "Dialog-Anteil ≥ 40%"
+    - criterion: "Keine Gefühls-Introspektion Brenners"
+  qualitative:
+    - criterion: "Heinlein-Authentizität"
+      min_score: 8
+    - criterion: "Business-Montage"
+      description: "Muss sich anfühlen wie ein Staat der funktioniert, nicht wie eine Aufzählung. Zeigen, nicht listen."
+      min_score: 8
+    - criterion: "CNN-Szene"
+      description: "Brenner vs. Reporter. Er verkauft keine Vision — er zeigt Zahlen. Der beste Moment: wenn Mitchell ihre Skepsis verliert."
+      min_score: 8
+    - criterion: "Akt-Übergang"
+      description: "Ende Akt I muss spürbar sein. Von 'sie lachen über uns' zu 'sie haben Angst vor uns'. Eskalation."
+      min_score: 8

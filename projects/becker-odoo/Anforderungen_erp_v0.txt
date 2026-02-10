@@ -1,0 +1,55 @@
+- lagerhaltung
+- wareneingang
+- bestellungen werden im erp 
+- verknüpfung auftragsbestätigung und einkauf
+- rechnung soll digital empfangen werden
+- barcodes auf alle belege
+- monatlicher datev sync
+- pflichtfeld regel set für eingangsrechnungen : wer bucht, projektnummer für einbuchen, oder handel
+- offene bestellungen anzeigen pro produkt - auch bei bestellposition
+
+- automatische artikel anlage aus lieferschein oder eingangsrechnungen
+
+- eingangsrechnungsprüfung automatisieren - abgleich EK und bestellungen
+
+- kundenspezifische historie zu angeboten - welcher artikel wurde schonmal angeboten, beliefert, zu welchem preis
+
+- dokumentation - vorgänge werden teils nicht erfasst
+
+- kalender funktion
+
+- monteurplanung + montage doku
+
+- 
+
+- pro position je eingangsrechnung / bestellung -> kostenstelle / projekt erfassen
+
+- Projektdoku + CRM
+
+- GAEB -> Ausschreibungen Import aus Datei
+
+- Regelbasierte Preisänderungen für VK und EK
+
+- Datenmigration
+
+- Bilder hinterlegen
+
+- POS Modul
+
+- Mehrere Lagerorte, Lagerplätze verwalten, Regalverwaltung
+
+- 3 Standorte mit verschiedenen Nummernkreisen
+
+- X Rechnungen Support
+
+- kein Produktionsmodul - keine fertigung
+
+- Arbeitszeiterfassung inklusive Arbeitszeitmodelle
+
+- Schnittstelle zu S-Firm -> Überweisungen
+
+- Wartungsverträge verwalten - mit verknüpfung
+
+- 
+
+- BAE ist alternative - 

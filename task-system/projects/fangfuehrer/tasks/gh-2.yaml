@@ -1,0 +1,42 @@
+id: gh-2
+title: "FastAPI Backend Scaffold"
+status: open
+github_issue: 2
+
+project: fangfuehrer
+strategy: mvp-launch
+phase: 1
+
+intention: |
+  API-Grundgerüst bereitstellen, auf dem alle Features aufbauen können.
+
+target_audience: |
+  Entwickler, indirekt alle App-User
+
+criteria:
+  quantitative:
+    - "Server startet ohne Errors"
+    - "/health Endpoint antwortet 200"
+    - "/docs (Swagger) erreichbar"
+  
+  qualitative:
+    - "Projektstruktur folgt Best Practices"
+    - "Logging konfiguriert"
+
+validation:
+  loop_count: 0
+  max_loops: 10
+  min_qualitative_score: 7
+  history: []
+
+created: "2026-02-04T11:45:00Z"
+created_by: heimdall
+updated: "2026-02-04T11:45:00Z"
+completed: ""
+
+artifacts: []
+
+notes: |
+  GitHub Issue: https://github.com/heimdall-prometheus/fangfuehrer/issues/2
+  Type: infra
+  Priority: critical

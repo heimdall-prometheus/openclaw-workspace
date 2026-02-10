@@ -1,0 +1,16 @@
+name = "erikreisig-api"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+account_id = "e1625bd206eaa162677dba0e5bc1569f"
+
+# Custom domain: api.erikreisig.de
+# Configure via Cloudflare Dashboard → Workers → Custom Domains
+# Or add a CNAME record pointing api.erikreisig.de to this worker
+
+[vars]
+ENVIRONMENT = "production"
+
+# Route configuration (alternative to custom domains)
+# routes = [
+#   { pattern = "api.erikreisig.de/*", zone_name = "erikreisig.de" }
+# ]

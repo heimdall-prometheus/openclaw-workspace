@@ -1,0 +1,126 @@
+## Out of the box / Konfiguration / Evtl Custom View
+- Mehrere Lagerorte, Lagerplätze verwalten, Regalverwaltung
+
+- 3 Standorte mit verschiedenen Nummernkreisen
+- Bilder hinterlegen
+- Projektdoku + CRM
+- pro position je eingangsrechnung / bestellung -> kostenstelle / projekt erfassen
+- offene bestellungen anzeigen pro produkt - auch bei bestellposition
+- pflichtfeld regel set für eingangsrechnungen : wer bucht, projektnummer für einbuchen, oder handel
+- barcodes auf alle belege
+- rechnung soll digital empfangen werden
+- verknüpfung auftragsbestätigung und einkauf
+- lagerhaltung
+- wareneingang
+- POS Modul
+
+- kundenspezifische historie zu angeboten - welcher artikel wurde schonmal angeboten, beliefert, zu welchem preis
+
+## Vorhandene Community Module - evtl erweitern
+- Wartungsverträge verwalten - mit verknüpfung
+- Arbeitszeiterfassung inklusive Arbeitszeitmodelle
+- X Rechnungen Support
+- Regelbasierte Preisänderungen für VK und EK
+- monteurplanung + montage doku [kommt auf details an]
+- eingangsrechnungsprüfung automatisieren - abgleich EK und bestellungen [OCR ist nicht in community version, umsetzung via KI Api]
+- monatlicher datev sync
+- automatische artikel anlage aus lieferschein oder eingangsrechnungen [evtl doch eigenes modul]
+
+## Custom Module
+- Schnittstelle zu S-Firm -> Überweisungen
+- GAEB -> Ausschreibungen Import aus Datei
+	-> Angebot erstellen
+	-> Mapping Produkte -> GAEB Position N:1
+		-> Für Statistik
+		-> Für Abrechnung
+
+
+
+## Pain Points
+- Nachvollziehbarkeit -> 
+	- Historie je Kunde
+	- Berechnung pro Projekt
+	- Weiterberechnung von Bestellungen je Projekt unklar -> EVTL UMSATZVERLUST!
+	- Arbeitszeit
+	- Aktuell Projekt = Ordner
+	- Profitabilität pro Projekt?
+	- Dateiablage
+	==>> PROJEKTMODUL
+	
+- Überblick über offene Bestellungen	
+	- "Wann kommt mein Zeug?" für Kunde
+	- Wunsch: Verknüpfung Auftragsbestätigung an Kunden mit Auftragsbestätigung vom Lieferanten
+	- Welche Bestellungen sind noch offen für meinen Kundne (offen bei Lieferant)
+	- Verfügbarkeit für Lieferbarkeit Auftrag
+	
+- 3-Wege-Prüfung
+	- Automatisiert!
+	
+- Etikettendruck
+	- Hardware?
+	- Mobile Scanner
+	
+- Abrechnung
+	- Monteure, Kleinstaufträge
+	- Material unklar
+	- Zeiterfassung?
+	- Aktuell Zettel!
+	- Umlagerung von Lager auf Lagerort Monteur Automatisiert
+		- Bestand reservieren
+		
+- Picking Prozess für Montage / Ersetzen von Material	
+	
+- PROZESS! FÜR MATERIAL ENTNAHME / AUSGANG
+	- Szenarien abfragen
+
+- Meldebestand -> Bestellvorschlag
+
+- SSO evtl mit Medium
+
+- Auftrag kopiere -> keine deep copy! MA, Datum, Preise-aktualisierung
+
+- Wünschenswert: Kundenspezifische / Gruppenspezifische Preisregeln
+
+- Lieferantenspezifische Hinweise 
+
+- Lieferanten Angebote -> CRM -> Angebot schon da pro Lieferant?
+	- RFQ Prozess
+	- Wiedervorlage
+	
+- Terminplanung Monteure
+	- Arbeitszeitmodell / Urlaub?
+	- Verknüpfung zu Aufträgen / Vorgänge
+	- Keine Verknüfung zu Personal
+	- Mängeldokumentation Wartungsverträge
+		- inkl Foto
+		
+- Angebotsvorlagen
+	
+- Rechtemanagement -> Rollenkonzept
+
+- Duplikatsprüfung bei Anlage Produkte / Kunden
+
+- Pflichtfelder bei Rechnungseingang
+	- Wer gebucht
+	- Wer freigegeben
+	- Welche Ausgangsrechnung / Vorgangsnummer
+	
+- Info Felder pro Position einpflegen bei Eingang
+
+- Optionale Infos auf Belegen
+
+- Bestandsverwaltung beim Kunden
+
+- Pflichtfelder für bestimmte Artikel
+
+- Seriennummer Verwaltung
+
+## Strategische Themen
+- Reaktionszeiten sind zu lang
+	-> Vorlagen und Automatisierung
+- 
+
+- X Rechnung ist zeitlicher Treiber -> Januar
+
+
+- mobil digitale Unterschrift - gegen zeichnen beim Kunden

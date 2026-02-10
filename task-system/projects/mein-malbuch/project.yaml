@@ -1,0 +1,35 @@
+# mein-malbuch Project
+
+slug: mein-malbuch
+title: "mein-malbuch.com"
+description: |
+  E-Commerce Plattform für personalisierte Malbücher für Kinder.
+  Eltern laden ein Foto hoch, KI generiert personalisierte Malvorlagen.
+
+owner: erik
+stakeholders:
+  - name: Erik
+    role: Founder, Product
+  - name: Heimdall
+    role: Development, Marketing
+
+vision: |
+  Die führende Plattform für personalisierte Kinderbücher im DACH-Raum.
+  Jedes Kind soll sich in seinen eigenen Büchern wiederfinden können.
+
+objectives:
+  - "Profitable Kundenakquise über organische Kanäle"
+  - "Wiederkehrende Käufe durch saisonale Produkte"
+  - "Mundpropaganda durch außergewöhnliches Produkt"
+
+status: active
+priority: high
+
+links:
+  repository: "git@github.com:InMediasReh/mein-malbuch.git"
+  production: "https://mein-malbuch.com"
+  staging: "http://100.67.243.6:8100"
+  docs: ""
+
+created: "2025-01-01"
+updated: "2026-01-31"

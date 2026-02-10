@@ -1,0 +1,17 @@
+
+body { font-family: Georgia, 'EB Garamond', serif; line-height: 1.6; margin: 1em; color: #1a1a1a; }
+h2 { font-size: 1.4em; text-align: center; margin: 2em 0 1em; letter-spacing: 0.15em; font-weight: normal; }
+p { text-indent: 1.5em; margin: 0.3em 0; text-align: justify; }
+.chapter-header { margin-top: 20%; text-align: center; margin-bottom: 2em; }
+.chapter-number { font-size: 0.85em; letter-spacing: 0.3em; color: #666; margin-bottom: 0.5em; }
+.chapter-title { font-size: 1.6em; font-style: italic; }
+.scene-break { text-align: center; margin: 1.5em 0; color: #999; letter-spacing: 0.5em; }
+.illustration { text-align: center; margin: 2em 0; page-break-before: always; }
+.illustration img { max-width: 100%; height: auto; }
+.first-paragraph { text-indent: 0; }
+.first-paragraph::first-letter { font-size: 3em; float: left; line-height: 0.8; margin: 0.1em 0.1em 0 0; font-weight: bold; }
+img.cover { max-width: 100%; height: auto; }
+.teaser { text-align: center; margin-top: 20%; }
+.teaser h2 { font-size: 1.3em; letter-spacing: 0.2em; }
+.teaser p { text-indent: 0; text-align: center; font-style: italic; margin: 1em 0; }
+.teaser .cta { display: inline-block; margin-top: 2em; padding: 0.8em 2em; border: 2px solid #1a1a1a; font-size: 0.9em; letter-spacing: 0.15em; text-decoration: none; color: #1a1a1a; }

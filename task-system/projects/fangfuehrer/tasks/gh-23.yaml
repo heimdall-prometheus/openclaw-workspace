@@ -1,0 +1,42 @@
+id: gh-23
+title: "XP & Level System (Backend)"
+status: open
+github_issue: 23
+
+project: fangfuehrer
+strategy: mvp-launch
+phase: 5
+
+intention: |
+  Progression-System das User motiviert weiterzumachen und wiederzukommen.
+
+target_audience: |
+  Alle User
+
+criteria:
+  quantitative:
+    - "XP für jeden Fang"
+    - "Level-Up Berechnung"
+    - "Bonus-XP für Achievements"
+  
+  qualitative:
+    - "Balancing fühlt sich fair an"
+    - "Klare Progression sichtbar"
+
+validation:
+  loop_count: 0
+  max_loops: 10
+  min_qualitative_score: 7
+  history: []
+
+created: "2026-02-04T11:45:00Z"
+created_by: heimdall
+updated: "2026-02-04T11:45:00Z"
+completed: ""
+
+artifacts: []
+
+notes: |
+  GitHub Issue: https://github.com/heimdall-prometheus/fangfuehrer/issues/23
+  Type: feature
+  Priority: critical

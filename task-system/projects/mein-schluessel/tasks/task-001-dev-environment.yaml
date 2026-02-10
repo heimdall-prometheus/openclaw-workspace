@@ -1,0 +1,104 @@
+id: ms-task-001
+title: "Dev-Environment: Prod-Clone auf dediziertem Server"
+project: mein-schluessel
+created: 2026-02-07T11:03:00Z
+status: passed
+
+intention: |
+  Wir brauchen eine vollständige Dev-Umgebung als Prod-Klon, um WCAG/BFSG-Fixes 
+  sicher testen zu können, bevor sie auf Produktion deployt werden. Echte Daten, 
+  echtes Theme, echter Designer — damit Änderungen 1:1 validierbar sind.
+
+strategic_goal: |
+  BFSG-Compliance bis Juni 2025. Ohne Dev-Umgebung können wir keine Änderungen 
+  am Theme sicher testen. Jeder Fix auf Prod ist ein Risiko.
+
+acceptance_criteria:
+  quantitative:
+    - id: q1
+      description: "Storefront lädt mit HTTP 200 und zeigt echte Produktdaten"
+      check: "curl -sI https://ms-dev.erikreisig.de | grep '200 OK'"
+    - id: q2
+      description: "Admin-Panel erreichbar und Login funktioniert"
+      check: "curl -sI https://ms-dev.erikreisig.de/admin | grep '200'"
+    - id: q3
+      description: "Prod-DB importiert: ≥100 Tabellen vorhanden"
+      check: "docker exec ms-shopware-dev mysql -h 127.0.0.1 -u root -proot -e 'SELECT COUNT(*) FROM information_schema.tables WHERE table_schema=\"shopware\"'"
+    - id: q4
+      description: "Theme RdMeinSchluesselTheme aktiv und kompiliert"
+      check: "docker exec ms-shopware-dev php /var/www/html/bin/console plugin:list | grep RdMeinSchluesselTheme | grep Yes"
+    - id: q5
+      description: "Designer Plugin aktiv"
+      check: "docker exec ms-shopware-dev php /var/www/html/bin/console plugin:list | grep SchliessanlagenDesigner | grep Yes"
+    - id: q6
+      description: "SSL/HTTPS funktioniert"
+      check: "curl -sI https://ms-dev.erikreisig.de | grep '200'"
+    - id: q7
+      description: "Tailscale SSH erreichbar"
+      check: "ssh erik@100.119.18.25 whoami"
+
+  qualitative:
+    - id: ql1
+      description: "Storefront zeigt echte Produkte (Schließanlagen, Briefkästen etc.)"
+      min_score: 7
+    - id: ql2
+      description: "Theme sieht aus wie Produktion (Farben, Layout, Navigation)"
+      min_score: 7
+
+  security:
+    - id: s1
+      description: "Root-Login gesperrt"
+      check: "ssh root@46.225.103.201 echo test (should fail)"
+    - id: s2
+      description: "UFW Firewall aktiv"
+      check: "ssh erik@46.225.103.201 sudo ufw status | grep active"
+    - id: s3
+      description: "Fail2ban aktiv"
+      check: "ssh erik@46.225.103.201 sudo systemctl is-active fail2ban"
+
+server:
+  ip: 46.225.103.201
+  tailscale_ip: 100.119.18.25
+  domain: ms-dev.erikreisig.de
+  users: [erik, heimdall]
+  os: Ubuntu 24.04
+  ram: 8GB
+  cores: 4
+  disk: 75GB
+
+components_done:
+  - security_hardening
+  - user_creation
+  - docker_install
+  - tailscale_ssh
+  - nginx_ssl
+  - dns_setup
+  - theme_plugin_installed
+  - designer_plugin_installed
+  - github_repos_cloned
+
+components_pending:
+  - media_files     # Prod media not yet synced (product images load from CDN/prod URLs)
+
+validation_results:
+  timestamp: 2026-02-07T11:34:00Z
+  quantitative:
+    q1: PASS  # Storefront 200 OK
+    q2: PASS  # Admin 200 OK
+    q3: PASS  # 355 tables (≥100)
+    q4: PASS  # RdMeinSchluesselTheme Yes/Yes
+    q5: PASS  # SchliessanlagenDesigner Yes/Yes
+    q6: PASS  # HTTPS 200 OK
+    q7: PASS  # Tailscale SSH works
+  qualitative:
+    ql1: 8/10  # Echte Produkte sichtbar (SimonsVoss, Wilka, Bohlking), Kategorien, SEO-Text
+    ql2: 8/10  # Theme korrekt (Logo, Farben, Layout, Footer), Bilder laden von Prod-CDN
+  security:
+    s1: PASS  # Root login blocked
+    s2: PASS  # UFW active
+    s3: PASS  # Fail2ban active
+  known_issues:
+    - "Orders-Tabelle leer (generated column 'document_number' MariaDB→MySQL Inkompatibilität) — nicht kritisch für WCAG-Arbeit"
+    - "product_keyword_dictionary.reversed generated column errors — SEO search nicht betroffen"
+    - "pickware_shipping_shipping_method_config missing — Pickware Plugin nicht installiert auf Dev"
+  overall: PASS

@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Anlage 1: Detaillierte Projektplanung</title>
+  <style>
+    @page { margin: 15mm; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      font-size: 10pt;
+      line-height: 1.5;
+      color: #333;
+      max-width: 210mm;
+      margin: 0 auto;
+      padding: 10mm;
+    }
+    h1 {
+      font-size: 18pt;
+      color: #1e3a5f;
+      border-bottom: 3px solid #1e3a5f;
+      padding-bottom: 8px;
+      margin-bottom: 5mm;
+    }
+    h2 {
+      font-size: 13pt;
+      color: #1e3a5f;
+      margin-top: 8mm;
+      margin-bottom: 3mm;
+      page-break-after: avoid;
+    }
+    h3 {
+      font-size: 11pt;
+      color: #2d5a87;
+      margin-top: 5mm;
+      margin-bottom: 2mm;
+    }
+    .header-info {
+      background: #f5f5f5;
+      padding: 4mm;
+      border-radius: 4px;
+      margin-bottom: 6mm;
+      font-size: 9pt;
+    }
+    .header-info p { margin: 1mm 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 3mm 0 5mm 0;
+      font-size: 9pt;
+    }
+    th, td {
+      border: 1px solid #d1d5db;
+      padding: 2mm 3mm;
+      text-align: left;
+    }
+    th {
+      background: #1e3a5f;
+      color: white;
+      font-weight: 600;
+    }
+    tr:nth-child(even) { background: #f9fafb; }
+    .total-row {
+      font-weight: bold;
+      background: #e8eef5 !important;
+    }
+    .section {
+      margin-bottom: 6mm;
+      page-break-inside: avoid;
+    }
+    .result-box {
+      background: #ecfdf5;
+      border-left: 4px solid #10b981;
+      padding: 2mm 4mm;
+      margin: 3mm 0;
+      font-size: 9pt;
+    }
+    .phase-header {
+      background: linear-gradient(135deg, #1e3a5f 0%, #2d5a87 100%);
+      color: white;
+      padding: 2mm 4mm;
+      border-radius: 4px;
+      margin: 5mm 0 3mm 0;
+      font-weight: 600;
+    }
+    .footer {
+      margin-top: 10mm;
+      padding-top: 4mm;
+      border-top: 1px solid #e5e7eb;
+      font-size: 8pt;
+      color: #6b7280;
+      text-align: center;
+    }
+    ul { margin: 2mm 0; padding-left: 6mm; }
+    li { margin: 1mm 0; }
+    .page-break { page-break-before: always; }
+    .dates-table td:first-child { font-weight: 600; width: 50%; }
+    .highlight-date { color: #1e3a5f; font-weight: bold; }
+    
+    /* Gantt Chart Styles */
+    .gantt-container {
+      margin: 4mm 0;
+      border: 1px solid #d1d5db;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .gantt-header {
+      display: flex;
+      background: #1e3a5f;
+      color: white;
+      font-size: 8pt;
+      font-weight: 600;
+    }
+    .gantt-header-task {
+      width: 160px;
+      padding: 2mm 3mm;
+      border-right: 1px solid #2d5a87;
+    }
+    .gantt-header-months {
+      display: flex;
+      flex: 1;
+    }
+    .gantt-month {
+      flex: 1;
+      text-align: center;
+      padding: 2mm 0;
+      border-right: 1px solid #2d5a87;
+    }
+    .gantt-month:last-child { border-right: none; }
+    .gantt-row {
+      display: flex;
+      border-bottom: 1px solid #e5e7eb;
+      font-size: 8pt;
+    }
+    .gantt-row:last-child { border-bottom: none; }
+    .gantt-row:nth-child(even) { background: #f9fafb; }
+    .gantt-task {
+      width: 160px;
+      padding: 1.5mm 3mm;
+      border-right: 1px solid #e5e7eb;
+      font-size: 7.5pt;
+    }
+    .gantt-timeline {
+      display: flex;
+      flex: 1;
+      position: relative;
+      align-items: center;
+    }
+    .gantt-cell {
+      flex: 1;
+      height: 100%;
+      border-right: 1px solid #f0f0f0;
+      position: relative;
+    }
+    .gantt-cell:last-child { border-right: none; }
+    .gantt-bar {
+      position: absolute;
+      height: 6mm;
+      top: 50%;
+      transform: translateY(-50%);
+      background: linear-gradient(135deg, #2d5a87 0%, #1e3a5f 100%);
+      border-radius: 2px;
+    }
+    .gantt-milestone-row .gantt-task {
+      font-weight: 600;
+      background: #f5f5f5;
+    }
+    .gantt-milestone {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #1e3a5f;
+      color: white;
+      padding: 1mm 2mm;
+      border-radius: 2px;
+      font-size: 7pt;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Anlage 1: Detaillierte Projektplanung</h1>
+  
+  <div class="header-info">
+    <p><strong>Angebot:</strong> CLED-2026-001 – Odoo ERP Implementation (Vollumfang)</p>
+    <p><strong>Kunde:</strong> Becker Sicherheitstechnik GmbH</p>
+    <p><strong>Anbieter:</strong> C-led Solutions GmbH</p>
+    <p><strong>Projektstart:</strong> 9. Februar 2026</p>
+  </div>
+
+  <h2>Übersicht & Zeitplanung</h2>
+  <table>
+    <tr>
+      <th>#</th>
+      <th>Bereich</th>
+      <th>PT</th>
+      <th>Zeitraum</th>
+      <th>Abschluss</th>
+    </tr>
+    <tr><td>1</td><td>Vertrieb & Angebote</td><td style="text-align:right">12</td><td>KW 7–10</td><td>07.03.2026</td></tr>
+    <tr><td>2</td><td>Einkauf & Bestellung</td><td style="text-align:right">8</td><td>KW 10–12</td><td>21.03.2026</td></tr>
+    <tr><td>3</td><td>Projektmanagement & Nachkalkulation</td><td style="text-align:right">10</td><td>KW 12–15</td><td>11.04.2026</td></tr>
+    <tr><td>4</td><td>CRM & Kundenakte</td><td style="text-align:right">8</td><td>KW 15–17</td><td>25.04.2026</td></tr>
+    <tr><td>5</td><td>Lager & Bestand</td><td style="text-align:right">10</td><td>KW 17–20</td><td>16.05.2026</td></tr>
+    <tr><td>6</td><td>Buchhaltung & DATEV</td><td style="text-align:right">12</td><td>KW 20–23</td><td>06.06.2026</td></tr>
+    <tr><td>7</td><td>Monteur-App & Service</td><td style="text-align:right">8</td><td>KW 23–25</td><td>20.06.2026</td></tr>
+    <tr><td>8</td><td>Schnittstellen & Custom</td><td style="text-align:right">12</td><td>KW 25–29</td><td>18.07.2026</td></tr>
+    <tr class="total-row"><td></td><td>Gesamt</td><td style="text-align:right">80</td><td>KW 7–29</td><td class="highlight-date">20.07.2026</td></tr>
+  </table>
+
+  <h2>Zeitlicher Ablauf (Gantt)</h2>
+  <div class="gantt-container">
+    <div class="gantt-header">
+      <div class="gantt-header-task">Bereich</div>
+      <div class="gantt-header-months">
+        <div class="gantt-month">Feb</div>
+        <div class="gantt-month">Mär</div>
+        <div class="gantt-month">Apr</div>
+        <div class="gantt-month">Mai</div>
+        <div class="gantt-month">Jun</div>
+        <div class="gantt-month">Jul</div>
+      </div>
+    </div>
+    <!-- 1. Vertrieb: Feb 9 - Mar 7 (ca. 0-17% des Zeitraums Feb-Jul = 0-100px bei 600px) -->
+    <div class="gantt-row">
+      <div class="gantt-task">1. Vertrieb & Angebote</div>
+      <div class="gantt-timeline">
+        <div class="gantt-cell"><div class="gantt-bar" style="left:30%; width:70%"></div></div>
+        <div class="gantt-cell"><div class="gantt-bar" style="left:0; width:25%"></div></div>
+        <div class="gantt-cell"></div>
+        <div class="gantt-cell"></div>
+        <div class="gantt-cell"></div>
+        <div class="gantt-cell"></div>
+      </div>
+    </div>
+    <!-- 2. Einkauf: Mar 9 - Mar 21 -->
+    <div class="gantt-row">
+      <div class="gantt-task">2. Einkauf & Bestellung</div>
+      <div class="gantt-timeline">
+        <div class="gantt-cell"></div>
+        <div class="gantt-cell"><div class="gantt-bar" style="left:25%; width:75%"></div></div>
+        <div class="gantt-cell"></div>
+        <div class="gantt-cell"></div>
+        <div class="gantt-cell"></div>
+        <div class="gantt-cell"></div>
+      </div>
+    </div>
+    <!-- 3. Projektmanagement: Mar 23 - Apr 11 -->
+    <div class="gantt-row">
+      <div class="gantt-task">3. Projektmanagement</div>
+      <div class="gantt-timeline">
+        <div class="gantt-cell"></div>
+        <div class="gantt-cell"><div class="gantt-bar" style="left:75%; width:25%"></div></div>
+        <div class="gantt-cell"><div class="gantt-bar" style="left:0; width:40%"></div></div>
+        <div class="gantt-cell"></div>
+        <div class="gantt-cell"></div>
+        <div class="gantt-cell"></div>
+      </div>
+    </div>
+    <!-- 4. CRM: Apr 13 - Apr 25 -->
+    <div class="gantt-row">
+      <div class="gantt-task">4. CRM & Kundenakte</div>
+      <div class="gantt-timeline">
+        <div class="gantt-cell"></div>
+        <div class="gantt-cell"></div>
+        <div class="gantt-cell"><div class="gantt-bar" style="left:40%; width:60%"></div></div>
+        <div class="gantt-cell"></div>
+        <div class="gantt-cell"></div>
+        <div class="gantt-cell"></div>
+      </div>
+    </div>
+    <!-- 5. Lager: Apr 27 - Mai 16 -->
+    <div class="gantt-row">
+      <div class="gantt-task">5. Lager & Bestand</div>
+      <div class="gantt-timeline">
+        <div class="gantt-cell"></div>
+        <div class="gantt-cell"></div>
+        <div class="gantt-cell"><div class="gantt-bar" style="left:90%; width:10%"></div></div>
+        <div class="gantt-cell"><div class="gantt-bar" style="left:0; width:55%"></div></div>
+        <div class="gantt-cell"></div>
+        <div class="gantt-cell"></div>
+      </div>
+    </div>
+    <!-- 6. Buchhaltung: Mai 18 - Jun 6 -->
+    <div class="gantt-row">
+      <div class="gantt-task">6. Buchhaltung & DATEV</div>
+      <div class="gantt-timeline">
+        <div class="gantt-cell"></div>
+        <div class="gantt-cell"></div>
+        <div class="gantt-cell"></div>
+        <div class="gantt-cell"><div class="gantt-bar" style="left:55%; width:45%"></div></div>
+        <div class="gantt-cell"><div class="gantt-bar" style="left:0; width:20%"></div></div>
+        <div class="gantt-cell"></div>
+      </div>
+    </div>
+    <!-- 7. Monteur-App: Jun 8 - Jun 20 -->
+    <div class="gantt-row">
+      <div class="gantt-task">7. Monteur-App & Service</div>
+      <div class="gantt-timeline">
+        <div class="gantt-cell"></div>
+        <div class="gantt-cell"></div>
+        <div class="gantt-cell"></div>
+        <div class="gantt-cell"></div>
+        <div class="gantt-cell"><div class="gantt-bar" style="left:25%; width:65%"></div></div>
+        <div class="gantt-cell"></div>
+      </div>
+    </div>
+    <!-- 8. Schnittstellen: Jun 22 - Jul 18 -->
+    <div class="gantt-row">
+      <div class="gantt-task">8. Schnittstellen & Custom</div>
+      <div class="gantt-timeline">
+        <div class="gantt-cell"></div>
+        <div class="gantt-cell"></div>
+        <div class="gantt-cell"></div>
+        <div class="gantt-cell"></div>
+        <div class="gantt-cell"><div class="gantt-bar" style="left:70%; width:30%"></div></div>
+        <div class="gantt-cell"><div class="gantt-bar" style="left:0; width:60%"></div></div>
+      </div>
+    </div>
+    <!-- Meilensteine -->
+    <div class="gantt-row gantt-milestone-row">
+      <div class="gantt-task">Meilensteine</div>
+      <div class="gantt-timeline">
+        <div class="gantt-cell"><div class="gantt-milestone" style="left:25%">Start 09.02.</div></div>
+        <div class="gantt-cell"></div>
+        <div class="gantt-cell"></div>
+        <div class="gantt-cell"></div>
+        <div class="gantt-cell"></div>
+        <div class="gantt-cell"><div class="gantt-milestone" style="left:35%">GO-LIVE 20.07.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <h2>Meilensteine</h2>
+  <table class="dates-table">
+    <tr><th>Meilenstein</th><th>Datum</th></tr>
+    <tr><td>Projektstart & Kick-off</td><td class="highlight-date">09.02.2026</td></tr>
+    <tr><td>Go-Live Vertrieb & Einkauf</td><td>21.03.2026</td></tr>
+    <tr><td>Go-Live Projektmanagement & CRM</td><td>25.04.2026</td></tr>
+    <tr><td>Go-Live Lager & Buchhaltung</td><td>06.06.2026</td></tr>
+    <tr><td>Go-Live Monteur-App</td><td>20.06.2026</td></tr>
+    <tr class="total-row"><td>Go-Live Komplett (inkl. Schnittstellen)</td><td class="highlight-date">20.07.2026</td></tr>
+  </table>
+
+  <div class="page-break"></div>
+
+  <h2>Detailplanung pro Bereich</h2>
+
+  <div class="phase-header">1. Vertrieb & Angebote (12 PT) — 09.02. bis 07.03.2026</div>
+  <table>
+    <tr><th>#</th><th>Prozess</th><th>Beschreibung</th><th style="text-align:right">PT</th></tr>
+    <tr><td>V1</td><td>Angebotserstellung</td><td>Angebote erstellen, Vorlagen, Rabattregeln</td><td style="text-align:right">3</td></tr>
+    <tr><td>V2</td><td>Auftragsbestätigung</td><td>AB erstellen, Verknüpfung mit Einkauf</td><td style="text-align:right">2</td></tr>
+    <tr><td>V3</td><td>Kundenspezifische Preise</td><td>Preisregeln pro Kunde/Gruppe</td><td style="text-align:right">3</td></tr>
+    <tr><td>V4</td><td>Auftragsfortschritt</td><td>Status-Tracking, Liefertermine, Kundenkommunikation</td><td style="text-align:right">2</td></tr>
+    <tr><td>V5</td><td>POS / Thekenkauf</td><td>Direktverkauf vor Ort, Kassensystem</td><td style="text-align:right">2</td></tr>
+  </table>
+  <div class="result-box"><strong>Ergebnis:</strong> Durchgängiger Vertriebsprozess von Angebot bis Rechnung</div>
+
+  <div class="phase-header">2. Einkauf & Bestellung (8 PT) — 09.03. bis 21.03.2026</div>
+  <table>
+    <tr><th>#</th><th>Prozess</th><th>Beschreibung</th><th style="text-align:right">PT</th></tr>
+    <tr><td>E1</td><td>Bestellung anlegen</td><td>Bestellungen beim Lieferanten</td><td style="text-align:right">1</td></tr>
+    <tr><td>E2</td><td>RFQ-Prozess</td><td>Anfrage → Angebote vergleichen → Bestellung</td><td style="text-align:right">2</td></tr>
+    <tr><td>E3</td><td>Wareneingang-Abgleich</td><td>Lieferschein mit Bestellung prüfen</td><td style="text-align:right">1.5</td></tr>
+    <tr><td>E4</td><td>3-Wege-Prüfung</td><td>Bestellung ↔ Lieferschein ↔ Rechnung automatisiert</td><td style="text-align:right">2.5</td></tr>
+    <tr><td>E5</td><td>Lieferantenverwaltung</td><td>Konditionen, Bewertung, Hinweise</td><td style="text-align:right">1</td></tr>
+  </table>
+  <div class="result-box"><strong>Ergebnis:</strong> Transparenz über offene Bestellungen, automatisierte Prüfungen</div>
+
+  <div class="phase-header">3. Projektmanagement & Nachkalkulation (10 PT) — 23.03. bis 11.04.2026</div>
+  <table>
+    <tr><th>#</th><th>Prozess</th><th>Beschreibung</th><th style="text-align:right">PT</th></tr>
+    <tr><td>P1</td><td>Projektanlage</td><td>Projekt erstellen, Struktur, Nummernkreise</td><td style="text-align:right">2</td></tr>
+    <tr><td>P2</td><td>Kosten erfassen</td><td>Material, Arbeitszeit, Fremdleistung auf Projekt</td><td style="text-align:right">3</td></tr>
+    <tr><td>P3</td><td>Weiterberechnung</td><td>Projektkosten an Kunde weiterberechnen</td><td style="text-align:right">2.5</td></tr>
+    <tr><td>P4</td><td>Profitabilität</td><td>Auswertungen, Margen-Reports pro Projekt</td><td style="text-align:right">1.5</td></tr>
+    <tr><td>P5</td><td>Dokumentenablage</td><td>Dateien, Fotos, Notizen pro Projekt</td><td style="text-align:right">1</td></tr>
+  </table>
+  <div class="result-box"><strong>Ergebnis:</strong> Vollständige Projekttransparenz, keine vergessenen Weiterberechnungen</div>
+
+  <div class="phase-header">4. CRM & Kundenakte (8 PT) — 13.04. bis 25.04.2026</div>
+  <table>
+    <tr><th>#</th><th>Prozess</th><th>Beschreibung</th><th style="text-align:right">PT</th></tr>
+    <tr><td>C1</td><td>Kundenhistorie</td><td>Komplette Historie: Angebote, Aufträge, Rechnungen</td><td style="text-align:right">2</td></tr>
+    <tr><td>C2</td><td>Kontaktmanagement</td><td>Ansprechpartner, Kommunikationshistorie</td><td style="text-align:right">2</td></tr>
+    <tr><td>C3</td><td>Wiedervorlage</td><td>Termine, Follow-ups, Erinnerungen</td><td style="text-align:right">2</td></tr>
+    <tr><td>C4</td><td>Kundenanalyse</td><td>Umsatz, Deckungsbeitrag, ABC-Klassifizierung</td><td style="text-align:right">2</td></tr>
+  </table>
+  <div class="result-box"><strong>Ergebnis:</strong> 360°-Sicht auf jeden Kunden</div>
+
+  <div class="page-break"></div>
+
+  <div class="phase-header">5. Lager & Bestand (10 PT) — 27.04. bis 16.05.2026</div>
+  <table>
+    <tr><th>#</th><th>Prozess</th><th>Beschreibung</th><th style="text-align:right">PT</th></tr>
+    <tr><td>L1</td><td>Wareneingang</td><td>Ware annehmen, prüfen, einbuchen</td><td style="text-align:right">2</td></tr>
+    <tr><td>L2</td><td>Warenausgang / Picking</td><td>Kommissionierung für Aufträge</td><td style="text-align:right">2</td></tr>
+    <tr><td>L3</td><td>Umlagerung Monteur</td><td>Material von Lager auf Monteur-Fahrzeug</td><td style="text-align:right">2</td></tr>
+    <tr><td>L4</td><td>Bestandsführung</td><td>Inventur, Korrekturen, Seriennummern</td><td style="text-align:right">1.5</td></tr>
+    <tr><td>L5</td><td>Meldebestand</td><td>Automatische Bestellvorschläge</td><td style="text-align:right">1.5</td></tr>
+    <tr><td>L6</td><td>Etiketten & Barcode</td><td>Drucken, Scannen (Hardware-Integration)</td><td style="text-align:right">1</td></tr>
+  </table>
+  <div class="result-box"><strong>Ergebnis:</strong> Echtzeit-Bestandsübersicht, effiziente Lagerprozesse</div>
+
+  <div class="phase-header">6. Buchhaltung & DATEV (12 PT) — 18.05. bis 06.06.2026</div>
+  <table>
+    <tr><th>#</th><th>Prozess</th><th>Beschreibung</th><th style="text-align:right">PT</th></tr>
+    <tr><td>B1</td><td>Eingangsrechnung</td><td>Rechnung erfassen, prüfen, kontieren</td><td style="text-align:right">2</td></tr>
+    <tr><td>B2</td><td>Auto-Prüfung</td><td>Automatischer Abgleich mit Bestellung/Lieferschein</td><td style="text-align:right">2.5</td></tr>
+    <tr><td>B3</td><td>Ausgangsrechnung</td><td>Rechnung an Kunde erstellen</td><td style="text-align:right">1.5</td></tr>
+    <tr><td>B4</td><td>X-Rechnung</td><td>ZUGFeRD / XRechnung Format (gesetzlich erforderlich)</td><td style="text-align:right">2.5</td></tr>
+    <tr><td>B5</td><td>DATEV Export</td><td>Monatlicher Sync zum Steuerberater</td><td style="text-align:right">2</td></tr>
+    <tr><td>B6</td><td>Kostenstellen</td><td>Zuordnung pro Projekt/Abteilung</td><td style="text-align:right">1.5</td></tr>
+  </table>
+  <div class="result-box"><strong>Ergebnis:</strong> X-Rechnung Compliance, automatisierte Buchhaltung</div>
+
+  <div class="phase-header">7. Monteur-App & Service (8 PT) — 08.06. bis 20.06.2026</div>
+  <table>
+    <tr><th>#</th><th>Prozess</th><th>Beschreibung</th><th style="text-align:right">PT</th></tr>
+    <tr><td>M1</td><td>Terminplanung</td><td>Einsatzplanung, Kalender, Urlaubsverwaltung</td><td style="text-align:right">2</td></tr>
+    <tr><td>M2</td><td>Zeiterfassung</td><td>Arbeitszeit auf Projekt buchen</td><td style="text-align:right">1.5</td></tr>
+    <tr><td>M3</td><td>Material-Entnahme</td><td>Material aus Lager/Fahrzeug entnehmen & buchen</td><td style="text-align:right">1.5</td></tr>
+    <tr><td>M4</td><td>Montage-Dokumentation</td><td>Dokumentation inkl. Fotos</td><td style="text-align:right">1</td></tr>
+    <tr><td>M5</td><td>Digitale Unterschrift</td><td>Kunde unterschreibt auf Tablet</td><td style="text-align:right">0.5</td></tr>
+    <tr><td>M6</td><td>Wartungsverträge</td><td>Zyklen, Erinnerungen, Verknüpfung</td><td style="text-align:right">1</td></tr>
+    <tr><td>M7</td><td>Mängeldokumentation</td><td>Mängel erfassen bei Wartung</td><td style="text-align:right">0.5</td></tr>
+  </table>
+  <div class="result-box"><strong>Ergebnis:</strong> Mobile Lösung für Außendienst, Ende der Zettelwirtschaft</div>
+
+  <div class="phase-header">8. Schnittstellen & Custom (12 PT) — 22.06. bis 18.07.2026</div>
+  <table>
+    <tr><th>#</th><th>Prozess</th><th>Beschreibung</th><th style="text-align:right">PT</th></tr>
+    <tr><td>S1</td><td>S-Firm Schnittstelle</td><td>Überweisungen automatisch an Banking übertragen</td><td style="text-align:right">4</td></tr>
+    <tr><td>S2</td><td>GAEB Import</td><td>Ausschreibungen importieren → Angebot erstellen</td><td style="text-align:right">4</td></tr>
+    <tr><td>S3</td><td>GAEB Mapping</td><td>Produkte zu GAEB-Positionen zuordnen (N:1)</td><td style="text-align:right">4</td></tr>
+  </table>
+  <div class="result-box"><strong>Ergebnis:</strong> Automatisierte Bankanbindung, effiziente Ausschreibungsbearbeitung</div>
+
+  <div class="page-break"></div>
+
+  <h2>Voraussetzungen (Kunde)</h2>
+  <ul>
+    <li>Benennung Key User pro Bereich</li>
+    <li>Zugang zu Altsystemen für Datenmigration</li>
+    <li>Verfügbarkeit für Workshops & Tests</li>
+    <li>Bereitstellung Testdaten</li>
+    <li>Entscheidungsbefugnis Ansprechpartner</li>
+  </ul>
+
+  <h2>Nicht im Angebot enthalten</h2>
+  <ul>
+    <li>Hardware (Scanner, Tablets, Etikettendrucker)</li>
+    <li>Odoo Hosting & Betrieb (separates Angebot)</li>
+    <li>Support nach Go-Live (separates Angebot, Stundenbasis)</li>
+    <li>Odoo Enterprise Lizenzen (Community Edition wird verwendet)</li>
+    <li>Reisekosten (falls anfallend, nach Aufwand)</li>
+    <li>Change Requests nach Abnahme</li>
+  </ul>
+
+  <div class="footer">
+    C-led Solutions GmbH · Feringastraße 9a · 85774 Unterföhring<br>
+    Anlage 1 zu Angebot CLED-2026-001 · Februar 2026
+  </div>
+
+</body>
+</html>

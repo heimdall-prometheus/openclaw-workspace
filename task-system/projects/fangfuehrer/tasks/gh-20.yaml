@@ -1,0 +1,42 @@
+id: gh-20
+title: "ARCore Integration (Android)"
+status: open
+github_issue: 20
+
+project: fangfuehrer
+strategy: mvp-launch
+phase: 4
+
+intention: |
+  Premium-Feature für Android: Gleiche AR-Messung wie iOS.
+
+target_audience: |
+  Android-User
+
+criteria:
+  quantitative:
+    - "AR Session startet ohne Crash"
+    - "Fischerkennung funktioniert"
+    - "Messung ±2cm Genauigkeit"
+  
+  qualitative:
+    - "Konsistent mit iOS-Version"
+    - "Funktioniert auf gängigen Geräten"
+
+validation:
+  loop_count: 0
+  max_loops: 10
+  min_qualitative_score: 7
+  history: []
+
+created: "2026-02-04T11:45:00Z"
+created_by: heimdall
+updated: "2026-02-04T11:45:00Z"
+completed: ""
+
+artifacts: []
+
+notes: |
+  GitHub Issue: https://github.com/heimdall-prometheus/fangfuehrer/issues/20
+  Type: feature
+  Priority: critical

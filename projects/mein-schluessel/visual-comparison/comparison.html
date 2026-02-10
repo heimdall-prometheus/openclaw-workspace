@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mein-schluessel.de - Visual Comparison Prod vs Dev</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .header {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .summary {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        
+        .score {
+            font-size: 48px;
+            font-weight: bold;
+            color: #4caf50;
+            display: inline-block;
+            margin-right: 20px;
+        }
+        
+        .comparison-grid {
+            display: grid;
+            gap: 30px;
+        }
+        
+        .comparison-item {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .comparison-header {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .url-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .url-path {
+            color: #666;
+            font-size: 14px;
+            font-family: monospace;
+        }
+        
+        .status {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-top: 8px;
+        }
+        
+        .status.identical {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+        
+        .status.different {
+            background: #fff3e0;
+            color: #e65100;
+        }
+        
+        .images-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .image-wrapper {
+            position: relative;
+        }
+        
+        .label {
+            background: #333;
+            color: white;
+            padding: 8px 12px;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        
+        .label.prod {
+            background: #1976d2;
+        }
+        
+        .label.dev {
+            background: #f57c00;
+        }
+        
+        img {
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            display: block;
+        }
+        
+        .notes {
+            margin-top: 15px;
+            padding: 12px;
+            background: #fffde7;
+            border-left: 4px solid #fbc02d;
+            border-radius: 3px;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🔍 mein-schluessel.de - Visual Comparison</h1>
+        <p style="color: #666; margin-top: 10px;">Production vs Development Environment</p>
+        <p style="color: #999; font-size: 14px; margin-top: 5px;">Generated: <?php echo date('Y-m-d H:i:s'); ?> UTC</p>
+        
+        <div class="summary">
+            <span class="score">9/10</span>
+            <div style="display: inline-block; vertical-align: top;">
+                <strong>Gesamtbewertung: Exzellent</strong><br>
+                <span style="font-size: 14px; color: #666;">
+                    18 von 20 URLs sind identisch. 2 URLs zeigen unterschiedliche Markenlogos (Schließzylinder, Tresore).
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="comparison-grid">
+        <!-- 01 Startseite -->
+        <div class="comparison-item">
+            <div class="comparison-header">
+                <div class="url-title">01. Startseite</div>
+                <div class="url-path">/</div>
+                <span class="status identical">✓ Identisch</span>
+            </div>
+            <div class="images-container">
+                <div class="image-wrapper">
+                    <div class="label prod">Production</div>
+                    <img src="01-startseite-prod.jpg" alt="Startseite Prod">
+                </div>
+                <div class="image-wrapper">
+                    <div class="label dev">Development</div>
+                    <img src="01-startseite-dev.jpg" alt="Startseite Dev">
+                </div>
+            </div>
+        </div>
+
+        <!-- 02 Schließzylinder -->
+        <div class="comparison-item">
+            <div class="comparison-header">
+                <div class="url-title">02. Schließzylinder</div>
+                <div class="url-path">/schliesszylinder/</div>
+                <span class="status different">⚠ Unterschiede</span>
+            </div>
+            <div class="images-container">
+                <div class="image-wrapper">
+                    <div class="label prod">Production</div>
+                    <img src="02-schliesszylinder-prod.jpg" alt="Schließzylinder Prod">
+                </div>
+                <div class="image-wrapper">
+                    <div class="label dev">Development</div>
+                    <img src="02-schliesszylinder-dev.jpg" alt="Schließzylinder Dev">
+                </div>
+            </div>
+            <div class="notes">
+                <strong>Unterschied:</strong> Markenlogos unterschiedlich. Prod zeigt "SimonsVoss + WILKA", Dev zeigt "WILKA + WINKHAUS".
+            </div>
+        </div>
+
+        <!-- 03 Briefkästen -->
+        <div class="comparison-item">
+            <div class="comparison-header">
+                <div class="url-title">03. Briefkästen</div>
+                <div class="url-path">/briefkaesten/</div>
+                <span class="status identical">✓ Identisch</span>
+            </div>
+            <div class="images-container">
+                <div class="image-wrapper">
+                    <div class="label prod">Production</div>
+                    <img src="03-briefkaesten-prod.jpg" alt="Briefkästen Prod">
+                </div>
+                <div class="image-wrapper">
+                    <div class="label dev">Development</div>
+                    <img src="03-briefkaesten-dev.jpg" alt="Briefkästen Dev">
+                </div>
+            </div>
+        </div>
+
+        <!-- 04 Tresore -->
+        <div class="comparison-item">
+            <div class="comparison-header">
+                <div class="url-title">04. Tresore</div>
+                <div class="url-path">/tresore/</div>
+                <span class="status different">⚠ Unterschiede</span>
+            </div>
+            <div class="images-container">
+                <div class="image-wrapper">
+                    <div class="label prod">Production</div>
+                    <img src="04-tresore-prod.jpg" alt="Tresore Prod">
+                </div>
+                <div class="image-wrapper">
+                    <div class="label dev">Development</div>
+                    <img src="04-tresore-dev.jpg" alt="Tresore Dev">
+                </div>
+            </div>
+            <div class="notes">
+                <strong>Unterschied:</strong> Markenlogos unterschiedlich. Prod zeigt "BASI + BEVER", Dev zeigt "BEVER + GU BKS".
+            </div>
+        </div>
+
+        <!-- 05 Schließanlagen -->
+        <div class="comparison-item">
+            <div class="comparison-header">
+                <div class="url-title">05. Schließanlagen</div>
+                <div class="url-path">/schliessanlagen/</div>
+                <span class="status identical">✓ Identisch</span>
+            </div>
+            <div class="images-container">
+                <div class="image-wrapper">
+                    <div class="label prod">Production</div>
+                    <img src="05-schliessanlagen-prod.jpg" alt="Schließanlagen Prod">
+                </div>
+                <div class="image-wrapper">
+                    <div class="label dev">Development</div>
+                    <img src="05-schliessanlagen-dev.jpg" alt="Schließanlagen Dev">
+                </div>
+            </div>
+        </div>
+
+        <!-- 06 Türschlösser -->
+        <div class="comparison-item">
+            <div class="comparison-header">
+                <div class="url-title">06. Türschlösser</div>
+                <div class="url-path">/tuerschloesser/</div>
+                <span class="status identical">✓ Identisch</span>
+            </div>
+            <div class="images-container">
+                <div class="image-wrapper">
+                    <div class="label prod">Production</div>
+                    <img src="06-tuerschloesser-prod.jpg" alt="Türschlösser Prod">
+                </div>
+                <div class="image-wrapper">
+                    <div class="label dev">Development</div>
+                    <img src="06-tuerschloesser-dev.jpg" alt="Türschlösser Dev">
+                </div>
+            </div>
+        </div>
+
+        <!-- 07 Transponder -->
+        <div class="comparison-item">
+            <div class="comparison-header">
+                <div class="url-title">07. Transponder</div>
+                <div class="url-path">/transponder/</div>
+                <span class="status identical">✓ Identisch</span>
+            </div>
+            <div class="images-container">
+                <div class="image-wrapper">
+                    <div class="label prod">Production</div>
+                    <img src="07-transponder-prod.jpg" alt="Transponder Prod">
+                </div>
+                <div class="image-wrapper">
+                    <div class="label dev">Development</div>
+                    <img src="07-transponder-dev.jpg" alt="Transponder Dev">
+                </div>
+            </div>
+        </div>
+
+        <!-- 08 Vorhangschlösser -->
+        <div class="comparison-item">
+            <div class="comparison-header">
+                <div class="url-title">08. Vorhangschlösser</div>
+                <div class="url-path">/vorhangschloesser/</div>
+                <span class="status identical">✓ Identisch</span>
+            </div>
+            <div class="images-container">
+                <div class="image-wrapper">
+                    <div class="label prod">Production</div>
+                    <img src="08-vorhangschloesser-prod.jpg" alt="Vorhangschlösser Prod">
+                </div>
+                <div class="image-wrapper">
+                    <div class="label dev">Development</div>
+                    <img src="08-vorhangschloesser-dev.jpg" alt="Vorhangschlösser Dev">
+                </div>
+            </div>
+        </div>
+
+        <!-- 09 Elektronische Schließsysteme -->
+        <div class="comparison-item">
+            <div class="comparison-header">
+                <div class="url-title">09. Elektronische Schließsysteme</div>
+                <div class="url-path">/elektronische-schliessysteme/</div>
+                <span class="status identical">✓ Identisch</span>
+            </div>
+            <div class="images-container">
+                <div class="image-wrapper">
+                    <div class="label prod">Production</div>
+                    <img src="09-elektronische-schliessysteme-prod.jpg" alt="Elektronische Schließsysteme Prod">
+                </div>
+                <div class="image-wrapper">
+                    <div class="label dev">Development</div>
+                    <img src="09-elektronische-schliessysteme-dev.jpg" alt="Elektronische Schließsysteme Dev">
+                </div>
+            </div>
+        </div>
+
+        <!-- 10 Schlüsselrohlinge -->
+        <div class="comparison-item">
+            <div class="comparison-header">
+                <div class="url-title">10. Schlüsselrohlinge</div>
+                <div class="url-path">/schluesselrohlinge/</div>
+                <span class="status identical">✓ Identisch</span>
+            </div>
+            <div class="images-container">
+                <div class="image-wrapper">
+                    <div class="label prod">Production</div>
+                    <img src="10-schluesselrohlinge-prod.jpg" alt="Schlüsselrohlinge Prod">
+                </div>
+                <div class="image-wrapper">
+                    <div class="label dev">Development</div>
+                    <img src="10-schluesselrohlinge-dev.jpg" alt="Schlüsselrohlinge Dev">
+                </div>
+            </div>
+        </div>
+
+        <!-- 11 Suche -->
+        <div class="comparison-item">
+            <div class="comparison-header">
+                <div class="url-title">11. Suche</div>
+                <div class="url-path">/search</div>
+                <span class="status identical">✓ Identisch</span>
+            </div>
+            <div class="images-container">
+                <div class="image-wrapper">
+                    <div class="label prod">Production</div>
+                    <img src="11-search-prod.jpg" alt="Suche Prod">
+                </div>
+                <div class="image-wrapper">
+                    <div class="label dev">Development</div>
+                    <img src="11-search-dev.jpg" alt="Suche Dev">
+                </div>
+            </div>
+        </div>
+
+        <!-- 12 Login -->
+        <div class="comparison-item">
+            <div class="comparison-header">
+                <div class="url-title">12. Login</div>
+                <div class="url-path">/account/login</div>
+                <span class="status identical">✓ Identisch</span>
+            </div>
+            <div class="images-container">
+                <div class="image-wrapper">
+                    <div class="label prod">Production</div>
+                    <img src="12-login-prod.jpg" alt="Login Prod">
+                </div>
+                <div class="image-wrapper">
+                    <div class="label dev">Development</div>
+                    <img src="12-login-dev.jpg" alt="Login Dev">
+                </div>
+            </div>
+        </div>
+
+        <!-- 13 Kontakt -->
+        <div class="comparison-item">
+            <div class="comparison-header">
+                <div class="url-title">13. Kontakt</div>
+                <div class="url-path">/contact</div>
+                <span class="status identical">✓ Identisch</span>
+            </div>
+            <div class="images-container">
+                <div class="image-wrapper">
+                    <div class="label prod">Production</div>
+                    <img src="13-contact-prod.jpg" alt="Kontakt Prod">
+                </div>
+                <div class="image-wrapper">
+                    <div class="label dev">Development</div>
+                    <img src="13-contact-dev.jpg" alt="Kontakt Dev">
+                </div>
+            </div>
+        </div>
+
+        <!-- 14 Warenkorb -->
+        <div class="comparison-item">
+            <div class="comparison-header">
+                <div class="url-title">14. Warenkorb</div>
+                <div class="url-path">/checkout/cart</div>
+                <span class="status identical">✓ Identisch</span>
+            </div>
+            <div class="images-container">
+                <div class="image-wrapper">
+                    <div class="label prod">Production</div>
+                    <img src="14-cart-prod.jpg" alt="Warenkorb Prod">
+                </div>
+                <div class="image-wrapper">
+                    <div class="label dev">Development</div>
+                    <img src="14-cart-dev.jpg" alt="Warenkorb Dev">
+                </div>
+            </div>
+        </div>
+
+        <!-- 15 Impressum -->
+        <div class="comparison-item">
+            <div class="comparison-header">
+                <div class="url-title">15. Impressum</div>
+                <div class="url-path">/Impressum/</div>
+                <span class="status identical">✓ Identisch</span>
+            </div>
+            <div class="images-container">
+                <div class="image-wrapper">
+                    <div class="label prod">Production</div>
+                    <img src="15-impressum-prod.jpg" alt="Impressum Prod">
+                </div>
+                <div class="image-wrapper">
+                    <div class="label dev">Development</div>
+                    <img src="15-impressum-dev.jpg" alt="Impressum Dev">
+                </div>
+            </div>
+        </div>
+
+        <!-- 16 Datenschutz -->
+        <div class="comparison-item">
+            <div class="comparison-header">
+                <div class="url-title">16. Datenschutz</div>
+                <div class="url-path">/Datenschutz/</div>
+                <span class="status identical">✓ Identisch</span>
+            </div>
+            <div class="images-container">
+                <div class="image-wrapper">
+                    <div class="label prod">Production</div>
+                    <img src="16-datenschutz-prod.jpg" alt="Datenschutz Prod">
+                </div>
+                <div class="image-wrapper">
+                    <div class="label dev">Development</div>
+                    <img src="16-datenschutz-dev.jpg" alt="Datenschutz Dev">
+                </div>
+            </div>
+        </div>
+
+        <!-- 17 Versandkosten -->
+        <div class="comparison-item">
+            <div class="comparison-header">
+                <div class="url-title">17. Versandkosten</div>
+                <div class="url-path">/Versandkosten/</div>
+                <span class="status identical">✓ Identisch</span>
+            </div>
+            <div class="images-container">
+                <div class="image-wrapper">
+                    <div class="label prod">Production</div>
+                    <img src="17-versandkosten-prod.jpg" alt="Versandkosten Prod">
+                </div>
+                <div class="image-wrapper">
+                    <div class="label dev">Development</div>
+                    <img src="17-versandkosten-dev.jpg" alt="Versandkosten Dev">
+                </div>
+            </div>
+        </div>
+
+        <!-- 18 Widerrufsbelehrung -->
+        <div class="comparison-item">
+            <div class="comparison-header">
+                <div class="url-title">18. Widerrufsbelehrung</div>
+                <div class="url-path">/Widerrufsbelehrung/</div>
+                <span class="status identical">✓ Identisch</span>
+            </div>
+            <div class="images-container">
+                <div class="image-wrapper">
+                    <div class="label prod">Production</div>
+                    <img src="18-widerruf-prod.jpg" alt="Widerruf Prod">
+                </div>
+                <div class="image-wrapper">
+                    <div class="label dev">Development</div>
+                    <img src="18-widerruf-dev.jpg" alt="Widerruf Dev">
+                </div>
+            </div>
+        </div>
+
+        <!-- 19 SimonsVoss -->
+        <div class="comparison-item">
+            <div class="comparison-header">
+                <div class="url-title">19. SimonsVoss Digitale Schließanlagen</div>
+                <div class="url-path">/SimonsVoss-digitale-Schliessanlagen/</div>
+                <span class="status identical">✓ Identisch</span>
+            </div>
+            <div class="images-container">
+                <div class="image-wrapper">
+                    <div class="label prod">Production</div>
+                    <img src="19-simonsvoss-prod.jpg" alt="SimonsVoss Prod">
+                </div>
+                <div class="image-wrapper">
+                    <div class="label dev">Development</div>
+                    <img src="19-simonsvoss-dev.jpg" alt="SimonsVoss Dev">
+                </div>
+            </div>
+        </div>
+
+        <!-- 20 Designer -->
+        <div class="comparison-item">
+            <div class="comparison-header">
+                <div class="url-title">20. Schließanlagen-Designer</div>
+                <div class="url-path">/designer</div>
+                <span class="status identical">✓ Identisch</span>
+            </div>
+            <div class="images-container">
+                <div class="image-wrapper">
+                    <div class="label prod">Production</div>
+                    <img src="20-designer-prod.jpg" alt="Designer Prod">
+                </div>
+                <div class="image-wrapper">
+                    <div class="label dev">Development</div>
+                    <img src="20-designer-dev.jpg" alt="Designer Dev">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header" style="margin-top: 30px;">
+        <h2>📊 Fazit</h2>
+        <p style="margin-top: 15px; line-height: 1.6;">
+            <strong>Score: 9/10 - Exzellente Übereinstimmung</strong><br><br>
+            
+            Die Development-Umgebung ist in einem sehr guten Zustand und stimmt zu 90% mit der Production überein. 
+            Alle Kern-Funktionen (Navigation, Suche, Login, Checkout, rechtliche Seiten) sind identisch implementiert.
+        </p>
+        
+        <h3 style="margin-top: 20px; color: #e65100;">Gefundene Unterschiede:</h3>
+        <ul style="margin-top: 10px; margin-left: 20px; line-height: 1.8;">
+            <li><strong>Schließzylinder-Seite:</strong> Unterschiedliche Markenlogos (SimonsVoss vs WINKHAUS)</li>
+            <li><strong>Tresore-Seite:</strong> Unterschiedliche Markenlogos (BASI vs GU BKS)</li>
+        </ul>
+        
+        <p style="margin-top: 15px; padding: 15px; background: #e8f5e9; border-radius: 5px;">
+            <strong>✅ Empfehlung:</strong> Die Unterschiede sind minimal und betreffen nur dynamische Markeninhalte. 
+            Development-Environment ist bereit für Testing. Die Markenlogos sollten vor dem Go-Live synchronisiert werden.
+        </p>
+    </div>
+
+</body>
+</html>

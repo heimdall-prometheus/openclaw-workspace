@@ -1,0 +1,21 @@
+name: "The Man Who Carved His Kingdom"
+slug: heinlein-book
+description: >
+  Roman im Stile von Robert A. Heinlein. Ein deutscher Ingenieur kauft eine
+  ausgemusterte Ölplattform und gründet den ersten souveränen Stadtstaat auf
+  dem offenen Meer. Heinlein-treue Picaresque-Struktur, keine Heldenreise.
+  Protagonist Klaus Brenner — benannt nach Eriks Vater.
+owner: Erik
+created: 2026-02-07
+status: active
+
+goals:
+  - "Publikationsreifer Roman, ~80.000 Wörter, 20 Kapitel"
+  - "Heinlein-authentischer Stil (kompetenter Protagonist, episodische Struktur, Dialog-getrieben)"
+  - "Thematisch fundiert: Sovereign Individuals, multipolares Machtspiel, UNCLOS/Seerecht"
+
+resources:
+  treatment: "projects/heinlein-book/TREATMENT.md"
+  reference_style: "Robert A. Heinlein — The Man Who Sold the Moon, Stranger in a Strange Land, The Moon Is a Harsh Mistress"
+  reference_philosophy: "Davidson & Rees-Mogg — The Sovereign Individual (1997)"
+  chapters_dir: "projects/heinlein-book/chapters/"

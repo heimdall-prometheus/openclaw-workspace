@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{BUSINESS_NAME}} – Digitale Wachstumsstrategie {{YEAR}}</title>
+<style>
+  /* Base */
+  :root {
+    --primary: #2d5016;
+    --primary-light: #4a7a2e;
+    --primary-bg: #f0f5ec;
+    --accent: #c9a227;
+    --text: #1a1a1a;
+    --text-light: #555;
+    --bg: #ffffff;
+    --border: #ddd;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text);
+    line-height: 1.6;
+    font-size: 11pt;
+  }
+
+  /* Header */
+  .report-header {
+    background: var(--primary);
+    color: white;
+    padding: 40px;
+    text-align: center;
+  }
+  .report-header h1 { font-size: 24pt; margin-bottom: 8px; }
+  .report-header .subtitle { font-size: 14pt; opacity: 0.9; }
+  .report-header .meta { margin-top: 16px; font-size: 10pt; opacity: 0.7; }
+
+  /* Content */
+  .content { padding: 30px 40px; max-width: 100%; }
+  h2 {
+    color: var(--primary);
+    font-size: 16pt;
+    margin-top: 30px;
+    margin-bottom: 12px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--primary);
+    page-break-after: avoid;
+  }
+  h3 {
+    color: var(--primary-light);
+    font-size: 13pt;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    page-break-after: avoid;
+  }
+  p { margin-bottom: 10px; }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    font-size: 10pt;
+  }
+  th {
+    background: var(--primary);
+    color: white;
+    padding: 8px 12px;
+    text-align: left;
+    font-weight: 600;
+  }
+  td { padding: 7px 12px; border-bottom: 1px solid var(--border); }
+  tr:nth-child(even) { background: #f8f8f8; }
+
+  /* Boxes */
+  .highlight-box {
+    background: var(--primary-bg);
+    border-left: 4px solid var(--primary);
+    padding: 15px 20px;
+    margin: 15px 0;
+    border-radius: 0 4px 4px 0;
+  }
+  .warning-box {
+    background: #fff8e1;
+    border-left: 4px solid var(--accent);
+    padding: 15px 20px;
+    margin: 15px 0;
+    border-radius: 0 4px 4px 0;
+  }
+  .score-box {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: white;
+  }
+  .score-good { background: #4caf50; }
+  .score-ok { background: #ff9800; }
+  .score-bad { background: #f44336; }
+
+  /* Lists */
+  ul, ol { margin: 8px 0 12px 24px; }
+  li { margin-bottom: 4px; }
+
+  /* Blockquote */
+  blockquote {
+    border-left: 3px solid var(--primary);
+    padding: 10px 20px;
+    margin: 15px 0;
+    background: #fafafa;
+    font-style: italic;
+    color: var(--text-light);
+  }
+
+  /* Footer */
+  .report-footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 9pt;
+    color: var(--text-light);
+    border-top: 1px solid var(--border);
+    margin-top: 40px;
+  }
+
+  /* Print */
+  .page-break { page-break-before: always; }
+  @media print {
+    .report-header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    th { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .highlight-box, .warning-box { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+
+  /* TOC */
+  .toc { margin: 20px 0; }
+  .toc a { color: var(--primary); text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+  .toc li { margin-bottom: 6px; }
+</style>
+</head>
+<body>
+
+<div class="report-header">
+  <h1>{{BUSINESS_NAME}}</h1>
+  <div class="subtitle">Digitale Wachstumsstrategie {{YEAR}}</div>
+  <div class="meta">
+    Erstellt am {{DATE}} | Fuer {{CONTACT_PERSON}}<br>
+    Erik Reisig Investment GmbH
+  </div>
+</div>
+
+<div class="content">
+  <!-- Strategy content goes here -->
+  {{CONTENT}}
+</div>
+
+<div class="report-footer">
+  Erstellt von Erik Reisig Investment GmbH | Duringstrasse 23, 82299 Tuerkenfeld<br>
+  Dieses Dokument ist vertraulich und nur fuer den internen Gebrauch bestimmt.
+</div>
+
+</body>
+</html>

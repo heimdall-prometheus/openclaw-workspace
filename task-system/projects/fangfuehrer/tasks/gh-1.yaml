@@ -1,0 +1,42 @@
+id: gh-1
+title: "Flutter Projekt Setup"
+status: open
+github_issue: 1
+
+project: fangfuehrer
+strategy: mvp-launch
+phase: 1
+
+intention: |
+  Solide Grundlage für Native App Development schaffen, damit Features konsistent und wartbar entwickelt werden können.
+
+target_audience: |
+  Entwickler (Heimdall), später alle Mobile-User
+
+criteria:
+  quantitative:
+    - "Flutter build erfolgreich (iOS + Android)"
+    - "Alle Dependencies installiert ohne Errors"
+    - "Hot Reload funktioniert"
+  
+  qualitative:
+    - "Projektstruktur sauber und skalierbar"
+    - "README dokumentiert Setup-Schritte"
+
+validation:
+  loop_count: 0
+  max_loops: 10
+  min_qualitative_score: 7
+  history: []
+
+created: "2026-02-04T11:45:00Z"
+created_by: heimdall
+updated: "2026-02-04T11:45:00Z"
+completed: ""
+
+artifacts: []
+
+notes: |
+  GitHub Issue: https://github.com/heimdall-prometheus/fangfuehrer/issues/1
+  Type: infra
+  Priority: critical

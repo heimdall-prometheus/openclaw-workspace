@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erik Reisig — Unternehmer, Berater, Autor</title>
+  <meta name="description" content="Erik Reisig — Unternehmer, Berater und Autor. Beratung in E-Commerce, Technologie, Künstlicher Intelligenz und strategischen Beteiligungen.">
+  <meta name="author" content="Erik Reisig">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://erikreisig.de">
+
+  <!-- Structured Data: Person + Book -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://erikreisig.de/#person",
+        "name": "Erik Reisig",
+        "url": "https://erikreisig.de",
+        "jobTitle": "Unternehmer & Berater",
+        "knowsAbout": ["E-Commerce", "Full-Stack Development", "Künstliche Intelligenz", "Venture Capital", "Shopware", "ERP"],
+        "sameAs": []
+      },
+      {
+        "@type": "Book",
+        "@id": "https://erikreisig.de/#book",
+        "name": "Auf fremdem Grund",
+        "author": { "@id": "https://erikreisig.de/#person" },
+        "bookFormat": "https://schema.org/Hardcover",
+        "numberOfPages": 312,
+        "publisher": {
+          "@type": "Organization",
+          "name": "TANSTAAFL Press"
+        },
+        "inLanguage": "de",
+        "genre": "Thriller",
+        "datePublished": "2026"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://erikreisig.de/#website",
+        "url": "https://erikreisig.de",
+        "name": "Erik Reisig",
+        "publisher": { "@id": "https://erikreisig.de/#person" }
+      },
+      {
+        "@type": "ProfessionalService",
+        "name": "Erik Reisig — Beratung",
+        "url": "https://erikreisig.de",
+        "provider": { "@id": "https://erikreisig.de/#person" },
+        "areaServed": "DE",
+        "serviceType": ["E-Commerce Beratung", "Technologie Beratung", "KI Beratung"]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Erik Reisig — Unternehmer, Berater, Autor">
+  <meta property="og:description" content="Beratung in E-Commerce, Technologie, Künstlicher Intelligenz und strategischen Beteiligungen.">
+  <meta property="og:image" content="https://assets.imr-media.de/heinlein-book/cover-v1.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:url" content="https://erikreisig.de">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Erik Reisig — Unternehmer, Berater, Autor">
+  <meta name="twitter:description" content="Beratung in E-Commerce, Technologie, Künstlicher Intelligenz und strategischen Beteiligungen.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ═══════════════════════════════════════
+       RESET & BASE
+       ═══════════════════════════════════════ */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --navy: #0a1628;
+      --navy-light: #0f1f3a;
+      --navy-mid: #152a4a;
+      --gold: #c9a84c;
+      --gold-light: #dbc17a;
+      --gold-dim: #a08a3e;
+      --cream: #f5f0e8;
+      --cream-dark: #e8e0d0;
+      --text-light: #c8c4bc;
+      --text-mid: #8a8578;
+      --text-dim: #8a8680;
+      --font-body: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+      --font-display: 'Cormorant Garamond', 'Georgia', serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 18px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--navy);
+      color: var(--text-light);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    ::selection {
+      background: var(--gold);
+      color: var(--navy);
+    }
+
+    a {
+      color: var(--gold);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: var(--gold-light);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* ═══════════════════════════════════════
+       ANIMATIONS
+       ═══════════════════════════════════════ */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.9s ease, transform 0.9s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .fade-in-delay-1 { transition-delay: 0.1s; }
+    .fade-in-delay-2 { transition-delay: 0.2s; }
+    .fade-in-delay-3 { transition-delay: 0.3s; }
+    .fade-in-delay-4 { transition-delay: 0.4s; }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes lineGrow {
+      from { width: 0; }
+      to { width: 60px; }
+    }
+
+    /* ═══════════════════════════════════════
+       NAVIGATION
+       ═══════════════════════════════════════ */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(to bottom, rgba(10,22,40,0.95), rgba(10,22,40,0));
+      transition: background 0.4s ease;
+    }
+
+    nav.scrolled {
+      background: rgba(10,22,40,0.97);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 1px 0 rgba(201,168,76,0.1);
+    }
+
+    .nav-author {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--font-body);
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-mid);
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    /* ═══════════════════════════════════════
+       HERO
+       ═══════════════════════════════════════ */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6rem 2rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(201,168,76,0.03) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(15,31,58,0.6) 0%, transparent 40%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-name {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 8vw, 6rem);
+      font-weight: 300;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--cream);
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      animation: fadeInUp 1.2s ease 0.2s both;
+    }
+
+    .hero-line {
+      width: 60px;
+      height: 1px;
+      background: var(--gold);
+      margin: 0 auto 1.8rem;
+      animation: lineGrow 1s ease 0.8s both;
+    }
+
+    .hero-tagline {
+      font-family: var(--font-display);
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      font-weight: 400;
+      font-style: italic;
+      color: var(--text-mid);
+      letter-spacing: 0.04em;
+      line-height: 1.5;
+      animation: fadeInUp 1.2s ease 1s both;
+    }
+
+    /* ═══════════════════════════════════════
+       SECTIONS COMMON
+       ═══════════════════════════════════════ */
+    section {
+      padding: 6rem 2rem;
+    }
+
+    .section-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-family: var(--font-body);
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 3rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .section-label::before {
+      content: '';
+      display: block;
+      width: 30px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .section-divider {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(201,168,76,0.15), transparent);
+    }
+
+    /* ═══════════════════════════════════════
+       BERATUNG (Consulting Grid)
+       ═══════════════════════════════════════ */
+    .beratung {
+      background: var(--navy);
+    }
+
+    .beratung-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem 4rem;
+    }
+
+    .beratung-item {
+      padding: 2rem 0;
+    }
+
+    .beratung-title {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--cream);
+      letter-spacing: 0.06em;
+      margin-bottom: 0.8rem;
+    }
+
+    .beratung-desc {
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--text-mid);
+      letter-spacing: 0.02em;
+    }
+
+    /* ═══════════════════════════════════════
+       BUCH (Book Section)
+       ═══════════════════════════════════════ */
+    .buch {
+      background: var(--navy-light);
+      border-top: 1px solid rgba(201,168,76,0.08);
+      border-bottom: 1px solid rgba(201,168,76,0.08);
+    }
+
+    .buch-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+    }
+
+    .buch-cover {
+      flex: 0 0 200px;
+    }
+
+    .buch-cover-wrapper {
+      position: relative;
+      transform: perspective(600px) rotateY(-6deg);
+      transition: transform 0.5s ease;
+    }
+
+    .buch-cover-wrapper:hover {
+      transform: perspective(600px) rotateY(-2deg) scale(1.02);
+    }
+
+    .buch-cover-wrapper img {
+      display: block;
+      width: 100%;
+      border-radius: 2px;
+      box-shadow:
+        6px 6px 16px rgba(0,0,0,0.5),
+        16px 16px 50px rgba(0,0,0,0.3);
+    }
+
+    .buch-cover-wrapper::before {
+      content: '';
+      position: absolute;
+      left: -2px;
+      top: 2px;
+      bottom: 2px;
+      width: 5px;
+      background: linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,0.1));
+      border-radius: 2px 0 0 2px;
+    }
+
+    .buch-text {
+      flex: 1;
+    }
+
+    .buch-title {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--cream);
+      margin-bottom: 0.4rem;
+    }
+
+    .buch-subtitle {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-style: italic;
+      color: var(--text-mid);
+      margin-bottom: 1.5rem;
+    }
+
+    .buch-teaser {
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 300;
+      line-height: 1.85;
+      color: var(--text-light);
+      margin-bottom: 2rem;
+    }
+
+    .buch-link {
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      transition: gap 0.3s ease, color 0.3s ease;
+    }
+
+    .buch-link:hover {
+      color: var(--gold-light);
+      gap: 1rem;
+    }
+
+    .buch-link::after {
+      content: '→';
+      font-size: 0.9rem;
+    }
+
+    /* ═══════════════════════════════════════
+       KONTAKT (Contact Form)
+       ═══════════════════════════════════════ */
+    .kontakt {
+      background: var(--navy);
+    }
+
+    .kontakt-inner {
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .kontakt-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .form-label {
+      font-family: var(--font-body);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-mid);
+    }
+
+    .form-input,
+    .form-textarea {
+      font-family: var(--font-body);
+      font-size: 0.88rem;
+      font-weight: 300;
+      color: var(--cream);
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid rgba(201,168,76,0.2);
+      padding: 0.8rem 0;
+      outline: none;
+      transition: border-color 0.3s ease;
+      letter-spacing: 0.02em;
+    }
+
+    .form-input:focus,
+    .form-textarea:focus {
+      border-bottom-color: var(--gold);
+    }
+
+    .form-input::placeholder,
+    .form-textarea::placeholder {
+      color: var(--text-dim);
+      font-weight: 300;
+    }
+
+    .form-textarea {
+      resize: vertical;
+      min-height: 120px;
+      line-height: 1.7;
+    }
+
+    .form-submit {
+      align-self: flex-start;
+      margin-top: 1rem;
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: transparent;
+      border: 1px solid var(--gold);
+      padding: 0.9rem 2.5rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .form-submit:hover {
+      background: var(--gold);
+      color: var(--navy);
+      box-shadow: 0 0 24px rgba(201,168,76,0.2);
+    }
+
+    .form-submit:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .form-submit:disabled:hover {
+      background: transparent;
+      color: var(--gold);
+      box-shadow: none;
+    }
+
+    .form-success {
+      display: none;
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 400;
+      color: var(--gold);
+      letter-spacing: 0.03em;
+      margin-top: 1rem;
+      animation: fadeInUp 0.5s ease both;
+    }
+
+    .form-success.show {
+      display: block;
+    }
+
+    .form-error {
+      display: none;
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 400;
+      color: #c94c4c;
+      letter-spacing: 0.03em;
+      margin-top: 1rem;
+      animation: fadeInUp 0.5s ease both;
+    }
+
+    .form-error.show {
+      display: block;
+    }
+
+    /* ═══════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════ */
+    footer {
+      background: var(--navy);
+      border-top: 1px solid rgba(201,168,76,0.08);
+      padding: 2.5rem 2rem;
+    }
+
+    .footer-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-copy {
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 400;
+      color: var(--text-dim);
+      letter-spacing: 0.05em;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .footer-links a {
+      font-family: var(--font-body);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+    }
+
+    .footer-links a:hover {
+      color: var(--gold);
+    }
+
+    /* ═══════════════════════════════════════
+       RESPONSIVE
+       ═══════════════════════════════════════ */
+    @media (max-width: 900px) {
+      html {
+        font-size: 16px;
+      }
+
+      .beratung-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .buch-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 2.5rem;
+      }
+
+      .buch-cover {
+        flex: none;
+        width: 160px;
+      }
+
+      .buch-cover-wrapper {
+        transform: perspective(600px) rotateY(-4deg);
+      }
+
+      .section-label {
+        font-size: 0.6rem;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        padding: 5rem 1.5rem 3rem;
+      }
+
+      section {
+        padding: 4rem 1.5rem;
+      }
+
+      .hero-name {
+        letter-spacing: 0.12em;
+      }
+
+      .beratung-item {
+        padding: 1.5rem 0;
+      }
+
+      .buch-cover {
+        width: 140px;
+      }
+
+      .kontakt-inner {
+        max-width: 100%;
+      }
+
+      .form-submit {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='85' font-family='serif'>R</text></svg>">
+</head>
+
+<body>
+
+  <!-- ═══════════════════ NAV ═══════════════════ -->
+  <nav id="nav">
+    <div class="nav-author">Erik Reisig</div>
+    <ul class="nav-links">
+      <li><a href="#beratung">Beratung</a></li>
+      <li><a href="#buch">Buch</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <!-- ═══════════════════ HERO ═══════════════════ -->
+  <main>
+  <section class="hero">
+    <div class="hero-inner">
+      <h1 class="hero-name">Erik Reisig</h1>
+      <div class="hero-line"></div>
+      <p class="hero-tagline">Ich baue Dinge. Manchmal helfe ich anderen dabei.</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ BERATUNG ═══════════════════ -->
+  <div class="section-divider"></div>
+  <section class="beratung" id="beratung">
+    <div class="section-inner">
+      <div class="section-label fade-in">Beratung</div>
+      <div class="beratung-grid">
+        <div class="beratung-item fade-in fade-in-delay-1">
+          <h2 class="beratung-title">E-Commerce</h2>
+          <p class="beratung-desc">Shops bauen, die verkaufen. Shopware, Custom, Marktplätze.</p>
+        </div>
+        <div class="beratung-item fade-in fade-in-delay-2">
+          <h2 class="beratung-title">Full-Stack Technology</h2>
+          <p class="beratung-desc">Systeme die halten. Backend, Frontend, Infrastruktur.</p>
+        </div>
+        <div class="beratung-item fade-in fade-in-delay-3">
+          <h2 class="beratung-title">Künstliche Intelligenz</h2>
+          <p class="beratung-desc">Was funktioniert, kommt rein. Was nicht, fliegt raus.</p>
+        </div>
+        <div class="beratung-item fade-in fade-in-delay-4">
+          <h2 class="beratung-title">Beteiligungen</h2>
+          <p class="beratung-desc">Geld, Erfahrung und Netzwerk. Für Gründer die liefern.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ BUCH ═══════════════════ -->
+  <section class="buch" id="buch">
+    <div class="buch-inner">
+      <div class="buch-cover fade-in">
+        <div class="buch-cover-wrapper">
+          <img src="https://assets.imr-media.de/heinlein-book/cover-v1.jpg"
+               alt="Auf fremdem Grund — Buchcover"
+               width="200" height="300"
+               loading="lazy">
+        </div>
+      </div>
+      <div class="buch-text fade-in fade-in-delay-2">
+        <h2 class="buch-title">Auf fremdem Grund</h2>
+        <p class="buch-subtitle">Ein Roman</p>
+        <p class="buch-teaser">Ein Mann kauft eine Ölplattform und gründet einen Staat. Die UN debattiert. Die Marine kommt.</p>
+        <a href="https://assets.imr-media.de/heinlein-book/Auf-fremdem-Grund-Leseprobe.epub" class="buch-link" download>Leseprobe herunterladen</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ KONTAKT ═══════════════════ -->
+  <section class="kontakt" id="kontakt">
+    <div class="kontakt-inner">
+      <div class="section-label fade-in">Kontakt</div>
+      <form class="kontakt-form fade-in fade-in-delay-1" id="contact-form" novalidate>
+        <div class="form-group">
+          <label class="form-label" for="name">Name</label>
+          <input class="form-input" type="text" id="name" name="name" required autocomplete="name">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="email">E-Mail</label>
+          <input class="form-input" type="email" id="email" name="email" required autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="message">Nachricht</label>
+          <textarea class="form-textarea" id="message" name="message" required></textarea>
+        </div>
+        <button class="form-submit" type="submit" id="submit-btn">Senden</button>
+        <div class="form-success" id="form-success">Ihre Nachricht wurde übermittelt.</div>
+        <div class="form-error" id="form-error">Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.</div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ FOOTER ═══════════════════ -->
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-copy">&copy; 2026 Erik Reisig</span>
+      <ul class="footer-links">
+        <li><a href="/impressum.html">Impressum</a></li>
+        <li><a href="/datenschutz.html">Datenschutz</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════ JAVASCRIPT ═══════════════════ -->
+  <script>
+    // ── Scroll-triggered fade-in ──
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.12,
+      rootMargin: '0px 0px -30px 0px'
+    });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // ── Nav scroll effect ──
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 60) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    }, { passive: true });
+
+    // ── Smooth scroll for anchor links ──
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          const offset = 80;
+          const top = target.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      });
+    });
+
+    // ── Contact form ──
+    const form = document.getElementById('contact-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const successMsg = document.getElementById('form-success');
+    const errorMsg = document.getElementById('form-error');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      // Basic validation
+      if (!name || !email || !message) return;
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return;
+
+      // Disable button
+      submitBtn.disabled = true;
+      submitBtn.textContent = '...';
+      successMsg.classList.remove('show');
+      errorMsg.classList.remove('show');
+
+      try {
+        const res = await fetch('https://api.erikreisig.de/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, email, message })
+        });
+
+        if (res.ok) {
+          successMsg.classList.add('show');
+          form.reset();
+        } else {
+          throw new Error('Request failed');
+        }
+      } catch (err) {
+        errorMsg.classList.add('show');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Senden';
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+id: hapex-003
+title: "MwSt-Info durch Stern-Lösung ersetzen"
+status: passed
+created: 2026-02-09T14:00:00Z
+
+intention: >
+  Produktkarten aufräumen — "Inkl. MwSt. zzgl. Versandkosten" aus jeder Karte entfernen,
+  stattdessen * am Preis und einmalige Fußnote unter dem Listing. Sauberer, weniger Clutter,
+  rechtlich PAngV-konform.
+
+zielgruppe: Endkunden (Shopbesucher)
+
+qualitaetskriterien:
+  quantitativ:
+    - "Kein 'Inkl. MwSt. zzgl. Versandkosten' Text auf Produktkarten sichtbar"
+    - "* (Stern) neben jedem Preis auf Produktkarten"
+    - "Fußnote '* Inkl. MwSt. zzgl. Versandkosten' unter dem Listing sichtbar"
+    - "'zzgl. X,XX € Pfand' weiterhin auf Karten mit Pfandartikeln sichtbar"
+    - "HTTP 200 auf Homepage, Kategorieseite, Suchseite"
+  qualitativ:
+    - "Karten wirken aufgeräumter als vorher"
+    - "Fußnote klar lesbar, nicht zu dominant"
+
+live_url_validation:
+  urls:
+    - url: "https://dev2.lebensmittel-sonderposten.de/"
+      expect: 200
+      screenshot: true
+      checks:
+        - "Stern am Preis"
+        - "Kein MwSt-Text auf Karten"
+        - "Fußnote am Ende des Listings"
+    - url: "https://dev2.lebensmittel-sonderposten.de/unsere-knaller/"
+      expect: 200
+      screenshot: true
+      checks:
+        - "Stern am Preis"
+        - "Pfand-Info sichtbar bei Pfandartikeln"
+        - "Fußnote am Ende des Listings"
+
+changed_files:
+  - path: "card/price-unit.html.twig"
+    type: "new (override)"
+    action: "Block component_product_box_price erweitert mit *, Block component_product_box_price_tax_info geleert"
+  - path: "listing.html.twig"
+    type: "modified"
+    action: "Fußnote vor Bottom-Pagination eingefügt"
+    backup: "listing.html.twig.bak"
+
+time_spent: "15min"

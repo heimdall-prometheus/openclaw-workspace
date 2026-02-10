@@ -1,0 +1,42 @@
+id: gh-3
+title: "PostgreSQL Schema Design"
+status: open
+github_issue: 3
+
+project: fangfuehrer
+strategy: mvp-launch
+phase: 1
+
+intention: |
+  Datenmodell definieren, das alle geplanten Features unterstützt und skaliert.
+
+target_audience: |
+  Entwickler, Datenintegrität für User
+
+criteria:
+  quantitative:
+    - "Alle Core-Tabellen existieren (users, fish, catches, waters)"
+    - "Foreign Keys korrekt"
+    - "Migrations laufen ohne Fehler"
+  
+  qualitative:
+    - "Schema ist normalisiert"
+    - "Indexe für häufige Queries"
+
+validation:
+  loop_count: 0
+  max_loops: 10
+  min_qualitative_score: 7
+  history: []
+
+created: "2026-02-04T11:45:00Z"
+created_by: heimdall
+updated: "2026-02-04T11:45:00Z"
+completed: ""
+
+artifacts: []
+
+notes: |
+  GitHub Issue: https://github.com/heimdall-prometheus/fangfuehrer/issues/3
+  Type: infra
+  Priority: critical

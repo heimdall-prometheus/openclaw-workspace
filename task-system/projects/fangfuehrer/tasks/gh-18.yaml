@@ -1,0 +1,42 @@
+id: gh-18
+title: "Gewässer-Suche UI"
+status: open
+github_issue: 18
+
+project: fangfuehrer
+strategy: mvp-launch
+phase: 3
+
+intention: |
+  User können Gewässer finden und mit Fängen verknüpfen.
+
+target_audience: |
+  Angler die neue Spots suchen
+
+criteria:
+  quantitative:
+    - "Suchfeld mit Autocomplete"
+    - "Kartenintegration"
+    - "Nearby basierend auf GPS"
+  
+  qualitative:
+    - "Schnelle Suche (<500ms)"
+    - "Intuitive Filteroptionen"
+
+validation:
+  loop_count: 0
+  max_loops: 10
+  min_qualitative_score: 7
+  history: []
+
+created: "2026-02-04T11:45:00Z"
+created_by: heimdall
+updated: "2026-02-04T11:45:00Z"
+completed: ""
+
+artifacts: []
+
+notes: |
+  GitHub Issue: https://github.com/heimdall-prometheus/fangfuehrer/issues/18
+  Type: feature
+  Priority: normal

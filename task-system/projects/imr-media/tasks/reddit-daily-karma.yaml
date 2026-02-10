@@ -1,0 +1,70 @@
+id: reddit-daily-karma
+name: Reddit Daily Karma Building
+project: imr-media
+strategy: reddit-karma-aufbau
+created: 2026-02-02
+status: open
+
+# INTENTION (Warum?)
+intention: |
+  Organisch Karma aufbauen durch echte, hilfreiche Beiträge in deutschen 
+  Subreddits, um später glaubwürdig IMR Media promoten zu können.
+  Fokus auf deutsche Zielgruppe = deutsche Subreddits priorisieren.
+
+# QUALITÄTSKRITERIEN
+criteria:
+  quantitative:
+    - name: comments_per_session
+      target: "2-3 hilfreiche Kommentare"
+      validation: count
+      
+    - name: subreddit_diversity
+      target: "Mindestens 2 verschiedene Subreddits pro Session"
+      validation: count
+      
+    - name: no_self_promotion
+      target: "0 Erwähnungen von IMR/Agentur/Services"
+      validation: text_search
+      
+  qualitative:
+    - name: helpfulness
+      description: "Sind die Kommentare wirklich hilfreich?"
+      min_score: 7
+      
+    - name: authenticity
+      description: "Klingt es wie ein echter Mensch, nicht wie Marketing?"
+      min_score: 7
+
+# ZIELGRUPPE
+target_audience: |
+  Deutsche Reddit-User in Tech/Business Subreddits die E-Commerce
+  oder Software-Fragen haben.
+
+# AUSFÜHRUNG
+execution:
+  trigger: cron (idle-check)
+  frequency: "Alle 2 Stunden wenn idle"
+  duration: "Max 15 Minuten pro Session"
+  
+  workflow:
+    1. Check ob Main Session idle (keine aktive Konversation >5min)
+    2. Reddit im Browser öffnen (TC21 oder Playwright)
+    3. Target Subreddits checken (sorted by New)
+    4. 2-3 hilfreiche Kommentare schreiben
+    5. Session loggen in memory/reddit-karma-log.md
+    6. Browser schließen
+
+# LOGGING
+log_format: |
+  ## {date} {time} UTC
+  - Subreddit: {subreddit}
+  - Post: {post_title}
+  - Comment: {comment_preview}
+  - Upvotes erhalten: {upvotes} (nach 24h updaten)
+
+# VALIDATION
+validation:
+  validator: self  # Kein externer Validator für recurring tasks
+  auto_pass_if:
+    - comments_written >= 2
+    - no_self_promotion == true

@@ -1,0 +1,42 @@
+id: gh-31
+title: "König vom See Feature"
+status: open
+github_issue: 31
+
+project: fangfuehrer
+strategy: mvp-launch
+phase: 6
+
+intention: |
+  Virales Feature: Wer hat den größten Fisch in MEINEM See? Lokale Rivalität.
+
+target_audience: |
+  Lokale Angler-Communities
+
+criteria:
+  quantitative:
+    - "Crown-Badge für aktuellen König"
+    - "History der Könige"
+    - "Challenge-System"
+  
+  qualitative:
+    - "Emotionaler Hook ('Der König hat gewechselt!')"
+    - "Social Sharing optimiert"
+
+validation:
+  loop_count: 0
+  max_loops: 10
+  min_qualitative_score: 7
+  history: []
+
+created: "2026-02-04T11:45:00Z"
+created_by: heimdall
+updated: "2026-02-04T11:45:00Z"
+completed: ""
+
+artifacts: []
+
+notes: |
+  GitHub Issue: https://github.com/heimdall-prometheus/fangfuehrer/issues/31
+  Type: feature
+  Priority: high

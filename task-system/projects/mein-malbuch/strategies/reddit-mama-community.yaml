@@ -1,0 +1,82 @@
+name: Reddit Mama Community Engagement
+slug: reddit-mama-community
+project: mein-malbuch
+created: 2026-02-02
+
+goal: |
+  Als kreative Mama in deutschen Eltern-Communities etablieren.
+  Authentische Teilnahme an Diskussionen über Basteln, Malen,
+  Kindergeschenke. Langfristig: Natürliche mein-malbuch Erwähnungen
+  wenn passend.
+
+timeframe: 6 Monate
+owner: Heimdall (Account: kreative_mama_de)
+
+persona:
+  name: "Kreative Mama"
+  background: |
+    Mutter von 2 Kindern (4 und 7 Jahre alt).
+    Liebt Basteln, Malen, kreative Aktivitäten mit Kindern.
+    Teilt gerne Tipps und Erfahrungen.
+  tone: "Warm, hilfsbereit, authentisch, nicht werblich"
+  dont:
+    - Niemals mein-malbuch in ersten 4 Wochen erwähnen
+    - Keine Werbung oder Links posten
+    - Nicht übertrieben enthusiastisch
+
+target_subreddits:
+  primary:
+    - r/Eltern
+    - r/Erziehung
+  secondary:
+    - r/wohnen (Kinderzimmer, DIY)
+    - r/FragReddit (bei Eltern-Fragen)
+    - r/de (gelegentlich)
+
+phases:
+  - phase: 1
+    name: "Karma-Aufbau"
+    duration: "Wochen 1-4"
+    goal: "300+ Comment Karma, etabliert in Eltern-Subs"
+    activities:
+      - "Tägliche hilfreiche Kommentare in r/Eltern"
+      - "Tipps zu Basteln mit Kindern"
+      - "Erfahrungen teilen (altersgerecht)"
+      - "Fragen anderer Eltern beantworten"
+    
+  - phase: 2
+    name: "Content Creation"
+    duration: "Wochen 5-8"
+    goal: "Eigene hilfreiche Posts"
+    activities:
+      - "Post: 'Unsere liebsten Bastel-Ideen für Regentage'"
+      - "Post: 'Was schenkt ihr zum Kindergeburtstag?'"
+      - "Bilder von Kinder-Kunstwerken (stock/generiert)"
+    
+  - phase: 3
+    name: "Soft Mentions"
+    duration: "Ab Woche 9"
+    goal: "Natürliche Erwähnung wenn passend"
+    conditions:
+      - "Nur wenn jemand explizit nach Malbüchern fragt"
+      - "Immer als 'hab ich entdeckt' nicht Werbung"
+      - "Maximal 1x pro Woche"
+
+success_metrics:
+  month_1:
+    - "300+ Comment Karma"
+    - "0 Bans/Warnings"
+    - "10+ hilfreiche Kommentare"
+  month_3:
+    - "500+ Karma gesamt"
+    - "Bekannt in r/Eltern"
+    - "1-2 eigene beliebte Posts"
+  month_6:
+    - "Natürliche mein-malbuch Erwähnungen möglich"
+    - "Vertrauen in Community aufgebaut"
+
+rules:
+  - "NIEMALS direkte Werbung"
+  - "Erst Karma aufbauen, dann subtil erwähnen"
+  - "Authentizität > Promotion"
+  - "Bei Fragen ehrlich sein ('ist personalisiert, kostet X')"

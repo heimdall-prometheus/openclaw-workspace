@@ -1,0 +1,1590 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saale-Baumschule | Seit 1934 - Ihr Gartencenter bei Halle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --forest: #1a3a2f;
+            --forest-deep: #0f2a1f;
+            --sage: #4a6741;
+            --moss: #7d9a6f;
+            --leaf: #a8c686;
+            --cream: #faf9f6;
+            --sand: #f0ebe3;
+            --terracotta: #c4724b;
+            --gold: #d4a852;
+            --bark: #3d2e1f;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--cream);
+            color: var(--forest);
+            font-weight: 400;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ===== TYPOGRAPHY ===== */
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+        }
+
+        /* ===== NAVIGATION ===== */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1.25rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.4s ease;
+        }
+
+        nav.scrolled {
+            background: rgba(250, 249, 246, 0.97);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 4px 30px rgba(26, 58, 47, 0.08);
+            padding: 0.75rem 5%;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--forest);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--sage);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-icon svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--cream);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--forest);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--terracotta);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            background: var(--forest);
+            color: var(--cream);
+            padding: 0.75rem 1.75rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-cta:hover {
+            background: var(--sage);
+            transform: translateY(-2px);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .mobile-menu-btn span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--forest);
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+        }
+
+        .hero-slide {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 1.5s ease;
+            transform: scale(1);
+            animation: slowZoom 25s ease-in-out infinite alternate;
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+        }
+
+        @keyframes slowZoom {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.08); }
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                135deg,
+                rgba(26, 58, 47, 0.75) 0%,
+                rgba(26, 58, 47, 0.5) 50%,
+                rgba(26, 58, 47, 0.7) 100%
+            );
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding: 0 5%;
+            max-width: 800px;
+            margin-left: 5%;
+        }
+
+        .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.25);
+            color: var(--cream);
+            padding: 0.5rem 1.25rem;
+            border-radius: 2px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            line-height: 1.1;
+            color: var(--white);
+            margin-bottom: 1.25rem;
+            text-shadow: 0 2px 40px rgba(0,0,0,0.3);
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            color: var(--gold);
+        }
+
+        .hero-text {
+            font-size: 1.15rem;
+            color: rgba(255,255,255,0.9);
+            max-width: 550px;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--bark);
+        }
+
+        .btn-primary:hover {
+            background: #e0b85e;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(212, 168, 82, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid rgba(255,255,255,0.6);
+            color: var(--white);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: var(--white);
+        }
+
+        .hero-info {
+            display: flex;
+            gap: 2.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .hero-info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--cream);
+        }
+
+        .hero-info-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-info-icon svg {
+            width: 20px;
+            height: 20px;
+            stroke: var(--gold);
+        }
+
+        .hero-info-text {
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+
+        .hero-info-text strong {
+            display: block;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        /* ===== VISIT US BANNER ===== */
+        .visit-banner {
+            background: var(--forest);
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .visit-banner-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--cream);
+        }
+
+        .visit-banner-item svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--gold);
+        }
+
+        .visit-banner-item span {
+            font-size: 0.95rem;
+        }
+
+        .visit-banner-item strong {
+            color: var(--gold);
+        }
+
+        /* ===== SECTIONS ===== */
+        .section {
+            padding: 5rem 5%;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--terracotta);
+            margin-bottom: 0.75rem;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--forest);
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--bark);
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.8;
+        }
+
+        /* ===== NEUHEITEN & RARITÄTEN ===== */
+        .rarities {
+            background: linear-gradient(135deg, var(--forest-deep) 0%, var(--forest) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .rarities::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+
+        .rarities .section-tag {
+            color: var(--gold);
+        }
+
+        .rarities .section-title {
+            color: var(--cream);
+        }
+
+        .rarities .section-subtitle {
+            color: rgba(255,255,255,0.8);
+        }
+
+        .rarities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .rarity-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .rarity-card:hover {
+            transform: translateY(-8px);
+            background: rgba(255,255,255,0.1);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .rarity-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: var(--terracotta);
+            color: white;
+            padding: 0.35rem 0.75rem;
+            border-radius: 2px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            z-index: 2;
+        }
+
+        .rarity-badge.limited {
+            background: var(--gold);
+            color: var(--bark);
+        }
+
+        .rarity-image {
+            position: relative;
+            height: 220px;
+            overflow: hidden;
+        }
+
+        .rarity-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .rarity-card:hover .rarity-image img {
+            transform: scale(1.1);
+        }
+
+        .rarity-content {
+            padding: 1.5rem;
+        }
+
+        .rarity-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            color: var(--cream);
+            margin-bottom: 0.5rem;
+        }
+
+        .rarity-latin {
+            font-style: italic;
+            font-size: 0.85rem;
+            color: var(--moss);
+            margin-bottom: 0.75rem;
+        }
+
+        .rarity-desc {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .rarity-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .rarity-price {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--gold);
+        }
+
+        .rarity-stock {
+            font-size: 0.8rem;
+            color: var(--terracotta);
+        }
+
+        /* ===== VOR ORT ERLEBEN ===== */
+        .experience {
+            background: var(--sand);
+        }
+
+        .experience-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .experience-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .experience-images img {
+            width: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .experience-images img:first-child {
+            height: 280px;
+            grid-column: span 2;
+        }
+
+        .experience-images img:nth-child(2),
+        .experience-images img:nth-child(3) {
+            height: 180px;
+        }
+
+        .experience-content .section-tag,
+        .experience-content .section-title {
+            text-align: left;
+        }
+
+        .experience-text {
+            font-size: 1.05rem;
+            color: var(--bark);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .experience-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .experience-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .experience-feature-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--moss);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .experience-feature-icon svg {
+            width: 18px;
+            height: 18px;
+            stroke: white;
+        }
+
+        .experience-feature span {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--forest);
+        }
+
+        /* ===== SORTIMENT ===== */
+        .products-scroll {
+            display: flex;
+            gap: 1.5rem;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding: 1rem 0 2rem;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+
+        .products-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        .product-card {
+            flex: 0 0 300px;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            scroll-snap-align: start;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+        }
+
+        .product-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.08);
+        }
+
+        .product-info {
+            padding: 1.25rem;
+        }
+
+        .product-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--forest);
+        }
+
+        .product-info p {
+            font-size: 0.9rem;
+            color: var(--bark);
+            opacity: 0.8;
+            margin-bottom: 0.75rem;
+        }
+
+        .product-price {
+            font-weight: 700;
+            color: var(--sage);
+        }
+
+        /* ===== OPENING HOURS / LOCATION ===== */
+        .location {
+            background: var(--forest);
+            color: var(--cream);
+        }
+
+        .location-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .location-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .location-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+
+        .location-icon svg {
+            width: 28px;
+            height: 28px;
+            stroke: var(--bark);
+        }
+
+        .location-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--cream);
+        }
+
+        .location-card p {
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.8);
+            line-height: 1.7;
+        }
+
+        .location-card a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .location-card a:hover {
+            text-decoration: underline;
+        }
+
+        .hours-list {
+            text-align: left;
+            font-size: 0.9rem;
+        }
+
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .hours-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonials {
+            background: var(--cream);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .testimonial-stars {
+            color: var(--gold);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-text {
+            font-size: 1rem;
+            color: var(--bark);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .testimonial-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .testimonial-name {
+            font-weight: 600;
+            color: var(--forest);
+        }
+
+        .testimonial-location {
+            font-size: 0.85rem;
+            color: var(--bark);
+            opacity: 0.7;
+        }
+
+        /* ===== CTA ===== */
+        .cta {
+            background: linear-gradient(135deg, var(--sage) 0%, var(--forest) 100%);
+            text-align: center;
+            padding: 5rem 5%;
+        }
+
+        .cta h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--cream);
+            margin-bottom: 1rem;
+        }
+
+        .cta p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.9);
+            max-width: 500px;
+            margin: 0 auto 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta .btn-primary {
+            background: var(--cream);
+            color: var(--forest);
+        }
+
+        .cta .btn-primary:hover {
+            background: white;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--bark);
+            color: var(--cream);
+            padding: 4rem 5% 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand p {
+            font-size: 0.95rem;
+            opacity: 0.8;
+            line-height: 1.7;
+            margin-top: 1rem;
+            max-width: 300px;
+        }
+
+        .footer-column h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+            color: var(--gold);
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-column a {
+            color: var(--cream);
+            text-decoration: none;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .footer-column a:hover {
+            opacity: 1;
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+
+        /* ===== PREVIEW BADGE ===== */
+        .preview-badge {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            background: linear-gradient(135deg, var(--terracotta), #a85a3a);
+            color: white;
+            padding: 0.75rem 1.25rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 9999;
+            box-shadow: 0 8px 30px rgba(196, 114, 75, 0.4);
+        }
+
+        .preview-badge span {
+            display: block;
+            font-size: 0.65rem;
+            font-weight: 400;
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        .fade-in-delay-1 { animation-delay: 0.2s; }
+        .fade-in-delay-2 { animation-delay: 0.4s; }
+        .fade-in-delay-3 { animation-delay: 0.6s; }
+        .fade-in-delay-4 { animation-delay: 0.8s; }
+
+        /* ===== MOBILE RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .experience-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+
+            .experience-images {
+                order: -1;
+            }
+
+            .location-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: 3.5rem 5%;
+            }
+
+            .hero-content {
+                margin-left: 0;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 2.25rem;
+            }
+
+            .hero-text {
+                font-size: 1rem;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-actions {
+                justify-content: center;
+            }
+
+            .hero-info {
+                flex-direction: column;
+                gap: 1.25rem;
+                align-items: center;
+            }
+
+            .visit-banner {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1.25rem 5%;
+            }
+
+            .experience-features {
+                grid-template-columns: 1fr;
+            }
+
+            .experience-images img:first-child {
+                height: 200px;
+            }
+
+            .experience-images img:nth-child(2),
+            .experience-images img:nth-child(3) {
+                height: 140px;
+            }
+
+            .rarities-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-brand p {
+                margin: 1rem auto 0;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 0.75rem;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                padding: 1rem 4%;
+            }
+
+            .logo {
+                font-size: 1.25rem;
+            }
+
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+
+            .hero-tag {
+                font-size: 0.65rem;
+                padding: 0.4rem 1rem;
+            }
+
+            .btn {
+                padding: 0.85rem 1.5rem;
+                font-size: 0.85rem;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .section-title {
+                font-size: 1.75rem;
+            }
+
+            .product-card {
+                flex: 0 0 260px;
+            }
+
+            .rarity-card {
+                margin: 0 -2%;
+                border-radius: 0;
+            }
+
+            .cta h2 {
+                font-size: 1.75rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-buttons .btn {
+                width: 100%;
+                max-width: 280px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="#" class="logo">
+            <div class="logo-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93s3.05-7.44 7-7.93v15.86zm2-15.86c3.94.49 7 3.85 7 7.93s-3.05 7.44-7 7.93V4.07z"/></svg>
+            </div>
+            Saale-Baumschule
+        </a>
+        <ul class="nav-links">
+            <li><a href="#neuheiten">Neuheiten</a></li>
+            <li><a href="#sortiment">Sortiment</a></li>
+            <li><a href="#besuch">Besuch planen</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+        <a href="#besuch" class="nav-cta">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Besuchen Sie uns
+        </a>
+        <button class="mobile-menu-btn" aria-label="Menü">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="hero-slide active" style="background-image: url('https://assets.imr-media.de/saale-baumschule/hero1-wisteria.jpg')"></div>
+            <div class="hero-slide" style="background-image: url('https://assets.imr-media.de/saale-baumschule/hero2-rose-garden.jpg')"></div>
+            <div class="hero-slide" style="background-image: url('https://assets.imr-media.de/saale-baumschule/hero3-cottage.jpg')"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-tag fade-in">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                Familientradition seit 1934
+            </div>
+            <h1 class="fade-in fade-in-delay-1">Erleben Sie Ihren <em>Traumgarten</em> vor Ort</h1>
+            <p class="hero-text fade-in fade-in-delay-2">
+                Auf 15.000 m² erwarten Sie über 2.000 Pflanzensorten zum Anfassen, Riechen und Entdecken. Persönliche Beratung von echten Gärtnern – direkt an der B6 bei Halle.
+            </p>
+            <div class="hero-actions fade-in fade-in-delay-3">
+                <a href="#besuch" class="btn btn-primary">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    Anfahrt & Öffnungszeiten
+                </a>
+                <a href="#neuheiten" class="btn btn-outline">Neuheiten entdecken</a>
+            </div>
+            <div class="hero-info fade-in fade-in-delay-4">
+                <div class="hero-info-item">
+                    <div class="hero-info-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                    </div>
+                    <div class="hero-info-text">
+                        <strong>Heute geöffnet</strong>
+                        9:00 – 18:00 Uhr
+                    </div>
+                </div>
+                <div class="hero-info-item">
+                    <div class="hero-info-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                    </div>
+                    <div class="hero-info-text">
+                        <strong>(034606) 22855</strong>
+                        Beratung & Bestellung
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visit Banner -->
+    <div class="visit-banner">
+        <div class="visit-banner-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span><strong>Magdeburger Chaussee 16</strong> · 06193 Petersberg</span>
+        </div>
+        <div class="visit-banner-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            <span>Mo–Do: 9–18 Uhr · Fr: 9–19 Uhr · <strong>Sa: 9–16 Uhr</strong></span>
+        </div>
+        <div class="visit-banner-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            <span><strong>Direkt an der B6</strong> · Kostenlose Parkplätze</span>
+        </div>
+    </div>
+
+    <!-- Neuheiten & Raritäten -->
+    <section class="section rarities" id="neuheiten">
+        <div class="section-header">
+            <div class="section-tag">Exklusiv bei uns</div>
+            <h2 class="section-title">Neuheiten & Raritäten</h2>
+            <p class="section-subtitle">Limitierte Sorten und besondere Neuzugänge – nur solange der Vorrat reicht. Kommen Sie vorbei!</p>
+        </div>
+        <div class="rarities-grid">
+            <div class="rarity-card">
+                <div class="rarity-image">
+                    <span class="rarity-badge">Neu 2024</span>
+                    <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=500&q=80" alt="Rosa Starlight">
+                </div>
+                <div class="rarity-content">
+                    <h3 class="rarity-name">Rosa 'Starlight Dream'</h3>
+                    <p class="rarity-latin">Edelrose, öfterblühend</p>
+                    <p class="rarity-desc">Preisgekrönte Neuheit mit außergewöhnlichem Farbverlauf von Apricot zu Rosa. Intensiver Duft.</p>
+                    <div class="rarity-footer">
+                        <span class="rarity-price">ab 24,90 €</span>
+                        <span class="rarity-stock">Nur noch 12 Stück</span>
+                    </div>
+                </div>
+            </div>
+            <div class="rarity-card">
+                <div class="rarity-image">
+                    <span class="rarity-badge limited">Limitiert</span>
+                    <img src="https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=500&q=80" alt="Japanischer Ahorn">
+                </div>
+                <div class="rarity-content">
+                    <h3 class="rarity-name">Acer palmatum 'Sango-kaku'</h3>
+                    <p class="rarity-latin">Korallenahorn, Solitär</p>
+                    <p class="rarity-desc">Rarität mit leuchtend korallenroter Rinde im Winter. 15 Jahre alte Exemplare aus eigener Anzucht.</p>
+                    <div class="rarity-footer">
+                        <span class="rarity-price">ab 189,00 €</span>
+                        <span class="rarity-stock">Nur 5 Exemplare</span>
+                    </div>
+                </div>
+            </div>
+            <div class="rarity-card">
+                <div class="rarity-image">
+                    <span class="rarity-badge">Neu 2024</span>
+                    <img src="https://images.unsplash.com/photo-1518882605630-8996a190b16d?w=500&q=80" alt="Hortensie">
+                </div>
+                <div class="rarity-content">
+                    <h3 class="rarity-name">Hydrangea 'Magical Moonlight'</h3>
+                    <p class="rarity-latin">Rispenhortensie</p>
+                    <p class="rarity-desc">XXL-Blütenrispen bis 40cm. Wechselt von Cremeweiß zu sanftem Rosa. Winterhart bis -25°C.</p>
+                    <div class="rarity-footer">
+                        <span class="rarity-price">ab 34,90 €</span>
+                        <span class="rarity-stock">Nur noch 8 Stück</span>
+                    </div>
+                </div>
+            </div>
+            <div class="rarity-card">
+                <div class="rarity-image">
+                    <span class="rarity-badge limited">Limitiert</span>
+                    <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=500&q=80" alt="Alter Apfelbaum">
+                </div>
+                <div class="rarity-content">
+                    <h3 class="rarity-name">Malus 'Gravensteiner'</h3>
+                    <p class="rarity-latin">Historische Apfelsorte, Hochstamm</p>
+                    <p class="rarity-desc">Legendäre Sorte von 1669. Kräftiges Aroma, perfekt für Streuobstwiesen. Stammumfang 12–14 cm.</p>
+                    <div class="rarity-footer">
+                        <span class="rarity-price">ab 79,00 €</span>
+                        <span class="rarity-stock">Nur 3 Exemplare</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vor Ort erleben -->
+    <section class="section experience" id="besuch">
+        <div class="experience-grid">
+            <div class="experience-images">
+                <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80" alt="Baumschule Gelände">
+                <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=400&q=80" alt="Beratung">
+                <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?w=400&q=80" alt="Pflanzenauswahl">
+            </div>
+            <div class="experience-content">
+                <div class="section-tag">Persönlich vor Ort</div>
+                <h2 class="section-title">Hier wächst Ihr Traumgarten</h2>
+                <p class="experience-text">
+                    Seit 90 Jahren ist die Saale-Baumschule der Ort, an dem Gartenträume Wirklichkeit werden. Keine Webshop-Ware – bei uns sehen, fühlen und riechen Sie jede Pflanze, bevor Sie sich entscheiden.
+                </p>
+                <p class="experience-text">
+                    Unsere Gärtnermeister Thomas und Christian Göricke beraten Sie persönlich: Welcher Baum passt zu Ihrem Boden? Welche Rose blüht im Schatten? Bringen Sie Fotos Ihres Gartens mit – wir helfen Ihnen.
+                </p>
+                <div class="experience-features">
+                    <div class="experience-feature">
+                        <div class="experience-feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <span>Fachberatung durch Gärtnermeister</span>
+                    </div>
+                    <div class="experience-feature">
+                        <div class="experience-feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+                        </div>
+                        <span>15.000 m² Verkaufsfläche</span>
+                    </div>
+                    <div class="experience-feature">
+                        <div class="experience-feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+                        </div>
+                        <span>Anwuchs-Garantie auf Gehölze</span>
+                    </div>
+                    <div class="experience-feature">
+                        <div class="experience-feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                        </div>
+                        <span>Lieferung im Saalekreis</span>
+                    </div>
+                </div>
+                <a href="https://maps.google.com/?q=Magdeburger+Chaussee+16+06193+Petersberg" target="_blank" class="btn btn-primary">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    Route planen
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sortiment -->
+    <section class="section" id="sortiment">
+        <div class="section-header">
+            <div class="section-tag">Unser Sortiment</div>
+            <h2 class="section-title">Pflanzenvielfalt entdecken</h2>
+            <p class="section-subtitle">Über 2.000 Sorten warten auf Sie – von der kleinen Staude bis zum mächtigen Solitärbaum.</p>
+        </div>
+        <div class="products-scroll">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=500&q=80" alt="Rosen">
+                </div>
+                <div class="product-info">
+                    <h4>Rosen</h4>
+                    <p>Edel-, Kletter-, Strauch- und Bodendeckerrosen</p>
+                    <span class="product-price">ab 12,99 €</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=500&q=80" alt="Rhododendron">
+                </div>
+                <div class="product-info">
+                    <h4>Rhododendron</h4>
+                    <p>Über 50 Sorten in allen Farben</p>
+                    <span class="product-price">ab 24,99 €</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=500&q=80" alt="Obstgehölze">
+                </div>
+                <div class="product-info">
+                    <h4>Obstgehölze</h4>
+                    <p>Äpfel, Birnen, Kirschen, Beeren</p>
+                    <span class="product-price">ab 19,99 €</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?w=500&q=80" alt="Stauden">
+                </div>
+                <div class="product-info">
+                    <h4>Stauden</h4>
+                    <p>Bienenweide & Blütenpracht</p>
+                    <span class="product-price">ab 4,99 €</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1509587584298-0f3b3a3a1797?w=500&q=80" alt="Formgehölze">
+                </div>
+                <div class="product-info">
+                    <h4>Formgehölze</h4>
+                    <p>Bonsai, Kugeln, Spaliere</p>
+                    <span class="product-price">ab 89,00 €</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1518882605630-8996a190b16d?w=500&q=80" alt="Hortensien">
+                </div>
+                <div class="product-info">
+                    <h4>Hortensien</h4>
+                    <p>Ball-, Rispen- & Tellerhortensien</p>
+                    <span class="product-price">ab 14,99 €</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location / Hours -->
+    <section class="section location" id="kontakt">
+        <div class="location-grid">
+            <div class="location-card">
+                <div class="location-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <h3>So finden Sie uns</h3>
+                <p>
+                    <strong>Magdeburger Chaussee 16</strong><br>
+                    06193 Petersberg OT Sennewitz<br><br>
+                    Direkt an der B6, nördlich von Halle.<br>
+                    Kostenlose Parkplätze vor Ort.
+                </p>
+                <p style="margin-top: 1rem;">
+                    <a href="https://maps.google.com/?q=Magdeburger+Chaussee+16+06193+Petersberg" target="_blank">→ Google Maps öffnen</a>
+                </p>
+            </div>
+            <div class="location-card">
+                <div class="location-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                </div>
+                <h3>Öffnungszeiten</h3>
+                <ul class="hours-list">
+                    <li><span>Montag – Donnerstag</span><span>9:00 – 18:00</span></li>
+                    <li><span>Freitag</span><span>9:00 – 19:00</span></li>
+                    <li><span>Samstag</span><span>9:00 – 16:00</span></li>
+                    <li><span>Sonntag</span><span>geschlossen</span></li>
+                </ul>
+                <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.7;">(Saison März – Dezember)</p>
+            </div>
+            <div class="location-card">
+                <div class="location-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                </div>
+                <h3>Kontakt</h3>
+                <p>
+                    <strong>Telefon:</strong><br>
+                    <a href="tel:03460622855">(034606) 22855</a><br><br>
+                    <strong>Inhaber:</strong><br>
+                    Thomas & Christian Göricke<br>
+                    Saale-Baumschule Göricke GbR
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testimonials">
+        <div class="section-header">
+            <div class="section-tag">Kundenstimmen</div>
+            <h2 class="section-title">Das sagen unsere Besucher</h2>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">„Die persönliche Beratung ist Gold wert! Herr Göricke hat mir genau die Rosen empfohlen, die zu meinem Garten passen. Alles blüht prächtig."</p>
+                <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" alt="Kundin" class="testimonial-avatar">
+                    <div>
+                        <div class="testimonial-name">Martina S.</div>
+                        <div class="testimonial-location">Halle (Saale)</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">„Seit 20 Jahren kaufen wir nur hier. Die Pflanzenqualität ist hervorragend und man merkt, dass hier echte Gärtner mit Leidenschaft arbeiten."</p>
+                <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="Kunde" class="testimonial-avatar">
+                    <div>
+                        <div class="testimonial-name">Klaus W.</div>
+                        <div class="testimonial-location">Merseburg</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">„Die Auswahl an seltenen Gehölzen ist einzigartig in der Region. Hier findet man Sorten, die es im Baumarkt einfach nicht gibt."</p>
+                <div class="testimonial-author">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Kundin" class="testimonial-avatar">
+                    <div>
+                        <div class="testimonial-name">Sabine K.</div>
+                        <div class="testimonial-location">Petersberg</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <h2>Besuchen Sie uns!</h2>
+        <p>Erleben Sie 15.000 m² Pflanzenvielfalt und lassen Sie sich von echten Gärtnern beraten.</p>
+        <div class="cta-buttons">
+            <a href="tel:03460622855" class="btn btn-primary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                (034606) 22855
+            </a>
+            <a href="https://maps.google.com/?q=Magdeburger+Chaussee+16+06193+Petersberg" target="_blank" class="btn btn-outline">
+                Route planen
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo" style="color: var(--cream);">
+                    Saale-Baumschule
+                </a>
+                <p>Ihr Gartencenter mit Tradition. Seit 1934 kultivieren wir mit Leidenschaft Pflanzen für Ihren Traumgarten – direkt an der B6 bei Halle.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Sortiment</h4>
+                <ul>
+                    <li><a href="#">Rosen</a></li>
+                    <li><a href="#">Obstgehölze</a></li>
+                    <li><a href="#">Rhododendron</a></li>
+                    <li><a href="#">Stauden</a></li>
+                    <li><a href="#">Heckenpflanzen</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Service</h4>
+                <ul>
+                    <li><a href="#">Fachberatung</a></li>
+                    <li><a href="#">Pflanzservice</a></li>
+                    <li><a href="#">Lieferung</a></li>
+                    <li><a href="#">Gutscheine</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Rechtliches</h4>
+                <ul>
+                    <li><a href="#">Impressum</a></li>
+                    <li><a href="#">Datenschutz</a></li>
+                    <li><a href="#">AGB</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2024 Saale-Baumschule Göricke GbR</span>
+            <span>Magdeburger Chaussee 16, 06193 Petersberg</span>
+        </div>
+    </footer>
+
+    <!-- Preview Badge -->
+    <div class="preview-badge">
+        <span>Design Preview</span>
+        Erstellt von IMR Media
+    </div>
+
+    <script>
+        // Navbar scroll
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Hero slideshow
+        const slides = document.querySelectorAll('.hero-slide');
+        let current = 0;
+        if (slides.length > 1) {
+            setInterval(() => {
+                slides[current].classList.remove('active');
+                current = (current + 1) % slides.length;
+                slides[current].classList.add('active');
+            }, 6000);
+        }
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+                e.preventDefault();
+                const target = document.querySelector(a.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Reveal animations on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.rarity-card, .product-card, .testimonial, .location-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

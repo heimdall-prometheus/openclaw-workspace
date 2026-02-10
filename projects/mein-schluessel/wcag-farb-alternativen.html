@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mein-schluessel.de – WCAG 2.2 AA Farbalternativen für Sekundärfarbe</title>
+  <style>
+    :root {
+      --navy: #01425e;
+      --current: #11aba8;
+      --white: #ffffff;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: #f5f7fa;
+      color: #1a1a2e;
+      line-height: 1.6;
+    }
+    
+    .header {
+      background: var(--navy);
+      color: white;
+      padding: 40px 32px;
+      text-align: center;
+    }
+    
+    .header h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    
+    .header p {
+      font-size: 16px;
+      opacity: 0.85;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 32px 20px;
+    }
+    
+    .info-box {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 32px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    
+    .info-box h2 {
+      font-size: 20px;
+      margin-bottom: 12px;
+      color: var(--navy);
+    }
+    
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    
+    .info-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .info-item .label {
+      font-weight: 600;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #666;
+      min-width: 100px;
+    }
+    
+    .wcag-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    
+    .wcag-badge.pass {
+      background: #e8f5e9;
+      color: #2e7d32;
+    }
+    
+    .wcag-badge.fail {
+      background: #ffebee;
+      color: #c62828;
+    }
+    
+    .wcag-badge.warn {
+      background: #fff3e0;
+      color: #e65100;
+    }
+    
+    /* Current color warning */
+    .current-color-box {
+      background: white;
+      border: 3px solid #c62828;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 40px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    
+    .current-color-box .banner {
+      background: #c62828;
+      color: white;
+      text-align: center;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+    
+    .current-demo {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 24px;
+    }
+    
+    .color-swatch-large {
+      width: 120px;
+      height: 120px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 16px;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    }
+    
+    .current-details {
+      flex: 1;
+      min-width: 200px;
+    }
+    
+    .current-details h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+    
+    .contrast-values {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin: 12px 0;
+    }
+    
+    .contrast-chip {
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      background: #f5f5f5;
+    }
+    
+    .current-demo .example-text {
+      font-size: 18px;
+      font-weight: 600;
+    }
+    
+    .current-demo .example-btn {
+      display: inline-block;
+      padding: 10px 24px;
+      border-radius: 8px;
+      color: white;
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+    }
+    
+    /* Section title */
+    .section-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    
+    .section-subtitle {
+      color: #666;
+      margin-bottom: 24px;
+      font-size: 15px;
+    }
+    
+    /* Color cards grid */
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+    
+    .color-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .color-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    }
+    
+    .color-card.recommended {
+      border: 2px solid #2e7d32;
+    }
+    
+    .color-card.recommended .card-header::after {
+      content: '⭐ TOP EMPFEHLUNG';
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(255,255,255,0.95);
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #2e7d32;
+      letter-spacing: 0.5px;
+    }
+    
+    .card-header {
+      position: relative;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 4px;
+    }
+    
+    .card-header .hex-code {
+      color: white;
+      font-size: 24px;
+      font-weight: 700;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    }
+    
+    .card-header .card-number {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(255,255,255,0.9);
+      color: #333;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 13px;
+    }
+    
+    .card-body {
+      padding: 20px;
+    }
+    
+    .card-body h3 {
+      font-size: 17px;
+      margin-bottom: 4px;
+      color: #1a1a2e;
+    }
+    
+    .card-body .category-tag {
+      display: inline-block;
+      font-size: 12px;
+      color: #888;
+      background: #f0f0f0;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+    
+    .contrast-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    
+    .contrast-row:last-child {
+      border-bottom: none;
+    }
+    
+    .contrast-row .label {
+      font-size: 13px;
+      color: #666;
+    }
+    
+    .contrast-row .value {
+      font-weight: 700;
+      font-size: 14px;
+    }
+    
+    .demo-section {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 1px solid #eee;
+    }
+    
+    .demo-section .demo-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #999;
+      margin-bottom: 8px;
+    }
+    
+    .demo-text {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    
+    .demo-text-small {
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+    
+    .demo-btn {
+      display: inline-block;
+      padding: 10px 28px;
+      border-radius: 8px;
+      color: white;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      margin-right: 8px;
+      margin-bottom: 8px;
+    }
+    
+    .demo-btn.outline {
+      background: transparent !important;
+      border: 2px solid;
+      color: inherit;
+    }
+    
+    .demo-link {
+      font-weight: 600;
+      text-decoration: underline;
+      font-size: 15px;
+    }
+    
+    /* Navy combo demo */
+    .navy-combo {
+      display: flex;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    
+    .navy-swatch {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background: var(--navy);
+    }
+    
+    .color-swatch-sm {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+    }
+    
+    /* Comparison table */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      margin-bottom: 48px;
+    }
+    
+    .comparison-table th {
+      background: var(--navy);
+      color: white;
+      padding: 14px 16px;
+      font-size: 13px;
+      text-align: left;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+    
+    .comparison-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #f0f0f0;
+      font-size: 14px;
+    }
+    
+    .comparison-table tr:hover td {
+      background: #f8f9fb;
+    }
+    
+    .comparison-table .swatch-cell {
+      width: 40px;
+    }
+    
+    .mini-swatch {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      display: inline-block;
+    }
+    
+    .recommendation-box {
+      background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
+      border: 2px solid #66bb6a;
+      border-radius: 12px;
+      padding: 28px;
+      margin-bottom: 40px;
+    }
+    
+    .recommendation-box h2 {
+      color: #2e7d32;
+      font-size: 22px;
+      margin-bottom: 16px;
+    }
+    
+    .rec-list {
+      list-style: none;
+    }
+    
+    .rec-list li {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+    
+    .rec-list li:last-child {
+      border-bottom: none;
+    }
+    
+    .rec-rank {
+      background: #2e7d32;
+      color: white;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+    
+    .rec-swatch {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      flex-shrink: 0;
+    }
+    
+    .rec-info h4 {
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+    
+    .rec-info p {
+      font-size: 13px;
+      color: #555;
+    }
+    
+    .footer {
+      text-align: center;
+      padding: 32px;
+      color: #999;
+      font-size: 13px;
+    }
+
+    @media (max-width: 768px) {
+      .color-grid {
+        grid-template-columns: 1fr;
+      }
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🔒 mein-schluessel.de – Farbalternativen</h1>
+  <p>WCAG 2.2 AA konforme Sekundärfarben als Ersatz für #11aba8 (Türkis)<br>
+  10 Vorschläge im Teal/Petrol-Spektrum, alle getestet gegen Weiß und Navy</p>
+</div>
+
+<div class="container">
+
+  <!-- Context Info -->
+  <div class="info-box">
+    <h2>📋 Kontext</h2>
+    <div class="info-grid">
+      <div class="info-item">
+        <span class="label">Branche</span>
+        <span>Sicherheitstechnik (Schließanlagen, Tresore)</span>
+      </div>
+      <div class="info-item">
+        <span class="label">Primärfarbe</span>
+        <span><span class="mini-swatch" style="background:#01425e; vertical-align:middle;"></span> #01425e (Navy)</span>
+      </div>
+      <div class="info-item">
+        <span class="label">WCAG AA Text</span>
+        <span>≥ 4.5:1 gegen Weiß</span>
+      </div>
+      <div class="info-item">
+        <span class="label">WCAG AA Large</span>
+        <span>≥ 3.0:1 gegen Weiß</span>
+      </div>
+      <div class="info-item">
+        <span class="label">Verwendung</span>
+        <span>Buttons, Links, Highlights, Newsletter, Badges</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Current Color (FAIL) -->
+  <div class="current-color-box">
+    <div class="banner">⚠️ AKTUELL – NICHT WCAG AA COMPLIANT ⚠️</div>
+    <div class="current-demo">
+      <div class="color-swatch-large" style="background: #11aba8;">#11aba8</div>
+      <div class="current-details">
+        <h3>Aktuelle Sekundärfarbe: Türkis</h3>
+        <div class="contrast-values">
+          <div class="contrast-chip">
+            vs Weiß: <strong style="color:#c62828;">2.83:1</strong>
+            <span class="wcag-badge fail">❌ FAIL</span>
+          </div>
+          <div class="contrast-chip">
+            vs Navy: <strong>3.82:1</strong>
+          </div>
+        </div>
+        <p style="color:#11aba8;" class="example-text">Beispieltext in #11aba8 auf Weiß – schwer lesbar!</p>
+        <div style="margin-top:12px;">
+          <button class="example-btn" style="background:#11aba8;">In den Warenkorb</button>
+          <a href="#" style="color:#11aba8;" class="demo-link">Produktdetails ansehen →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOP 3 Recommendations -->
+  <div class="recommendation-box">
+    <h2>🏆 Top 3 Empfehlungen</h2>
+    <ul class="rec-list">
+      <li>
+        <span class="rec-rank">1</span>
+        <span class="rec-swatch" style="background:#0D7D7A;"></span>
+        <div class="rec-info">
+          <h4>#0D7D7A – Tiefes Türkis</h4>
+          <p>Nächste Farbe am Original. Fühlt sich vertraut an, ist aber WCAG-compliant. 4.96:1 vs Weiß. <strong>Empfohlen für minimale visuelle Veränderung.</strong></p>
+        </div>
+      </li>
+      <li>
+        <span class="rec-rank">2</span>
+        <span class="rec-swatch" style="background:#0E7490;"></span>
+        <div class="rec-info">
+          <h4>#0E7490 – Blaugrün Marine</h4>
+          <p>Mehr Blau-Anteil, harmoniert perfekt mit Navy. 5.36:1 vs Weiß. <strong>Empfohlen für professionellen, kohärenten Look.</strong></p>
+        </div>
+      </li>
+      <li>
+        <span class="rec-rank">3</span>
+        <span class="rec-swatch" style="background:#1A7A7A;"></span>
+        <div class="rec-info">
+          <h4>#1A7A7A – Klassisches Teal</h4>
+          <p>Zeitloser Teal-Ton. Neutral und professionell. 5.11:1 vs Weiß. <strong>Empfohlen als sichere, universell funktionierende Wahl.</strong></p>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Section: All 10 Colors -->
+  <h2 class="section-title">Alle 10 Farbalternativen</h2>
+  <p class="section-subtitle">Jede Farbe erfüllt WCAG 2.2 AA (≥ 4.5:1 Kontrast gegen Weiß) und passt ins Teal/Petrol-Farbschema.</p>
+
+  <div class="color-grid">
+
+    <!-- Card 1 -->
+    <div class="color-card">
+      <div class="card-header" style="background: #0A8280;">
+        <span class="card-number">1</span>
+        <span class="hex-code">#0A8280</span>
+      </div>
+      <div class="card-body">
+        <h3>Dunkles Türkis</h3>
+        <span class="category-tag">Dunkleres Türkis</span>
+        <div class="contrast-row">
+          <span class="label">vs Weiß (#FFF)</span>
+          <span class="value">4.65:1 <span class="wcag-badge pass">✅ AA</span></span>
+        </div>
+        <div class="contrast-row">
+          <span class="label">vs Navy (#01425e)</span>
+          <span class="value">2.33:1</span>
+        </div>
+        <div class="demo-section">
+          <div class="demo-label">Vorschau</div>
+          <p class="demo-text" style="color: #0A8280;">Sicherheitstechnik vom Fachmann</p>
+          <p class="demo-text-small" style="color: #0A8280;">ABUS Schließzylinder ab 24,90 € – Jetzt bestellen</p>
+          <button class="demo-btn" style="background: #0A8280;">In den Warenkorb</button>
+          <button class="demo-btn outline" style="border-color: #0A8280; color: #0A8280;">Merken</button>
+          <div class="navy-combo">
+            <div class="navy-swatch"></div>
+            <div class="color-swatch-sm" style="background: #0A8280;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 - RECOMMENDED -->
+    <div class="color-card recommended">
+      <div class="card-header" style="background: #0D7D7A;">
+        <span class="card-number">2</span>
+        <span class="hex-code">#0D7D7A</span>
+      </div>
+      <div class="card-body">
+        <h3>Tiefes Türkis</h3>
+        <span class="category-tag">Dunkleres Türkis</span>
+        <div class="contrast-row">
+          <span class="label">vs Weiß (#FFF)</span>
+          <span class="value">4.96:1 <span class="wcag-badge pass">✅ AA</span></span>
+        </div>
+        <div class="contrast-row">
+          <span class="label">vs Navy (#01425e)</span>
+          <span class="value">2.18:1</span>
+        </div>
+        <div class="demo-section">
+          <div class="demo-label">Vorschau</div>
+          <p class="demo-text" style="color: #0D7D7A;">Sicherheitstechnik vom Fachmann</p>
+          <p class="demo-text-small" style="color: #0D7D7A;">ABUS Schließzylinder ab 24,90 € – Jetzt bestellen</p>
+          <button class="demo-btn" style="background: #0D7D7A;">In den Warenkorb</button>
+          <button class="demo-btn outline" style="border-color: #0D7D7A; color: #0D7D7A;">Merken</button>
+          <div class="navy-combo">
+            <div class="navy-swatch"></div>
+            <div class="color-swatch-sm" style="background: #0D7D7A;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 - RECOMMENDED -->
+    <div class="color-card recommended">
+      <div class="card-header" style="background: #1A7A7A;">
+        <span class="card-number">3</span>
+        <span class="hex-code">#1A7A7A</span>
+      </div>
+      <div class="card-body">
+        <h3>Klassisches Teal</h3>
+        <span class="category-tag">Petrol/Teal</span>
+        <div class="contrast-row">
+          <span class="label">vs Weiß (#FFF)</span>
+          <span class="value">5.11:1 <span class="wcag-badge pass">✅ AA</span></span>
+        </div>
+        <div class="contrast-row">
+          <span class="label">vs Navy (#01425e)</span>
+          <span class="value">2.12:1</span>
+        </div>
+        <div class="demo-section">
+          <div class="demo-label">Vorschau</div>
+          <p class="demo-text" style="color: #1A7A7A;">Sicherheitstechnik vom Fachmann</p>
+          <p class="demo-text-small" style="color: #1A7A7A;">ABUS Schließzylinder ab 24,90 € – Jetzt bestellen</p>
+          <button class="demo-btn" style="background: #1A7A7A;">In den Warenkorb</button>
+          <button class="demo-btn outline" style="border-color: #1A7A7A; color: #1A7A7A;">Merken</button>
+          <div class="navy-combo">
+            <div class="navy-swatch"></div>
+            <div class="color-swatch-sm" style="background: #1A7A7A;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="color-card">
+      <div class="card-header" style="background: #0B6E6E;">
+        <span class="card-number">4</span>
+        <span class="hex-code">#0B6E6E</span>
+      </div>
+      <div class="card-body">
+        <h3>Petrol Dunkel</h3>
+        <span class="category-tag">Petrol/Teal</span>
+        <div class="contrast-row">
+          <span class="label">vs Weiß (#FFF)</span>
+          <span class="value">6.05:1 <span class="wcag-badge pass">✅ AA</span></span>
+        </div>
+        <div class="contrast-row">
+          <span class="label">vs Navy (#01425e)</span>
+          <span class="value">1.79:1</span>
+        </div>
+        <div class="demo-section">
+          <div class="demo-label">Vorschau</div>
+          <p class="demo-text" style="color: #0B6E6E;">Sicherheitstechnik vom Fachmann</p>
+          <p class="demo-text-small" style="color: #0B6E6E;">ABUS Schließzylinder ab 24,90 € – Jetzt bestellen</p>
+          <button class="demo-btn" style="background: #0B6E6E;">In den Warenkorb</button>
+          <button class="demo-btn outline" style="border-color: #0B6E6E; color: #0B6E6E;">Merken</button>
+          <div class="navy-combo">
+            <div class="navy-swatch"></div>
+            <div class="color-swatch-sm" style="background: #0B6E6E;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="color-card">
+      <div class="card-header" style="background: #186A6A;">
+        <span class="card-number">5</span>
+        <span class="hex-code">#186A6A</span>
+      </div>
+      <div class="card-body">
+        <h3>Seriöses Petrol</h3>
+        <span class="category-tag">Petrol/Teal</span>
+        <div class="contrast-row">
+          <span class="label">vs Weiß (#FFF)</span>
+          <span class="value">6.35:1 <span class="wcag-badge pass">✅ AA</span></span>
+        </div>
+        <div class="contrast-row">
+          <span class="label">vs Navy (#01425e)</span>
+          <span class="value">1.70:1</span>
+        </div>
+        <div class="demo-section">
+          <div class="demo-label">Vorschau</div>
+          <p class="demo-text" style="color: #186A6A;">Sicherheitstechnik vom Fachmann</p>
+          <p class="demo-text-small" style="color: #186A6A;">ABUS Schließzylinder ab 24,90 € – Jetzt bestellen</p>
+          <button class="demo-btn" style="background: #186A6A;">In den Warenkorb</button>
+          <button class="demo-btn outline" style="border-color: #186A6A; color: #186A6A;">Merken</button>
+          <div class="navy-combo">
+            <div class="navy-swatch"></div>
+            <div class="color-swatch-sm" style="background: #186A6A;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 6 - RECOMMENDED -->
+    <div class="color-card recommended">
+      <div class="card-header" style="background: #0E7490;">
+        <span class="card-number">6</span>
+        <span class="hex-code">#0E7490</span>
+      </div>
+      <div class="card-body">
+        <h3>Blaugrün Marine</h3>
+        <span class="category-tag">Blaugrün</span>
+        <div class="contrast-row">
+          <span class="label">vs Weiß (#FFF)</span>
+          <span class="value">5.36:1 <span class="wcag-badge pass">✅ AA</span></span>
+        </div>
+        <div class="contrast-row">
+          <span class="label">vs Navy (#01425e)</span>
+          <span class="value">2.02:1</span>
+        </div>
+        <div class="demo-section">
+          <div class="demo-label">Vorschau</div>
+          <p class="demo-text" style="color: #0E7490;">Sicherheitstechnik vom Fachmann</p>
+          <p class="demo-text-small" style="color: #0E7490;">ABUS Schließzylinder ab 24,90 € – Jetzt bestellen</p>
+          <button class="demo-btn" style="background: #0E7490;">In den Warenkorb</button>
+          <button class="demo-btn outline" style="border-color: #0E7490; color: #0E7490;">Merken</button>
+          <div class="navy-combo">
+            <div class="navy-swatch"></div>
+            <div class="color-swatch-sm" style="background: #0E7490;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="color-card">
+      <div class="card-header" style="background: #0C6B82;">
+        <span class="card-number">7</span>
+        <span class="hex-code">#0C6B82</span>
+      </div>
+      <div class="card-body">
+        <h3>Tiefes Blaugrün</h3>
+        <span class="category-tag">Blaugrün</span>
+        <div class="contrast-row">
+          <span class="label">vs Weiß (#FFF)</span>
+          <span class="value">6.10:1 <span class="wcag-badge pass">✅ AA</span></span>
+        </div>
+        <div class="contrast-row">
+          <span class="label">vs Navy (#01425e)</span>
+          <span class="value">1.77:1</span>
+        </div>
+        <div class="demo-section">
+          <div class="demo-label">Vorschau</div>
+          <p class="demo-text" style="color: #0C6B82;">Sicherheitstechnik vom Fachmann</p>
+          <p class="demo-text-small" style="color: #0C6B82;">ABUS Schließzylinder ab 24,90 € – Jetzt bestellen</p>
+          <button class="demo-btn" style="background: #0C6B82;">In den Warenkorb</button>
+          <button class="demo-btn outline" style="border-color: #0C6B82; color: #0C6B82;">Merken</button>
+          <div class="navy-combo">
+            <div class="navy-swatch"></div>
+            <div class="color-swatch-sm" style="background: #0C6B82;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="color-card">
+      <div class="card-header" style="background: #147080;">
+        <span class="card-number">8</span>
+        <span class="hex-code">#147080</span>
+      </div>
+      <div class="card-body">
+        <h3>Ozean Blaugrün</h3>
+        <span class="category-tag">Blaugrün</span>
+        <div class="contrast-row">
+          <span class="label">vs Weiß (#FFF)</span>
+          <span class="value">5.74:1 <span class="wcag-badge pass">✅ AA</span></span>
+        </div>
+        <div class="contrast-row">
+          <span class="label">vs Navy (#01425e)</span>
+          <span class="value">1.88:1</span>
+        </div>
+        <div class="demo-section">
+          <div class="demo-label">Vorschau</div>
+          <p class="demo-text" style="color: #147080;">Sicherheitstechnik vom Fachmann</p>
+          <p class="demo-text-small" style="color: #147080;">ABUS Schließzylinder ab 24,90 € – Jetzt bestellen</p>
+          <button class="demo-btn" style="background: #147080;">In den Warenkorb</button>
+          <button class="demo-btn outline" style="border-color: #147080; color: #147080;">Merken</button>
+          <div class="navy-combo">
+            <div class="navy-swatch"></div>
+            <div class="color-swatch-sm" style="background: #147080;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 9 -->
+    <div class="color-card">
+      <div class="card-header" style="background: #1B7A5D;">
+        <span class="card-number">9</span>
+        <span class="hex-code">#1B7A5D</span>
+      </div>
+      <div class="card-body">
+        <h3>Vertrauensgrün</h3>
+        <span class="category-tag">Sattes Grün</span>
+        <div class="contrast-row">
+          <span class="label">vs Weiß (#FFF)</span>
+          <span class="value">5.27:1 <span class="wcag-badge pass">✅ AA</span></span>
+        </div>
+        <div class="contrast-row">
+          <span class="label">vs Navy (#01425e)</span>
+          <span class="value">2.05:1</span>
+        </div>
+        <div class="demo-section">
+          <div class="demo-label">Vorschau</div>
+          <p class="demo-text" style="color: #1B7A5D;">Sicherheitstechnik vom Fachmann</p>
+          <p class="demo-text-small" style="color: #1B7A5D;">ABUS Schließzylinder ab 24,90 € – Jetzt bestellen</p>
+          <button class="demo-btn" style="background: #1B7A5D;">In den Warenkorb</button>
+          <button class="demo-btn outline" style="border-color: #1B7A5D; color: #1B7A5D;">Merken</button>
+          <div class="navy-combo">
+            <div class="navy-swatch"></div>
+            <div class="color-swatch-sm" style="background: #1B7A5D;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 10 -->
+    <div class="color-card">
+      <div class="card-header" style="background: #207868;">
+        <span class="card-number">10</span>
+        <span class="hex-code">#207868</span>
+      </div>
+      <div class="card-body">
+        <h3>Jade Grün</h3>
+        <span class="category-tag">Sattes Grün</span>
+        <div class="contrast-row">
+          <span class="label">vs Weiß (#FFF)</span>
+          <span class="value">5.32:1 <span class="wcag-badge pass">✅ AA</span></span>
+        </div>
+        <div class="contrast-row">
+          <span class="label">vs Navy (#01425e)</span>
+          <span class="value">2.03:1</span>
+        </div>
+        <div class="demo-section">
+          <div class="demo-label">Vorschau</div>
+          <p class="demo-text" style="color: #207868;">Sicherheitstechnik vom Fachmann</p>
+          <p class="demo-text-small" style="color: #207868;">ABUS Schließzylinder ab 24,90 € – Jetzt bestellen</p>
+          <button class="demo-btn" style="background: #207868;">In den Warenkorb</button>
+          <button class="demo-btn outline" style="border-color: #207868; color: #207868;">Merken</button>
+          <div class="navy-combo">
+            <div class="navy-swatch"></div>
+            <div class="color-swatch-sm" style="background: #207868;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Comparison Table -->
+  <h2 class="section-title">Vergleichstabelle</h2>
+  <p class="section-subtitle">Alle Farben auf einen Blick mit exakten Kontrast-Werten.</p>
+
+  <table class="comparison-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Farbe</th>
+        <th>Hex</th>
+        <th>Name</th>
+        <th>Kategorie</th>
+        <th>vs Weiß</th>
+        <th>vs Navy</th>
+        <th>WCAG AA</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: #fff0f0;">
+        <td>—</td>
+        <td><span class="mini-swatch" style="background: #11aba8;"></span></td>
+        <td><code>#11aba8</code></td>
+        <td>Aktuell (Türkis)</td>
+        <td>—</td>
+        <td><strong style="color:#c62828;">2.83:1</strong></td>
+        <td>3.82:1</td>
+        <td><span class="wcag-badge fail">❌ FAIL</span></td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td><span class="mini-swatch" style="background: #0A8280;"></span></td>
+        <td><code>#0A8280</code></td>
+        <td>Dunkles Türkis</td>
+        <td>Dunkleres Türkis</td>
+        <td><strong>4.65:1</strong></td>
+        <td>2.33:1</td>
+        <td><span class="wcag-badge pass">✅ AA</span></td>
+      </tr>
+      <tr style="background: #f0faf0;">
+        <td>2 ⭐</td>
+        <td><span class="mini-swatch" style="background: #0D7D7A;"></span></td>
+        <td><code>#0D7D7A</code></td>
+        <td>Tiefes Türkis</td>
+        <td>Dunkleres Türkis</td>
+        <td><strong>4.96:1</strong></td>
+        <td>2.18:1</td>
+        <td><span class="wcag-badge pass">✅ AA</span></td>
+      </tr>
+      <tr style="background: #f0faf0;">
+        <td>3 ⭐</td>
+        <td><span class="mini-swatch" style="background: #1A7A7A;"></span></td>
+        <td><code>#1A7A7A</code></td>
+        <td>Klassisches Teal</td>
+        <td>Petrol/Teal</td>
+        <td><strong>5.11:1</strong></td>
+        <td>2.12:1</td>
+        <td><span class="wcag-badge pass">✅ AA</span></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><span class="mini-swatch" style="background: #0B6E6E;"></span></td>
+        <td><code>#0B6E6E</code></td>
+        <td>Petrol Dunkel</td>
+        <td>Petrol/Teal</td>
+        <td><strong>6.05:1</strong></td>
+        <td>1.79:1</td>
+        <td><span class="wcag-badge pass">✅ AA</span></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td><span class="mini-swatch" style="background: #186A6A;"></span></td>
+        <td><code>#186A6A</code></td>
+        <td>Seriöses Petrol</td>
+        <td>Petrol/Teal</td>
+        <td><strong>6.35:1</strong></td>
+        <td>1.70:1</td>
+        <td><span class="wcag-badge pass">✅ AA</span></td>
+      </tr>
+      <tr style="background: #f0faf0;">
+        <td>6 ⭐</td>
+        <td><span class="mini-swatch" style="background: #0E7490;"></span></td>
+        <td><code>#0E7490</code></td>
+        <td>Blaugrün Marine</td>
+        <td>Blaugrün</td>
+        <td><strong>5.36:1</strong></td>
+        <td>2.02:1</td>
+        <td><span class="wcag-badge pass">✅ AA</span></td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td><span class="mini-swatch" style="background: #0C6B82;"></span></td>
+        <td><code>#0C6B82</code></td>
+        <td>Tiefes Blaugrün</td>
+        <td>Blaugrün</td>
+        <td><strong>6.10:1</strong></td>
+        <td>1.77:1</td>
+        <td><span class="wcag-badge pass">✅ AA</span></td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td><span class="mini-swatch" style="background: #147080;"></span></td>
+        <td><code>#147080</code></td>
+        <td>Ozean Blaugrün</td>
+        <td>Blaugrün</td>
+        <td><strong>5.74:1</strong></td>
+        <td>1.88:1</td>
+        <td><span class="wcag-badge pass">✅ AA</span></td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td><span class="mini-swatch" style="background: #1B7A5D;"></span></td>
+        <td><code>#1B7A5D</code></td>
+        <td>Vertrauensgrün</td>
+        <td>Sattes Grün</td>
+        <td><strong>5.27:1</strong></td>
+        <td>2.05:1</td>
+        <td><span class="wcag-badge pass">✅ AA</span></td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td><span class="mini-swatch" style="background: #207868;"></span></td>
+        <td><code>#207868</code></td>
+        <td>Jade Grün</td>
+        <td>Sattes Grün</td>
+        <td><strong>5.32:1</strong></td>
+        <td>2.03:1</td>
+        <td><span class="wcag-badge pass">✅ AA</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Implementation notes -->
+  <div class="info-box">
+    <h2>🔧 Implementierung</h2>
+    <p style="margin-bottom:12px;">Die gewählte Farbe muss in folgenden Stellen aktualisiert werden:</p>
+    <ul style="padding-left:20px; line-height:2;">
+      <li><strong>Theme Config:</strong> Sekundärfarbe in der Shopware Theme-Konfiguration</li>
+      <li><strong>SCSS Variables:</strong> <code>$secondary</code> bzw. Custom SCSS-Overrides</li>
+      <li><strong>Newsletter Templates:</strong> Inline-CSS in E-Mail-Templates</li>
+      <li><strong>Statische Assets:</strong> Icons/SVGs die die Farbe hardcoded haben</li>
+    </ul>
+    <p style="margin-top:16px; color: #666; font-size:13px;">
+      <strong>Hinweis:</strong> WCAG 2.2 AA fordert 4.5:1 für normalen Text und 3:1 für großen Text (≥18pt oder ≥14pt bold) und UI-Komponenten. Alle hier vorgeschlagenen Farben erfüllen das strengere 4.5:1 Kriterium.
+    </p>
+  </div>
+
+</div>
+
+<div class="footer">
+  <p>Erstellt am 07.02.2026 | WCAG 2.2 Farbalternativen für mein-schluessel.de<br>
+  Kontrast-Berechnungen nach WCAG 2.2 Relative Luminance Formula</p>
+</div>
+
+</body>
+</html>

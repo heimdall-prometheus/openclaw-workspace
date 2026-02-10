@@ -1,0 +1,42 @@
+id: gh-17
+title: "Persönliche Sammlung View (Pokédex)"
+status: open
+github_issue: 17
+
+project: fangfuehrer
+strategy: mvp-launch
+phase: 3
+
+intention: |
+  Stolz auf die eigene Sammlung wecken, Sammeltrieb aktivieren, 'Gotta catch em all'.
+
+target_audience: |
+  Wiederkehrende User
+
+criteria:
+  quantitative:
+    - "Alle eigenen Fänge sichtbar"
+    - "Nach Art gruppierbar"
+    - "Statistiken (Anzahl, größter Fisch)"
+  
+  qualitative:
+    - "Visuell ansprechend (Kartendesign)"
+    - "Unentdeckte Arten ausgegraut (Teaser)"
+
+validation:
+  loop_count: 0
+  max_loops: 10
+  min_qualitative_score: 7
+  history: []
+
+created: "2026-02-04T11:45:00Z"
+created_by: heimdall
+updated: "2026-02-04T11:45:00Z"
+completed: ""
+
+artifacts: []
+
+notes: |
+  GitHub Issue: https://github.com/heimdall-prometheus/fangfuehrer/issues/17
+  Type: feature
+  Priority: high
